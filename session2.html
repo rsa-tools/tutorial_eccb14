@@ -1,413 +1,456 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
-
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-	<meta name="description" content=""/>
-	<meta name="keywords" content="" />
-	<meta name="author" content="carl" />
-	<title>ECCB 2014 T01</title>
-	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-<style type="text/css">
-
-#wrapper{
-  margin:0 auto;
-  #padding:15px 15% 8em;
-  text-align:left
-}
-#content {
-  max-width:70em;
-  width:100%;
-  margin:0 auto;
-  padding-bottom:20px;
-  overflow:hidden
-}
-.demo {
-  margin:1.5em 0;
-  padding:1.5em 1.5em 0.75em;
-  border:1px solid #ccc;
-  position:relative;
-  overflow:hidden
-}
-
-.post {
-  position:relative;
-  overflow:hidden
-}
-.collapse p {padding:0 10px 1em}
-
-.switch {position:absolute; top:1.5em; right: 1.5em; padding:3px}
-
-#.post .switch {position:static; text-align:right}
-
-.post .main{margin-bottom:0; padding-bottom:0}
-
-.other li, .summary {margin-bottom:.3em; padding:1em; border:1px solid #e8e7e8; background-color:#f8f7f8}
-
-.other ul {list-style-type:none; text-align:center}
-
-.expand{padding-bottom:.75em}
-
-/* --- Links  --- */
-
-#download {
-  border-style:none;
-  background:white;
-}
-
-.expand a {
-  display:block;
-  padding:3px 10px
-}
-.expand a:link, .expand a:visited {
-  border-width:1px;
-  background-image:url(img/arrow-down.gif);
-  background-repeat:no-repeat;
-  background-position:98% 50%;
-}
-.expand a:hover, .expand a:active, .expand a:focus {
-}
-.expand a.open:link, .expand a.open:visited {
-  #border-style:solid;
-  #background:#eee url(img/arrow-up.gif) no-repeat 98% 50%
-  color:black;
-}
-</style>
-<!--[if lte IE 6]>
-<style type="text/css">
-h3 a, .demo {position:relative; height:1%}
-</style>
-<![endif]-->
-
-<!--[if lte IE 6]>
-<script type="text/javascript">
-   try { document.execCommand( "BackgroundImageCache", false, true); } catch(e) {};
-</script>
-<![endif]-->
-<!--[if !lt IE 6]><!-->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/expand.js"></script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-$(function() {
-    $("#content h3.expand").toggler();
-    $("#content h2.expand").toggler();
-    $("#content div.demo").expandAll({trigger: "h3.expand", ref: "h3.expand"});
-    $("#content div.other").expandAll({
-      expTxt : "[Show]", 
-      cllpsTxt : "[Hide]",
-      ref : "ul.collapse",
-      showMethod : "show",
-      hideMethod : "hide"
-    });
-    $("#content div.post").expandAll({
-      expTxt : "[Show tip]", 
-      cllpsTxt : "[Hide tip]",
-      ref : "div.collapse", 
-      localLinks: "p.top a"    
-    });    
-});
-//--><!]]>
-</script>
-<!--<![endif]-->
-
-
-    <script type="text/javascript" src="syntaxhighlight/shCore.js"></script>
-    <script type="text/javascript" src="syntaxhighlight/shBrushBash.js"></script>
-    <script type="text/javascript" src="syntaxhighlight/shBrushR.js"></script>
-    <link type="text/css" rel="stylesheet" href="syntaxhighlight/shCore.css"/>
-    <link type="text/css" rel="stylesheet" href="syntaxhighlight/shThemeDefault.css"/>
-    
-    <script type="text/javascript">
-      SyntaxHighlighter.config.clipboardSwf = 'syntaxhighlight/clipboard.swf';
-      SyntaxHighlighter.all();
-      
-    </script>
-
-</head>
-
-<body>
-
-<div id="site-wrapper">
-
-	<div id="header">
-
-		<div id="top">
-
-			<div class="left" id="logo">
-				<a href="#"><h2 class="label label-green">Session 2 : Using command-line tools</h2></a>
-			</div>
-
-
-
-			<div class="clearer">&nbsp;</div>
-
-		</div>
-
-		<div class="navigation" id="sub-nav">
-
-			<ul class="tabbed">
-				<li ><a href="index.html">Home</a></li>
-				<li ><a href="session1.html">Session1:Web site</a></li>
-				<li class="current-tab"><a href="session2.html">Session2:Command line</a></li>
-				<li><a href="session3.html">Session3:SOAP Web services</a></li>
-			</ul>
-
-			<div class="clearer">&nbsp;</div>
-
-		</div>
-
-	</div>
-
-	<div class="main" id="main-two-columns">
-
-		<div class="left" id="main-content">
-
-			<h2 id="contents"> Introduction </h2>
-<br/>
-			<b>Goal:</b> Being able to redo the analysis of session 1 using command-line tools only, installed locally or through the usage of a distance virtual machine. <br/>
-The advantages are :
-<br/>
-<ul>
-<li> automatation of the tasks into analysis pipeline that can be used for several datasets</li>
-<li> access to additional tools of the RSAT suite that have no web interface</li>
-<li> running parallel analysis for example on a cluster</li>
-<li> possibility to customize the tools by installing e.g. custom genomes</li>
-<li> easy combination with additional command-line tools</li>
-</ul>
-
-						
-	<div id="wrapper"> 
-      <div id="content"> 
-      
-          
-          
-     <!-- PEAK-MOTIFS-->	     
-          
-          
-          <div class="demo">
-            <h2 id="quality" class="expand" >Getting started with command-line tools</h2>
-            <div class="collapse">
-            <div class="notice">
-	      <b>Goal:</b>Reproduce the web-based analysis of session 1 using command-line tools. 
-			<br/>
-	    </div>
-
-            <div class="notice">
-	      <b>Notice:</b> In the following instructions, the commands that need to be typed in the terminal are indicated <code>like this</code>. After each command, the Return key
-needs to be pressed.
-	    </div>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+	
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<meta name="description" content=""/>
+		<meta name="keywords" content="" />
+		<meta name="author" content="carl" />
+		<title>ECCB 2014 T01</title>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	<style type="text/css">
+	
+	#wrapper{
+	  margin:0 auto;
+	  #padding:15px 15% 8em;
+	  text-align:left
+	}
+	#content {
+	  max-width:70em;
+	  width:100%;
+	  margin:0 auto;
+	  padding-bottom:20px;
+	  overflow:hidden
+	}
+	.demo {
+	  margin:1.5em 0;
+	  padding:1.5em 1.5em 0.75em;
+	  border:1px solid #ccc;
+	  position:relative;
+	  overflow:hidden
+	}
+	
+	.post {
+	  position:relative;
+	  overflow:hidden
+	}
+	.collapse p {padding:0 10px 1em}
+	
+	.switch {position:absolute; top:1.5em; right: 1.5em; padding:3px}
+	
+	#.post .switch {position:static; text-align:right}
+	
+	.post .main{margin-bottom:0; padding-bottom:0}
+	
+	.other li, .summary {margin-bottom:.3em; padding:1em; border:1px solid #e8e7e8; background-color:#f8f7f8}
+	
+	.other ul {list-style-type:none; text-align:center}
+	
+	.expand{padding-bottom:.75em}
+	
+	/* --- Links  --- */
+	
+	#download {
+	  border-style:none;
+	  background:white;
+	}
+	
+	.expand a {
+	  display:block;
+	  padding:3px 10px
+	}
+	.expand a:link, .expand a:visited {
+	  border-width:1px;
+	  background-image:url(img/arrow-down.gif);
+	  background-repeat:no-repeat;
+	  background-position:98% 50%;
+	}
+	.expand a:hover, .expand a:active, .expand a:focus {
+	}
+	.expand a.open:link, .expand a.open:visited {
+	  #border-style:solid;
+	  #background:#eee url(img/arrow-up.gif) no-repeat 98% 50%
+	  color:black;
+	}
+	</style>
+	<!--[if lte IE 6]>
+	<style type="text/css">
+	h3 a, .demo {position:relative; height:1%}
+	</style>
+	<![endif]-->
+	
+	<!--[if lte IE 6]>
+	<script type="text/javascript">
+	   try { document.execCommand( "BackgroundImageCache", false, true); } catch(e) {};
+	</script>
+	<![endif]-->
+	<!--[if !lt IE 6]><!-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/expand.js"></script>
+	<script type="text/javascript">
+	<!--//--><![CDATA[//><!--
+	$(function() {
+	    $("#content h3.expand").toggler();
+	    $("#content h2.expand").toggler();
+	    $("#content div.demo").expandAll({trigger: "h3.expand", ref: "h3.expand"});
+	    $("#content div.other").expandAll({
+	      expTxt : "[Show]", 
+	      cllpsTxt : "[Hide]",
+	      ref : "ul.collapse",
+	      showMethod : "show",
+	      hideMethod : "hide"
+	    });
+	    $("#content div.post").expandAll({
+	      expTxt : "[Show tip]", 
+	      cllpsTxt : "[Hide tip]",
+	      ref : "div.collapse", 
+	      localLinks: "p.top a"    
+	    });    
+	});
+	//--><!]]>
+	</script>
+	<!--<![endif]-->
+	
+	
+	    <script type="text/javascript" src="syntaxhighlight/shCore.js"></script>
+	    <script type="text/javascript" src="syntaxhighlight/shBrushBash.js"></script>
+	    <script type="text/javascript" src="syntaxhighlight/shBrushR.js"></script>
+	    <link type="text/css" rel="stylesheet" href="syntaxhighlight/shCore.css"/>
+	    <link type="text/css" rel="stylesheet" href="syntaxhighlight/shThemeDefault.css"/>
 	    
-            <h3 class="expand">1 - Technicalities</h3>
-            <div class="collapse">
-	      <div class=notice>
-	      Command-line tools can be accessed in different ways:<br/>
-	      <ol>
-		<li> by installing the RSAT suite on a server using the instructions provided <a>on this web page</a>; or</li>
-		<li> using a virtual machine provided by the IFB which deploys a fully functional instance of the RSAT tools; or</li>
-		<li> using a virtual machine on your own computer (the image needs to be downloaded).</li>
-	      </ol>
+	    <script type="text/javascript">
+	      SyntaxHighlighter.config.clipboardSwf = 'syntaxhighlight/clipboard.swf';
+	      SyntaxHighlighter.all();
+	      
+	    </script>
+	
+	</head>
+	
+	<body>
+	
+	<div id="site-wrapper">
+	
+		<div id="header">
+	
+			<div id="top">
+	
+				<div class="left" id="logo">
+					<a href="#"><h2 class="label label-green">Session 2 : Using command-line tools</h2></a>
+				</div>
+	
+	
+	
+				<div class="clearer">&nbsp;</div>
+	
+			</div>
+	
+			<div class="navigation" id="sub-nav">
+	
+				<ul class="tabbed">
+					<li ><a href="index.html">Home</a></li>
+					<li ><a href="session1.html">Session1:Web site</a></li>
+					<li class="current-tab"><a href="session2.html">Session2:Command line</a></li>
+					<li><a href="session3.html">Session3:SOAP Web services</a></li>
+				</ul>
+	
+				<div class="clearer">&nbsp;</div>
+	
+			</div>
+	
+		</div>
+	
+		<div class="main" id="main-two-columns">
+	
+			<div class="left" id="main-content">
+	
+				<h2 id="contents"> Introduction </h2>
+	<br/>
+				<b>Goal:</b> Being able to redo the analysis of session 1 using command-line tools only, installed locally or through the usage of a distance virtual machine. <br/>
+	The advantages are :
+	<br/>
+	<ul>
+	<li> automatation of the tasks into analysis pipeline that can be used for several datasets</li>
+	<li> access to additional tools of the RSAT suite that have no web interface</li>
+	<li> running parallel analysis for example on a cluster</li>
+	<li> possibility to customize the tools by installing e.g. custom genomes</li>
+	<li> easy combination with additional command-line tools</li>
+	</ul>
+	
+							
+		<div id="wrapper"> 
+	      <div id="content"> 
+	      
+	          
+	          
+	     <!-- PEAK-MOTIFS-->	     
+	          
+	          
+	          <div class="demo">
+	            <h2 id="quality" class="expand" >Getting started with command-line tools</h2>
+	            <div class="collapse">
+	            <div class="notice">
+		      <b>Goal:</b>Reproduce the web-based analysis of session 1 using command-line tools. 
+				<br/>
+		    </div>
+	
+	            <div class="notice">
+		      <b>Notice:</b> In the following instructions, the commands that need to be typed in the terminal are indicated <code>like this</code>. After each command, the Return key
+	needs to be pressed.
+		    </div>
+		    
+	            <h3 class="expand">1 - Technicalities</h3>
+	            <div class="collapse">
+		      <div class=notice>
+		      Command-line tools can be accessed in different ways:<br/>
+		      <ol>
+			<li> by installing the RSAT suite on a server using the instructions provided <a>on this web page</a>; or</li>
+			<li> using a virtual machine provided by the IFB which deploys a fully functional instance of the RSAT tools; or</li>
+			<li> using a virtual machine on your own computer (the image needs to be downloaded).</li>
+		      </ol>
+		      </div>
+	            </div>
+	            <h3 class="expand">2 - Exercice : fetching sequences from command line</h3>
+	            <div class="collapse">
+		      <ol>
+			<li> Open a terminal; type <code>fetch-sequences</code>. The result should be an error message indicating that no genome information has been provided. However, this means that the RSAT tools are installed and can be accessed through the terminal.</li>
+			<li>Examine the options of the fetch-sequence tool by running <code>fetch-sequences -h</code></li>
+			<div class=notice>
+			  The long list of options is typical for all RSAT command-line tools. This is the sign that these tools can be tuned using many parameters, but also implies that they are more complex to use. Many of these options have default values, meaning that predefined values will be used if no information for these options are provided by the
+			  user (optional parameters). However, some parameters have no default values and need to be provided by the user (as the genome information previously)
+			</div>
+			<li>Try to identify the parameters which are compulsory.</li>
+			<li>Run the fetch-sequence tool using the bed file for the dog genome peaks.</li>
+		      </ol>
+		    <div class="error">
+				You should now have a file in your working directory containing the fasta sequences for the dog peaks.	    
+	
+		    </div>
+		    </div>
+	   	</div>
+	        
 	      </div>
-            </div>
-            <h3 class="expand">2 - Exercice : fetching sequences from command line</h3>
-            <div class="collapse">
-	      <ol>
-		<li> Open a terminal; type <code>fetch-sequences</code>. The result should be an error message indicating that no genome information has been provided. However, this means that the RSAT tools are installed and can be accessed through the terminal.</li>
-		<li>Examine the options of the fetch-sequence tool by running <code>fetch-sequences -h</code></li>
-		<div class=notice>
-		  The long list of options is typical for all RSAT command-line tools. This is the sign that these tools can be tuned using many parameters, but also implies that they are more complex to use. Many of these options have default values, meaning that predefined values will be used if no information for these options are provided by the
-		  user (optional parameters). However, some parameters have no default values and need to be provided by the user (as the genome information previously)
+	        
+	
+	
+			 <!-- Scanning sequences -->
+			 
+			           <div class="demo">
+	            <h2 id="peak" class="expand">Advanced motif search in ChIP-seq peaks</h2>
+	             <div class="collapse">
+	            <div class="notice">
+				<b>Goals:</b> 
+	<ul>
+	<li>Use a position-weight matrix (PWM) to locate possible transcription factor binding sites in ChIP-seq peaks (a.k.a. "motif-scanning").</li>
+	<li>Visualize the hits within the peak sequences using a genome browser.</li>
+	</ul>		
+				</div>
+	
+				
+	            <h3 class="expand">1 - Inspecting PWMs</h3>
+	            <div class="collapse">
+	            <div class=notice>
+	We will scan the ChIP-seq peaks for CEPBa using two distinct CEPBa position-weight matrices (PWM). The goal is to find the optimal set of parameters to achieve the 
+	highest sensitivity/specificity.            
+	            </div>
+	           <ol>
+	<li>  Download the three PWMs in TRANSFAC format 
+		<ol>
+		<li> <a href=data/jaspar_pwm/ma0102.1.tf>MA0102.1</a> </li>
+		<li> <a href=data/jaspar_pwm/ma0102.3.tf>MA0102.3</a> </li>
+		</ol>
+	
+	       </li> 
+	       <div class=success> Looking at these two files, can you see the difference between these PWMs ? 
+	       We can build the logos for these to inspect the matrices graphically</div>
+	       <li> Run the command <code>convert-matrix -from transfac -to transfac -return logo -i [pwm]</code> 
+	       where <code>[pwm]</code> represents the path to the PWM file in transfac format; navigate to the logos folder and visualize the PWM logos.</li>
+	           </ol>
+	
+	            </div>
+	            <h3 class="expand">2 -  Scanning sequences</h3>
+	            <div class="collapse">
+	               <div class="notice">We will now scan the peak regions using the two PWMs. We will restrict the analysis to the peaks of one of the 
+	               smaller chromosomes (chr38) to reduce computational time.</div>
+
+
+<ol>
+<li> Fetch the sequences corresponding to the <a href="data/dataset_cebpa_dog/do61-do79_cfam_CEBPA_liver.bed.SWEMBL.3.3.chr38.bed">peaks on chromosome 38</a> using <code>fetch-sequences</code>. </li>
+<li> Scan the resulting fasta file using the <code>matrix-scan</code> tool (values in brackets should be replaced!):<br />
+<code>
+matrix-scan -quick -i [fasta] -m [pwm] -matrix_format tf -return pval -bginput -markov 3 -origin start -o [outfile] -v 2 -uth pval 1e-3
+</code>
+</li>
+<br />
+<div class="success">
+<b>Exercice:</b> check the meaning of the parameters used in the previous command using the help file of matrix-scan. 
+</div>
+<li>Open the resulting file to understand the format and the information provided by the output.</li>
+
+</ol>	               
+	               
+	            </div>
+	            
+	            
+	            <h3 class="expand">3 - Exporting the results to the UCSC browser </h3>
+	            <div class="collapse">
+	            <div class="notice">
+<b>Goal:</b> We want to visualize the PWM hits in the UCSC genome browser. More precisely, we want to display:
+<ol>
+<li>the localization of the ChIP-seq peaks</li>
+<li>the localization of the PWM hits inside these peaks, for the two PWMs used.</li>
+</ol> 
+	            </div>
+
+	            <div class="notice">
+You might have noticed that the coordinates of the PWM hits in the output file of matrix-scan (columns start and end) are <b>relative coordinates</b>, i.e. 
+they are given relative to the start of 
+the sequence that was scanned (first column). We first need to convert these relative coordinates to <b>absolute or genomic coordinates</b>. Fod fr this, we need to extract the coordinates
+of the peaks sequences (basically the initial bed file, but in a slightly different format).	            
+	            </div>
+	            <ol>
+<li> Convert the initial bed file for </li>	            
+	            </ol>
+	          
+	   	    </div>
+	   			
+	          </div>
+	          </div>
+	
+	
+	
+	
+	        <!-- Background Models -->	
+	
+	        <div class="demo">
+	            <h2 id="mapping" class="expand">Choosing the right background model</h2>
+	            <div class="collapse">
+	            <div class="notice">
+				<b>Goal:</b> The choice of a background model is <b>critical</b> for the quality of the results. The goal of this part are:
+				<ul>
+				<li>learn how to generate a background model based on Markov models</li>
+	<li>test the effect of using different background models</li>
+	<li>experiment with negative controls</li>			
+				</ul>
+				</div>
+				
+	            <h3 class="expand">1 - create background models</h3>
+	            <div class="collapse">
+	               <div class=notice>
+	               Generating a realistic background model is a tricky task! Ideally, the background model should be realistic i.e. capture possible features from the input datasets (e.g. compositional biases such as CpG content, etc...), without being "too close" to the dataset, as the signal we are looking for would be included in the background model. Unrealistic background models are for example random sequences based on equiprobable nucleotides. On the other hand, random sequences based on <b>Markov models</b> appear to be a good trade-off, and are fast to compute.<br/>
+	               The RSAT distribution contains pre-computed background models for various Markov model orders
+	            </div>
+	<ol> Inspect the parameters of the program create-background-model</ol>
+	<ol> convert-background-model</ol>            
+	            
+	            <h3 class="expand">2 - Impact of background model on k-mer scores</h3>
+	            <div class="collapse">
+	<div class=notice> We will compare the results of oligo-analysis using two distinct random models</div>
+	               
+	               
+	            </div>
+	            </div>
+	
+	
+	
+	
+	            <h3 class="expand">3 - Testing a negative control datasets</h3>
+	            <div class="collapse">
+	<div class=notice>
+	<b>Goal :</b> Verifying that the tool is able to deliver a negative result if the input file contains no signal. We will analyse a set of randomly generated sequences and check that no over-represented k-mer are identified.
+	
+	</div>            
+	            
+	                </div>
+	            
+	          </div>
+	          </div>
+</div>	        
+	
+		    	
+	
+				
+			    <!-- ENRICHMENT -->
+			    <div class="demo">
+	            <h2 id="vizu" class="expand">Measure the enrichment of your peak for the expected motif</h2>
+	            <div class="collapse">
+	            <div class="notice">
+				<b>Goal:</b> 
+				<br/>
+				</div>
+	            <h3 class="expand">1 -</h3>
+	            <div class="collapse">
+	           
+	
+	            </div>
+	            <h3 class="expand">2 -  </h3>
+	            <div class="collapse">
+	               
+	                </div>
+	   	    
+		    
+		    
+		    
+		    </div>	
+		    	    </div>
 		</div>
-		<li>Try to identify the parameters which are compulsory.</li>
-		<li>Run the fetch-sequence tool using the bed file for the dog genome peaks.</li>
-	      </ol>
-	    <div class="error">
-			You should now have a file in your working directory containing the fasta sequences for the dog peaks.	    
-
-	    </div>
-	    </div>
-   	</div>
-        
-      </div>
-        
-        <!-- Background Models -->	
-
-        <div class="demo">
-            <h2 id="mapping" class="expand">Choosing the right background model</h2>
-            <div class="collapse">
-            <div class="notice">
-			<b>Goal:</b> The choice of a background model is <b>critical</b> for the quality of the results. The goal of this part are:
-			<ul>
-			<li>learn how to generate a background model based on Markov models</li>
-<li>test the effect of using different background models</li>
-<li>experiment with negative controls</li>			
-			</ul>
-			</div>
-			
-            <h3 class="expand">1 - create background models</h3>
-            <div class="collapse">
-               <div class=notice></div>
-               Generating a realistic background model is a tricky task! Ideally, the background model should be realistic i.e. capture possible features from the input datasets (e.g. compositional biases such as CpG content, etc...), without being "too close" to the dataset, as the signal we are looking for would be included in the background model. Unrealistic background models are for example random sequences based on equiprobable nucleotides. On the other hand, random sequences based on <b>Markov models</b> appear to be a good trade-off, and are fast to compute.<br/>
-               The RSAT distribution contains pre-computed background models for various Markov model orders
-            </div>
-<ol> Inspect the parameters of the program create-background-model</ol>
-<ol> convert-background-model</ol>            
-            
-            <h3 class="expand">2 - Impact of background model on k-mer scores</h3>
-            <div class="collapse">
-<div class=notice> We will compare the results of oligo-analysis using two distinct random models</div>
-               
-               
-            </div>
-            </div>
-            </div>
-
-
-
-		 <!-- Scanning sequences -->
-		 
-		           <div class="demo">
-            <h2 id="peak" class="expand">Advanced motif search in ChIP-seq peaks</h2>
-             <div class="collapse">
-            <div class="notice">
-			<b>Goals:</b> 
-<ul>
-<li>Use a position-weight matrix (PWM) to locate possible transcription factor binding sites in ChIP-seq peaks (a.k.a. "motif-scanning").</li>
-<li>Visualize the hits within the peak sequences using a genome browser.</li>
-</ul>		
-			</div>
-
-			
-            <h3 class="expand">1 - Scanning sequences</h3>
-            <div class=notice>
-We will scan the ChIP-seq peaks for CEPBa using two distinct CEPBa position-weight matrices (PWM). The goal is to find the optimal set of parameters to achieve the 
-highest sensitivity/specificity.            
-            </div>
-            <div class="collapse">
-           <ol>
-<li>          </li> 
-           
-           </ol>
-
-            </div>
-            <h3 class="expand">2 -  </h3>
-            <div class="collapse">
-               
-            </div>
-            <h3 class="expand">3 -  </h3>
-            <div class="collapse">
-            
-            
-          
-   	    </div>
-   			
-          </div>
-          </div>
-
-
-
-
-
-
-
-            <h3 class="expand">3 - Testing a negative control datasets</h3>
-            <div class="collapse">
-<div class=notice>
-<b>Goal :</b> Verifying that the tool is able to deliver a negative result if the input file contains no signal. We will analyse a set of randomly generated sequences and check that no over-represented k-mer are identified.
-
-</div>            
-            
-                </div>
-            
-          </div>
-          </div>
-        
-
-	    	
-
-			
-		    <!-- ENRICHMENT -->
-		    <div class="demo">
-            <h2 id="vizu" class="expand">Measure the enrichment of your peak for the expected motif</h2>
-            <div class="collapse">
-            <div class="notice">
-			<b>Goal:</b> 
-			<br/>
-			</div>
-            <h3 class="expand">1 -</h3>
-            <div class="collapse">
-           
-
-            </div>
-            <h3 class="expand">2 -  </h3>
-            <div class="collapse">
-               
-                </div>
-   	    
-	    
-	    
-	    
-	    </div>	
-	    	    </div>
+		
+	</div>
 	</div>
 	
-</div>
-</div>
-
-<!-- SIDE BAR -->		
-
-		<div class="right sidebar" id="sidebar">
-
-			<h5>Slides:</h5>
-			<ul>
-			<li><a href="booklet/booklet_chip-seq.pdf" target='_blank'>Presentation</a></li>
-			</ul>
-			<h5>Dataset:</h5>
-			Schmidt,Wilson and Ballester <i>Five-vertebrate ChIP-seq reveals the evolutionary dynamics of transcription factor binding.</i> Science, 328(5981), 1036–1040. 2010 <a href="http://www.sciencemag.org/content/328/5981/1036" target='_blank'>Article</a>
-			<a href="articles/2013_Myers_PLoS Genet.pdf" target='_blank'> [PDF] </a><br/>
-			<u>peaks:</u><a href="peaks_url.bed" target='_blank'>bed file</a><br/>		
-			</ul>
-			
-			<h5>Suggested Reading:</h5>
-			<ul>
-			<li>Bailey et al. <i>Practical Guidelines for the Comprehensive Analysis of ChIP-seq Data.</i> PLoS Comput Biol 9, e1003326 (2013).<a href="articles/2013_Bailey_PLoS Comput Biol.pdf" target='_blank'> [PDF] </a><br/>
-			</li>
-			<li>Thomas-Chollier et al. <i>A complete workflow for the analysis of full-size ChIP-seq (and similar) data sets using peak-motifs.</i> Nature Protocols 7, 1551–1568 (2012).<a href="articles/2012_Thomas-Chollier_Nature Protocols.pdf" target='_blank'> [PDF] </a><br/>
-			</li>
-			</ul>
-			<p/>
-			
-			
-
-		</div>
-
-		<div class="clearer">&nbsp;</div>
-
-	</div>
-
-	<div id="footer">
-
-		<div class="left" id="footer-left">
-			
-		
-			
-			<p>&copy; 2014 Morgane Thomas-Chollier. All rights Reserved</p>
-
-			<p class="quiet"><a href="http://templates.arcsin.se/">Website template</a> by <a href="http://arcsin.se/">Arcsin</a></p>
-			
+	<!-- SIDE BAR -->		
+	
+			<div class="right sidebar" id="sidebar">
+	
+				<h5>Slides:</h5>
+				<ul>
+				<li><a href="booklet/booklet_chip-seq.pdf" target='_blank'>Presentation</a></li>
+				</ul>
+				<h5>Dataset:</h5>
+				Schmidt,Wilson and Ballester <i>Five-vertebrate ChIP-seq reveals the evolutionary dynamics of transcription factor binding.</i> Science, 328(5981), 1036–1040. 2010 <a href="http://www.sciencemag.org/content/328/5981/1036" target='_blank'>Article</a>
+				<a href="articles/2013_Myers_PLoS Genet.pdf" target='_blank'> [PDF] </a><br/>
+				<u>peaks:</u><a href="peaks_url.bed" target='_blank'>bed file</a><br/>		
+				</ul>
+				
+				<h5>Suggested Reading:</h5>
+				<ul>
+				<li>Bailey et al. <i>Practical Guidelines for the Comprehensive Analysis of ChIP-seq Data.</i> PLoS Comput Biol 9, e1003326 (2013).<a href="articles/2013_Bailey_PLoS Comput Biol.pdf" target='_blank'> [PDF] </a><br/>
+				</li>
+				<li>Thomas-Chollier et al. <i>A complete workflow for the analysis of full-size ChIP-seq (and similar) data sets using peak-motifs.</i> Nature Protocols 7, 1551–1568 (2012).<a href="articles/2012_Thomas-Chollier_Nature Protocols.pdf" target='_blank'> [PDF] </a><br/>
+				</li>
+				</ul>
+				<p/>
+				
+				
+	
+			</div>
+	
 			<div class="clearer">&nbsp;</div>
-
+	
 		</div>
-
-		<div class="right" id="footer-right">
-
+	
+		<div id="footer">
+	
+			<div class="left" id="footer-left">
+				
+			
+				
+				<p>&copy; 2014 Morgane Thomas-Chollier. All rights Reserved</p>
+	
+				<p class="quiet"><a href="http://templates.arcsin.se/">Website template</a> by <a href="http://arcsin.se/">Arcsin</a></p>
+				
+				<div class="clearer">&nbsp;</div>
+	
+			</div>
+	
+			<div class="right" id="footer-right">
+	
+			</div>
+	
+			<div class="clearer">&nbsp;</div>
+	
 		</div>
-
-		<div class="clearer">&nbsp;</div>
-
+	
 	</div>
-
-</div>
-
-</body>
-</html>
+	
+	</body>
+	</html>
