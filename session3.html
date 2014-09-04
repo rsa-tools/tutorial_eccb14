@@ -238,7 +238,7 @@ $(function() {
  			<ol>
                 <li>Save this Python script <a href="python_scripts/fetch-sequences_soap.py">fetch-sequences_soap.py</a> on your computer</li>
                 <li>Run the script a first time to get the help by typing
-                <pre>python fetch-sequences_soap.py.py -h</pre>
+                <pre>python fetch-sequences_soap.py -h</pre>
                 <br/>
                  
                 <div class="post">
@@ -249,9 +249,10 @@ $(function() {
                            You need a coordinate file (peaks) in BED format.
                 </div>
                  </li>
-                <li> Now run the script to scan the <a href="data/dataset_cebpa_dog/do61+do79_cfam_CEBPA_liver.bed.SWEMBL.3.3.bed">CEBPa peak coordinates</a>. Adapt the file path to the files as needed for your computer.</li>
+                <li> Now run the script to retrieve the sequences corresponding to the <a href="data/dataset_cebpa_dog/do61+do79_cfam_CEBPA_liver.bed.SWEMBL.3.3.bed">CEBPa peak coordinates</a>. Save this file on your machine and adapt the file path of the command to the files as needed for your computer. The genome is the dog CanFam2 assembly</li>
                 
-                <pre>python matrix_scan_soap.py -b do61+do79_cfam_CEBPA_liver.bed.SWEMBL.3.3.bed -g canFam2</pre>
+                <pre>python fetch-sequences_soap.py -b do61+do79_cfam_CEBPA_liver.bed.SWEMBL.3.3.bed -g canFam2</pre>
+                <br/>
                 <li> You should obtain the results from fetch-sequences. Note that this analysis did not run on your computer, but used the computing power of the remote RSAT server.</li>
       
                 </ol> 
@@ -291,10 +292,11 @@ $(function() {
                            You need a sequence file in FASTA format and a matrix file in TRANSFAC format.
                 </div>
                  </li>
-                <li> Now run the script to scan the <a href="result/1_do61+do79_cfam_CEBPA_liver.SWEMBL.3.3_peaks.fasta">CEBPa peak sequences</a> with the first discovered motif (session1, <a href="data/session3/peak-motifs_oligos_6nt_mkv4_m1.tf">oligos_6nt_mkv4_m1</a>). Adapt the file path to the files as needed for your computer.</li>
+                <li> Now run the script to scan the <a href="results/session1/1_do61+do79_cfam_CEBPA_liver.SWEMBL.3.3_peaks.fasta">CEBPa peak sequences</a> with the first discovered motif (session1, <a href="data/session3/peak-motifs_oligos_6nt_mkv4_m1.tf">oligos_6nt_mkv4_m1</a>). Adapt the file path to the files as needed for your computer.</li>
                 
-                <pre>python matrix_scan_soap.py -s 1_do61+do79_cfam_CEBPA_liver.SWEMBL.3.3_peaks.fasta -m peak-motifs_oligos_6nt_mkv4_m1.tf -u 0.0001</pre>
-                <li> You should obtain the results from matrix-scan. Note that this analysis did not run on your computer, but used the computing power of the remote RSAT server.</li>
+                <pre>python matrix_scan_soap.py -s 1_do61+do79_cfam_CEBPA_liver.SWEMBL.3.3_peaks.fasta -m peak-motifs_oligos_6nt_mkv4_m1.tf -u 0.0001 > cebpa_oligos_6nt_mkv4_m1_10-4.ft</pre>
+               </br>
+                <li> You should obtain the results from matrix-scan within the file cebpa_oligos_6nt_mkv4_m1_10-4.ft. Note that this analysis did not run on your computer, but used the computing power of the remote RSAT server.</li>
       
                 </ol> 
             </div>
