@@ -210,19 +210,19 @@ $(function() {
 	<h3 class="expand">2 - Fetch sequences from a bed file </h3>
 	<div class="collapse">
           <ol>
-	    <li>In a web browser window open the <a href="http://rsat.ulb.ac.be/">RSAT</a> web page</li>
+	    <li>In a web browser window open the <a href="http://rsat.sb-roscoff.fr/">RSAT</a> web page</li>
 	    <li>In the menu (left side) click on the NGS-ChIP-seq drop down menu, and select the tool: fetch-sequences from UCSC.</li>
 	    <li>Select the genome of interest, in this case: canFam2.</li>
 
 	    <li>There are several options to input a bed file: Paste
 	      the coordinates, input from a URL, and upload the file
-	      from your computer. In this case, we will use this
-	      URL <a href="http://rsat.ulb.ac.be/dataset_cepa_peaks">http://rsat.ulb.ac.be/dataset_cepa_peaks</a></li>
+	      from your computer. In this case, we will use the URL method.
+	      <a href="./data/dataset_cebpa_dog/do61+do79_cfam_CEBPA_liver.bed.SWEMBL.3.3.bed">[peaks]</a></li>
 	    
 	    <li>Introduce your email address to receive a mail once the job is done. </li>
 	    <li>Click on Go once the form is complete.</li>
             <img class="bordered" src="./figures/Screen1_c.png" alt="fetch_seq_SC1" width="550"/>
-	    <li>When the tool is finished you will receive a link to the fasta file containing the sequences corresponding to the coordinates in the bed file.</li>
+	    <li>When the job is finished you will receive a link to the fasta file containing the sequences corresponding to the coordinates in the bed file.</li>
 	  </ol>
 	  
 	  <div class="post">
@@ -295,7 +295,7 @@ $(function() {
             <li>Are there any significant motifs discovered?</li>
             <li>Where you expecting these results?</li>
 	    </ol>
-	    <a href="./results/session1/2_peak-motifs_archive_cebpa_liver_dog/peak-motifs_synthesis.html"><b>Anticipated Results</b></a>
+	    <b>Anticipated Results:</b><a href="./results/session1/2_peak-motifs_archive_cebpa_liver_dog/peak-motifs_synthesis.html">peak-motifs results</a>
 
           </div>
 
@@ -376,7 +376,7 @@ $(function() {
 	    <li>Do you have any interesting findings?</li>
 	     
 	  </ol>
-	  <a href="https://genome-euro.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=amedina&hgS_otherUserSessionName=canFam2_eccb14_with_sites"><b>Anticipated Results</b></a>	    
+	  <b>Anticipated Results:</b> <a href="https://genome-euro.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=amedina&hgS_otherUserSessionName=canFam2_eccb14_with_sites">UCSC Session.</a>	    
         </div>	  
       </div>
 
@@ -415,6 +415,7 @@ $(function() {
 	<li>In the "Send to" menu, select file and then specify fasta format.</li>
 	<p><img class="bordered" src="./figures/NCBI_genome_ecoli.png" alt="FNRSC1" width="550"/></p>
       </ol>
+
     </div>
 <h3 class="expand">3 - Fetching peak sequences with Galaxy</h3>
     <div class="collapse">
@@ -424,16 +425,47 @@ $(function() {
 	<li>Now we will upload the genome (fasta format) and peaks (bed format) files into Galaxy through the tool <i>Upload File</i> under the "Get Data" menu. Select the corresponding type of data and select "unspecified" genome (the <i>E. coli</i> K12 genome availablable in Galaxy does not correspond to the verision we are using).</li>
 	<p><img class="bordered" src="./figures/galaxy_upload_files_2.png" alt="FNRSC2" width="550"/></p>
 	<li>The tool "Extract Genomic DNA" can be found under the <i>Fetch Sequences</i> dropdown menu.</li>
-	<li>Selet the bed and fasta files saved in the history as inputs.</li>
+	<li>Select the bed and fasta files saved in the history as inputs and execute the job.</li>
 	<p><img class="bordered" src="./figures/galaxy_fetch_2.png" alt="FNRSC3" width="550"/></p>
-	<li></li>
+	<li>Once the job is finished the result will appear in the history.</li>
       </ol>
+      <div class="post">
+        <div class="success"><b>Fetching sequences for new genomes</b>
+	  <ol>
+            <li>Do you know other options to fetch peak sequences for genomes that are new or not supported?</li>
+            <div class="collapse"> 
+              You can also do this using the command line.
+	      <pre>$ bedtools getfasta -fi Escherichia_coli_K_12_MG1655.fasta -bed macs14_peaks.bed -fo macs14_peaks.fa </pre>
+	    </div>
+	  </ol>
+	  <b>Anticipated Results:</b><a href="./results/session1/4_E_coliK12_peaks-seq_galaxy.fasta"> fasta file.</a>
+	  
+        </div>
+      </div>
+     
     </div>
-    <h3 class="expand">3 -  </h3>
+    <h3 class="expand">4 - Motif Discovery </h3>
     <div class="collapse">
+      Now that we have the peak sequences we can do motif discovery. 
+      <p>You now know what to do!</p>
+      <ol>
+	<li>Go to the RSAT <a href="http://rsat.sb-roscoff.fr/">web page</a>.</li>
+	<li>Fill the form and input the peak sequences in fasta format.</li>
+	<li>Select the desired options.</li>
+	<li>Go!</li>
+      </ol>
       
-      
-      
+      <div class="post">
+        <div class="success"><b>Tunning parameters</b>
+	  <ol>
+            <li>Which parameters did you use?</li>
+            <li>Did you select any specific set of motifs to compare with? Why?</li>
+	    <li>Which algorithm gave you the expected motif?</li>
+	  </ol>
+	  <b>Anticipated Results:</b> <a href="./results/session1/5_peak-motifs_archive_FNR_Ecoli/peak-motifs_synthesis.html"> [Default parameters]</a> <a href="results/session1/6_peak-motifs_archive_FNR_Ecoli_dyad/peak-motifs_synthesis.html"> [Tunned parameters]</a>	    
+        </div>	  
+      </div>
+
     </div>
     
   </div>
