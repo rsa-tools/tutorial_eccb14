@@ -165,7 +165,7 @@
 	
 				<h2 id="contents"> Introduction </h2>
 	<br/>
-				<b>Goal:</b> Being able to redo the analysis of session 1 using command-line tools only, installed locally or through the usage of a distance virtual machine. <br/>
+				<b>Goal:</b> Being able to perform analysis similar to those in Session 1 using command-line tools only, installed locally or through the usage of a distance virtual machine. <br/>
 	The advantages are :
 	<br/>
 	<ul>
@@ -219,7 +219,7 @@
 			  user (optional parameters). However, some parameters have no default values and need to be provided by the user (as the genome information previously)
 			</div>
 			<li>Try to identify the parameters which are compulsory.</li>
-			<li>Run the fetch-sequence tool using the bed file for the dog genome peaks.</li>
+			<li>Run the fetch-sequence tool using the bed file for the dog genome peaks. Make sure to use the <code>-header_format galaxy</code> in order to include the genomic coordinates of the sequence in the fasta header !</li>
 		      </ol>
 		    <div class="error">
 				You should now have a file in your working directory containing the fasta sequences for the dog peaks.	    
@@ -249,18 +249,18 @@
 	            <h3 class="expand">1 - Inspecting PWMs</h3>
 	            <div class="collapse">
 	            <div class=notice>
-	We will scan the ChIP-seq peaks for CEPBa using two distinct CEPBa position-weight matrices (PWM). The goal is to find the optimal set of parameters to achieve the 
-	highest sensitivity/specificity.            
+Classical ChIP-seq peaks are much longer than the binding site of the transcription factor that was immuno-precipitated. Hence, it is important to try to identify the most likely position of the transcription factor binding site (TFBS) inside the peaks.<br />	
+	In order to do this, we will scan the ChIP-seq peaks for CEPBa using two distinct CEPBa position-weight matrices (PWM).
 	            </div>
 	           <ol>
-	<li>  Download the three PWMs in TRANSFAC format 
+	<li>  Download the CEPBa PWMs in TRANSFAC format 
 		<ol>
 		<li> <a href=data/jaspar_pwm/ma0102.1.tf>MA0102.1</a> </li>
 		<li> <a href=data/jaspar_pwm/ma0102.3.tf>MA0102.3</a> </li>
 		</ol>
 	
 	       </li> 
-	       <div class=success> Looking at these two files, can you see the difference between these PWMs ? 
+	       <div class=success> Looking at these two files, can you see obvious differences between these PWMs ? How were these matrices built ?
 	       We can build the logos for these to inspect the matrices graphically</div>
 	       <li> Run the command <code>convert-matrix -from transfac -to transfac -return logo -i [pwm]</code> 
 	       where <code>[pwm]</code> represents the path to the PWM file in transfac format; navigate to the logos folder and visualize the PWM logos.</li>
@@ -270,12 +270,12 @@
 	            <h3 class="expand">2 -  Scanning sequences</h3>
 	            <div class="collapse">
 	               <div class="notice">We will now scan the peak regions using the two PWMs. We will restrict the analysis to the peaks of one of the 
-	               smaller chromosomes (chr38) to reduce computational time.</div>
+	               smaller chromosomes (chr38, remember, dog !) to reduce computational time.</div>
 
 
 <ol>
 <li> Fetch the sequences corresponding to the <a href="data/dataset_cebpa_dog/do61-do79_cfam_CEBPA_liver.bed.SWEMBL.3.3.chr38.bed">peaks on chromosome 38</a> using <code>fetch-sequences</code>. </li>
-<li> Scan the resulting fasta file using the <code>matrix-scan</code> tool (values in brackets should be replaced!):<br />
+<li> Scan the resulting fasta file using the <code>matrix-scan</code> tool using the following command (values in brackets should be replaced!):<br />
 <code>
 matrix-scan -quick -i [fasta] -m [pwm] -matrix_format tf -return pval -bginput -markov 3 -origin start -o [outfile] -v 2 -uth pval 1e-3
 </code>
@@ -284,7 +284,12 @@ matrix-scan -quick -i [fasta] -m [pwm] -matrix_format tf -return pval -bginput -
 <div class="success">
 <b>Exercice:</b> check the meaning of the parameters used in the previous command using the help file of matrix-scan. 
 </div>
+<div class="notice">
+<b>Hint</b> choose a name for the output file that contains information about the parameters used and their values ! This is very usefull if we run this command again with a different set of parameters, in order to keep track of the output files. 
+</div>
+
 <li>Open the resulting file to understand the format and the information provided by the output.</li>
+<div class="success">How many peaks did we have ? How many predicted TFBS do we have ?</div>
 
 </ol>	               
 	               
@@ -304,12 +309,30 @@ matrix-scan -quick -i [fasta] -m [pwm] -matrix_format tf -return pval -bginput -
 	            <div class="notice">
 You might have noticed that the coordinates of the PWM hits in the output file of matrix-scan (columns start and end) are <b>relative coordinates</b>, i.e. 
 they are given relative to the start of 
-the sequence that was scanned (first column). We first need to convert these relative coordinates to <b>absolute or genomic coordinates</b>. Fod fr this, we need to extract the coordinates
-of the peaks sequences (basically the initial bed file, but in a slightly different format).	            
+the sequence that was scanned (first column). We first need to convert these relative coordinates to <b>absolute or genomic coordinates</b>. For this, we first need to extract the coordinates of the peaks sequences (basically the initial bed file, but in a slightly different format).	            
 	            </div>
 	            <ol>
-<li> Convert the initial bed file for </li>	            
+<li> Run the command :<br />
+<code>convert-features -from galaxy_seq -to bed -i [fasta] > [coord]</code> <br />
+where <code>[fasta]</code> represents the fasta file of fetched sequences for chromosome 38, and <code>[coord]</code> is a new file in bed format containing the coordinated of all peaks.<br />
+<div class=notice> Remember that we used the option -header_format galaxy in the fetch-sequences command ?</div>
+</li>	            
+<li>Convert the output of matrix-scan into a plain bed format using <br />
+<code> convert-features -from ft -to bed  -coord [coord] -i [outfile] -o [TFBS bed file]</code><br />
+
+</li>
+<li> Open the <a href="http://genome-euro.ucsc.edu/cgi-bin/hgGateway" target="_blank">UCSC genome browser site </a>; select the dog genome (beware : canFam2)</li>
+<li>click on the "Add custom tracks" button, and upload the bed file containing the peak coordinates, and the two bed files containig the TFBS inside the peaks obtained using the two PWMs.</li>
+<li>Click on "go to the genome browser" (right-hand side) once you have uploaded the bed files, and navigate/zoom out to visulize some peak regions and the TFBS inside them.</li>
 	            </ol>
+
+<div class="success">
+<b>Questions :</b>
+<ul>
+<li>Do you see differences in the results obtained with the different PWMs ?</li>
+<li>Can you identify peaks that have no TFBS inside ? Do you have an explanation for this ?</li>
+</ul>
+</div>
 	          
 	   	    </div>
 	   			
