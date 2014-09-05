@@ -372,16 +372,17 @@ $(function() {
   <h2 id="peak" class="expand">ChIP-seq in bacteria</h2>
   <div class="collapse">
     <div class="notice">
-      <p><b>Goal:</b> Apply the knowledge acquire today in a new data set.</p>
+      <b>Goal:</b> Apply the knowledge acquire today in a second data set.
     </div>
-    <h3 class="expand">1 - FNR ChIP-seq in  </h3>
+    <h3 class="expand">1 - FNR ChIP-seq in <i>E. coli</i> K12 </h3>
     <div class="collapse">
       <p>Myers, et al. recently published a paper where they characterized through ChIP-seq the binding profile for the transcription factor FNR <a href="http://dx.plos.org/10.1371/journal.pgen.1003565">(Paper)</a> in <i>Escherichia coli</i> K12MG1655  . </p>
       <p>Data was processed in the following way:</p>
       <ol>
-	<li>Data was dowloaded from GEO database. ID:<a href=L"http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE41195"></a>GSE41195.</li>
+	<li>Raw reads were downloaded from GEO database. ID:<a href=L"http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE41195"></a>GSE41195.</li>
 	<li>Reads were aligned to <i>E.coli</i> K12 MG1655 genome, version <b>NC_000913.2</b> using bowtie. </li>
-	<li>Peaks were called using MACS with parameters: --gsize 4639675 --name "macs14"  --bw 400 --keep-dup 1 --bdg --single-profile --diag . </li>
+	<li>Peaks were called using MACS with parameters: --gsize 4639675 --name "macs14"  --bw 400 --keep-dup 1 --bdg --single-profile --diag.</li>
+	<li>The peak set is <a href="./data/FNR_coli/macs14_peaks.bed">[here]</a>.</li>
       </ol>
     </div>
     <h3 class="expand">2 -  </h3>
