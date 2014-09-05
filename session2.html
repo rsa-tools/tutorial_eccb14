@@ -328,7 +328,7 @@ where <code>[fasta]</code> represents the fasta file of fetched sequences for ch
 
 <div class="success">
 <b>Questions :</b>
-<ul>
+	<ul>
 <li>Do you see differences in the results obtained with the different PWMs ?</li>
 <li>Can you identify peaks that have no TFBS inside ? Do you have an explanation for this ?</li>
 </ul>
@@ -345,26 +345,51 @@ where <code>[fasta]</code> represents the fasta file of fetched sequences for ch
 	        <!-- Background Models -->	
 	
 	        <div class="demo">
-	            <h2 id="mapping" class="expand">Choosing the right background model</h2>
+	            <h2 id="mapping" class="expand">Negative controls</h2>
 	            <div class="collapse">
 	            <div class="notice">
-				<b>Goal:</b> The choice of a background model is <b>critical</b> for the quality of the results. The goal of this part are:
-				<ul>
-				<li>learn how to generate a background model based on Markov models</li>
-	<li>test the effect of using different background models</li>
-	<li>experiment with negative controls</li>			
-				</ul>
+				<b>Goal:</b> Test whether the tools are able to return negative results (i.e. no result at all) when the input dataset contains no signal. This is a crucial test to validate how reliable the results on a REAL dataset are!
 				</div>
 				
-	            <h3 class="expand">1 - create background models</h3>
+	            <h3 class="expand">1 - generate artificial random sequences</h3>
 	            <div class="collapse">
 	               <div class=notice>
-	               Generating a realistic background model is a tricky task! Ideally, the background model should be realistic i.e. capture possible features from the input datasets (e.g. compositional biases such as CpG content, etc...), without being "too close" to the dataset, as the signal we are looking for would be included in the background model. Unrealistic background models are for example random sequences based on equiprobable nucleotides. On the other hand, random sequences based on <b>Markov models</b> appear to be a good trade-off, and are fast to compute.<br/>
-	               The RSAT distribution contains pre-computed background models for various Markov model orders
+There are several ways to create random sequences to generate a negative control. 
+<ul>
+<li>The simplest way would be to generate sequences from an equiprobable model, but this is a very unrealistic model since no biological sequence follows this model.</li>
+<li>An alternative is to generate random sequences according to a Markov model (i.e. taking into account dependencies between nucleotides, cf. Session 1)</li>
+<li>a more realistic control dataset would be to extract random genomic fragement from the genome of interest according to a template file (in order to retrieve the same number of sequences of equal size)</li>
+</ul>
 	            </div>
-	<ol> Inspect the parameters of the program create-background-model</ol>
-	<ol> convert-background-model</ol>            
+	<ol> 
+	<li> Run the following command<br />
+<code>random-seq -i [template bed file] -template_format bed -bg upstream -markov 2 -org Canis_familiaris_EnsEMBL -o [output file]</code> 
+<div class=error>Do not forget to check the help of this tool to understand the parameters !</div>
+	</li>
+	<li> Run peak-motifs on the output file<br />
+<code>peak-motifs -i [previous output file] -title random-seq -markov auto -disco oligos,positions,local_words -nmotifs 5 -minol 6 -maxol 6 -2str -origin center 
+-task purge,seqlen,composition,disco,merge_words,collect_motifs,synthesis -prefix peakmot_randomseq -noov -outdir random-seq-mmo-2
+</code>	
+		</li> 
+		<li>Navigate to the output folder just created and open the html file</li>
+		<div class="success"><b>Question : </b> Do you find any over-represented motifs ? Check the different algorithm used (olig-analysis, position-analysis, local-words).</div>      
+	            </ol>
+	We now turn to a different negative control, i.e. extracting random genomic fragments from the genome of interest using as template the bed file of the true sequences.
+	<ol>
+	
+<li> Check the list of supported organisms using <br />
+<code>supported-organisms</code>
+Check the exact name of the Canis familiaris organims in the output.
+</li>	
+<li>Extract random genomic fragments from the dog genome using <br />
+
+<code>random-genomic-fragments -i [template bed file] -template_format bed -org Canis_familiaris_EnsEMBL -return seq -o [output file]</code></li>
+<li>Run the previous peak-motifs command on this new file (Modify the name of the output dir !)</li>
+<div class="success"><b>Question : </b> Do you find any over-represented motifs ? Check the different algorithm used (olig-analysis, position-analysis, local-words). How different are the results compared to the negative control based on articial sequences ?</div>      
+
+	</ol>            
 	            
+	           
 	            <h3 class="expand">2 - Impact of background model on k-mer scores</h3>
 	            <div class="collapse">
 	<div class=notice> We will compare the results of oligo-analysis using two distinct random models</div>
@@ -392,30 +417,6 @@ where <code>[fasta]</code> represents the fasta file of fetched sequences for ch
 		    	
 	
 				
-			    <!-- ENRICHMENT -->
-			    <div class="demo">
-	            <h2 id="vizu" class="expand">Measure the enrichment of your peak for the expected motif</h2>
-	            <div class="collapse">
-	            <div class="notice">
-				<b>Goal:</b> 
-				<br/>
-				</div>
-	            <h3 class="expand">1 -</h3>
-	            <div class="collapse">
-	           
-	
-	            </div>
-	            <h3 class="expand">2 -  </h3>
-	            <div class="collapse">
-	               
-	                </div>
-	   	    
-		    
-		    
-		    
-		    </div>	
-		    	    </div>
-		</div>
 		
 	</div>
 	</div>
