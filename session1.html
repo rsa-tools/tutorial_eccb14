@@ -404,12 +404,30 @@ $(function() {
 	<li>Raw reads were downloaded from GEO database. ID:<a href=L"http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE41195"></a>GSE41195.</li>
 	<li>Reads were aligned to <i>E.coli</i> K12 MG1655 genome, version <b>NC_000913.2</b> using bowtie. </li>
 	<li>Peaks were called using MACS with parameters: --gsize 4639675 --name "macs14"  --bw 400 --keep-dup 1 --bdg --single-profile --diag.</li>
-	<li>The peak set is <a href="./data/FNR_coli/macs14_peaks.bed">[here]</a>.</li>
+	<li>The peak set is <a href="./data/FNR_coli/macs14_peaks.bed">here</a>.</li>
       </ol>
     </div>
-    <h3 class="expand">2 -  </h3>
+    <h3 class="expand">2 - Get the genome sequence</h3>
     <div class="collapse">
-      
+      <p>We will require to have the fasta file for the <b>NC_000913.2</b> version of the <i>E.coli</i> K12 MG1655 genome for the following step. </p>
+      <ol>
+	<li>We will download this file from <a href="http://www.ncbi.nlm.nih.gov/nuccore/NC_000913.2">NCBI</a>.</li>
+	<li>In the "Send to" menu, select file and then specify fasta format.</li>
+	<p><img class="bordered" src="./figures/NCBI_genome_ecoli.png" alt="FNRSC1" width="550"/></p>
+      </ol>
+    </div>
+<h3 class="expand">3 - Fetching peak sequences with Galaxy</h3>
+    <div class="collapse">
+      <p><a href="https://usegalaxy.org/">Galaxy</a> provides access through the web to useful tools for NGS analysis. We will use the tool <i>Extract Genomic DNA</i> to get the peak regions from the fasta file of the <i>E. coli</i> K12 MG1655 genome. This tool is specially useful for genomes that are not supported by resources like UCSC genome browser.</p>
+      <ol>
+	<li>Go to Galaxy:<a href="https://usegalaxy.org/">https://usegalaxy.org/</a>, and login. In case you don't have a user please create one, is fast and it might be useful in the future.</li>
+	<li>Now we will upload the genome (fasta format) and peaks (bed format) files into Galaxy through the tool <i>Upload File</i> under the "Get Data" menu. Select the corresponding type of data and select "unspecified" genome (the <i>E. coli</i> K12 genome availablable in Galaxy does not correspond to the verision we are using).</li>
+	<p><img class="bordered" src="./figures/galaxy_upload_files_2.png" alt="FNRSC2" width="550"/></p>
+	<li>The tool "Extract Genomic DNA" can be found under the <i>Fetch Sequences</i> dropdown menu.</li>
+	<li>Selet the bed and fasta files saved in the history as inputs.</li>
+	<p><img class="bordered" src="./figures/galaxy_fetch_2.png" alt="FNRSC3" width="550"/></p>
+	<li></li>
+      </ol>
     </div>
     <h3 class="expand">3 -  </h3>
     <div class="collapse">
