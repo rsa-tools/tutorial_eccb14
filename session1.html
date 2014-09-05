@@ -169,8 +169,19 @@ $(function() {
 
 <u>The aim is to :</u>
 <ul>
-<li></li>
+<li> get familiar with motif analysis of ChIP-seq data</li>
+<li> learn de novo motif discovery methods</li>
+<li> become familiar with using RSAT via the website</li>
 </ul>
+
+<u>In practice :</u>
+<ul>
+<li> motif discovery with <i>peak-motifs</i></li>
+<li> advanced parameter settings</li>
+<li> visualisation of the putative TFBS</li>
+<li> motif enrichment with <i>matrix-quality</i></li>
+</ul>
+
 
 <div id="wrapper"> 
   <div id="content"> 
@@ -210,14 +221,14 @@ $(function() {
 	<h3 class="expand">2 - Fetch sequences from a bed file </h3>
 	<div class="collapse">
           <ol>
-	    <li>In a web browser window open the <a href="http://rsat.ulb.ac.be/">RSAT</a> web page</li>
+	    <li>In a web browser window open the <a href="http://rsat.sb-roscoff.fr/ target="_blank">RSAT</a> web page</li>
 	    <li>In the menu (left side) click on the NGS-ChIP-seq drop down menu, and select the tool: fetch-sequences from UCSC.</li>
-	    <li>Select the genome of interest, in this case: canFam2.</li>
+	    <li>Select the genome of interest, in this case: <b>canFam2</b>.</li>
 
 	    <li>There are several options to input a bed file: Paste
 	      the coordinates, input from a URL, and upload the file
-	      from your computer. In this case, we will use this
-	      URL <a href="http://rsat.ulb.ac.be/dataset_cepa_peaks">http://rsat.ulb.ac.be/dataset_cepa_peaks</a></li>
+	      from your computer. In this case, to prevent traffic between the teaching room and internet, 
+	      we will favor using the URL option. Right click on this <a href="./data/dataset_cebpa_dog/do61+do79_cfam_CEBPA_liver.bed.SWEMBL.3.3.bed">link</a> and "copy link location" to get the URL of the peak coordinates (BED) file. Alternatively, save the file on your computer and use the "upload" method.</li>
 	    
 	    <li>Introduce your email address to receive a mail once the job is done. </li>
 	    <li>Click on Go once the form is complete.</li>
@@ -265,25 +276,26 @@ $(function() {
 	In this section we will get familiar with this tool and its general usage.
 	Its basic usage requires as input:
 	<ol>
-          <li>Title for the analysis.</li>
-	  <li>A set of peak sequences in fasta format. Sequences can be pasted in the available box, input from a URL, and uploading a file from your computer </li>      
+          <li>Title for the analysis. For the studied dataset, use <b>CEBPa_ChIP-seq_in_dog_liver</b></li>
+	  <li>A set of peak sequences in fasta format. Sequences can be pasted in the available box, input from a URL, and uploading a file from your computer. Alternatively, the sequences can come directly from another RSAT program (like <i>fetch-sequences</i>), as detailed just below.</li>      
 	  <li>Introduce your email address to receive a mail once the job is done. </li>
 	</ol>
 	<img class="bordered" src="./figures/Screen2_a.png" alt="fetch_seq_SC2" width="550"/> 
-
+<br/>
 	<b>Passing results from one tool to the next one:</b> As a suite of tools, RSAT is designed to pass the output from one tool as input into related tools. E.g: From the output display in <i>fetch-sequences</i>, you can directly send the sequences to <i>peak-motifs</i>.
 	
 	<img class="bordered" src="./figures/Screen1_2_PM_color.png" alt="fetch_seq_SC3" width="550"/>
-	The output is conformed by the following parts:
+	<br/>
+	The <i>peak-motifs</i> output is formed by the following parts:
 	<ol>
-	  <li><b>Sequence Compotition:</b>The distribution of sequence lengths provides a useful way to detect outlier peaks (i.e., exceptionally long peaks that may ‘dilute’ the motif signal) or irregular length distributions resulting from problems during the peak-calling procedure. Nucleotide and dinucleotide compositions are computed and displayed in the form of heat maps and positional profiles</li>
+	  <li><b>Sequence Composition:</b>The distribution of sequence lengths provides a useful way to detect outlier peaks (i.e., exceptionally long peaks that may ‘dilute’ the motif signal) or irregular length distributions resulting from problems during the peak-calling procedure. Nucleotide and dinucleotide compositions are computed and displayed in the form of heat maps and positional profiles</li>
 	  <img class="bordered" src="./figures/peak-motifs_archive_cebpa_liver_dog_SC1.png" alt="PMSC3" width="550"/> 
 	  
 	  <li><b>Motif Discovery:</b>The workflow combines four word-based pattern-discovery algorithms that rely on two complementary criteria (overrepresentation and positional bias) to detect exceptional words (oligonucleotides) and spaced pairs of words (dyads). Significant words are used as seeds to build probabilistic description of motifs (position-specific scoring matrices), indicating residue variability at each position of the motif. Motif discovery will be done only using oligonucleotides detection by default.</li>
 	  <img class="bordered" src="./figures/peak-motifs_archive_cebpa_liver_dog_SC2.png" alt="PMSC3" width="550"/> 
 	  
 	  <li><b>Motif comparisons:</b> Discovered motifs are compared with one or several public databases of annotated motifs to predict associated transcription factors. Comparison results are displayed as multiple motif alignments to highlight matches with several annotated motifs (e.g., factors belonging to the same family, composite motifs bound by protein complexes). Motif comparison is perfomred against vertebrate transcription factors binding motifs in <a href="http://jaspar.genereg.net/" target='_blank'>JASPAR database</a>. </li>
-	  <li><b>Binding site predictions:</b>Sequences are scanned with the discovered motifs to locate binding sites, and their posi- tioning within peaks is analyzed (coverage, positional distribution along peaks).</li>
+	  <li><b>Binding site predictions:</b>Sequences are scanned with the discovered motifs to locate binding sites, and their positioning within peaks is analyzed (coverage, positional distribution along peaks).</li>
 	  <img class="bordered" src="./figures/peak-motifs_archive_cebpa_liver_dog_SC3.png" alt="PMSC3" width="550"/> 
 	  
 	</ol>
@@ -305,7 +317,7 @@ $(function() {
       <div class="collapse">
 	Several parameters can be tunned in <i>peak-motifs</i> in order to obtain better results.
 	<ol>
-	  <li><b>Reduce peak sequences:</b>  In our previous results it is possible to observe that most of the discovered motifs lay in the middel parts of the peaks. In order to focus our anaysis to this section of the peaks we can use this option and reduce the sequence length.</li> 
+	  <li><b>Reduce peak sequences:</b>  In our previous results it is possible to observe that most of the discovered motifs lay in the middle parts of the peaks. In order to focus our anaysis to this section of the peaks we can use this option and reduce the sequence length.</li> 
 	  <img class="bordered" src="figures/Screen_peak_motifs_cutseq.png" alt="PMSC4" width="550"/>
 	  <li><b>Motif-discovery parameters:</b> The choice of motif discovery algorithms markedly affects the result. It is recommended to combine the analysis of overrepresentation (oligo-analysis) and positional bias (position-analysis). Other available analysis are based on: spaced pairs (dyad-analysis) and locally overrepresented words (local-word).</li>
 	  <img class="bordered" src="figures/Screen_peak_motifs_motif_dis.png" alt="PMSC5" width="550"/>
