@@ -1,0 +1,23 @@
+; One-to-n matrix alignment; reference matrix: positions_7nt_m2_shift1	; 3 matrices	; sort_field=rank_mean
+; positions_7nt_m2; m=0 (reference); ncol1=11; shift=1; ncol=12; -wwATATAAGkb
+; Alignment reference
+a	0	2	3	7	0	7	0	7	7	0	0	1
+c	0	1	1	0	0	0	0	0	0	0	1	2
+g	0	1	1	0	0	0	0	0	0	7	3	2
+t	0	3	2	0	7	0	7	0	0	0	3	2
+//
+; positions_7nt_m2 versus MA0033.1 (FOXL1); m=1/2; ncol2=8; w=7; offset=-1; strand=D; shift=0; score=      1; wwdayATA----
+; cor=0.854; Ncor=0.498; logoDP=4.621; NIcor=0.481; NsEucl=0.895; SSD=1.090; NSW=0.922; rcor=1; rNcor=1; rlogoDP=1; rNIcor=1; rNsEucl=1; rSSD=1; rNSW=1; rank_mean=1.000; match_rank=1
+a	7	10	6	13	4	21	0	22	0	0	0	0
+c	1	4	3	4	10	0	2	1	0	0	0	0
+g	4	2	6	4	2	2	0	0	0	0	0	0
+t	11	7	8	2	7	0	21	0	0	0	0	0
+//
+; positions_7nt_m2 versus MA0124.1_rc (NKX3-1_rc); m=2/2; ncol2=7; w=6; offset=5; strand=R; shift=6; score=      2; ------TAAGTA
+; cor=0.808; Ncor=0.404; logoDP=2.199; NIcor=0.041; NsEucl=0.860; SSD=1.421; NSW=0.882; rcor=2; rNcor=2; rlogoDP=2; rNIcor=2; rNsEucl=2; rSSD=2; rNSW=2; rank_mean=2.000; match_rank=2
+a	0	0	0	0	0	0	0	19	19	1	0	19
+c	0	0	0	0	0	0	1	0	0	0	0	0
+g	0	0	0	0	0	0	0	0	0	19	0	1
+t	0	0	0	0	0	0	19	1	1	0	20	0
+//
+;

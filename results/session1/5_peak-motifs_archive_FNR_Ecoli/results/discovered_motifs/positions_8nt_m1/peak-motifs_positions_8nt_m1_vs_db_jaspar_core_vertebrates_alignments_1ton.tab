@@ -1,0 +1,16 @@
+; One-to-n matrix alignment; reference matrix: positions_8nt_m1_shift0	; 2 matrices	; sort_field=rank_mean
+; positions_8nt_m1; m=0 (reference); ncol1=13; shift=0; ncol=13; wkCAGGCCGATvc
+; Alignment reference
+a	17	7	1	37	2	1	4	2	2	34	1	10	9
+c	7	9	38	0	0	0	27	31	2	1	0	12	17
+g	5	12	0	1	36	38	3	1	35	1	0	12	7
+t	10	11	0	1	1	0	5	5	0	3	38	5	6
+//
+; positions_8nt_m1 versus MA0035.1 (Gata1); m=1/1; ncol2=6; w=6; offset=7; strand=D; shift=7; score=      1; -------sGATgs
+; cor=0.872; Ncor=0.402; logoDP=3.480; NIcor=0.405; NsEucl=0.911; SSD=0.572; NSW=0.952; rcor=1; rNcor=1; rlogoDP=1; rNIcor=1; rNsEucl=1; rSSD=1; rNSW=1; rank_mean=1.000; match_rank=1
+a	0	0	0	0	0	0	0	13	0	50	1	13	6
+c	0	0	0	0	0	0	0	14	0	2	0	6	16
+g	0	0	0	0	0	0	0	15	53	0	1	25	22
+t	0	0	0	0	0	0	0	11	0	1	51	9	9
+//
+;

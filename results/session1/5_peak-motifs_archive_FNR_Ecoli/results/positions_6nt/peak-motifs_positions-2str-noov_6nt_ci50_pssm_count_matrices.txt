@@ -1,0 +1,26 @@
+; convert-matrix  -v 1 -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/positions_6nt/peak-motifs_positions-2str-noov_6nt_ci50_pssm_count_matrices.tf -from transfac -to tab -return counts -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/positions_6nt/peak-motifs_positions-2str-noov_6nt_ci50_pssm_count_matrices.txt
+; Input files
+;	input	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/positions_6nt/peak-motifs_positions-2str-noov_6nt_ci50_pssm_count_matrices.tf
+; Input format        	transfac
+; Output files
+;	output	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/positions_6nt/peak-motifs_positions-2str-noov_6nt_ci50_pssm_count_matrices.txt
+; Output format       	tab
+; pseudo-weight       	1
+a	8	0	12	0	0	12	12	12	0	4
+c	1	0	0	0	12	0	0	0	3	0
+g	3	4	0	0	0	0	0	0	7	3
+t	0	8	0	12	0	0	0	0	2	5
+//
+a	0	0	0	0	0	0	1	0	0	0	0
+c	0	1	1	1	1	0	0	0	1	0	1
+g	0	0	0	0	0	0	0	1	0	1	0
+t	1	0	0	0	0	1	0	0	0	0	0
+//
+; Host name	biow
+; Job started	2014-09-05.194953
+; Job done	2014-09-05.194953
+; Seconds	0.25
+;	user	0.25
+;	system	0.02
+;	cuser	0
+;	csystem	0

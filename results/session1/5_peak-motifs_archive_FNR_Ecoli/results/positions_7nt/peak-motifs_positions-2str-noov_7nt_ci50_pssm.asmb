@@ -1,0 +1,52 @@
+; pattern-assembly  -v 1 -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/positions_7nt/peak-motifs_positions-2str-noov_7nt_ci50.tab -2str -maxfl 1 -subst 1 -max_asmb_width 20 -toppat 100 -max_asmb_size 50 -max_asmb_width 20 -max_asmb_nb 5 -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/positions_7nt/peak-motifs_positions-2str-noov_7nt_ci50_pssm.asmb
+; Input file	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/positions_7nt/peak-motifs_positions-2str-noov_7nt_ci50.tab
+; Output file	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/positions_7nt/peak-motifs_positions-2str-noov_7nt_ci50_pssm.asmb
+; Input score column           	9
+; Output score column          	0
+; Strand-insensitive assembly
+; Max flanking bases           	1
+; Max substitutions            	1
+; Min matches                  	0
+; Min weight                   	0
+; Max assembly size            	50
+; Max assembly width           	20
+; Top number of patterns       	100
+; Number of input patterns     	47
+;
+
+; assembly # 1	seed: aggggcc	1 assembled patterns	length 7
+;alignt	rev_cpl	score
+aggggcc	ggcccct	5.71
+aggggcc	ggcccct	5.71	best consensus
+
+; assembly # 2	seed: atataag	1 assembled patterns	length 7
+;alignt	rev_cpl	score
+atataag	cttatat	3.32
+atataag	cttatat	3.32	best consensus
+
+; assembly # 3	seed: ctcaggc	1 assembled patterns	length 7
+;alignt	rev_cpl	score
+ctcaggc	gcctgag	2.92
+ctcaggc	gcctgag	2.92	best consensus
+
+; assembly # 4	seed: ctagcca	4 assembled patterns	length 10
+;   alignt	   rev_cpl	score
+cccctag...	...ctagggg	0.94
+.ccctagc..	..gctaggg.	0.94
+..cctagcc.	.ggctagg..	0.94
+...ctagcca	tggctag...	2.07
+cccctagcca	tggctagggg	2.07	best consensus
+
+; assembly # 5	seed: cactcca	1 assembled patterns	length 7
+;alignt	rev_cpl	score
+cactcca	tggagtg	1.51
+cactcca	tggagtg	1.51	best consensus
+; Maximal number of assemblies is reached (5). Remaining patterns: 38.
+; Host name	biow
+; Job started	2014-09-05.195015
+; Job done	2014-09-05.195017
+; Seconds	2.14
+;	user	2.15
+;	system	0.01
+;	cuser	0
+;	csystem	0
