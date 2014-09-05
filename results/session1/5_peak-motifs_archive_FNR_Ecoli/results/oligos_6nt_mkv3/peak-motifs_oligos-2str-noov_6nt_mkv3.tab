@@ -1,0 +1,60 @@
+; oligo-analysis  -v 1 -quick -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/data/sequences/peak-motifs_test_maxlen1000_purged_ml30_mis0.fasta -format fasta -sort -lth ratio 1 -lth occ_sig 0 -uth rank 100 -return occ,proba,rank -2str -noov -seqtype dna -l 6 -markov 3 -pseudo 0.01 -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/oligos_6nt_mkv3/peak-motifs_oligos-2str-noov_6nt_mkv3.tab
+; Citation: van Helden et al. (1998). J Mol Biol 281(5), 827-42. 
+; Program version              	1.169
+; Quick counting mode          
+; Detection of over-represented words (right-tail test)
+; Oligomer length              	6
+; Input file                   	$RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/data/sequences/peak-motifs_test_maxlen1000_purged_ml30_mis0.fasta
+; Input format                 	fasta
+; Output file                  	$RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/oligos_6nt_mkv3/peak-motifs_oligos-2str-noov_6nt_mkv3.tab
+; Discard overlapping matches
+; Counted on both strands
+; 	grouped by pairs of reverse complements
+; Background model             	Markov
+; Background estimation method 	Markov model estimated from input sequences
+; Markov chain order           	3
+; Pseudo-frequency             	0.01
+; Pseudo-frequency per oligo   	4.80769230769231e-06
+; Sequence type                	DNA
+; Nb of sequences              	109
+; Sum of sequence lengths      	108923
+; discarded residues           	NA (quick mode)	 (other letters than ACGT)
+; discarded occurrences        	NA (quick mode)	 (contain discarded residues)
+; nb possible positions        	NA (quick mode)
+; total oligo occurrences      	107326
+; total overlapping occurrences	721
+; total non overlapping occ    	106605
+; alphabet size                	4
+; nb possible oligomers        	2080
+; oligomers tested for significance	2077
+;
+; column headers
+;	1	seq            	oligomer sequence
+;	2	identifier     	oligomer identifier
+;	3	exp_freq       	expected relative frequency
+;	4	occ            	observed occurrences
+;	5	exp_occ        	expected occurrences
+;	6	occ_P          	occurrence probability (binomial)
+;	7	occ_E          	E-value for occurrences (binomial)
+;	8	occ_sig        	occurrence significance (binomial)
+;	9	rank           	rank
+;	10	ovl_occ        	number of overlapping occurrences (discarded from the count)
+;	11	forbocc        	forbidden positions (to avoid self-overlap)
+#seq	identifier	exp_freq	occ	exp_occ	occ_P	occ_E	occ_sig	rank	ovl_occ	forbocc
+aagaga	aagaga|tctctt	0.0004779345800	82	51.29	4.7e-05	9.9e-02	1.01	1	0	410
+ctcttc	ctcttc|gaagag	0.0004776162891	81	51.26	7.6e-05	1.6e-01	0.80	2	0	405
+atcgac	atcgac|gtcgat	0.0004342487485	75	46.61	7.9e-05	1.6e-01	0.79	3	0	375
+acaaaa	acaaaa|ttttgt	0.0011063622948	162	118.74	9.4e-05	2.0e-01	0.71	4	0	810
+gctaaa	gctaaa|tttagc	0.0005965451160	96	64.02	0.00011	2.4e-01	0.62	5	0	480
+ggtaga	ggtaga|tctacc	0.0003281869297	59	35.22	0.00016	3.2e-01	0.49	6	0	295
+ggcaaa	ggcaaa|tttgcc	0.0010448238142	152	112.14	0.00020	4.1e-01	0.39	7	0	760
+agagat	agagat|atctct	0.0004166579051	70	44.72	0.00028	5.9e-01	0.23	8	2	350
+tcggca	tcggca|tgccga	0.0005637646404	89	60.51	0.00036	7.4e-01	0.13	9	0	445
+; Host name	biow
+; Job started	2014-09-05.194919
+; Job done	2014-09-05.194920
+; Seconds	0.8
+;	user	0.8
+;	system	0.03
+;	cuser	0.25
+;	csystem	0.02

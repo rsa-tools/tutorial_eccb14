@@ -1,0 +1,192 @@
+; position-analysis -v 1 -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/data/sequences/peak-motifs_test_maxlen1000_purged_ml30_mis0.fasta -format fasta -sort -return html,chi,sig,distrib,exp_occ,graphs,rank,index -max_graphs 100 -2str -noov -seqtype dna -l 8 -ci 50 -lth_occ 1 -lth_sig 0 -uth_rank 100 -img_format png -title FNR_original_sequences_ -origin center -max_graphs 20 -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/positions_8nt/peak-motifs_positions-2str-noov_8nt_ci50.tab
+; Citation: van Helden, et al. (2000).  Nucleic Acids Res 28, 1000-1010.
+; Sequence file                	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/data/sequences/peak-motifs_test_maxlen1000_purged_ml30_mis0.fasta
+; Sequence format              	fasta
+; Sequence type                	dna
+; Output file                  	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/positions_8nt/peak-motifs_positions-2str-noov_8nt_ci50.tab
+; Oligo length                 	8
+; Lower threshold on occurrences	1
+; Occurrences counted  on both strands
+; Grouping reverse complements
+; Background model estimation: homogeneous repartition
+; Sequence statistics:
+;	Nb of sequences              	109
+;	Sum of sequence lengths      	108923
+;	Min sequence length          	0
+;	Max sequence length          	1000
+;	Average sequence length      	999
+;	Possible positions           	216320
+; Oligonucleotide statistics:
+;	Total occurrences    	107058
+;	Total overlaps       	16
+; Position interval parameters:
+;	Position interval    	50
+;	Number of windows    	20
+;	Total positions      	108160
+;	Degrees of freedom   	19
+; K-mer clustering parameters:
+;	Number of clusters   	0
+;	Clustering method    	complete
+; Position intervals:
+;	window	[min,max]	mid	seq	occ
+;	1	-10	[-499,-450]	-474.5	109	5412
+;	2	-9	[-449,-400]	-424.5	109	5450
+;	3	-8	[-399,-350]	-374.5	109	5450
+;	4	-7	[-349,-300]	-324.5	109	5450
+;	5	-6	[-299,-250]	-274.5	109	5450
+;	6	-5	[-249,-200]	-224.5	109	5450
+;	7	-4	[-199,-150]	-174.5	109	5450
+;	8	-3	[-149,-100]	-124.5	109	5450
+;	9	-2	[-99,-50]	-74.5	109	5450
+;	10	-1	[-49,0]	-24.5	109	5450
+;	11	0	[1,50]	25.5	109	5450
+;	12	1	[51,100]	75.5	109	5450
+;	13	2	[101,150]	125.5	109	5450
+;	14	3	[151,200]	175.5	109	5450
+;	15	4	[201,250]	225.5	109	5450
+;	16	5	[251,300]	275.5	109	5450
+;	17	6	[301,350]	325.5	109	5450
+;	18	7	[351,400]	375.5	109	5450
+;	19	8	[401,450]	425.5	109	5450
+;	20	9	[451,500]	475.5	109	4648
+;
+; Column headers
+;	1	seq            	pattern sequence
+;	2	id             	pattern identifier
+;	3	occ            	pattern occurrences
+;	4	over           	overlapping occurrences (discarded)
+;	5	chi2           	observed chi-square
+;	6	df             	degrees of freedom
+;	7	Pval           	P-value (probability for one word to be a false positive)
+;	8	Eval           	E-value; expected number of false positives (Eval = Pval * nb_tests)
+;	9	sig            	Significance (sig = -log10(Eval))
+;	10	rank           	rank of the pattern according to sorting criterion
+;	11	-474.5         	occurrences in window	1	[-499,-450]
+;	12	-424.5         	occurrences in window	2	[-449,-400]
+;	13	-374.5         	occurrences in window	3	[-399,-350]
+;	14	-324.5         	occurrences in window	4	[-349,-300]
+;	15	-274.5         	occurrences in window	5	[-299,-250]
+;	16	-224.5         	occurrences in window	6	[-249,-200]
+;	17	-174.5         	occurrences in window	7	[-199,-150]
+;	18	-124.5         	occurrences in window	8	[-149,-100]
+;	19	-74.5          	occurrences in window	9	[-99,-50]
+;	20	-24.5          	occurrences in window	10	[-49,0]
+;	21	25.5           	occurrences in window	11	[1,50]
+;	22	75.5           	occurrences in window	12	[51,100]
+;	23	125.5          	occurrences in window	13	[101,150]
+;	24	175.5          	occurrences in window	14	[151,200]
+;	25	225.5          	occurrences in window	15	[201,250]
+;	26	275.5          	occurrences in window	16	[251,300]
+;	27	325.5          	occurrences in window	17	[301,350]
+;	28	375.5          	occurrences in window	18	[351,400]
+;	29	425.5          	occurrences in window	19	[401,450]
+;	30	475.5          	occurrences in window	20	[451,500]
+#seq	id	occ	over	chi2	df	Pval	Eval	sig	rank	-474.5	-424.5	-374.5	-324.5	-274.5	-224.5	-174.5	-124.5	-74.5	-24.5	25.5	75.5	125.5	175.5	225.5	275.5	325.5	375.5	425.5	475.5
+caggccga	caggccga|tcggcctg	1	0	56.5	1	5.5e-14	1.6e-09	8.80	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0
+aatcaaaa	aatcaaaa|ttttgatt	7	0	53.9	11	1.2e-07	0.0036	2.45	2	1	0	0	1	1	1	0	1	0	0	6	0	1	0	0	0	0	0	0	0
+taaatcaa	taaatcaa|ttgattta	4	0	48.3	11	1.3e-06	0.036	1.44	3	0	0	0	0	0	0	2	0	1	5	3	0	0	0	0	0	0	0	1	0
+attaaaat	attaaaat|attttaat	8	0	45.3	13	1.9e-05	0.53	0.27	4	0	0	2	0	0	0	0	1	0	0	6	2	1	1	0	1	0	1	0	0
+aagataat	aagataat|attatctt	6	0	45.2	9	8.4e-07	0.024	1.62	5	0	0	0	1	0	0	0	0	1	0	5	1	0	0	0	1	0	0	0	1
+acgccgtc	acgccgtc|gacggcgt	6	0	40.6	10	1.3e-05	0.37	0.43	6	1	0	2	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	5	0
+ctgaacaa	ctgaacaa|ttgttcag	2	0	40.1	5	1.4e-07	0.0041	2.39	7	0	1	0	0	1	1	0	0	0	0	0	0	0	0	0	4	0	0	0	0
+ggcagcga	ggcagcga|tcgctgcc	6	0	39.3	7	1.7e-06	0.048	1.32	8	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	1	1	4	0	0
+aacccgga	aacccgga|tccgggtt	2	0	37.7	1	8.3e-10	2.4e-05	4.63	9	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+aagtgcaa	aagtgcaa|ttgcactt	1	0	37.7	1	8.3e-10	2.4e-05	4.63	10	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+aggaagcc	aggaagcc|ggcttcct	1	0	37.7	1	8.3e-10	2.4e-05	4.63	11	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+agggggag	agggggag|ctccccct	1	0	37.7	1	8.3e-10	2.4e-05	4.63	12	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+agtacgcc	agtacgcc|ggcgtact	1	0	37.7	1	8.3e-10	2.4e-05	4.63	13	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+gtctatcg	gtctatcg|cgatagac	2	0	37.7	1	8.3e-10	2.4e-05	4.63	14	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+tggggcta	tggggcta|tagcccca	2	0	37.7	1	8.3e-10	2.4e-05	4.63	15	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+tcgttggc	tcgttggc|gccaacga	2	0	37.7	1	8.3e-10	2.4e-05	4.63	16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+gggggaga	gggggaga|tctccccc	1	0	37.7	1	8.3e-10	2.4e-05	4.63	17	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+tggtaatt	tggtaatt|aattacca	2	0	37.7	1	8.3e-10	2.4e-05	4.63	18	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+cattcgca	cattcgca|tgcgaatg	1	0	37.7	1	8.3e-10	2.4e-05	4.63	19	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+cggtcaga	cggtcaga|tctgaccg	2	0	37.4	7	3.9e-06	0.11	0.95	20	0	0	0	1	0	1	0	0	0	0	0	0	0	0	4	1	0	1	0	0
+tactggca	tactggca|tgccagta	5	0	37.4	7	3.9e-06	0.11	0.95	21	1	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0	1	4	0	0
+aacgccct	aacgccct|agggcgtt	5	0	37.4	7	3.9e-06	0.11	0.95	22	0	0	0	1	0	1	0	0	0	0	0	0	3	0	0	0	0	3	0	0
+atccttca	atccttca|tgaaggat	1	0	37.4	7	3.9e-06	0.11	0.95	23	0	0	0	0	0	0	0	0	1	0	0	0	0	3	0	0	3	0	0	1
+caataccg	caataccg|cggtattg	5	0	35.3	8	2.4e-05	0.68	0.17	24	0	0	0	0	0	0	1	0	0	0	0	1	0	1	0	0	1	1	4	0
+atgcgctc	atgcgctc|gagcgcat	3	0	34.8	7	1.2e-05	0.35	0.45	25	0	0	2	1	1	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0
+gttttcaa	gttttcaa|ttgaaaac	4	0	34.8	7	1.2e-05	0.35	0.45	26	0	0	0	0	0	0	1	1	0	1	0	1	4	0	0	0	0	0	0	0
+cgccggta	cgccggta|taccggcg	1	0	31.6	1	1.9e-08	0.00055	3.26	27	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	3	0
+cggcgtac	cggcgtac|gtacgccg	4	0	31.6	1	1.9e-08	0.00055	3.26	28	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	3	0
+gcataata	gcataata|tattatgc	1	0	31.6	1	1.9e-08	0.00055	3.26	29	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	3	0
+ttcctcaa	ttcctcaa|ttgaggaa	3	0	31.6	1	1.9e-08	0.00055	3.26	30	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	3	0
+agtgcgat	agtgcgat|atcgcact	2	0	31.6	1	1.9e-08	0.00055	3.26	31	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	3	0
+aataccgg	aataccgg|ccggtatt	3	0	31.6	1	1.9e-08	0.00055	3.26	32	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	1	0	3	0
+cccgggcg	cccgggcg|cgcccggg	2	0	30.6	5	1.1e-05	0.32	0.50	33	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	3	2	0	0
+catcgccg	catcgccg|cggcgatg	2	0	30.6	5	1.1e-05	0.32	0.50	34	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	2	0	0	3	0
+ctgaccgc	ctgaccgc|gcggtcag	4	0	30.6	5	1.1e-05	0.32	0.50	35	0	0	0	0	0	0	0	0	0	0	0	1	0	0	3	2	0	0	0	1
+acactccg	acactccg|cggagtgt	4	0	27.9	3	3.9e-06	0.11	0.95	36	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	3	1	0
+agtgatcg	agtgatcg|cgatcact	3	0	25.5	3	1.2e-05	0.34	0.47	37	0	0	0	0	1	1	0	0	1	0	0	0	0	0	0	0	3	0	0	0
+agtcgccg	agtcgccg|cggcgact	4	0	25.5	3	1.2e-05	0.34	0.47	38	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	3	0	0
+agttttag	agttttag|ctaaaact	2	0	25.5	3	1.2e-05	0.34	0.47	39	0	0	1	0	0	1	0	0	1	0	0	0	0	0	0	0	3	0	0	0
+tgcattaa	tgcattaa|ttaatgca	2	0	25.5	3	1.2e-05	0.34	0.47	40	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	3	0	0	1
+aaacgcat	aaacgcat|atgcgttt	3	0	25.5	3	1.2e-05	0.34	0.47	41	0	0	0	0	1	0	0	0	1	0	0	0	0	0	1	0	3	0	0	0
+acagttaa	acagttaa|ttaactgt	5	0	25.5	3	1.2e-05	0.34	0.47	42	0	0	0	1	0	0	0	0	1	0	0	1	0	0	0	0	0	3	0	0
+aatatata	aatatata|tatatatt	4	0	25.5	3	1.2e-05	0.34	0.47	43	0	0	0	0	1	0	0	0	0	0	1	0	0	0	1	0	3	0	0	0
+actccgca	actccgca|tgcggagt	1	0	25.5	3	1.2e-05	0.34	0.47	44	0	0	1	0	1	0	0	0	0	0	0	0	0	1	0	0	0	3	0	0
+acgccgtg	acgccgtg|cacggcgt	5	0	25.5	3	1.2e-05	0.34	0.47	45	0	0	0	0	1	0	0	1	1	0	0	0	0	0	0	0	0	3	0	0
+cacggcgc	cacggcgc|gcgccgtg	3	0	25.5	3	1.2e-05	0.34	0.47	46	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	3	0	0	1
+agccaacg	agccaacg|cgttggct	2	0	25.5	3	1.2e-05	0.34	0.47	47	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	3	0
+aagaatac	aagaatac|gtattctt	3	0	23.8	1	1.1e-06	0.03	1.52	48	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	1
+tgaggaaa	tgaggaaa|tttcctca	1	0	23.8	1	1.1e-06	0.03	1.52	49	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+agtgcaat	agtgcaat|attgcact	2	0	23.8	1	1.1e-06	0.03	1.52	50	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+atgcttga	atgcttga|tcaagcat	2	0	23.8	1	1.1e-06	0.03	1.52	51	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+ctaagtaa	ctaagtaa|ttacttag	3	0	23.8	1	1.1e-06	0.03	1.52	52	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	2	0
+gcactgta	gcactgta|tacagtgc	2	0	23.8	1	1.1e-06	0.03	1.52	53	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+tccaggcc	tccaggcc|ggcctgga	3	0	23.8	1	1.1e-06	0.03	1.52	54	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	1
+cctttaaa	cctttaaa|tttaaagg	3	0	23.8	1	1.1e-06	0.03	1.52	55	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	2	0
+aggccgat	aggccgat|atcggcct	1	0	23.8	1	1.1e-06	0.03	1.52	56	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+ccgccggc	ccgccggc|gccggcgg	2	0	23.8	1	1.1e-06	0.03	1.52	57	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	2	0
+aaggggga	aaggggga|tccccctt	1	0	23.8	1	1.1e-06	0.03	1.52	58	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	2	0
+aaggaata	aaggaata|tattcctt	1	0	23.8	1	1.1e-06	0.03	1.52	59	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	2	0
+ctgcccca	ctgcccca|tggggcag	1	0	23.8	1	1.1e-06	0.03	1.52	60	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	2	0
+gtaaagac	gtaaagac|gtctttac	2	0	23.8	1	1.1e-06	0.03	1.52	61	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	2	0
+acttcgac	acttcgac|gtcgaagt	2	0	23.8	1	1.1e-06	0.03	1.52	62	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+accgctac	accgctac|gtagcggt	2	0	23.8	1	1.1e-06	0.03	1.52	63	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+cgtcttaa	cgtcttaa|ttaagacg	1	0	23.8	1	1.1e-06	0.03	1.52	64	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	2	0
+aagccgca	aagccgca|tgcggctt	2	0	23.8	1	1.1e-06	0.03	1.52	65	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+ctgggaaa	ctgggaaa|tttcccag	2	0	23.8	1	1.1e-06	0.03	1.52	66	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	2	0
+atacccag	atacccag|ctgggtat	1	0	23.8	1	1.1e-06	0.03	1.52	67	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	2	0
+tatggggc	tatggggc|gccccata	3	0	23.8	1	1.1e-06	0.03	1.52	68	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	1
+agccgcat	agccgcat|atgcggct	1	0	23.8	1	1.1e-06	0.03	1.52	69	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+tcgatcgt	tcgatcgt|acgatcga	3	0	23.8	1	1.1e-06	0.03	1.52	70	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	2	0
+ttatgggg	ttatgggg|ccccataa	3	0	23.8	1	1.1e-06	0.03	1.52	71	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+catgtcaa	catgtcaa|ttgacatg	2	0	23.8	1	1.1e-06	0.03	1.52	72	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+atggggca	atggggca|tgccccat	2	0	23.8	1	1.1e-06	0.03	1.52	73	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	2	0
+caggaacc	caggaacc|ggttcctg	2	0	23.8	1	1.1e-06	0.03	1.52	74	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	2	0
+cccgccca	cccgccca|tgggcggg	1	0	23.8	1	1.1e-06	0.03	1.52	75	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0
+gtttgaca	gtttgaca|tgtcaaac	2	0	23.8	1	1.1e-06	0.03	1.52	76	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	2	0
+acgattac	acgattac|gtaatcgt	2	0	23.8	1	1.1e-06	0.03	1.52	77	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	2	0
+gcgttaga	gcgttaga|tctaacgc	1	0	23.8	1	1.1e-06	0.03	1.52	78	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	2	0
+atccaatt	atccaatt|aattggat	1	0	18.8	1	1.4e-05	0.41	0.39	79	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+aggattgt	aggattgt|acaatcct	1	0	18.8	1	1.4e-05	0.41	0.39	80	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+tcctcaag	tcctcaag|cttgagga	1	0	18.8	1	1.4e-05	0.41	0.39	81	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+aatgcctc	aatgcctc|gaggcatt	1	0	18.8	1	1.4e-05	0.41	0.39	82	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+ccccggag	ccccggag|ctccgggg	1	0	18.8	1	1.4e-05	0.41	0.39	83	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+ggcccatt	ggcccatt|aatgggcc	1	0	18.8	1	1.4e-05	0.41	0.39	84	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+gacctcgt	gacctcgt|acgaggtc	1	0	18.8	1	1.4e-05	0.41	0.39	85	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+tgcgcgca	tgcgcgca|tgcgcgca	1	0	18.8	1	1.4e-05	0.41	0.39	86	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+ttggctag	ttggctag|ctagccaa	1	0	18.8	1	1.4e-05	0.41	0.39	87	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+gattaaga	gattaaga|tcttaatc	1	0	18.8	1	1.4e-05	0.41	0.39	88	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+taagatat	taagatat|atatctta	1	0	18.8	1	1.4e-05	0.41	0.39	89	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+tggactac	tggactac|gtagtcca	1	0	18.8	1	1.4e-05	0.41	0.39	90	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+gtggacgg	gtggacgg|ccgtccac	1	0	18.8	1	1.4e-05	0.41	0.39	91	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+cggctcac	cggctcac|gtgagccg	1	0	18.8	1	1.4e-05	0.41	0.39	92	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+aatccggg	aatccggg|cccggatt	1	0	18.8	1	1.4e-05	0.41	0.39	93	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+actaaggg	actaaggg|cccttagt	1	0	18.8	1	1.4e-05	0.41	0.39	94	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+actactgt	actactgt|acagtagt	1	0	18.8	1	1.4e-05	0.41	0.39	95	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+tctctgta	tctctgta|tacagaga	1	0	18.8	1	1.4e-05	0.41	0.39	96	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+cttgcagt	cttgcagt|actgcaag	1	0	18.8	1	1.4e-05	0.41	0.39	97	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+ggtagagg	ggtagagg|cctctacc	1	0	18.8	1	1.4e-05	0.41	0.39	98	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+atgcttcg	atgcttcg|cgaagcat	1	0	18.8	1	1.4e-05	0.41	0.39	99	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+atcctaag	atcctaag|cttaggat	1	0	18.8	1	1.4e-05	0.41	0.39	100	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+; Host name	biow
+; Job started	2014-09-05.195027
+; Job done	2014-09-05.195103
+; Seconds	36.22
+;	user	36.22
+;	system	0.21
+;	cuser	0
+;	csystem	0

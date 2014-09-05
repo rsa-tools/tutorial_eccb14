@@ -1,0 +1,30 @@
+; One-to-n matrix alignment; reference matrix: positions_6nt_m2_shift2	; 4 matrices	; sort_field=rank_mean
+; positions_6nt_m2; m=0 (reference); ncol1=11; shift=2; ncol=13; --TCCCCTAGCGC
+; Alignment reference
+a	0	0	0	0	0	0	0	0	1	0	0	0	0
+c	0	0	0	1	1	1	1	0	0	0	1	0	1
+g	0	0	0	0	0	0	0	0	0	1	0	1	0
+t	0	0	1	0	0	0	0	1	0	0	0	0	0
+//
+; positions_6nt_m2 versus MA0056.1_rc (MZF1_1-4_rc); m=1/3; ncol2=6; w=6; offset=0; strand=R; shift=2; score= 1.4286; --TCCCCr-----
+; cor=0.878; Ncor=0.479; logoDP=0.037; NIcor=-0.132; NsEucl=0.880; SSD=1.035; NSW=0.914; rcor=1; rNcor=1; rlogoDP=3; rNIcor=2; rNsEucl=1; rSSD=1; rNSW=1; rank_mean=1.429; match_rank=1
+a	0	0	0	0	1	0	1	8	0	0	0	0	0
+c	0	0	2	20	19	18	19	4	0	0	0	0	0
+g	0	0	0	0	0	0	0	5	0	0	0	0	0
+t	0	0	18	0	0	2	0	3	0	0	0	0	0
+//
+; positions_6nt_m2 versus MA0057.1_rc (MZF1_5-13_rc); m=2/3; ncol2=10; w=8; offset=-2; strand=R; shift=0; score= 2.1429; yymCCCMTmv---
+; cor=0.755; Ncor=0.465; logoDP=0.728; NIcor=-0.108; NsEucl=0.858; SSD=2.594; NSW=0.838; rcor=3; rNcor=2; rlogoDP=1; rNIcor=1; rNsEucl=2; rSSD=3; rNSW=3; rank_mean=2.143; match_rank=2
+a	2	2	4	2	0	1	5	0	7	4	0	0	0
+c	4	4	8	14	14	15	11	0	7	7	0	0	0
+g	2	0	1	0	2	0	0	1	0	4	0	0	0
+t	8	10	3	0	0	0	0	15	2	1	0	0	0
+//
+; positions_6nt_m2 versus MA0081.1_rc (SPIB_rc); m=3/3; ncol2=7; w=6; offset=-1; strand=R; shift=1; score= 2.4286; -TTCCksw-----
+; cor=0.801; Ncor=0.401; logoDP=0.209; NIcor=-0.140; NsEucl=0.850; SSD=1.616; NSW=0.865; rcor=2; rNcor=3; rlogoDP=2; rNIcor=3; rNsEucl=3; rSSD=2; rNSW=2; rank_mean=2.429; match_rank=3
+a	0	2	1	1	0	2	2	18	0	0	0	0	0
+c	0	0	0	47	47	7	29	0	0	0	0	0	0
+g	0	0	0	0	0	16	14	0	0	0	0	0	0
+t	0	47	48	1	2	24	4	31	0	0	0	0	0
+//
+;

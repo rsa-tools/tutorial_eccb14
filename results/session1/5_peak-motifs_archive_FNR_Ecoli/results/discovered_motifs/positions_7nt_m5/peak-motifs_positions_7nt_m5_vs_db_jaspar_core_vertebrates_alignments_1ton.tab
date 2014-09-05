@@ -1,0 +1,16 @@
+; One-to-n matrix alignment; reference matrix: positions_7nt_m5_shift0	; 2 matrices	; sort_field=rank_mean
+; positions_7nt_m5; m=0 (reference); ncol1=11; shift=0; ncol=11; wkCACTCCAsg
+; Alignment reference
+a	2	1	0	6	0	0	0	0	6	0	1
+c	0	0	6	0	6	0	6	6	0	2	1
+g	0	2	0	0	0	0	0	0	0	4	3
+t	4	3	0	0	0	6	0	0	0	0	1
+//
+; positions_7nt_m5 versus MA0130.1 (ZNF354C); m=1/1; ncol2=6; w=6; offset=4; strand=D; shift=4; score=      1; ----mTCCAC-
+; cor=0.800; Ncor=0.437; logoDP=6.779; NIcor=0.396; NsEucl=0.856; SSD=1.496; NSW=0.875; rcor=1; rNcor=1; rlogoDP=1; rNIcor=1; rNsEucl=1; rSSD=1; rNSW=1; rank_mean=1.000; match_rank=1
+a	0	0	0	0	7	3	0	0	16	0	0
+c	0	0	0	0	6	2	16	16	0	15	0
+g	0	0	0	0	3	0	0	0	0	1	0
+t	0	0	0	0	0	11	0	0	0	0	0
+//
+;

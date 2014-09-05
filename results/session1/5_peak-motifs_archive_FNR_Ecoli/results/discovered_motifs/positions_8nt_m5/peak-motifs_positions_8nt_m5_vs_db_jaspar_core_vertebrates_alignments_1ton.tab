@@ -1,0 +1,16 @@
+; One-to-n matrix alignment; reference matrix: positions_8nt_m5_shift0	; 2 matrices	; sort_field=rank_mean
+; positions_8nt_m5; m=0 (reference); ncol1=12; shift=0; ncol=12; dtAACCCGGAtg
+; Alignment reference
+a	13	6	33	39	0	1	1	1	7	36	9	9
+c	6	7	2	2	43	42	38	0	0	2	8	8
+g	12	8	3	1	0	0	0	41	31	2	10	18
+t	12	22	5	1	0	0	4	1	5	3	16	8
+//
+; positions_8nt_m5 versus MA0098.1_rc (ETS1_rc); m=1/1; ncol2=6; w=6; offset=6; strand=R; shift=6; score=      1; ------mGGAwr
+; cor=0.841; Ncor=0.421; logoDP=0.238; NIcor=-0.094; NsEucl=0.898; SSD=0.750; NSW=0.937; rcor=1; rNcor=1; rlogoDP=1; rNIcor=1; rNsEucl=1; rSSD=1; rNSW=1; rank_mean=1.000; match_rank=1
+a	0	0	0	0	0	0	15	1	0	39	23	16
+c	0	0	0	0	0	0	17	0	1	0	0	4
+g	0	0	0	0	0	0	3	39	39	1	0	16
+t	0	0	0	0	0	0	5	0	0	0	17	4
+//
+;

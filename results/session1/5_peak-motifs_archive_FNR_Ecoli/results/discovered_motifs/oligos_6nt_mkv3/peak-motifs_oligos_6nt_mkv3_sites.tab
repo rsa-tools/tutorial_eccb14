@@ -1,0 +1,85 @@
+; matrix-scan  -quick -v 1 -seq_format fasta -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/data/sequences/peak-motifs_test_maxlen1000.fasta -matrix_format transfac -m $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/discovered_motifs/oligos_6nt_mkv3/peak-motifs_oligos_6nt_mkv3.tf -bg_format inclusive -bgfile $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/composition/peak-motifs_test_inclusive-1str-ovlp_2nt.txt -pseudo 1 -2str -decimals 1 -bg_pseudo 0.01 -n score -lth score 7.5 -origin center -return sites -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/discovered_motifs/oligos_6nt_mkv3/peak-motifs_oligos_6nt_mkv3_sites.tab
+; Quick counting mode          
+; Input files
+;	input	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/data/sequences/peak-motifs_test_maxlen1000.fasta
+;	bg	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/composition/peak-motifs_test_inclusive-1str-ovlp_2nt.txt
+; Matrix files
+;	matrix 1	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/discovered_motifs/oligos_6nt_mkv3/peak-motifs_oligos_6nt_mkv3.tf
+; Sequence format      	fasta
+; Output files
+;	output	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.194903_2014-09-05.194903_oebJl9/results/discovered_motifs/oligos_6nt_mkv3/peak-motifs_oligos_6nt_mkv3_sites.tab
+; Pseudo counts        	1
+; Background model
+;	Method        	file
+;	Markov order  	1
+;	Strand        	undef
+;	Background pseudo-frequency	0.01
+;	Residue probabilities
+;		a	0.26267
+;		c	0.23953
+;		g	0.23490
+;		t	0.26291
+; Thresholds	lower	upper
+;	score 	7.5  	NA
+; Output columns
+;	1	seq_id
+;	2	ft_type
+;	3	ft_name
+;	4	strand
+;	5	start
+;	6	end
+;	7	sequence
+;	8	weight
+#seq_id	ft_type	ft_name	strand	start	end	sequence	weight
+gi|49175990|ref|NC_000913.2|:20369-21701	site	oligos_6nt_mkv3	D	-363	-352	ACGAAGAGTTCA	7.6
+gi|49175990|ref|NC_000913.2|:29051-30211	site	oligos_6nt_mkv3	R	309	320	AAGAAGAGAGGT	8.3
+gi|49175990|ref|NC_000913.2|:854565-855677	site	oligos_6nt_mkv3	D	291	302	TTGAAGAGTTCA	7.9
+gi|49175990|ref|NC_000913.2|:939453-940572	site	oligos_6nt_mkv3	D	-449	-438	TGGAAGAGATGA	10.9
+gi|49175990|ref|NC_000913.2|:939453-940572	site	oligos_6nt_mkv3	R	-299	-288	AGGAAGAGATCT	12.5
+gi|49175990|ref|NC_000913.2|:952544-954500	site	oligos_6nt_mkv3	D	-104	-93	GTAAAGAGATCG	8.1
+gi|49175990|ref|NC_000913.2|:1514602-1515991	site	oligos_6nt_mkv3	D	418	429	TTGAAGAGAGCG	9.7
+gi|49175990|ref|NC_000913.2|:1544745-1545910	site	oligos_6nt_mkv3	D	224	235	CTAAAGAGATCC	7.7
+gi|49175990|ref|NC_000913.2|:1762628-1763683	site	oligos_6nt_mkv3	D	-148	-137	CAGAAGAGAGAG	9.0
+gi|49175990|ref|NC_000913.2|:2376810-2377899	site	oligos_6nt_mkv3	R	434	445	TGGAAGATATCT	8.3
+gi|49175990|ref|NC_000913.2|:2530808-2532723	site	oligos_6nt_mkv3	R	-397	-386	GTGAAGAGATCG	12.0
+gi|49175990|ref|NC_000913.2|:2816030-2817497	site	oligos_6nt_mkv3	D	-412	-401	AGTAAGAGATGG	7.6
+gi|49175990|ref|NC_000913.2|:2816030-2817497	site	oligos_6nt_mkv3	R	263	274	GTGAAGAGATCT	11.9
+gi|49175990|ref|NC_000913.2|:2907250-2908427	site	oligos_6nt_mkv3	R	349	360	ACGAAGAGATCG	11.7
+gi|49175990|ref|NC_000913.2|:2921806-2923429	site	oligos_6nt_mkv3	D	102	113	TGTAAGAGATCT	8.5
+gi|49175990|ref|NC_000913.2|:2944763-2946198	site	oligos_6nt_mkv3	R	-280	-269	AAGAAGAGAACA	7.6
+gi|49175990|ref|NC_000913.2|:3084066-3085778	site	oligos_6nt_mkv3	D	-1	10	TCGAAGAGATCA	11.6
+gi|49175990|ref|NC_000913.2|:3084066-3085778	site	oligos_6nt_mkv3	D	377	388	CTGAAGAGATCG	12.7
+gi|49175990|ref|NC_000913.2|:3084066-3085778	site	oligos_6nt_mkv3	D	416	427	TGGAAGAGATCA	12.3
+gi|49175990|ref|NC_000913.2|:3143814-3145078	site	oligos_6nt_mkv3	R	-466	-455	TCGAAGAGAACA	7.7
+gi|49175990|ref|NC_000913.2|:3143814-3145078	site	oligos_6nt_mkv3	D	415	426	CGTAAGAGATAA	7.6
+gi|49175990|ref|NC_000913.2|:3152620-3153790	site	oligos_6nt_mkv3	R	-440	-429	CAGAAGAGATTT	7.8
+gi|49175990|ref|NC_000913.2|:3152620-3153790	site	oligos_6nt_mkv3	R	-41	-30	GTGAAGAGATTT	7.7
+gi|49175990|ref|NC_000913.2|:3279335-3280398	site	oligos_6nt_mkv3	D	180	191	AAGAAGAGATCC	10.5
+gi|49175990|ref|NC_000913.2|:3375092-3377195	site	oligos_6nt_mkv3	R	253	264	TTGAAGAGATGA	10.6
+gi|49175990|ref|NC_000913.2|:3491374-3492566	site	oligos_6nt_mkv3	R	-160	-149	GGGAAGAGAGGA	9.1
+gi|49175990|ref|NC_000913.2|:3881223-3882950	site	oligos_6nt_mkv3	D	-162	-151	CGCAAGAGATCT	8.2
+gi|49175990|ref|NC_000913.2|:3928628-3929783	site	oligos_6nt_mkv3	R	-438	-427	TGGATGAGATCT	8.3
+gi|49175990|ref|NC_000913.2|:4047381-4049667	site	oligos_6nt_mkv3	R	-10	1	CGGAAGAGATGA	11.3
+gi|49175990|ref|NC_000913.2|:4346418-4347761	site	oligos_6nt_mkv3	D	-286	-275	CTGAATAGATCA	8.7
+gi|49175990|ref|NC_000913.2|:4346418-4347761	site	oligos_6nt_mkv3	D	105	116	CTGAAGAGATAT	11.2
+gi|49175990|ref|NC_000913.2|:4379856-4380991	site	oligos_6nt_mkv3	D	51	62	TTGACGAGATCG	8.1
+gi|49175990|ref|NC_000913.2|:4402117-4403527	site	oligos_6nt_mkv3	R	-326	-315	TCGCAGAGATCA	7.6
+;
+; Matrices
+;	matrix	name           	ncol	nrow	pseudo	Wmin	Wmax	Wrange
+;	1	oligos_6nt_mkv3	12	4	0	-24.800	12.300	37.100	a:0.263 c:0.240 g:0.235 t:0.263 
+; Number of sequences scanned	109
+; Sum of sequence lengths	108923
+; N residues           	0
+; Matches per matrix
+;	matrix	name           	matches	scored
+;	1	oligos_6nt_mkv3	33	0
+;		TOTAL          	33	0
+; Host name	biow
+; Job started	2014-09-05.195237
+; Job done	2014-09-05.195238
+; Seconds	0.3
+;	user	0.3
+;	system	0.03
+;	cuser	0.23
+;	csystem	0.02

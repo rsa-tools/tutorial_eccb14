@@ -1,0 +1,9 @@
+seq	cluster	chi2	sig	Eval	identifier
+TT	1	206.5	19.31	4.9e-20	TT
+CG	2	145.5	9.57	2.7e-10	CG
+GC	3	114.5	5.24	5.8e-06	GC
+GG	4	104.2	3.93	0.00012	GG
+AA	5	96.2	2.98	0.001	AA
+TA	6	94.5	2.79	0.0016	TA
+AC	7	86	1.87	0.014	AC
+CC	8	81.2	1.39	0.041	CC
