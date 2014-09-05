@@ -186,8 +186,25 @@ $(function() {
         
 	<h3 class="expand">1 - Example dataset1: CEBPa binding regions in dog liver </h3>
 	<div class="collapse">
-          <p>Schmidt, Wilson and Ballester published a ChIP-seq experiment on liver tissue to identify binding regions for the transcription factor CEBPa <a href="http://www.sciencemag.org/content/328/5981/1036" target='_blank'>(PMID:20378774)</a> in five different species (human, mouse, dog, short-tailed opossum and chicken). This data set is publicly available through arrayexpess<a href="http://www.ebi.ac.uk/arrayexpress/experiments/E-TABM-722/" target='_blank'> (E-TABM-722)</a>.</br>
-	  As done by the authors, CEBPa binding regions (peaks) were called using SWEMBL with parameter R=0.05, merged reads from two biological replicates and their corresponding input controls. For this tutorial we will analyze CEBPa binding pattern in dog, peaks can be downloaded from <a href="./data/dataset_cebpa_dog/do61+do79_cfam_CEBPA_liver.bed.SWEMBL.3.3.bed">here</a>.<br/> 
+
+          <p>Schmidt, Wilson and Ballester published a ChIP-seq
+          experiment on liver tissue to identify binding regions for
+          the transcription factor
+          CEBPa <a href="http://www.sciencemag.org/content/328/5981/1036"
+          target='_blank'>(PMID:20378774)</a> in five different
+          species (human, mouse, dog, short-tailed opossum and
+          chicken). This data set is publicly available through
+          arrayexpess<a href="http://www.ebi.ac.uk/arrayexpress/experiments/E-TABM-722/"
+          target='_blank'> (E-TABM-722)</a>.</br>
+
+	  As done by the authors, CEBPa binding regions (peaks) were
+	  called by running <a target="_blank"
+	  href="http://www.ebi.ac.uk/~swilder/SWEMBL/">SWEMBL</a> with
+	  parameter R=0.05, on merged reads from two biological
+	  replicates and their corresponding input controls. For this
+	  tutorial we will analyze CEBPa binding pattern in dog, peaks
+	  can be downloaded
+	  from <a href="./data/dataset_cebpa_dog/do61+do79_cfam_CEBPA_liver.bed.SWEMBL.3.3.bed">here</a>.<br/>
         </div>
         
 	<h3 class="expand">2 - Fetch sequences from a bed file </h3>
@@ -196,7 +213,12 @@ $(function() {
 	    <li>In a web browser window open the <a href="http://rsat.ulb.ac.be/">RSAT</a> web page</li>
 	    <li>In the menu (left side) click on the NGS-ChIP-seq drop down menu, and select the tool: fetch-sequences from UCSC.</li>
 	    <li>Select the genome of interest, in this case: canFam2.</li>
-	    <li>There are several options to input a bed file: Paste the coordinates, input from a URL, and upload the file from your computer. In this case, we will use this URL   <a href="http://rsat.ulb.ac.be/dataset_cepa_peaks">http://rsat.ulb.ac.be/dataset_cepa_peaks</a></li>
+
+	    <li>There are several options to input a bed file: Paste
+	      the coordinates, input from a URL, and upload the file
+	      from your computer. In this case, we will use this
+	      URL <a href="http://rsat.ulb.ac.be/dataset_cepa_peaks">http://rsat.ulb.ac.be/dataset_cepa_peaks</a></li>
+	    
 	    <li>Introduce your email address to receive a mail once the job is done. </li>
 	    <li>Click on Go once the form is complete.</li>
             <img class="bordered" src="./figures/Screen1_c.png" alt="fetch_seq_SC1" width="550"/>
