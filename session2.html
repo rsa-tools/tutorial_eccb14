@@ -345,10 +345,11 @@ where <code>[fasta]</code> represents the fasta file of fetched sequences for ch
 	        <!-- Background Models -->	
 	
 	        <div class="demo">
-	            <h2 id="mapping" class="expand">Negative controls</h2>
+	            <h2 id="mapping" class="expand">Testing the tools with negative controls</h2>
 	            <div class="collapse">
 	            <div class="notice">
-				<b>Goal:</b> Test whether the tools are able to return negative results (i.e. no result at all) when the input dataset contains no signal. This is a crucial test to validate how reliable the results on a REAL dataset are!
+				<b>Goal:</b> Test whether the tools are able to return negative results (i.e. no result at all) when the input dataset contains no signal. We will learn how to generate negative control datasets and test how the motif discovery tools behave on these datasets. 
+				This is a crucial test to validate the reliability of the results on real datasets !
 				</div>
 				
 	            <h3 class="expand">1 - generate artificial random sequences</h3>
@@ -374,6 +375,11 @@ There are several ways to create random sequences to generate a negative control
 		<li>Navigate to the output folder just created and open the html file</li>
 		<div class="success"><b>Question : </b> Do you find any over-represented motifs ? Check the different algorithm used (olig-analysis, position-analysis, local-words).</div>      
 	            </ol>
+</div>
+				
+	            <h3 class="expand">2 - generate random genomic fragments</h3>
+	            <div class="collapse">
+
 	We now turn to a different negative control, i.e. extracting random genomic fragments from the genome of interest using as template the bed file of the true sequences.
 	<ol>
 	
@@ -385,42 +391,19 @@ Check the exact name of the Canis familiaris organims in the output.
 
 <code>random-genomic-fragments -i [template bed file] -template_format bed -org Canis_familiaris_EnsEMBL -return seq -o [output file]</code></li>
 <li>Run the previous peak-motifs command on this new file (Modify the name of the output dir !)</li>
-<div class="success"><b>Question : </b> Do you find any over-represented motifs ? Check the different algorithm used (olig-analysis, position-analysis, local-words). How different are the results compared to the negative control based on articial sequences ?</div>      
+<div class="success"><b>Question : </b> Do you find any over-represented motifs ? Check the different algorithm used (olig-analysis, position-analysis, local-words). How different are the results compared to the negative control based on artificial sequences ?</div>      
 
 	</ol>            
 	            
 	           
-	            <h3 class="expand">2 - Impact of background model on k-mer scores</h3>
-	            <div class="collapse">
-	<div class=notice> We will compare the results of oligo-analysis using two distinct random models</div>
-	               
-	               
-	            </div>
-	            </div>
-	
-	
-	
-	
-	            <h3 class="expand">3 - Testing a negative control datasets</h3>
-	            <div class="collapse">
-	<div class=notice>
-	<b>Goal :</b> Verifying that the tool is able to deliver a negative result if the input file contains no signal. We will analyse a set of randomly generated sequences and check that no over-represented k-mer are identified.
-	
-	</div>            
 	            
 	                </div>
-	            
-	          </div>
-	          </div>
-</div>	        
-	
-		    	
-	
-				
-		
-	</div>
-	</div>
-	
+	                </div>
+	                </div>
+	                </div>
+	                </div>
+	                </div>
+
 	<!-- SIDE BAR -->		
 	
 			<div class="right sidebar" id="sidebar">
