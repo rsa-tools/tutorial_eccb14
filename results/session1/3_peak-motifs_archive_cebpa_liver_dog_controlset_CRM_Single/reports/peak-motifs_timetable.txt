@@ -1,0 +1,6 @@
+oligos_6nt_test_vs_ctrl	6.754
+oligos_6nt_test_vs_ctrl_pssm	47.548
+oligos_7nt_test_vs_ctrl	8.762
+oligos_7nt_test_vs_ctrl_pssm	61.155
+oligos_8nt_test_vs_ctrl	16.072
+oligos_8nt_test_vs_ctrl_pssm	47.773

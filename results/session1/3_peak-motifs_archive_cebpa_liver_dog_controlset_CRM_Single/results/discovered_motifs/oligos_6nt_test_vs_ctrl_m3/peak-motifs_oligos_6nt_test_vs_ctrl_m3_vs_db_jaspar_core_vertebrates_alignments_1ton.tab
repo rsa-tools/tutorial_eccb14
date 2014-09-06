@@ -1,0 +1,44 @@
+; One-to-n matrix alignment; reference matrix: oligos_6nt_test_vs_ctrl_m3_shift2	; 6 matrices	; sort_field=rank_mean
+; oligos_6nt_test_vs_ctrl_m3; m=0 (reference); ncol1=11; shift=2; ncol=18; --mdGGGTCAGrr-----
+; Alignment reference
+a	0	0	425	502	0	0	0	0	0	1513	0	452	396	0	0	0	0	0
+c	0	0	446	86	0	0	0	0	1513	0	0	285	256	0	0	0	0	0
+g	0	0	284	466	1513	1513	1513	0	0	0	1513	477	526	0	0	0	0	0
+t	0	0	358	459	0	0	0	1513	0	0	0	299	335	0	0	0	0	0
+//
+; oligos_6nt_test_vs_ctrl_m3 versus MA0258.1 (ESR2); m=1/5; ncol2=18; w=11; offset=0; strand=D; shift=2; score= 1.8571; --cwrGGTCAsgkTGmCC
+; cor=0.848; Ncor=0.518; logoDP=6.561; NIcor=0.507; NsEucl=0.920; SSD=1.531; NSW=0.930; rcor=1; rNcor=2; rlogoDP=4; rNIcor=2; rNsEucl=1; rSSD=2; rNSW=1; rank_mean=1.857; match_rank=1
+a	0	0	78	158	186	27	18	13	0	337	49	64	52	21	63	178	34	46
+c	0	0	161	51	15	0	20	19	357	1	123	63	61	33	25	99	268	289
+g	0	0	63	41	154	275	319	33	0	0	113	149	147	24	265	19	2	0
+t	0	0	55	107	2	55	0	292	0	19	72	81	97	279	4	61	53	22
+//
+; oligos_6nt_test_vs_ctrl_m3 versus MA0071.1 (RORA_1); m=2/5; ncol2=10; w=8; offset=-2; strand=D; shift=0; score= 2.2857; wwcwAGGTCA--------
+; cor=0.834; Ncor=0.513; logoDP=9.825; NIcor=0.504; NsEucl=0.892; SSD=1.486; NSW=0.907; rcor=2; rNcor=3; rlogoDP=1; rNIcor=3; rNsEucl=4; rSSD=1; rNSW=2; rank_mean=2.286; match_rank=2
+a	15	9	6	11	21	0	0	0	0	25	0	0	0	0	0	0	0	0
+c	1	1	12	2	0	0	0	0	25	0	0	0	0	0	0	0	0	0
+g	2	0	4	5	4	25	25	0	0	0	0	0	0	0	0	0	0	0
+t	7	15	3	7	0	0	0	25	0	0	0	0	0	0	0	0	0	0
+//
+; oligos_6nt_test_vs_ctrl_m3 versus MA0504.1 (NR2C2); m=3/5; ncol2=15; w=11; offset=0; strand=D; shift=2; score= 3.2857; --mgrGGTCArAGGTCA-
+; cor=0.775; Ncor=0.568; logoDP=6.381; NIcor=0.530; NsEucl=0.904; SSD=2.216; NSW=0.899; rcor=5; rNcor=1; rlogoDP=5; rNIcor=1; rNsEucl=2; rSSD=5; rNSW=4; rank_mean=3.286; match_rank=3
+a	0	0	129	82	193	0	10	3	6	343	187	324	10	11	0	9	290	0
+c	0	0	126	70	6	8	3	0	309	0	0	0	0	0	27	315	0	0
+g	0	0	90	221	195	366	355	79	54	48	208	71	385	336	89	35	92	0
+t	0	0	50	22	1	21	27	313	26	4	0	0	0	48	279	36	13	0
+//
+; oligos_6nt_test_vs_ctrl_m3 versus MA0258.2 (ESR2); m=4/5; ncol2=15; w=9; offset=2; strand=D; shift=4; score= 3.4286; ----rGGTCAsmstGaCC
+; cor=0.814; Ncor=0.431; logoDP=7.479; NIcor=0.420; NsEucl=0.895; SSD=1.783; NSW=0.901; rcor=3; rNcor=4; rlogoDP=3; rNIcor=5; rNsEucl=3; rSSD=3; rNSW=3; rank_mean=3.429; match_rank=4
+a	0	0	0	0	5410	429	59	74	0	8098	502	2092	1808	1602	1121	3278	434	1111
+c	0	0	0	0	96	0	0	147	7621	1	4202	3235	2510	975	398	2056	6469	5854
+g	0	0	0	0	2563	7170	8143	989	533	57	2738	1688	2173	533	6658	1391	363	0
+t	0	0	0	0	174	644	41	7033	89	87	801	1228	1752	5133	66	1518	977	1278
+//
+; oligos_6nt_test_vs_ctrl_m3 versus MA0074.1 (RXRA::VDR); m=5/5; ncol2=15; w=9; offset=2; strand=D; shift=4; score= 4.1429; ----RGGTCAwcGrGTTC
+; cor=0.798; Ncor=0.423; logoDP=8.578; NIcor=0.442; NsEucl=0.890; SSD=1.954; NSW=0.891; rcor=4; rNcor=5; rlogoDP=2; rNIcor=4; rNsEucl=5; rSSD=4; rNSW=5; rank_mean=4.143; match_rank=5
+a	0	0	0	0	3	0	0	0	0	9	4	2	2	5	0	0	1	0
+c	0	0	0	0	0	0	0	0	9	0	2	4	0	0	0	0	0	9
+g	0	0	0	0	7	10	9	0	0	1	0	2	8	5	10	0	0	0
+t	0	0	0	0	0	0	1	10	1	0	4	2	0	0	0	10	9	1
+//
+;

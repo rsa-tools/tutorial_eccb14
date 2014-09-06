@@ -1,0 +1,151 @@
+; oligo-analysis  -v 1 -quick -i $RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/data/sequences/peak-motifs_test_maxlen1000_purged_ml30_mis0.fasta -format fasta -sort -lth ratio 1 -lth occ_sig 0 -uth rank 100 -return occ,proba,rank -2str -noov -seqtype dna -l 7 -expfreq $RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_7nt_test_vs_ctrl/peak-motifs_oligos_bg_from_ctrl_7nt-2str-noov.tab -pseudo 0.01 -o $RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_7nt_test_vs_ctrl/peak-motifs_oligos-2str-noov_7nt_test_vs_ctrl.tab
+; Citation: van Helden et al. (1998). J Mol Biol 281(5), 827-42. 
+; Program version              	1.169
+; Quick counting mode          
+; Detection of over-represented words (right-tail test)
+; Oligomer length              	7
+; Input file                   	$RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/data/sequences/peak-motifs_test_maxlen1000_purged_ml30_mis0.fasta
+; Input format                 	fasta
+; Output file                  	$RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_7nt_test_vs_ctrl/peak-motifs_oligos-2str-noov_7nt_test_vs_ctrl.tab
+; Discard overlapping matches
+; Counted on both strands
+; 	grouped by pairs of reverse complements
+; Background model             	exp_file
+; Background estimation method 	Frequency file
+; Expected frequency file      	$RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_7nt_test_vs_ctrl/peak-motifs_oligos_bg_from_ctrl_7nt-2str-noov.tab
+; Pseudo-frequency             	0.01
+; Pseudo-frequency per oligo   	1.220703125e-06
+; Sequence type                	DNA
+; Nb of sequences              	23807
+; Sum of sequence lengths      	6774188
+; discarded residues           	NA (quick mode)	 (other letters than ACGT)
+; discarded occurrences        	NA (quick mode)	 (contain discarded residues)
+; nb possible positions        	NA (quick mode)
+; total oligo occurrences      	6570503
+; total overlapping occurrences	63723
+; total non overlapping occ    	6506780
+; alphabet size                	4
+; nb possible oligomers        	8192
+; oligomers tested for significance	8192
+;
+; column headers
+;	1	seq            	oligomer sequence
+;	2	identifier     	oligomer identifier
+;	3	exp_freq       	expected relative frequency
+;	4	occ            	observed occurrences
+;	5	exp_occ        	expected occurrences
+;	6	occ_P          	occurrence probability (binomial)
+;	7	occ_E          	E-value for occurrences (binomial)
+;	8	occ_sig        	occurrence significance (binomial)
+;	9	rank           	rank
+;	10	ovl_occ        	number of overlapping occurrences (discarded from the count)
+;	11	forbocc        	forbidden positions (to avoid self-overlap)
+#seq	identifier	exp_freq	occ	exp_occ	occ_P	occ_E	occ_sig	rank	ovl_occ	forbocc
+aaagtcc	aaagtcc|ggacttt	0.0001343323103	2324	882.63	0	0e+00	350.00	1	0	13944
+caaagtc	caaagtc|gactttg	0.0001641551294	2536	1078.58	3e-311	2e-307	306.68	2	2	15216
+aagtcca	aagtcca|tggactt	0.0001481526411	2229	973.44	3e-259	2e-255	254.68	3	1	13374
+acctttg	acctttg|caaaggt	0.0001673071347	2298	1099.29	7e-218	6e-214	213.24	4	0	13788
+agggcag	agggcag|ctgccct	0.0002143447518	2597	1408.35	2e-176	1e-172	171.86	5	14	15582
+ctgggcc	ctgggcc|ggcccag	0.0001256036803	1719	825.28	4e-162	3e-158	157.51	6	40	10314
+agtccag	agtccag|ctggact	0.0001328775387	1757	873.07	3e-152	3e-148	147.59	7	2	10542
+agtccaa	agtccaa|ttggact	0.0001180873600	1610	775.89	1e-150	1e-146	145.99	8	2	9660
+cctggcc	cctggcc|ggccagg	0.0001530018800	1939	1005.30	4e-150	3e-146	145.50	9	48	11634
+cagggca	cagggca|tgccctg	0.0001796726939	2163	1180.54	1e-144	1e-140	139.98	10	8	12978
+cctgccc	cctgccc|gggcagg	0.0001772480744	2137	1164.61	2e-143	1e-139	138.90	11	21	12822
+ccagggc	ccagggc|gccctgg	0.0001617305099	1983	1062.65	5e-140	4e-136	135.39	12	8	11898
+ctggccc	ctggccc|gggccag	0.0001316652290	1700	865.11	1e-138	1e-134	133.97	13	5	10200
+gccaggc	gccaggc|gcctggc	0.0001433034022	1806	941.58	7e-138	6e-134	133.25	14	9	10836
+gccagcc	gccagcc|ggctggc	0.0001173599743	1562	771.11	8e-138	7e-134	133.18	15	27	9372
+ctgaccc	ctgaccc|gggtcag	0.0001132381212	1516	744.03	9e-136	7e-132	131.15	16	1	9096
+ccctgcc	ccctgcc|ggcaggg	0.0001733686832	2069	1139.12	7e-135	6e-131	130.25	17	18	12414
+cagggcc	cagggcc|ggccctg	0.0001217242893	1584	799.79	6e-132	5e-128	127.32	18	26	9504
+aagggca	aagggca|tgccctt	0.0001789453080	2107	1175.76	8e-132	6e-128	127.19	19	2	12642
+cagccag	cagccag|ctggctg	0.0001995545732	2284	1311.17	2e-130	1e-126	125.86	20	41	13704
+gagtcca	gagtcca|tggactc	0.0000991753285	1360	651.63	2e-129	2e-125	124.72	21	0	8160
+aggccag	aggccag|ctggcct	0.0001847643946	2148	1214.00	4e-129	3e-125	124.50	22	8	12888
+gggcaaa	gggcaaa|tttgccc	0.0001532443419	1860	1006.89	1e-127	9e-124	123.05	23	0	11160
+aaaggtc	aaaggtc|gaccttt	0.0001491224889	1822	979.81	2e-127	1e-123	122.91	24	0	10932
+cagagtc	cagagtc|gactctg	0.0001457280216	1775	957.51	3e-123	3e-119	118.56	25	1	10650
+ctgccag	ctgccag|ctggcag	0.0001976148777	2230	1298.43	1e-121	9e-118	117.03	26	0	13380
+ctctggc	ctctggc|gccagag	0.0001777329982	2053	1167.80	5e-121	4e-117	116.39	27	5	12318
+caggcca	caggcca|tggcctg	0.0001546991137	1845	1016.45	3e-120	2e-116	115.65	28	11	11070
+agccagg	agccagg|cctggct	0.0002022216546	2255	1328.70	4e-118	3e-114	113.54	29	0	13530
+gcccagc	gcccagc|gctgggc	0.0001168750504	1490	767.93	1e-117	8e-114	113.10	30	14	8940
+gtccaaa	gtccaaa|tttggac	0.0001197845937	1515	787.05	4e-117	3e-113	112.51	31	0	9090
+cagcctg	cagcctg|caggctg	0.0001828246991	2080	1201.25	1e-116	8e-113	112.09	32	0	12480
+aggtcag	aggtcag|ctgacct	0.0002039188882	2261	1339.85	3e-116	3e-112	111.55	33	8	13566
+aaggtca	aaggtca|tgacctt	0.0002407731037	2571	1582.00	4e-115	3e-111	110.50	34	0	15426
+cctgggc	cctgggc|gcccagg	0.0001639126674	1905	1076.99	1e-114	9e-111	110.02	35	6	11430
+cctggac	cctggac|gtccagg	0.0000931137798	1252	611.80	1e-113	8e-110	109.09	36	1	7512
+cccaggg	cccaggg|ccctggg	0.0002107078226	2303	1384.46	2e-112	1e-108	107.87	37	0	13818
+gaggcca	gaggcca|tggcctc	0.0001471827934	1742	967.06	4e-111	3e-107	106.47	38	0	10452
+ccctggc	ccctggc|gccaggg	0.0001602757383	1858	1053.09	5e-111	4e-107	106.36	39	3	11148
+gcctgcc	gcctgcc|ggcaggc	0.0001127531973	1424	740.85	8e-110	7e-106	105.18	40	30	8544
+cctgacc	cctgacc|ggtcagg	0.0001224516751	1511	804.57	4e-109	3e-105	104.53	41	8	9066
+ccaggcc	ccaggcc|ggcctgg	0.0001534868039	1789	1008.49	9e-109	7e-105	104.15	42	51	10734
+agggcca	agggcca|tggccct	0.0001224516751	1501	804.57	2e-106	2e-102	101.80	43	4	9006
+aggccaa	aggccaa|ttggcct	0.0001377267775	1639	904.93	2e-106	2e-102	101.76	44	4	9834
+agggtca	agggtca|tgaccct	0.0001338473865	1601	879.44	1e-105	1e-101	100.94	45	1	9606
+ctttgcc	ctttgcc|ggcaaag	0.0001939779485	2122	1274.53	4e-104	3e-100	99.52	46	1	12732
+gcaggcc	gcaggcc|ggcctgc	0.0000829303782	1123	544.89	5e-104	4e-100	99.36	47	11	6738
+agcccag	agcccag|ctgggct	0.0001900985574	2087	1249.04	9e-104	7e-100	99.14	48	9	12522
+agagtcc	agagtcc|ggactct	0.0001142079690	1409	750.40	7e-102	6e-98	97.25	49	0	8454
+aaagggc	aaagggc|gcccttt	0.0001377267775	1618	904.93	5e-101	4e-97	96.39	50	0	9708
+ggggtca	ggggtca|tgacccc	0.0000812331446	1097	533.74	6e-101	5e-97	96.33	51	0	6582
+gctgccc	gctgccc|gggcagc	0.0001214818273	1467	798.20	1.1e-99	9.0e-96	95.04	52	0	8802
+ccagcca	ccagcca|tggctgg	0.0001850068566	2022	1215.59	4.9e-99	4.0e-95	94.39	53	35	12132
+cctgcca	cctgcca|tggcagg	0.0001915533290	2077	1258.60	8e-99	6.5e-95	94.18	54	0	12462
+aaggcca	aaggcca|tggcctt	0.0001629428197	1828	1070.62	3.5e-98	2.8e-94	93.55	55	4	10968
+ccagctc	ccagctc|gagctgg	0.0001551840375	1759	1019.64	7.4e-98	6.1e-94	93.22	56	2	10554
+gctggcc	gctggcc|ggccagc	0.0001047519531	1307	688.27	1.1e-97	9.1e-94	93.04	57	20	7842
+ccaaagg	ccaaagg|cctttgg	0.0001980998016	2120	1301.62	4.2e-96	3.4e-92	91.47	58	0	12720
+ctggggc	ctggggc|gccccag	0.0001413637067	1626	928.83	5.1e-95	4.2e-91	90.38	59	1	9756
+ctttggc	ctttggc|gccaaag	0.0001925231768	2066	1264.97	1.1e-94	9.3e-91	90.03	60	3	12396
+actttgg	actttgg|ccaaagt	0.0002029490405	2153	1333.48	2e-94	1.6e-90	89.79	61	0	12918
+agggcaa	agggcaa|ttgccct	0.0001605182003	1788	1054.69	8.5e-94	6.9e-90	89.16	62	1	10728
+agcctgg	agcctgg|ccaggct	0.0001753083789	1912	1151.86	4.5e-93	3.7e-89	88.43	63	0	11472
+ccagagg	ccagagg|cctctgg	0.0001915533290	2048	1258.60	1.4e-92	1.1e-88	87.95	64	0	12288
+gctggca	gctggca|tgccagc	0.0001452430978	1649	954.32	2.3e-92	1.9e-88	87.72	65	4	9894
+ggccaaa	ggccaaa|tttggcc	0.0001386966253	1591	911.31	3.2e-92	2.6e-88	87.58	66	36	9546
+ctggcac	ctggcac|gtgccag	0.0001483951030	1674	975.03	9.1e-92	7.5e-88	87.13	67	2	10044
+caagggc	caagggc|gcccttg	0.0001059642629	1296	696.24	1.3e-91	1.1e-87	86.97	68	3	7776
+cctcccc	cctcccc|ggggagg	0.0002315595498	2375	1521.46	4.9e-91	4.0e-87	86.40	69	46	14250
+gtaaaca	gtaaaca|tgtttac	0.0002322869357	2378	1526.24	1.9e-90	1.5e-86	85.81	70	0	14268
+caaggcc	caaggcc|ggccttg	0.0001115408876	1342	732.88	2.2e-90	1.8e-86	85.75	71	25	8052
+ccctccc	ccctccc|gggaggg	0.0002393183320	2435	1572.44	3e-90	2.4e-86	85.62	72	99	14610
+ggcagcc	ggcagcc|ggctgcc	0.0001302104573	1506	855.55	1e-89	8.3e-86	85.08	73	0	9036
+aatcaat	aatcaat|attgatt	0.0001869465521	1991	1228.33	8.9e-89	7.3e-85	84.14	74	30	11946
+caggcag	caggcag|ctgcctg	0.0002157995235	2231	1417.91	1.9e-88	1.6e-84	83.80	75	44	13386
+ctggctc	ctggctc|gagccag	0.0001915533290	2028	1258.60	2.2e-88	1.8e-84	83.75	76	3	12168
+ggccaga	ggccaga|tctggcc	0.0001505772605	1678	989.37	2.7e-88	2.2e-84	83.65	77	19	10068
+gagggca	gagggca|tgccctc	0.0001559114233	1722	1024.42	8.1e-88	6.6e-84	83.18	78	0	10332
+ctctgcc	ctctgcc|ggcagag	0.0002567755920	2561	1687.14	4.4e-87	3.6e-83	82.44	79	6	15366
+gccctcc	gccctcc|ggagggc	0.0000991753285	1214	651.63	3.7e-86	3.1e-82	81.51	80	0	7284
+caggccc	caggccc|gggcctg	0.0001176024362	1378	772.71	1.1e-85	9.2e-82	81.04	81	2	8268
+ctttgga	ctttgga|tccaaag	0.0002405306417	2420	1580.41	1.5e-85	1.2e-81	80.92	82	0	14520
+gtcaaca	gtcaaca|tgttgac	0.0001292406095	1480	849.18	1.8e-85	1.5e-81	80.82	83	0	8880
+cctggca	cctggca|tgccagg	0.0002296198543	2329	1508.72	2.7e-85	2.2e-81	80.65	84	0	13974
+ctgcccc	ctgcccc|ggggcag	0.0001643975913	1776	1080.17	1.1e-83	8.9e-80	79.05	85	3	10656
+cccagcc	cccagcc|ggctggg	0.0001830671610	1933	1202.84	1.7e-83	1.4e-79	78.86	86	18	11598
+cctggga	cctggga|tcccagg	0.0002053736598	2118	1349.41	3.1e-83	2.5e-79	78.60	87	0	12708
+gaggtca	gaggtca|tgacctc	0.0001891287097	1982	1242.67	4e-83	3.3e-79	78.48	88	0	11892
+gcagggc	gcagggc|gccctgc	0.0001265735281	1444	831.65	2e-82	1.6e-78	77.79	89	15	8664
+ccttggc	ccttggc|gccaagg	0.0001447581739	1601	951.13	3.5e-82	2.9e-78	77.54	90	8	9606
+ctgggca	ctgggca|tgcccag	0.0001833096230	1928	1204.44	4.7e-82	3.8e-78	77.42	91	0	11568
+ccccagg	ccccagg|cctgggg	0.0001733686832	1844	1139.12	5.6e-82	4.5e-78	77.34	92	0	11064
+gggccaa	gggccaa|ttggccc	0.0000826879163	1046	543.30	1.4e-81	1.1e-77	76.94	93	0	6276
+ccaaggg	ccaaggg|cccttgg	0.0001205119795	1386	791.82	2.8e-81	2.3e-77	76.64	94	0	8316
+gggcaga	gggcaga|tctgccc	0.0001755508407	1854	1153.46	3.1e-80	2.5e-76	75.60	95	0	11124
+ggggcca	ggggcca|tggcccc	0.0000836577640	1050	549.67	3.6e-80	2.9e-76	75.53	96	0	6300
+cccaccc	cccaccc|gggtggg	0.0001556689614	1683	1022.82	1.2e-79	1.0e-75	75.00	97	90	10098
+ccacccc	ccacccc|ggggtgg	0.0001578511189	1699	1037.16	4.3e-79	3.6e-75	74.45	98	71	10194
+caaaggg	caaaggg|ccctttg	0.0001740960691	1836	1143.90	4.8e-79	3.9e-75	74.41	99	0	11016
+aggccac	aggccac|gtggcct	0.0001137230451	1317	747.22	4.8e-79	3.9e-75	74.40	100	0	7902
+; Host name	rsat
+; Job started	2014-09-06.124544
+; Job done	2014-09-06.124553
+; Seconds	6.81
+;	user	6.81
+;	system	0.02
+;	cuser	1.93
+;	csystem	0.03

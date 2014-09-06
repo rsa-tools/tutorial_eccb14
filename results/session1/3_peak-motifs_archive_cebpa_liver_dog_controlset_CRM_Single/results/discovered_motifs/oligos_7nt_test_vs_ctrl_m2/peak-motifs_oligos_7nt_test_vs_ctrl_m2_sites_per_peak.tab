@@ -1,0 +1,53 @@
+; classfreq  -v 1 -ci 1 -o $RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_motifs/oligos_7nt_test_vs_ctrl_m2/peak-motifs_oligos_7nt_test_vs_ctrl_m2_sites_per_peak.tab
+;	min                 	minimum of class interval (inclusive)
+;	max                 	maximum of class interval (exclusive)
+;	center              	center of class interval
+;	n                   	occurrences
+;	n_cum               	cumulative occurrences (inclusive)
+;	n_dcum              	decreasing cumulative occurrences (inclusive)
+;	f                   	frequencies
+;	f_cum               	cumulative frequencies (inclusive)
+;	f_dcum              	decreasing cumulative frequencies (inclusive)
+#[min	max[	center	n	n_cum	n_dcum	f	f_cum	f_dcum
+1	2	1.5	1137	1137	1439	0.79013	0.79013	1.00000
+2	3	2.5	155	1292	302	0.10771	0.89785	0.20987
+3	4	3.5	66	1358	147	0.04587	0.94371	0.10215
+4	5	4.5	27	1385	81	0.01876	0.96247	0.05629
+5	6	5.5	20	1405	54	0.01390	0.97637	0.03753
+6	7	6.5	11	1416	34	0.00764	0.98402	0.02363
+7	8	7.5	10	1426	23	0.00695	0.99097	0.01598
+8	9	8.5	2	1428	13	0.00139	0.99236	0.00903
+9	10	9.5	3	1431	11	0.00208	0.99444	0.00764
+10	11	10.5	4	1435	8	0.00278	0.99722	0.00556
+11	12	11.5	0	1435	4	0.00000	0.99722	0.00278
+12	13	12.5	1	1436	4	0.00069	0.99792	0.00278
+13	14	13.5	2	1438	3	0.00139	0.99931	0.00208
+14	15	14.5	0	1438	1	0.00000	0.99931	0.00069
+15	16	15.5	0	1438	1	0.00000	0.99931	0.00069
+16	17	16.5	0	1438	1	0.00000	0.99931	0.00069
+17	18	17.5	0	1438	1	0.00000	0.99931	0.00069
+18	19	18.5	0	1438	1	0.00000	0.99931	0.00069
+19	20	19.5	0	1438	1	0.00000	0.99931	0.00069
+20	21	20.5	0	1438	1	0.00000	0.99931	0.00069
+21	22	21.5	1	1439	1	0.00069	1.00000	0.00069
+; Statistics:
+; -----------
+; class interval     	1
+; classes            	21
+; count              	1439
+; sum                	2131
+; mean               	1.48089
+; median class       	[2..3[
+; var                	1.88
+; std                	1.37161
+; min                	1
+; max                	21
+; range              	20
+; Host name	rsat
+; Job started	2014-09-06.125433
+; Job done	2014-09-06.125433
+; Seconds	0.27
+;	user	0.27
+;	system	0.01
+;	cuser	0
+;	csystem	0

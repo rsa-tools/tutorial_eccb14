@@ -1,0 +1,128 @@
+; compare-matrices  -v 1 -mode matches -format1 transfac -file1 $RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_motifs/peak-motifs_motifs_discovered.tf -format2 tf -file2 $RSAT/public_html/data/motif_databases/JASPAR/jaspar_core_vertebrates_2013-11.tf -mode matches -DR -uth offset_rank 1 -lth w 5 -lth Wr 0.3 -lth cor 0.75 -lth Ncor 0.4 -return matrix_name,matrix_id,cor,Ncor,logoDP,NIcor,NsEucl,SSD,NSW,match_rank,width,strand,offset,consensus,alignments_1ton -sort Ncor -o $RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_vs_db/peak-motifs_motifs_vs_db_jaspar_core_vertebrates.tab
+; Program version       	1.118
+; Input files
+;	file2 	/home/rsat/rsat/public_html/data/motif_databases/JASPAR/jaspar_core_vertebrates_2013-11.tf
+;	file1 	/home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_motifs/peak-motifs_motifs_discovered.tf
+; Output files
+;	alignments_1ton	/home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_vs_db/peak-motifs_motifs_vs_db_jaspar_core_vertebrates_alignments_1ton.tab
+;	match_table_txt	/home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_vs_db/peak-motifs_motifs_vs_db_jaspar_core_vertebrates.tab
+;	html_index   	/home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_vs_db/peak-motifs_motifs_vs_db_jaspar_core_vertebrates_index.html
+;	alignments_1ton_html	/home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_vs_db/peak-motifs_motifs_vs_db_jaspar_core_vertebrates_alignments_1ton.html
+;	match_table_html	/home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_vs_db/peak-motifs_motifs_vs_db_jaspar_core_vertebrates.html
+;	prefix       	/home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_vs_db/peak-motifs_motifs_vs_db_jaspar_core_vertebrates
+; Matrices
+;	file1	15 matrices	/home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_motifs/peak-motifs_motifs_discovered.tf
+;		file1	1	24	2	CrCCCTrsCCTGrCCyGGGkCACr
+;		file1	2	23	1	ATCCAAAGTCCAGAGCAGGGAAT
+;		file1	3	11	1513	mdGGGTCAGrr
+;		file1	4	24	1	GGCAGGGCAGCCGGGTCAGCCCTG
+;		file1	5	12	715	cmAAGGTCAGrr
+;		file1	6	24	2	TykGGCCAGyCCAAAGTCCArGAy
+;		file1	7	24	1	CACCTGCCCTTTGACCTGGCCACG
+;		file1	8	24	3	hdsGCmCmGGrCAkssyCAkGCCb
+;		file1	9	24	2	TmGGkCCAGkCCAAAGwCCAArwk
+;		file1	10	24	3	sdCCCAGCCAGrmCAkGGCwGGvk
+;		file1	11	21	18	ymAAGTCCAAAGTCCAGGGrw
+;		...	5 more matrices
+;	file2	263 matrices	/home/rsat/rsat/public_html/data/motif_databases/JASPAR/jaspar_core_vertebrates_2013-11.tf
+;		file2		1		11		26		wwyTGyGGTww
+;		file2		2		9		185		GCCcbrrGs
+;		file2		3		6		20		CACGTG
+;		file2		4		6		24		yGCGTG
+;		file2		5		22		24		hwwrGmACryyvtGTwCchrms
+;		file2		6		11		40		CTAGGTGTGAA
+;		file2		7		20		12		drvkcasygrwGcRkrrCsr
+;		file2		8		14		13		TGAmCTTTGmmCyt
+;		file2		9		12		16		bbkGrTGACGym
+;		file2		10		12		39		rrrTGCAATmcc
+;		file2		11		8		10		TTTsGCGC
+;		...	253 more matrices
+; Column content
+;	1	id1          	Identifier of the first matrix
+;	2	id2          	Identifier of the second matrix
+;	3	name1        	Name of the first matrix
+;	4	name2        	Name of the second matrix
+;	5	cor          	Pearson coefficient of correlation between frequency matrices
+;	6	Ncor         	Normalized correlation. Ncor = cor * Wr
+;	7	logoDP       	Dot product between the logo matrices.
+;	8	NIcor        	Normalized Pearson correlation between the information content matrices. NIcor = Icor * Wr
+;	9	NSW          	Normalized Sandelin-Wasserman similarity. NSW = SW/w
+;	10	SSD          	sum of squared distance.
+;	11	NsEucl       	relative Euclidian similarity. NsEucl = (max(dEucl) - dEucl)/max(dEucl)
+;	12	w1           	Width of the first matrix
+;	13	w2           	Width of the second matrix
+;	14	w            	Alignment length (number of overlapping columns between matrix 1 and matrix 2, as a function of the offset)
+;	15	W            	Total alignment length (overlapping + non-overlapping columns). W = w1 + w2 - w
+;	16	Wr           	Relative alignment length (overlap divided by the total alignemnt length). Wr = w/W
+;	17	wr1          	Alignment length relative to the width of the first matrix. wr1 = w/w1
+;	18	wr2          	Alignment length relative to the width of the second matrix. wr2 = w/w2
+;	19	strand       	"strand", i.e. orientation of matrix 2 relative to matrix 1 (D=direct;  R=reverse)
+;	20	offset       	shift of the second matrix relative to the first matrix (negative:left; positive: right)
+;	21	consensus1   	IUPAC consensus of matrix 1 (dots represent non-aligned columns)
+;	22	consensus2   	IUPAC consensus of matrix 2 (dots represent non-aligned columns)
+;	23	rcor         	Matching rank for cor
+;	24	rNcor        	Matching rank for Ncor
+;	25	rlogoDP      	Matching rank for logoDP
+;	26	rNIcor       	Matching rank for NIcor
+;	27	rNsEucl      	Matching rank for NsEucl
+;	28	rSSD         	Matching rank for SSD
+;	29	rNSW         	Matching rank for NSW
+;	30	rank_mean    	Mean of the matching ranks on all selected metrics
+;	31	match_rank   	Rank of the match (sorting by rank_mean)
+#id1	id2	name1	name2	cor	Ncor	logoDP	NIcor	NSW	SSD	NsEucl	w1	w2	w	W	Wr	wr1	wr2	strand	offset	consensus1	consensus2	rcor	rNcor	rlogoDP	rNIcor	rNsEucl	rSSD	rNSW	rank_mean	match_rank
+oligos_6nt_test_vs_ctrl_m5	MA0141.2	oligos_6nt_test_vs_ctrl_m5	Esrrb	0.957	0.574	10.632	0.573	0.975	0.4527	0.94714	12	12	9	15	0.6000	0.7500	0.7500	D	-3	            cmAAGGTCA...	...yCAAGGTCA                  	1	9	5	5	1	1	1	3.2857	1
+oligos_6nt_test_vs_ctrl_m5	MA0071.1	oligos_6nt_test_vs_ctrl_m5	RORA_1	0.913	0.632	10.808	0.628	0.951	0.8863	0.92604	12	10	9	13	0.6923	0.7500	0.9000	D	-1	            cmAAGGTCA...	.wcwAGGTCA                    	3	5	4	4	5	3	3	3.8571	2
+oligos_6nt_test_vs_ctrl_m5	MA0141.1	oligos_6nt_test_vs_ctrl_m5	Esrrb	0.956	0.574	10.474	0.573	0.975	0.4555	0.94698	12	12	9	15	0.6000	0.7500	0.7500	D	-3	            cmAAGGTCA...	...yCAAGGTCA                  	2	10	7	6	2	2	2	4.4286	3
+oligos_6nt_test_vs_ctrl_m5	MA0592.1	oligos_6nt_test_vs_ctrl_m5	ESRRA	0.870	0.797	11.273	0.783	0.931	1.5109	0.92098	12	11	11	12	0.9167	0.9167	1.0000	D	0	            cmAAGGTCAGr.	yCAAGGTCAcm                   	6	1	2	1	9	10	6	5.0000	4
+oligos_6nt_test_vs_ctrl_m5	MA0512.1	oligos_6nt_test_vs_ctrl_m5	Rxra	0.853	0.782	9.135	0.742	0.925	1.6602	0.91717	12	11	11	12	0.9167	0.9167	1.0000	D	0	            cmAAGGTCAGr.	CArAGKTCAgd                   	13	2	13	2	12	14	11	9.5714	5
+oligos_8nt_test_vs_ctrl_m4	MA0114.2	oligos_8nt_test_vs_ctrl_m4	HNF4A	0.856	0.642	8.481	0.631	0.926	2.2244	0.92969	20	15	15	20	0.7500	0.7500	1.0000	D	4	    ....CTGGACTTTGCCCTv.	cTGrmCTTTGrmCyy               	11	3	15	3	4	24	9	9.8571	6
+oligos_8nt_test_vs_ctrl_m2	MA0512.1	oligos_8nt_test_vs_ctrl_m2	Rxra	0.905	0.433	10.330	0.424	0.939	1.3519	0.92526	23	11	11	23	0.4783	0.4783	1.0000	D	11	 ...........CAAAGGkCAGv.	CArAGKTCAgd                   	4	41	8	28	7	6	5	14.1429	7
+oligos_8nt_test_vs_ctrl_m1	MA0484.1	oligos_8nt_test_vs_ctrl_m1	HNF4G	0.841	0.600	8.171	0.570	0.916	2.5131	0.92527	21	15	15	21	0.7143	0.7143	1.0000	D	1	   .mAAGTCCAAAGTCCA.....	arrGkyCAAAGkyCA               	19	8	17	7	6	28	14	14.1429	8
+oligos_6nt_test_vs_ctrl_m3	MA0258.1	oligos_6nt_test_vs_ctrl_m3	ESR2	0.848	0.518	6.561	0.507	0.930	1.5310	0.92046	11	18	11	18	0.6111	1.0000	0.6111	D	0	             mdGGGTCAGrr	cwrGGTCAsgk.......            	15	20	26	12	10	12	7	14.5714	9
+oligos_6nt_test_vs_ctrl_m5	MA0258.2	oligos_6nt_test_vs_ctrl_m5	ESR2	0.896	0.448	7.773	0.442	0.940	1.0748	0.91855	12	15	9	18	0.5000	0.7500	0.6000	D	3	            ...AGGTCAGrr	rGGTCAsms......               	5	38	18	23	11	4	4	14.7143	10
+oligos_6nt_test_vs_ctrl_m5	MA0505.1	oligos_6nt_test_vs_ctrl_m5	Nr5a2	0.833	0.573	9.942	0.545	0.913	1.9094	0.91117	12	15	11	16	0.6875	0.9167	0.7333	D	-4	            cmAAGGTCAGr.	....TCAAGGyCAgs               	22	11	11	9	23	18	18	16.0000	11
+oligos_6nt_test_vs_ctrl_m5	MA0065.1	oligos_6nt_test_vs_ctrl_m5	PPARG::RXRA	0.831	0.498	11.103	0.484	0.915	2.0482	0.91567	12	20	12	20	0.6000	1.0000	0.6000	D	-8	            cmAAGGTCAGrr	........CAAAGGTCAymk          	24	23	3	15	14	20	16	16.4286	12
+oligos_6nt_test_vs_ctrl_m5	MA0258.1	oligos_6nt_test_vs_ctrl_m5	ESR2	0.849	0.491	6.707	0.476	0.919	1.7856	0.91410	12	18	11	19	0.5789	0.9167	0.6111	D	1	            .mAAGGTCAGrr	cwrGGTCAsgk.......            	14	27	23	18	18	17	13	18.5714	13
+oligos_6nt_test_vs_ctrl_m5	MA0160.1	oligos_6nt_test_vs_ctrl_m5	NR4A2	0.859	0.573	8.211	0.562	0.900	1.6058	0.88799	12	8	8	12	0.6667	0.6667	1.0000	D	2	            ..AAGGTCAG..	aAGGTCAc                      	9	12	16	8	47	13	26	18.7143	14
+oligos_6nt_test_vs_ctrl_m3	MA0071.1	oligos_6nt_test_vs_ctrl_m3	RORA_1	0.834	0.513	9.825	0.504	0.907	1.4860	0.89225	11	10	8	13	0.6154	0.7273	0.8000	D	-2	             mdGGGTCA...	..cwAGGTCA                    	21	21	12	13	43	8	20	19.7143	15
+oligos_8nt_test_vs_ctrl_m2	MA0114.1	oligos_8nt_test_vs_ctrl_m2	HNF4A	0.862	0.487	6.666	0.497	0.904	2.4910	0.91415	23	13	13	23	0.5652	0.5652	1.0000	D	7	 .......rGmCCAAAGGkCA...	rGgbCAAAGkyCa                 	8	30	24	14	17	27	22	20.2857	16
+oligos_8nt_test_vs_ctrl_m4	MA0484.1	oligos_8nt_test_vs_ctrl_m4	HNF4G	0.853	0.640	0.743	-0.132	0.930	2.1142	0.93146	20	15	15	20	0.7500	0.7500	1.0000	R	5	    .....TGGACTTTGCCCTvb	TGRMCTTTGRMCYYT               	12	4	47	47	3	21	8	20.2857	17
+oligos_8nt_test_vs_ctrl_m2	MA0484.1	oligos_8nt_test_vs_ctrl_m2	HNF4G	0.818	0.534	10.149	0.530	0.893	3.2119	0.91552	23	15	15	23	0.6522	0.6522	1.0000	D	5	 .....ArrGmCCAAAGGkCA...	arrGkyCAAAGkyCA               	27	17	10	11	15	37	30	21.0000	18
+oligos_8nt_test_vs_ctrl_m1	MA0114.2	oligos_8nt_test_vs_ctrl_m1	HNF4A	0.843	0.602	4.672	0.155	0.914	2.5799	0.92428	21	15	15	21	0.7143	0.7143	1.0000	R	2	   ..AAGTCCAAAGTCCAG....	RRGKYCAAAGKYCAG               	18	7	35	39	8	30	17	22.0000	19
+oligos_6nt_test_vs_ctrl_m5	MA0065.2	oligos_6nt_test_vs_ctrl_m5	PPARG::RXRA	0.858	0.429	4.750	0.402	0.920	1.4319	0.90599	12	15	9	18	0.5000	0.7500	0.6000	D	-6	            cmAAGGTCA...	......cArAGGkcA               	10	43	34	31	29	7	12	23.7143	20
+oligos_8nt_test_vs_ctrl_m4	MA0114.1	oligos_8nt_test_vs_ctrl_m4	HNF4A	0.846	0.550	2.854	0.172	0.910	2.3525	0.91657	20	13	13	20	0.6500	0.6500	1.0000	R	5	    .....TGGACTTTGCCCT..	TGRMCTTTGVCCY                 	16	15	44	36	13	25	19	24.0000	21
+oligos_6nt_test_vs_ctrl_m3	MA0504.1	oligos_6nt_test_vs_ctrl_m3	NR2C2	0.775	0.568	6.381	0.530	0.899	2.2163	0.90430	11	15	11	15	0.7333	1.0000	0.7333	D	0	             mdGGGTCAGrr	mgrGGTCArAG....               	43	13	28	10	30	23	27	24.8571	22
+oligos_6nt_test_vs_ctrl_m5	MA0017.1	oligos_6nt_test_vs_ctrl_m5	NR2F1	0.868	0.460	0.751	-0.135	0.926	1.3389	0.90909	12	14	9	17	0.5294	0.7500	0.6429	R	-5	            cmAAGGTCA...	.....CAAAGKTCA                	7	35	46	48	24	5	10	25.0000	23
+oligos_6nt_test_vs_ctrl_m5	MA0504.1	oligos_6nt_test_vs_ctrl_m5	NR2C2	0.845	0.423	6.396	0.402	0.916	1.5170	0.90323	12	15	9	18	0.5000	0.7500	0.6000	D	-6	            cmAAGGTCA...	......CArAGGTCA               	17	44	27	30	33	11	15	25.2857	24
+oligos_7nt_test_vs_ctrl_m4	MA0114.1	oligos_7nt_test_vs_ctrl_m4	HNF4A	0.838	0.454	6.625	0.452	0.888	2.9089	0.90723	24	13	13	24	0.5417	0.5417	1.0000	D	7	.......AGkCCAAAGwCCA....	rGgbCAAAGkyCa                 	20	36	25	21	26	35	35	28.2857	25
+oligos_7nt_test_vs_ctrl_m1	MA0114.2	oligos_7nt_test_vs_ctrl_m1	HNF4A	0.832	0.520	5.970	0.153	0.890	3.3003	0.91436	24	15	15	24	0.6250	0.6250	1.0000	R	6	......CAGyCCAAAGTCCAr...	RRGKYCAAAGKYCAG               	23	18	31	40	16	38	33	28.4286	26
+oligos_6nt_test_vs_ctrl_m5	MA0115.1	oligos_6nt_test_vs_ctrl_m5	NR1H2::RXRA	0.797	0.487	13.304	0.469	0.875	2.7537	0.89333	12	17	11	18	0.6111	0.9167	0.6471	D	-6	            cmAAGGTCAGr.	......CAAAGGTCAAc             	35	29	1	20	42	33	40	28.5714	27
+oligos_6nt_test_vs_ctrl_m3	MA0258.2	oligos_6nt_test_vs_ctrl_m3	ESR2	0.814	0.431	7.479	0.420	0.901	1.7834	0.89508	11	15	9	17	0.5294	0.8182	0.6000	D	2	             ..GGGTCAGrr	rGGTCAsms......               	30	42	19	29	41	16	24	28.7143	28
+oligos_6nt_test_vs_ctrl_m5	MA0114.1	oligos_6nt_test_vs_ctrl_m5	HNF4A	0.818	0.460	3.992	0.424	0.901	1.7817	0.89513	12	13	9	16	0.5625	0.7500	0.6923	D	-4	            cmAAGGTCA...	....CAAAGkyCa                 	28	34	38	27	40	15	23	29.2857	29
+oligos_8nt_test_vs_ctrl_m3	MA0484.1	oligos_8nt_test_vs_ctrl_m3	HNF4G	0.774	0.464	6.915	0.438	0.895	2.5211	0.90644	17	15	12	20	0.6000	0.7059	0.8000	D	-3	       ksCCAGAGTCCA.....	...GkyCAAAGkyCA               	45	33	20	25	27	29	29	29.7143	30
+oligos_8nt_test_vs_ctrl_m5	MA0594.1	oligos_8nt_test_vs_ctrl_m5	Hoxa9	0.826	0.413	6.314	0.388	0.906	1.5076	0.89147	13	11	8	16	0.5000	0.6154	0.7273	D	-3	           aaAAATCA.....	...ATmAATCA                   	25	46	29	33	45	9	21	29.7143	31
+oligos_8nt_test_vs_ctrl_m3	MA0114.2	oligos_8nt_test_vs_ctrl_m3	HNF4A	0.784	0.537	3.897	0.157	0.900	2.5871	0.91251	17	15	13	19	0.6842	0.7647	0.8667	R	-2	       ksCCAGAGTCCAG....	..GKYCAAAGKYCAG               	39	16	39	38	21	31	25	29.8571	32
+oligos_8nt_test_vs_ctrl_m1	MA0114.1	oligos_8nt_test_vs_ctrl_m1	HNF4A	0.799	0.495	5.209	0.470	0.886	2.9644	0.90635	21	13	13	21	0.6190	0.6190	1.0000	D	3	   ...AGTCCAAAGTCCA.....	rGgbCAAAGkyCa                 	33	25	33	19	28	36	37	30.1429	33
+oligos_6nt_test_vs_ctrl_m3	MA0074.1	oligos_6nt_test_vs_ctrl_m3	RXRA::VDR	0.798	0.423	8.578	0.442	0.891	1.9539	0.89018	11	15	9	17	0.5294	0.8182	0.6000	D	2	             ..GGGTCAGrr	RGGTCAwcG......               	34	45	14	24	46	19	31	30.4286	34
+oligos_8nt_test_vs_ctrl_m5	MA0047.1	oligos_8nt_test_vs_ctrl_m5	Foxa2	0.787	0.618	3.193	0.211	0.891	2.3988	0.90044	13	12	11	14	0.7857	0.8462	0.9167	R	2	           ..AAATCAATAww	RARYMAAYAWT.                  	38	6	43	34	36	26	32	30.7143	35
+oligos_7nt_test_vs_ctrl_m4	MA0484.1	oligos_7nt_test_vs_ctrl_m4	HNF4G	0.776	0.485	10.252	0.478	0.862	4.1470	0.90400	24	15	15	24	0.6250	0.6250	1.0000	D	5	.....CCAGkCCAAAGwCCA....	arrGkyCAAAGkyCA               	41	31	9	17	31	45	44	31.1429	36
+oligos_8nt_test_vs_ctrl_m2	MA0017.1	oligos_8nt_test_vs_ctrl_m2	NR2F1	0.817	0.497	3.603	-0.066	0.896	2.9047	0.91392	23	14	14	23	0.6087	0.6087	1.0000	R	6	 ......rrGmCCAAAGGkCA...	ARGKKCAAAGKTCA                	29	24	41	44	19	34	28	31.2857	37
+oligos_8nt_test_vs_ctrl_m2	MA0114.2	oligos_8nt_test_vs_ctrl_m2	HNF4A	0.795	0.519	5.945	0.175	0.883	3.5138	0.91163	23	15	15	23	0.6522	0.6522	1.0000	R	6	 ......rrGmCCAAAGGkCAG..	RRGKYCAAAGKYCAG               	36	19	32	35	22	40	38	31.7143	38
+oligos_7nt_test_vs_ctrl_m1	MA0484.1	oligos_7nt_test_vs_ctrl_m1	HNF4G	0.775	0.484	10.539	0.478	0.854	4.3879	0.90125	24	15	15	24	0.6250	0.6250	1.0000	D	5	.....CCAGyCCAAAGTCCA....	arrGkyCAAAGkyCA               	42	32	6	16	35	47	46	32.0000	39
+oligos_7nt_test_vs_ctrl_m4	MA0114.2	oligos_7nt_test_vs_ctrl_m4	HNF4A	0.800	0.500	6.018	0.161	0.874	3.7750	0.90841	24	15	15	24	0.6250	0.6250	1.0000	R	6	......CAGkCCAAAGwCCAA...	RRGKYCAAAGKYCAG               	32	22	30	37	25	43	41	32.8571	40
+oligos_6nt_test_vs_ctrl_m5	MA0112.2	oligos_6nt_test_vs_ctrl_m5	ESR1	0.751	0.451	4.613	0.445	0.889	2.6723	0.90367	12	20	12	20	0.6000	1.0000	0.6000	D	-2	            cmAAGGTCAGrr	..scmaGGtCAccc......          	47	37	36	22	32	32	34	34.2857	41
+oligos_7nt_test_vs_ctrl_m1	MA0114.1	oligos_7nt_test_vs_ctrl_m1	HNF4A	0.801	0.434	6.718	0.434	0.863	3.5731	0.89718	24	13	13	24	0.5417	0.5417	1.0000	D	7	.......AGyCCAAAGTCCA....	rGgbCAAAGkyCa                 	31	40	22	26	39	42	43	34.7143	42
+oligos_8nt_test_vs_ctrl_m4	MA0065.2	oligos_8nt_test_vs_ctrl_m4	PPARG::RXRA	0.751	0.563	0.673	-0.122	0.888	3.3682	0.91349	20	15	15	20	0.7500	0.7500	1.0000	R	5	    .....TGGACTTTGCCCTvb	TGMCCTYTGCCCYAS               	48	14	48	46	20	39	36	35.8571	43
+oligos_8nt_test_vs_ctrl_m5	MA0485.1	oligos_8nt_test_vs_ctrl_m5	Hoxc9	0.770	0.407	6.798	0.388	0.881	2.1422	0.88501	13	13	9	17	0.5294	0.6923	0.6923	D	-4	           aaAAATCAA....	....ATAAATCwy                 	46	47	21	32	48	22	39	36.4286	44
+oligos_7nt_test_vs_ctrl_m2	MA0114.1	oligos_7nt_test_vs_ctrl_m2	HNF4A	0.822	0.445	3.550	0.112	0.863	3.5656	0.89729	24	13	13	24	0.5417	0.5417	1.0000	R	4	....TGCCCTTTGACCT.......	TGRMCTTTGVCCY                 	26	39	42	41	38	41	42	38.4286	45
+oligos_7nt_test_vs_ctrl_m2	MA0504.1	oligos_7nt_test_vs_ctrl_m2	NR2C2	0.787	0.492	3.742	0.013	0.855	4.3360	0.90184	24	15	15	24	0.6250	0.6250	1.0000	R	4	....TGCCCTTTGACCTGG.....	TGACCTYTGACCYCK               	37	26	40	43	34	46	45	38.7143	46
+oligos_7nt_test_vs_ctrl_m2	MA0065.2	oligos_7nt_test_vs_ctrl_m2	PPARG::RXRA	0.779	0.487	1.791	-0.076	0.844	4.6824	0.89799	24	15	15	24	0.6250	0.6250	1.0000	R	4	....TGCCCTTTGACCTGG.....	TGMCCTYTGCCCYAS               	40	28	45	45	37	48	48	41.5714	47
+oligos_6nt_test_vs_ctrl_m2	MA0114.2	oligos_6nt_test_vs_ctrl_m2	HNF4A	0.774	0.402	4.452	0.058	0.848	3.9457	0.89196	23	15	13	25	0.5200	0.5652	0.8667	R	-2	 ATCCAAAGTCCAG..........	..GKYCAAAGKYCAG               	44	48	37	42	44	44	47	43.7143	48
+; Host name	rsat
+; Job started	2014-09-06.124934
+; Job done	2014-09-06.125040
+; Seconds	43.92
+;	user	43.92
+;	system	0.6
+;	cuser	21.03
+;	csystem	0.82

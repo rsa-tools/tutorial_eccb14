@@ -1,0 +1,29 @@
+WARNING only first matrix in /home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_8nt_test_vs_ctrl/peak-motifs_oligos-2str-noov_8nt_test_vs_ctrl_pssm_sig_matrices_split_oligos_8nt_test_vs_ctrl_m1.tab is used
+WARNING only first matrix in /home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_8nt_test_vs_ctrl/peak-motifs_oligos-2str-noov_8nt_test_vs_ctrl_pssm_sig_matrices_split_oligos_8nt_test_vs_ctrl_m2.tab is used
+WARNING only first matrix in /home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_8nt_test_vs_ctrl/peak-motifs_oligos-2str-noov_8nt_test_vs_ctrl_pssm_sig_matrices_split_oligos_8nt_test_vs_ctrl_m3.tab is used
+WARNING only first matrix in /home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_8nt_test_vs_ctrl/peak-motifs_oligos-2str-noov_8nt_test_vs_ctrl_pssm_sig_matrices_split_oligos_8nt_test_vs_ctrl_m4.tab is used
+WARNING only first matrix in /home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_8nt_test_vs_ctrl/peak-motifs_oligos-2str-noov_8nt_test_vs_ctrl_pssm_sig_matrices_split_oligos_8nt_test_vs_ctrl_m5.tab is used
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+GPL Ghostscript 9.07: Set UseCIEColor for UseDeviceIndependentColor to work properly.
+
+real	0m47.773s
+user	0m46.977s
+sys	0m0.587s

@@ -1,0 +1,48 @@
+; classfreq  -v 1 -ci 1 -o $RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_motifs/oligos_6nt_test_vs_ctrl_m1/peak-motifs_oligos_6nt_test_vs_ctrl_m1_sites_per_peak.tab
+;	min                 	minimum of class interval (inclusive)
+;	max                 	maximum of class interval (exclusive)
+;	center              	center of class interval
+;	n                   	occurrences
+;	n_cum               	cumulative occurrences (inclusive)
+;	n_dcum              	decreasing cumulative occurrences (inclusive)
+;	f                   	frequencies
+;	f_cum               	cumulative frequencies (inclusive)
+;	f_dcum              	decreasing cumulative frequencies (inclusive)
+#[min	max[	center	n	n_cum	n_dcum	f	f_cum	f_dcum
+1	2	1.5	923	923	1283	0.71941	0.71941	1.00000
+2	3	2.5	169	1092	360	0.13172	0.85113	0.28059
+3	4	3.5	72	1164	191	0.05612	0.90725	0.14887
+4	5	4.5	45	1209	119	0.03507	0.94232	0.09275
+5	6	5.5	21	1230	74	0.01637	0.95869	0.05768
+6	7	6.5	18	1248	53	0.01403	0.97272	0.04131
+7	8	7.5	9	1257	35	0.00701	0.97973	0.02728
+8	9	8.5	7	1264	26	0.00546	0.98519	0.02027
+9	10	9.5	3	1267	19	0.00234	0.98753	0.01481
+10	11	10.5	7	1274	16	0.00546	0.99299	0.01247
+11	12	11.5	2	1276	9	0.00156	0.99454	0.00701
+12	13	12.5	2	1278	7	0.00156	0.99610	0.00546
+13	14	13.5	3	1281	5	0.00234	0.99844	0.00390
+14	15	14.5	1	1282	2	0.00078	0.99922	0.00156
+15	16	15.5	0	1282	1	0.00000	0.99922	0.00078
+16	17	16.5	1	1283	1	0.00078	1.00000	0.00078
+; Statistics:
+; -----------
+; class interval     	1
+; classes            	16
+; count              	1283
+; sum                	2201
+; mean               	1.71551
+; median class       	[2..3[
+; var                	2.87
+; std                	1.69479
+; min                	1
+; max                	16
+; range              	15
+; Host name	rsat
+; Job started	2014-09-06.125053
+; Job done	2014-09-06.125053
+; Seconds	0.26
+;	user	0.26
+;	system	0.01
+;	cuser	0
+;	csystem	0

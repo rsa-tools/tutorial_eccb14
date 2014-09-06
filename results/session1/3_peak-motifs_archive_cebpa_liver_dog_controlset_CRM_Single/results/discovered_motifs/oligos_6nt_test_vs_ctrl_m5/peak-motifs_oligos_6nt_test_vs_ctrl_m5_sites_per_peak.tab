@@ -1,0 +1,35 @@
+; classfreq  -v 1 -ci 1 -o $RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/discovered_motifs/oligos_6nt_test_vs_ctrl_m5/peak-motifs_oligos_6nt_test_vs_ctrl_m5_sites_per_peak.tab
+;	min                 	minimum of class interval (inclusive)
+;	max                 	maximum of class interval (exclusive)
+;	center              	center of class interval
+;	n                   	occurrences
+;	n_cum               	cumulative occurrences (inclusive)
+;	n_dcum              	decreasing cumulative occurrences (inclusive)
+;	f                   	frequencies
+;	f_cum               	cumulative frequencies (inclusive)
+;	f_dcum              	decreasing cumulative frequencies (inclusive)
+#[min	max[	center	n	n_cum	n_dcum	f	f_cum	f_dcum
+1	2	1.5	688	688	701	0.98146	0.98146	1.00000
+2	3	2.5	12	700	13	0.01712	0.99857	0.01854
+3	4	3.5	1	701	1	0.00143	1.00000	0.00143
+; Statistics:
+; -----------
+; class interval     	1
+; classes            	3
+; count              	701
+; sum                	715
+; mean               	1.01997
+; median class       	[2..3[
+; var                	0.0224
+; std                	0.149752
+; min                	1
+; max                	3
+; range              	2
+; Host name	rsat
+; Job started	2014-09-06.125340
+; Job done	2014-09-06.125340
+; Seconds	0.25
+;	user	0.25
+;	system	0.02
+;	cuser	0
+;	csystem	0

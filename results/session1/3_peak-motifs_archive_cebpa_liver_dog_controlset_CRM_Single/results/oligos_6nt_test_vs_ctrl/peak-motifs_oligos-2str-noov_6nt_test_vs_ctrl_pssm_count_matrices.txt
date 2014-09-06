@@ -1,0 +1,41 @@
+; convert-matrix  -v 1 -i $RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_6nt_test_vs_ctrl/peak-motifs_oligos-2str-noov_6nt_test_vs_ctrl_pssm_count_matrices.tf -from transfac -to tab -return counts -o $RSAT/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_6nt_test_vs_ctrl/peak-motifs_oligos-2str-noov_6nt_test_vs_ctrl_pssm_count_matrices.txt
+; Input files
+;	input	/home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_6nt_test_vs_ctrl/peak-motifs_oligos-2str-noov_6nt_test_vs_ctrl_pssm_count_matrices.tf
+; Input format        	transfac
+; Output files
+;	output	/home/rsat/rsat/public_html/tmp/wwwrun/2014/09/06/peak-motifs.2014-09-06.123915_2014-09-06.123915_sfIm4F/results/oligos_6nt_test_vs_ctrl/peak-motifs_oligos-2str-noov_6nt_test_vs_ctrl_pssm_count_matrices.txt
+; Output format       	tab
+; pseudo-weight       	1
+a	0	1	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	2	0	1
+c	2	0	2	2	2	0	0	1	2	2	0	0	0	2	2	1	0	0	0	0	2	0	2	0
+g	0	1	0	0	0	0	1	1	0	0	0	2	1	0	0	0	2	2	2	1	0	0	0	1
+t	0	0	0	0	0	2	0	0	0	0	2	0	0	0	0	1	0	0	0	1	0	0	0	0
+//
+a	1	0	0	0	1	1	1	0	0	0	0	1	0	1	0	0	1	0	0	0	1	1	0
+c	0	0	1	1	0	0	0	0	0	1	1	0	0	0	0	1	0	0	0	0	0	0	0
+g	0	0	0	0	0	0	0	1	0	0	0	0	1	0	1	0	0	1	1	1	0	0	0
+t	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+//
+a	425	502	0	0	0	0	0	1513	0	452	396
+c	446	86	0	0	0	0	1513	0	0	285	256
+g	284	466	1513	1513	1513	0	0	0	1513	477	526
+t	358	459	0	0	0	1513	0	0	0	299	335
+//
+a	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+c	0	0	1	0	0	0	0	1	0	0	1	1	0	0	0	0	1	0	0	1	1	1	0	0
+g	1	1	0	0	1	1	1	0	0	1	0	0	1	1	1	0	0	0	1	0	0	0	0	1
+t	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0
+//
+a	139	297	715	715	0	0	0	0	715	0	220	200
+c	264	201	0	0	0	0	0	715	0	0	145	133
+g	154	130	0	0	715	715	0	0	0	715	200	212
+t	158	87	0	0	0	0	715	0	0	0	150	170
+//
+; Host name	rsat
+; Job started	2014-09-06.124540
+; Job done	2014-09-06.124540
+; Seconds	0.29
+;	user	0.29
+;	system	0.01
+;	cuser	0
+;	csystem	0
