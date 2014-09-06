@@ -169,17 +169,17 @@ $(function() {
 
 <u>The aim is to :</u>
 <ul>
-<li> get familiar with motif analysis of ChIP-seq data</li>
-<li> learn de novo motif discovery methods</li>
-<li> become familiar with using RSAT via the website</li>
+<li> Get familiar with motif analysis of ChIP-seq data.</li>
+<li> Learn de novo motif discovery methods.</li>
+<li> Become familiar with using RSAT via the website.</li>
 </ul>
 
 <u>In practice :</u>
 <ul>
-<li> motif discovery with <i>peak-motifs</i></li>
-<li> advanced parameter settings</li>
+<li> Motif discovery with <i>peak-motifs</i>.</li>
+<li> Advanced parameter settings</li>.
 <li> visualisation of the putative TFBS</li>
-<li> motif enrichment with <i>matrix-quality</i></li>
+<li> Motif enrichment with <i>matrix-quality</i>.</li>
 </ul>
 
 
@@ -472,7 +472,31 @@ $(function() {
             <li>Did you select any specific set of motifs to compare with? Why?</li>
 	    <li>Which algorithm gave you the expected motif?</li>
 	  </ol>
-	  <b>Anticipated Results:</b> <a href="./results/session1/5_peak-motifs_archive_FNR_Ecoli/peak-motifs_synthesis.html"> [Default parameters]</a> <a href="results/session1/6_peak-motifs_archive_FNR_Ecoli_dyad/peak-motifs_synthesis.html"> [Tunned parameters]</a>	    
+	  <b>Anticipated Results:</b> <a href="./results/session1/6_peak-motifs_archive_FNR_Ecoli/peak-motifs_synthesis.html"> [Default parameters]</a> <a href="results/session1/6_peak-motifs_archive_FNR_Ecoli_dyad/peak-motifs_synthesis.html"> [Tunned parameters]</a>	    
+        </div>	  
+      </div>
+
+    </div>
+
+ <h3 class="expand">5 - Focusing motif discovery in the summits </h3>
+    <div class="collapse">
+      The last analysis didn't show the expected results. Probably because the peaks were to long and this can difficult the search. We will now center the search around +/- 50 base pairs of the reported <a href="./data/FNR_coli/macs14_summits.bed">summits</a>.
+      <ol>
+	<li>Go back to the galaxy server.</li>
+	<li>Upload the summits</li>
+	<li>We will use the tool <i>Compute</i> under the Text Manipulation menu. We will use this tool twice, one to calculate the start-50 bps and end +50 bps.</li>
+	<p><img class="bordered" src="./figures/galaxy_compute_2.png" alt="FNRSC3" width="550"/></p>
+	<li>With the tool <i>Cut</i> under the Text Manipulation menu we will select the first,sixth and seventh columns to create a new bed file.</li>
+	<p><img class="bordered" src="./figures/galaxy_cut_2.png" alt="FNRSC4" width="550"/></p>
+	<li>As done before, use the bed file to obtain the sequences from the genome data file.</li>
+      </ol>
+      
+      <div class="post">
+        <div class="success"><b>Signal in the summit</b>
+	  <ol>
+            <li>Now the results show the expected FNR motif.</li>
+	  </ol>
+	  <b>Anticipated Results:</b> <a href="./results/session1/5_FNR_summit_50bps_sequences.fasta">[summit bed file]</a> <a href="./results/session1/6_peak-motifs_archive_FNR_Ecoli_summits_50bps/peak-motifs_synthesis.html"> [Summit peak-motifs]</a>	    
         </div>	  
       </div>
 
@@ -481,32 +505,94 @@ $(function() {
   </div>
 </div>
 			
-		    <!-- ENRICHMENT -->
-		    <div class="demo">
-            <h2 id="vizu" class="expand">Measure the enrichment of your peak for the expected motif</h2>
-            <div class="collapse">
-            <div class="notice">
-			<b>Goal:</b> 
-			<br/>
-			</div>
-            <h3 class="expand">1 -</h3>
-            <div class="collapse">
-           
+<!-- ENRICHMENT -->
+<div class="demo">
+  <h2 id="vizu" class="expand">Measure the enrichment of your peak for expected motifs</h2>
+  <div class="collapse">
+    <div class="notice">
+      <b>Goal:</b> To identify weather there is enrichment for a set of specific motifs in a collection of peaks.      
+    </div>
+    <h3 class="expand">1 - Motif enrichment in RSAT</h3>
+    <div class="collapse">
+      <i>matrix-quality</i> is a tool that highlights the enrichment of binding sites in sequence sets obtained from high-throughput ChIP-chip, and ChIP–seq and experiments, to assess enrichment it combines information from theoretical and empirical score distributions.
+      The tool can be found under the Matrix Tools manu in the <a href="http://rsat.sb-roscoff.fr/"> RSAT </a> web.      
+    </div>
+    <h3 class="expand">2 - Enrichment of liver Transcription factors binding sites in ChIP-seq peak sequences </h3>
+    <div class="collapse">
+      In a recent paper, Ballester, et al. in press, characterized the binding profile for other three relevant transcription factors in liver: OCT1 (HNF6), FOXA1 and HNF4A. The matrices reported in this paper for mouse can be found <a href="data/dataset_cebpa_dog/Liver_TFs_mmus_ballester_zoo-chip.tf">here</a>. 
+      We will use <i>matrix-qualt</i> to assess enrichment for the four TFs (CEBPa, OCT1, HNF4A and FOXA1).
+      <ol>
+	<li>Define a title for the job. We will use the title:<b>CEBPa motif enrichment in ChIP-seq</b></li>
+	<li>Paste the motifs to be used and select <b>transfac</b> format.</li>
+	<li>Input the peak sequences using the URL.</li>
+	<p><img class="bordered" src="./figures/matrix_quality_SC1_2.png" alt="MQSC1" width="550"/></p>
+	<li>Permutations are used as negative control, select 2.</li>
+	<li>Enter your email.</li>
+	<li>Go!</li>
+	<p><img class="bordered" src="./figures/matrix_quality_SC2_2.png" alt="MQSC1" width="550"/></p>
 
-            </div>
-            <h3 class="expand">2 -  </h3>
-            <div class="collapse">
-               
-                </div>
-   	    
-	    
-	    
-	    
-	    </div>	
-	    	    </div>
-	</div>
-	
+      </ol>
+      
+    </div>
+ <h3 class="expand">3 - Understanding enrichment graphs</h3>
+    <div class="collapse">
+      First we will analyse the enrichment for CEBPa reported motif in the collection of peaks from the ChIP-seq in dog liver.
+      <ol>
+	<li>Decreasing cumulative distribution function (dCDF).</li>
+	<p><img class="bordered" src="./results/session1/7_matrix-quality/do560plusdo843_mmus_cebpa_liver_meme_top_m1/matrix-quality_2014-09-05.235841_do560plusdo843_mmus_cebpa_liver_meme_top_m1_score_distrib_compa.png" alt="MQ3" width="550"/></p>
+	<li>Decreasing cumulative distribution function (dCDF) in logy scale. The logarithm scale facilitates observing differences in high scores.</li>
+	<p><img class="bordered" src="./results/session1/7_matrix-quality/do560plusdo843_mmus_cebpa_liver_meme_top_m1/matrix-quality_2014-09-05.235841_do560plusdo843_mmus_cebpa_liver_meme_top_m1_score_distrib_compa_logy.png" alt="MQ4" width="550"/></p>
+	<li>Receiver Operating Characteristic (ROC) curves.</li>
+	<p><img class="bordered" src="./results/session1/7_matrix-quality/do560plusdo843_mmus_cebpa_liver_meme_top_m1/matrix-quality_2014-09-05.235841_do560plusdo843_mmus_cebpa_liver_meme_top_m1_score_distrib_compa_roc_xlog.png" alt="MQ5" width="550"/></p>
+      </ol>
+       <div class="post">
+	    <div class="success"><b>Is the CEBPa motif enriched?</b></p>
+	      <b>Anticipated Results:</b> In comparison with the theoretical score distribution with the empirical one using the CEBPA motif shows enrichment for high score values. High scores are more likely to be related to biologically relevant sites. 
+	      <ol>
+		<li><a href="./results/session1/7_matrix-quality/matrix-quality_2014-09-05.235841_synthesis.html">matrix-quality result</a>.</li>
+	    </div>
+       </div>  
+       
+    </div>
+    
+    
+    
+    
+  </div>	
 </div>
+
+
+<!--Background Model-->	
+
+<div class="demo">
+  <h2 id="mapping" class="expand">Background model</h2>
+  <div class="collapse">
+    <div class="notice">
+      <b>Goal:</b> Understand the relevance of background model selection and how to creat one
+      <br/>
+    </div>
+    <h3 class="expand">1 - Creating a background model</h3>
+    <div class="collapse">
+      <p>The tool <i>creat-background-model</i> can be used to creat a costumized background model from the a set of sequences.</p>
+      <ol>
+	<li>Input the peak sequences in fasta format.</li>
+	<li>Select the markov order to be used.</li>
+	<li>Specify an email.</li>
+      </ol>
+      <p><img class="bordered" src="./figures/creat_bgmodel_2.png" alt="VSC1" width="550"/> </p>
+      
+    </div>
+    
+    
+    
+  </div>
+</div>
+
+
+
+		</div>
+		
+	</div>
 </div>
 
 <!-- SIDE BAR -->		
