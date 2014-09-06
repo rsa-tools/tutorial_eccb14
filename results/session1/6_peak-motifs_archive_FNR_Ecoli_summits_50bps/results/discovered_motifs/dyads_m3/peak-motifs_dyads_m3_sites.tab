@@ -1,0 +1,65 @@
+; matrix-scan  -quick -v 1 -seq_format fasta -i $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/data/sequences/peak-motifs_test_maxlen1000.fasta -matrix_format transfac -m $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_motifs/dyads_m3/peak-motifs_dyads_m3.tf -bg_format inclusive -bgfile $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/composition/peak-motifs_test_inclusive-1str-ovlp_2nt.txt -pseudo 1 -2str -decimals 1 -bg_pseudo 0.01 -n score -lth score 7.5 -origin center -return sites -o $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_motifs/dyads_m3/peak-motifs_dyads_m3_sites.tab
+; Quick counting mode          
+; Input files
+;	input	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/data/sequences/peak-motifs_test_maxlen1000.fasta
+;	bg	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/composition/peak-motifs_test_inclusive-1str-ovlp_2nt.txt
+; Matrix files
+;	matrix 1	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_motifs/dyads_m3/peak-motifs_dyads_m3.tf
+; Sequence format      	fasta
+; Output files
+;	output	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_motifs/dyads_m3/peak-motifs_dyads_m3_sites.tab
+; Pseudo counts        	1
+; Background model
+;	Method        	file
+;	Markov order  	1
+;	Strand        	undef
+;	Background pseudo-frequency	0.01
+;	Residue probabilities
+;		a	0.29011
+;		c	0.21156
+;		g	0.20757
+;		t	0.29076
+; Thresholds	lower	upper
+;	score 	7.5  	NA
+; Output columns
+;	1	seq_id
+;	2	ft_type
+;	3	ft_name
+;	4	strand
+;	5	start
+;	6	end
+;	7	sequence
+;	8	weight
+#seq_id	ft_type	ft_name	strand	start	end	sequence	weight
+?_gi|49175990|ref|NC_000913.2|_34015_34116_+	site	dyads_m3	D	-39	-29	CAGATCAAATA	10.6
+?_gi|49175990|ref|NC_000913.2|_34015_34116_+	site	dyads_m3	R	5	15	TCGATCAAATT	10.0
+?_gi|49175990|ref|NC_000913.2|_770360_770461_+	site	dyads_m3	D	-20	-10	TCGATCAAATT	10.0
+?_gi|49175990|ref|NC_000913.2|_1311881_1311982_+	site	dyads_m3	R	31	41	TAGATCACATT	7.6
+?_gi|49175990|ref|NC_000913.2|_1627125_1627226_+	site	dyads_m3	D	-32	-22	TTGATCAAAAA	7.5
+?_gi|49175990|ref|NC_000913.2|_1735502_1735603_+	site	dyads_m3	D	-42	-32	ACGATCAAACC	7.7
+?_gi|49175990|ref|NC_000913.2|_2632165_2632266_+	site	dyads_m3	R	21	31	GAGATCAAATT	10.3
+?_gi|49175990|ref|NC_000913.2|_2904854_2904955_+	site	dyads_m3	R	31	41	CTGATCAAATT	9.5
+?_gi|49175990|ref|NC_000913.2|_3144375_3144476_+	site	dyads_m3	R	39	49	TTGATCAAACA	8.3
+?_gi|49175990|ref|NC_000913.2|_3656432_3656533_+	site	dyads_m3	D	-1	9	GAGATCAAAAA	8.6
+?_gi|49175990|ref|NC_000913.2|_3783164_3783265_+	site	dyads_m3	R	-15	-5	AAGATCAAAAT	8.6
+?_gi|49175990|ref|NC_000913.2|_4131663_4131764_+	site	dyads_m3	R	15	25	TAGATCAAATT	10.8
+?_gi|49175990|ref|NC_000913.2|_4347172_4347273_+	site	dyads_m3	R	14	24	CAGATCAAATA	10.6
+;
+; Matrices
+;	matrix	name    	ncol	nrow	pseudo	Wmin	Wmax	Wrange
+;	1	dyads_m3	11	4	0	-25.200	12.000	37.200	a:0.290 c:0.212 g:0.208 t:0.291 
+; Number of sequences scanned	109
+; Sum of sequence lengths	11009
+; N residues           	0
+; Matches per matrix
+;	matrix	name    	matches	scored
+;	1	dyads_m3       	13	0
+;		TOTAL          	13	0
+; Host name	biow
+; Job started	2014-09-06.012200
+; Job done	2014-09-06.012201
+; Seconds	0.28
+;	user	0.28
+;	system	0.03
+;	cuser	0.23
+;	csystem	0.02

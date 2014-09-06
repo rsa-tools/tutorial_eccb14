@@ -1,0 +1,36 @@
+; classfreq  -v 1 -ci 20 -o $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_motifs/oligos_6nt_mkv2/peak-motifs_oligos_6nt_mkv2_site_distrib.tab
+;	min                 	minimum of class interval (inclusive)
+;	max                 	maximum of class interval (exclusive)
+;	center              	center of class interval
+;	n                   	occurrences
+;	n_cum               	cumulative occurrences (inclusive)
+;	n_dcum              	decreasing cumulative occurrences (inclusive)
+;	f                   	frequencies
+;	f_cum               	cumulative frequencies (inclusive)
+;	f_dcum              	decreasing cumulative frequencies (inclusive)
+#[min	max[	center	n	n_cum	n_dcum	f	f_cum	f_dcum
+-40	-20	-30	1	1	6	0.16667	0.16667	1.00000
+-20	0	-10	1	2	5	0.16667	0.33333	0.83333
+0	20	10	3	5	4	0.50000	0.83333	0.66667
+20	40	30	1	6	1	0.16667	1.00000	0.16667
+; Statistics:
+; -----------
+; class interval     	20
+; classes            	4
+; count              	6
+; sum                	35
+; mean               	5.83333
+; median class       	[-20..0[
+; var                	341
+; std                	18.4609
+; min                	-22
+; max                	38
+; range              	60
+; Host name	biow
+; Job started	2014-09-06.012142
+; Job done	2014-09-06.012142
+; Seconds	0.22
+;	user	0.22
+;	system	0.01
+;	cuser	0
+;	csystem	0

@@ -1,0 +1,162 @@
+; compare-matrices  -v 1 -mode matches -format1 transfac -file1 $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_motifs/peak-motifs_motifs_discovered.tf -format2 tf -file2 $RSAT/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf -mode matches -DR -uth offset_rank 1 -lth w 5 -lth Wr 0.3 -lth cor 0.75 -lth Ncor 0.4 -return matrix_name,matrix_id,cor,Ncor,logoDP,NIcor,NsEucl,SSD,NSW,match_rank,width,strand,offset,consensus,alignments_1ton -sort Ncor -o $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_vs_db/peak-motifs_motifs_vs_db_footprintDB.tab
+; Program version       	1.118
+; Input files
+;	file2 	/vh/rsat/rsat/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf
+;	file1 	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_motifs/peak-motifs_motifs_discovered.tf
+; Output files
+;	alignments_1ton	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_vs_db/peak-motifs_motifs_vs_db_footprintDB_alignments_1ton.tab
+;	match_table_txt	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_vs_db/peak-motifs_motifs_vs_db_footprintDB.tab
+;	html_index   	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_vs_db/peak-motifs_motifs_vs_db_footprintDB_index.html
+;	alignments_1ton_html	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_vs_db/peak-motifs_motifs_vs_db_footprintDB_alignments_1ton.html
+;	match_table_html	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_vs_db/peak-motifs_motifs_vs_db_footprintDB.html
+;	prefix       	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_vs_db/peak-motifs_motifs_vs_db_footprintDB
+; Matrices
+;	file1	6 matrices	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_motifs/peak-motifs_motifs_discovered.tf
+;		file1	1	11	5	taGATCAATrw
+;		file1	2	11	7	TsAGGAGTAhw
+;		file1	3	12	3	rwAGAGGGAGws
+;		file1	4	20	28	wwwTTGATctadATCAAwww
+;		file1	5	20	28	wwwTTGAystagATCAAtww
+;		file1	6	11	11	ymGATCAAAtw
+;	file2	4196 matrices	/vh/rsat/rsat/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf
+;		file2		1		17		100		yyaymCATCAAwmwwmm
+;		file2		2		10		7		ACCGGAAGws
+;		file2		3		16		100		wwtksgTAATTACsdy
+;		file2		4		17		100		twrttaATTAwtaawwr
+;		file2		5		18		100		TCCGynnnnnnnnnCGGA
+;		file2		6		20		100		gwrastTTCCGGAAyrywrr
+;		file2		7		20		100		yrawygGyGCCGyrysackh
+;		file2		8		21		100		wmrmraAtmGAAGaaawawww
+;		file2		9		20		100		rkmkkakCACGTGmyyrvwy
+;		file2		10		6		1		CTATCA
+;		file2		11		18		66		hTTwCCwWAwwdGGhAat
+;		...	4186 more matrices
+; Column content
+;	1	id1          	Identifier of the first matrix
+;	2	id2          	Identifier of the second matrix
+;	3	name1        	Name of the first matrix
+;	4	name2        	Name of the second matrix
+;	5	cor          	Pearson coefficient of correlation between frequency matrices
+;	6	Ncor         	Normalized correlation. Ncor = cor * Wr
+;	7	logoDP       	Dot product between the logo matrices.
+;	8	NIcor        	Normalized Pearson correlation between the information content matrices. NIcor = Icor * Wr
+;	9	NSW          	Normalized Sandelin-Wasserman similarity. NSW = SW/w
+;	10	SSD          	sum of squared distance.
+;	11	NsEucl       	relative Euclidian similarity. NsEucl = (max(dEucl) - dEucl)/max(dEucl)
+;	12	w1           	Width of the first matrix
+;	13	w2           	Width of the second matrix
+;	14	w            	Alignment length (number of overlapping columns between matrix 1 and matrix 2, as a function of the offset)
+;	15	W            	Total alignment length (overlapping + non-overlapping columns). W = w1 + w2 - w
+;	16	Wr           	Relative alignment length (overlap divided by the total alignemnt length). Wr = w/W
+;	17	wr1          	Alignment length relative to the width of the first matrix. wr1 = w/w1
+;	18	wr2          	Alignment length relative to the width of the second matrix. wr2 = w/w2
+;	19	strand       	"strand", i.e. orientation of matrix 2 relative to matrix 1 (D=direct;  R=reverse)
+;	20	offset       	shift of the second matrix relative to the first matrix (negative:left; positive: right)
+;	21	consensus1   	IUPAC consensus of matrix 1 (dots represent non-aligned columns)
+;	22	consensus2   	IUPAC consensus of matrix 2 (dots represent non-aligned columns)
+;	23	rcor         	Matching rank for cor
+;	24	rNcor        	Matching rank for Ncor
+;	25	rlogoDP      	Matching rank for logoDP
+;	26	rNIcor       	Matching rank for NIcor
+;	27	rNsEucl      	Matching rank for NsEucl
+;	28	rSSD         	Matching rank for SSD
+;	29	rNSW         	Matching rank for NSW
+;	30	rank_mean    	Mean of the matching ranks on all selected metrics
+;	31	match_rank   	Rank of the match (sorting by rank_mean)
+#id1	id2	name1	name2	cor	Ncor	logoDP	NIcor	NSW	SSD	NsEucl	w1	w2	w	W	Wr	wr1	wr2	strand	offset	consensus1	consensus2	rcor	rNcor	rlogoDP	rNIcor	rNsEucl	rSSD	rNSW	rank_mean	match_rank
+dyads_m1	3061_FNR_RegulonDB_7.5_	dyads_m1	3061_FNR_RegulonDB_7.5_	0.948	0.663	6.730	0.655	0.971	0.8223	0.95420	20	14	14	20	0.7000	0.7000	1.0000	D	3	...TTGATctadATCAA...	tTGaTywayATCAA                        	2	7	39	5	1	9	2	9.2857	1
+dyads_m2	3061_FNR_RegulonDB_7.5_	dyads_m2	3061_FNR_RegulonDB_7.5_	0.915	0.641	6.428	0.637	0.962	1.0598	0.94800	20	14	14	20	0.7000	0.7000	1.0000	R	3	...TTGAystagATCAA...	TTGATRTWRATCAA                                    	10	9	41	6	2	14	5	12.4286	2
+oligos_6nt_mkv2	2784_PF0097.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	2784_PF0097.1_JASPAR_CORE_2009_	0.916	0.666	7.697	0.346	0.945	0.8854	0.91683	11	8	8	11	0.7273	0.7273	1.0000	R	2	..GATCAATr.	GATRAATR                      	9	6	27	59	17	11	9	19.7143	3
+oligos_6nt_mkv2	7424_HBP1_f1_HOCOMOCO_v9_	oligos_6nt_mkv2	7424_HBP1_f1_HOCOMOCO_v9_	0.939	0.433	6.895	0.434	0.967	0.4000	0.92546	11	8	6	13	0.4615	0.5455	0.7500	D	5	.....CAATrw	CAATgr..                            	4	56	34	31	10	2	4	20.1429	4
+oligos_6nt_mkv2	6530_3a01_E_3D-footprint_20130124_	oligos_6nt_mkv2	6530_3a01_E_3D-footprint_20130124_	0.896	0.489	7.801	0.504	0.941	0.7118	0.90057	11	6	6	11	0.5455	0.5455	1.0000	D	5	.....CAATrw	CAATtA                              	11	36	23	21	37	5	12	20.7143	5
+oligos_6nt_mkv2	5766_SOX18_full_2_HumanTF_1.0_	oligos_6nt_mkv2	5766_SOX18_full_2_HumanTF_1.0_	0.921	0.410	10.470	0.424	0.954	0.7428	0.92382	11	15	8	18	0.4444	0.7273	0.5333	D	3	...ATCAATrw	ATCAATwk.......                     	7	81	3	40	13	8	8	22.8571	6
+oligos_6nt_mkv2	5763_SOX15_full_2_HumanTF_1.0_	oligos_6nt_mkv2	5763_SOX15_full_2_HumanTF_1.0_	0.925	0.411	10.378	0.414	0.954	0.7301	0.92448	11	15	8	18	0.4444	0.7273	0.5333	D	3	...ATCAATrw	ATCAATAm.......                     	6	78	4	49	12	7	7	23.2857	7
+oligos_6nt_mkv2	1999_PB0144.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	1999_PB0144.1_JASPAR_CORE_2009_	0.818	0.562	7.711	0.585	0.914	1.8973	0.91146	11	16	11	16	0.6875	1.0000	0.6875	D	-1	taGATCAATrw	.wrsATCAATCr....       	32	15	26	10	20	42	31	25.1429	8
+dyads_m3	2526_MA0151.1_JASPAR_CORE_2009_	dyads_m3	2526_MA0151.1_JASPAR_CORE_2009_	0.887	0.484	8.694	0.469	0.920	0.9602	0.88452	11	6	6	11	0.5455	0.5455	1.0000	D	3	         ...ATCAAA..	ATyAAA                                            	13	39	15	26	54	12	25	26.2857	9
+oligos_6nt_mkv2	5829_Sox3_DBD_2_HumanTF_1.0_	oligos_6nt_mkv2	5829_Sox3_DBD_2_HumanTF_1.0_	0.884	0.419	10.178	0.419	0.931	1.2360	0.91265	11	17	9	19	0.4737	0.8182	0.5294	D	2	..GATCAATrw	sATCAATGt........                   	15	67	7	42	19	20	15	26.4286	10
+oligos_6nt_mkv2	2042_PB0188.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	2042_PB0188.1_JASPAR_CORE_2009_	0.814	0.559	7.045	0.586	0.913	1.9228	0.91086	11	16	11	16	0.6875	1.0000	0.6875	D	-1	taGATCAATrw	.drsWTCAATCr....       	33	16	33	9	21	43	32	26.7143	11
+oligos_6nt_mkv2	5774_SOX2_DBD_3_HumanTF_1.0_	oligos_6nt_mkv2	5774_SOX2_DBD_3_HumanTF_1.0_	0.886	0.420	10.258	0.408	0.933	1.2123	0.91350	11	17	9	19	0.4737	0.8182	0.5294	D	2	..GATCAATrw	rATCAATGk........                   	14	65	6	52	18	18	14	26.7143	12
+dyads_m3	6733_4euw_A_3D-footprint_20130124_	dyads_m3	6733_4euw_A_3D-footprint_20130124_	0.883	0.481	7.280	0.491	0.927	0.8773	0.88961	11	6	6	11	0.5455	0.5455	1.0000	D	4	         ....TCAAAt.	TcAAAg                                            	16	42	31	23	51	10	18	27.2857	13
+dyads_m3	5048_ZmHOX2a_2__Athamap_20091028_	dyads_m3	5048_ZmHOX2a_2__Athamap_20091028_	0.940	0.598	0.123	-0.161	0.967	0.4560	0.93179	11	7	7	11	0.6364	0.6364	1.0000	R	0	         ymGATCA....	CMGATCA                                           	3	10	86	84	3	3	3	27.4286	14
+oligos_6nt_mkv2	5048_ZmHOX2a_2__Athamap_20091028_	oligos_6nt_mkv2	5048_ZmHOX2a_2__Athamap_20091028_	0.926	0.589	0.139	-0.157	0.961	0.5430	0.92556	11	7	7	11	0.6364	0.6364	1.0000	R	0	taGATCA....	CMGATCA                       	5	11	83	82	9	4	6	28.5714	15
+dyads_m3	2653_MA0434.1_JASPAR_CORE_2009_	dyads_m3	2653_MA0434.1_JASPAR_CORE_2009_	0.862	0.464	6.479	0.443	0.928	1.0135	0.89830	11	9	7	13	0.5385	0.6364	0.7778	D	-2	         ymGATCA....	..ymrATCm                                         	21	47	40	27	40	13	17	29.2857	16
+dyads_m2	1999_PB0144.1_JASPAR_CORE_2009_	dyads_m2	1999_PB0144.1_JASPAR_CORE_2009_	0.839	0.420	5.565	0.431	0.944	1.3434	0.93170	20	16	12	24	0.5000	0.6000	0.7500	D	8	........stagATCAAtww	swrsATCAATCr....                                  	26	66	49	32	5	24	11	30.4286	17
+oligos_6nt_mkv2	5197_CUX1_DBD_3_HumanTF_1.0_	oligos_6nt_mkv2	5197_CUX1_DBD_3_HumanTF_1.0_	0.792	0.720	9.238	0.710	0.893	2.1482	0.89636	11	10	10	11	0.9091	0.9091	1.0000	D	1	.aGATCAATrw	TrATCrATam                          	47	1	11	3	44	63	52	31.5714	18
+dyads_m2	2042_PB0188.1_JASPAR_CORE_2009_	dyads_m2	2042_PB0188.1_JASPAR_CORE_2009_	0.832	0.416	5.073	0.430	0.944	1.3416	0.93175	20	16	12	24	0.5000	0.6000	0.7500	D	8	........stagATCAAtww	sdrsWTCAATCr....                                  	27	72	50	35	4	23	10	31.5714	19
+dyads_m3	1939_PB0082.1_JASPAR_CORE_2009_	dyads_m3	1939_PB0082.1_JASPAR_CORE_2009_	0.799	0.517	8.434	0.552	0.903	2.1345	0.90608	11	17	11	17	0.6471	1.0000	0.6471	D	-2	         ymGATCAAAtw	..wasATCAAAGg....                                 	43	27	17	13	24	62	37	31.8571	20
+oligos_6nt_mkv2	2653_MA0434.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	2653_MA0434.1_JASPAR_CORE_2009_	0.845	0.455	6.405	0.438	0.921	1.1002	0.89404	11	9	7	13	0.5385	0.6364	0.7778	D	-2	taGATCA....	..ymrATCm                     	25	48	42	30	45	16	23	32.7143	21
+oligos_6nt_mkv2	5776_SOX2_full_2_HumanTF_1.0_	oligos_6nt_mkv2	5776_SOX2_full_2_HumanTF_1.0_	0.870	0.412	9.016	0.406	0.922	1.3993	0.90706	11	17	9	19	0.4737	0.8182	0.5294	R	2	..GATCAATrw	KATCAATGK........                   	17	77	12	53	22	30	22	33.2857	22
+dyads_m3	7482_LEF1_f1_HOCOMOCO_v9_	dyads_m3	7482_LEF1_f1_HOCOMOCO_v9_	0.917	0.500	2.545	0.028	0.939	0.7262	0.89957	11	6	6	11	0.5455	0.5455	1.0000	R	3	         ...ATCAAA..	WWCAAA                                            	8	34	67	68	38	6	13	33.4286	23
+dyads_m3	6387_2a07_K_3D-footprint_20130124_	dyads_m3	6387_2a07_K_3D-footprint_20130124_	0.958	0.436	0.093	-0.128	0.972	0.2820	0.92490	11	5	5	11	0.4545	0.4545	1.0000	R	5	         .....CAAAt.	CAAAT                                             	1	55	88	80	11	1	1	33.8571	24
+dyads_m3	3755_UP00058_UniPROBE_20120919_	dyads_m3	3755_UP00058_UniPROBE_20120919_	0.796	0.515	8.422	0.550	0.902	2.1652	0.90541	11	17	11	17	0.6471	1.0000	0.6471	D	-2	         ymGATCAAAtw	..wwsATCAAAGg....                                 	44	28	18	14	28	66	41	34.1429	25
+dyads_m3	1940_PB0083.1_JASPAR_CORE_2009_	dyads_m3	1940_PB0083.1_JASPAR_CORE_2009_	0.795	0.515	7.733	0.554	0.902	2.1605	0.90551	11	17	11	17	0.6471	1.0000	0.6471	D	-2	         ymGATCAAAtw	..wasWTCAAAGg....                                 	45	29	24	11	26	65	40	34.2857	26
+dyads_m3	3751_UP00054_UniPROBE_20120919_	dyads_m3	3751_UP00054_UniPROBE_20120919_	0.795	0.514	7.843	0.554	0.901	2.1670	0.90537	11	17	11	17	0.6471	1.0000	0.6471	D	-2	         ymGATCAAAtw	..wasWTCAAAGg....                                 	46	30	22	12	29	67	42	35.4286	27
+dyads_m3	1795_MA0237.1_JASPAR_CORE_2009_	dyads_m3	1795_MA0237.1_JASPAR_CORE_2009_	0.888	0.646	2.118	0.068	0.915	1.3602	0.89691	11	8	8	11	0.7273	0.7273	1.0000	R	2	         ..GATCAAAt.	KWTCAAAR                                          	12	8	68	66	43	26	30	36.1429	28
+dyads_m3	2329_CN0166.1_JASPAR_CORE_2009_	dyads_m3	2329_CN0166.1_JASPAR_CORE_2009_	0.864	0.407	8.500	0.387	0.917	1.3229	0.89834	11	14	8	17	0.4706	0.7273	0.5714	D	-6	         ymGATCAA...	......GAGATCAA                                    	18	84	16	56	39	22	29	37.7143	29
+dyads_m2	1000_UP00185_UniPROBE_20120919_	dyads_m2	1000_UP00185_UniPROBE_20120919_	0.765	0.466	5.022	0.471	0.925	2.1106	0.92662	20	17	14	23	0.6087	0.7000	0.8235	D	6	......AystagATCAAtww	yyaymCATCAAwmw...                                 	65	44	51	24	6	57	19	38.0000	30
+dyads_m2	7440_HNF6_f1_HOCOMOCO_v9_	dyads_m2	7440_HNF6_f1_HOCOMOCO_v9_	0.805	0.524	0.878	-0.127	0.930	1.8206	0.92661	20	13	13	20	0.6500	0.6500	1.0000	R	7	.......ystagATCAAtww	WHWAARTCAATAW                                     	35	20	75	79	7	39	16	38.7143	31
+oligos_6nt_mkv2	5199_CUX2_DBD_2_HumanTF_1.0_	oligos_6nt_mkv2	5199_CUX2_DBD_2_HumanTF_1.0_	0.768	0.698	8.936	0.681	0.880	2.4073	0.89029	11	10	10	11	0.9091	0.9091	1.0000	D	1	.aGATCAATrw	TrATCRATaa                          	61	3	13	4	50	80	61	38.8571	32
+dyads_m3	5494_LEF1_DBD_HumanTF_1.0_	dyads_m3	5494_LEF1_DBD_HumanTF_1.0_	0.777	0.570	11.529	0.608	0.876	2.7363	0.89367	11	15	11	15	0.7333	1.0000	0.7333	D	-1	         ymGATCAAAtw	.AAGATCAAAGg...                                   	55	14	1	7	47	84	65	39.0000	33
+dyads_m3	5900_Tcf7_DBD_HumanTF_1.0_	dyads_m3	5900_Tcf7_DBD_HumanTF_1.0_	0.766	0.702	11.009	0.742	0.870	2.8493	0.89149	11	12	11	12	0.9167	1.0000	0.9167	D	-1	         ymGATCAAAtw	.AASATCAAAGg                                      	64	2	2	1	49	86	71	39.2857	34
+oligos_7nt_mkv2	5131_YufM_DBTBS_1.0_	oligos_7nt_mkv2	5131_YufM_DBTBS_1.0_	0.786	0.572	7.999	0.589	0.872	2.0454	0.87359	11	8	8	11	0.7273	0.7273	1.0000	D	2	..AGGAGTAh.	ArGrGdws                            	49	13	21	8	66	51	68	39.4286	35
+dyads_m2	2984_PH0134.1_JASPAR_CORE_2009_	dyads_m2	2984_PH0134.1_JASPAR_CORE_2009_	0.764	0.465	5.021	0.471	0.924	2.1190	0.92648	20	17	14	23	0.6087	0.7000	0.8235	D	6	......AystagATCAAtww	yyaymCATCAAwmw...                                 	69	45	52	25	8	58	20	39.5714	36
+dyads_m3	3061_FNR_RegulonDB_7.5_	dyads_m3	3061_FNR_RegulonDB_7.5_	0.863	0.406	6.313	0.409	0.924	1.2158	0.90254	11	14	8	17	0.4706	0.7273	0.5714	D	-6	         ymGATCAA...	......wayATCAA                                    	20	86	46	51	35	19	21	39.7143	37
+oligos_6nt_mkv2	5195_CUX1_DBD_1_HumanTF_1.0_	oligos_6nt_mkv2	5195_CUX1_DBD_1_HumanTF_1.0_	0.854	0.405	7.521	0.397	0.920	1.4468	0.90550	11	17	9	19	0.4737	0.8182	0.5294	D	-8	taGATCAAT..	........strATCrAT                   	23	87	29	55	27	32	26	39.8571	38
+oligos_8nt_mkv2	6513_2v2t_A_3D-footprint_20130124_	oligos_8nt_mkv2	6513_2v2t_A_3D-footprint_20130124_	0.860	0.430	4.825	0.409	0.908	1.1026	0.87625	12	6	6	12	0.5000	0.5000	1.0000	D	5	.....GGGAGw.	GGgAnT                               	22	57	53	50	63	17	35	42.4286	39
+oligos_6nt_mkv2	1000_UP00185_UniPROBE_20120919_	oligos_6nt_mkv2	1000_UP00185_UniPROBE_20120919_	0.780	0.505	6.380	0.516	0.899	2.2270	0.90407	11	17	11	17	0.6471	1.0000	0.6471	D	-3	taGATCAATrw	...ymCATCAAwmw...	52	32	43	19	33	72	48	42.7143	40
+oligos_6nt_mkv2	2984_PH0134.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	2984_PH0134.1_JASPAR_CORE_2009_	0.780	0.505	6.380	0.516	0.899	2.2270	0.90407	11	17	11	17	0.6471	1.0000	0.6471	D	-3	taGATCAATrw	...ymCATCAAwmw...             	52	32	43	19	33	72	48	42.7143	41
+oligos_6nt_mkv2	2329_CN0166.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	2329_CN0166.1_JASPAR_CORE_2009_	0.850	0.400	8.262	0.376	0.910	1.4456	0.89373	11	14	8	17	0.4706	0.7273	0.5714	D	-6	taGATCAA...	......GAGATCAA          	24	88	19	58	46	31	33	42.7143	42
+dyads_m3	5863_TCF7L1_full_HumanTF_1.0_	dyads_m3	5863_TCF7L1_full_HumanTF_1.0_	0.750	0.688	10.294	0.720	0.863	3.0152	0.88838	11	12	11	12	0.9167	1.0000	0.9167	D	-1	         ymGATCAAAtw	.AAGATCAAAGG                                      	87	4	5	2	53	88	72	44.4286	43
+dyads_m3	3780_UP00083_UniPROBE_20120919_	dyads_m3	3780_UP00083_UniPROBE_20120919_	0.803	0.520	3.634	0.097	0.902	2.1520	0.90570	11	17	11	17	0.6471	1.0000	0.6471	R	-2	         ymGATCAAAtw	..WASATCAAAGG....                                 	39	23	64	63	25	64	38	45.1429	44
+oligos_6nt_mkv2	7440_HNF6_f1_HOCOMOCO_v9_	oligos_6nt_mkv2	7440_HNF6_f1_HOCOMOCO_v9_	0.805	0.681	0.872	-0.173	0.905	2.0928	0.90701	11	13	11	13	0.8462	1.0000	0.8462	R	-2	taGATCAATrw	..WAARTCAATAW                       	38	5	76	86	23	55	36	45.5714	45
+dyads_m1	7440_HNF6_f1_HOCOMOCO_v9_	dyads_m1	7440_HNF6_f1_HOCOMOCO_v9_	0.780	0.507	1.034	-0.102	0.920	2.0804	0.92155	20	13	13	20	0.6500	0.6500	1.0000	R	7	.......TctadATCAAwww	WHWAARTCAATAW                                     	51	31	72	75	14	54	24	45.8571	46
+oligos_6nt_mkv2	6138_1j5n_A_3D-footprint_20130124_	oligos_6nt_mkv2	6138_1j5n_A_3D-footprint_20130124_	0.773	0.492	9.628	0.518	0.854	2.0478	0.85545	11	7	7	11	0.6364	0.6364	1.0000	D	3	...ATCAATr.	AACAATc                             	58	35	9	18	77	52	75	46.2857	47
+dyads_m3	3764_UP00067_UniPROBE_20120919_	dyads_m3	3764_UP00067_UniPROBE_20120919_	0.805	0.521	3.757	0.094	0.901	2.1757	0.90518	11	17	11	17	0.6471	1.0000	0.6471	R	-2	         ymGATCAAAtw	..WASATCAAAGG....                                 	36	21	63	64	31	69	45	47.0000	48
+oligos_6nt_mkv2	7627_SOX10_si_HOCOMOCO_v9_	oligos_6nt_mkv2	7627_SOX10_si_HOCOMOCO_v9_	0.801	0.437	5.845	0.418	0.894	1.2695	0.86722	11	6	6	11	0.5455	0.5455	1.0000	D	5	.....CAATrw	CAAwGr                              	42	54	48	43	70	21	51	47.0000	49
+oligos_6nt_mkv2	3061_FNR_RegulonDB_7.5_	oligos_6nt_mkv2	3061_FNR_RegulonDB_7.5_	0.863	0.406	6.281	0.405	0.902	1.5678	0.88933	11	14	8	17	0.4706	0.7273	0.5714	R	-6	taGATCAA...	......TWRATCAA                	19	85	47	54	52	35	39	47.2857	50
+oligos_6nt_mkv2	3788_UP00091_UniPROBE_20120919_	oligos_6nt_mkv2	3788_UP00091_UniPROBE_20120919_	0.753	0.517	7.714	0.528	0.884	2.5561	0.89723	11	16	11	16	0.6875	1.0000	0.6875	D	-2	taGATCAATrw	..drgAACAATwa...              	82	25	25	16	42	83	60	47.5714	51
+dyads_m3	2684_PB0084.1_JASPAR_CORE_2009_	dyads_m3	2684_PB0084.1_JASPAR_CORE_2009_	0.801	0.518	3.622	0.097	0.901	2.1747	0.90520	11	17	11	17	0.6471	1.0000	0.6471	R	-2	         ymGATCAAAtw	..WASATCAAAGG....                                 	41	24	65	62	30	68	44	47.7143	52
+dyads_m3	1904_PB0040.1_JASPAR_CORE_2009_	dyads_m3	1904_PB0040.1_JASPAR_CORE_2009_	0.805	0.521	3.773	0.092	0.901	2.1768	0.90516	11	17	11	17	0.6471	1.0000	0.6471	R	-2	         ymGATCAAAtw	..WASATCAAAGG....                                 	37	22	62	65	32	70	46	47.7143	53
+oligos_6nt_mkv2	2682_PB0072.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	2682_PB0072.1_JASPAR_CORE_2009_	0.753	0.517	7.665	0.527	0.884	2.5547	0.89725	11	16	11	16	0.6875	1.0000	0.6875	D	-2	taGATCAATrw	..drgAACAATwa...              	83	26	28	17	41	82	59	48.0000	54
+oligos_7nt_mkv2	5047_ZmHOX2a_1__Athamap_20091028_	oligos_7nt_mkv2	5047_ZmHOX2a_1__Athamap_20091028_	0.825	0.525	0.129	-0.139	0.901	1.3824	0.88123	11	7	7	11	0.6364	0.6364	1.0000	R	0	TsAGGAG....	TTAGGAY                             	31	19	84	81	57	28	43	49.0000	55
+oligos_6nt_mkv2	6753_6gat_A_3D-footprint_20130124_	oligos_6nt_mkv2	6753_6gat_A_3D-footprint_20130124_	0.803	0.438	4.707	0.416	0.888	1.3459	0.86328	11	6	6	11	0.5455	0.5455	1.0000	D	1	.aGATCA....	CnATCA                              	40	53	58	44	72	25	54	49.4286	56
+dyads_m3	6753_6gat_A_3D-footprint_20130124_	dyads_m3	6753_6gat_A_3D-footprint_20130124_	0.805	0.439	4.748	0.415	0.885	1.3769	0.86171	11	6	6	11	0.5455	0.5455	1.0000	D	1	         .mGATCA....	CnATCA                                            	34	52	57	48	74	27	56	49.7143	57
+oligos_8nt_mkv2	6322_1svc_P_3D-footprint_20130124_	oligos_8nt_mkv2	6322_1svc_P_3D-footprint_20130124_	0.829	0.483	0.244	-0.041	0.901	1.3867	0.88105	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....GGGAGws	GGGANNC                              	28	40	79	71	58	29	47	50.2857	58
+dyads_m2	1924_PB0063.1_JASPAR_CORE_2009_	dyads_m2	1924_PB0063.1_JASPAR_CORE_2009_	0.750	0.424	4.768	0.416	0.918	2.1235	0.92074	20	16	13	23	0.5652	0.6500	0.8125	D	7	.......ystagATCAAtww	wtwrgAACAATww...                                  	88	64	56	45	15	59	27	50.5714	59
+dyads_m2	3793_UP00096_UniPROBE_20120919_	dyads_m2	3793_UP00096_UniPROBE_20120919_	0.750	0.424	4.822	0.416	0.918	2.1307	0.92060	20	16	13	23	0.5652	0.6500	0.8125	D	7	.......ystagATCAAtww	wtwrgAACAATww...                                  	86	63	54	46	16	61	28	50.5714	60
+oligos_6nt_mkv2	7634_SOX5_f1_HOCOMOCO_v9_	oligos_6nt_mkv2	7634_SOX5_f1_HOCOMOCO_v9_	0.767	0.488	6.350	0.491	0.857	2.0035	0.85702	11	7	7	11	0.6364	0.6364	1.0000	D	3	...ATCAATr.	AACAATr                             	62	37	45	22	76	47	74	51.8571	61
+oligos_6nt_mkv2	1741_MA0182.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	1741_MA0182.1_JASPAR_CORE_2009_	0.826	0.413	0.779	-0.103	0.909	1.0956	0.87665	11	7	6	12	0.5000	0.5455	0.8571	R	5	.....CAATrw	YAATWA.              	30	76	78	76	62	15	34	53.0000	62
+oligos_7nt_mkv2	2780_PF0093.1_JASPAR_CORE_2009_	oligos_7nt_mkv2	2780_PF0093.1_JASPAR_CORE_2009_	0.778	0.424	9.609	0.424	0.833	2.0000	0.83333	11	6	6	11	0.5455	0.5455	1.0000	D	3	...GGAGTA..	GGATTA                              	54	62	10	39	85	46	85	54.4286	63
+oligos_7nt_mkv2	3094_NarL_RegulonDB_7.5_	oligos_7nt_mkv2	3094_NarL_RegulonDB_7.5_	0.764	0.555	4.299	0.537	0.857	2.2886	0.86628	11	8	8	11	0.7273	0.7273	1.0000	D	1	.sAGGAGTA..	wakrrkTA                            	71	18	60	15	71	76	73	54.8571	64
+dyads_m3	7299_ARI3A_do_HOCOMOCO_v9_	dyads_m3	7299_ARI3A_do_HOCOMOCO_v9_	0.781	0.409	4.796	0.423	0.895	2.3089	0.90232	11	21	11	21	0.5238	1.0000	0.5238	D	-7	         ymGATCAAAtw	.......rrwATcWAAwt...                             	50	82	55	41	36	77	50	55.8571	65
+oligos_6nt_mkv2	2872_PH0014.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	2872_PH0014.1_JASPAR_CORE_2009_	0.761	0.428	6.819	0.429	0.876	2.2370	0.88249	11	14	9	16	0.5625	0.8182	0.6429	D	-5	taGATCAAT..	.....ssmATCAaw                	73	58	37	37	55	74	63	56.7143	66
+oligos_6nt_mkv2	3893_UP00198_UniPROBE_20120919_	oligos_6nt_mkv2	3893_UP00198_UniPROBE_20120919_	0.761	0.428	6.819	0.429	0.876	2.2370	0.88249	11	14	9	16	0.5625	0.8182	0.6429	D	-5	taGATCAAT..	.....ssmATCAaw                	73	58	37	37	55	74	63	56.7143	67
+oligos_7nt_mkv2	3095_NarP_RegulonDB_7.5_	oligos_7nt_mkv2	3095_NarP_RegulonDB_7.5_	0.789	0.574	0.939	-0.161	0.872	2.0441	0.87363	11	8	8	11	0.7273	0.7273	1.0000	R	2	..AGGAGTAh.	AGRRGTAK                            	48	12	74	83	65	50	67	57.0000	68
+dyads_m3	7604_RARG_f1_HOCOMOCO_v9_	dyads_m3	7604_RARG_f1_HOCOMOCO_v9_	0.759	0.414	7.379	0.439	0.848	1.8216	0.84094	11	6	6	11	0.5455	0.5455	1.0000	D	1	         .mGATCA....	AGKTCA                                            	75	74	30	29	81	40	79	58.2857	69
+dyads_m3	2619_MA0389.1_JASPAR_CORE_2009_	dyads_m3	2619_MA0389.1_JASPAR_CORE_2009_	0.776	0.452	1.017	0.016	0.884	1.6212	0.87138	11	8	7	12	0.5833	0.6364	0.8750	R	-1	         ymGATCA....	.KAGATCT                                          	57	49	73	69	69	38	58	59.0000	70
+dyads_m3	3893_UP00198_UniPROBE_20120919_	dyads_m3	3893_UP00198_UniPROBE_20120919_	0.758	0.426	6.826	0.431	0.871	2.3132	0.88050	11	14	9	16	0.5625	0.8182	0.6429	D	-5	         ymGATCAAA..	.....ssmATCAaw                                    	79	60	35	33	59	78	69	59.0000	71
+dyads_m3	2872_PH0014.1_JASPAR_CORE_2009_	dyads_m3	2872_PH0014.1_JASPAR_CORE_2009_	0.758	0.426	6.826	0.431	0.871	2.3132	0.88050	11	14	9	16	0.5625	0.8182	0.6429	D	-5	         ymGATCAAA..	.....ssmATCAaw                                    	79	60	35	33	59	78	69	59.0000	72
+oligos_6nt_mkv2	2619_MA0389.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	2619_MA0389.1_JASPAR_CORE_2009_	0.771	0.450	0.785	-0.004	0.885	1.6162	0.87158	11	8	7	12	0.5833	0.6364	0.8750	R	-1	taGATCA....	.KAGATCT                      	60	51	77	70	68	37	57	60.0000	73
+dyads_m3	2760_PF0073.1_JASPAR_CORE_2009_	dyads_m3	2760_PF0073.1_JASPAR_CORE_2009_	0.828	0.452	0.121	-0.177	0.877	1.4711	0.85706	11	6	6	11	0.5455	0.5455	1.0000	R	4	         ....TCAAAt.	TCAAAG                                            	29	50	87	87	75	33	62	60.4286	74
+dyads_m3	7300_ARI3A_f1_HOCOMOCO_v9_	dyads_m3	7300_ARI3A_f1_HOCOMOCO_v9_	0.764	0.417	8.757	0.415	0.829	2.0579	0.83094	11	6	6	11	0.5455	0.5455	1.0000	D	3	         ...ATCAAA..	ATTAAA                                            	67	70	14	47	88	53	88	61.0000	75
+oligos_8nt_mkv2	2711_PF0024.1_JASPAR_CORE_2009_	oligos_8nt_mkv2	2711_PF0024.1_JASPAR_CORE_2009_	0.758	0.408	9.734	0.441	0.841	2.2222	0.84942	12	8	7	13	0.5385	0.5833	0.8750	D	5	.....GGGAGws	GGGAGGr.                            	77	83	8	28	80	71	82	61.2857	76
+oligos_6nt_mkv2	7604_RARG_f1_HOCOMOCO_v9_	oligos_6nt_mkv2	7604_RARG_f1_HOCOMOCO_v9_	0.752	0.410	7.248	0.429	0.846	1.8446	0.83994	11	6	6	11	0.5455	0.5455	1.0000	D	1	.aGATCA....	AGKTCA                              	84	79	32	36	82	41	81	62.1429	77
+oligos_6nt_mkv2	2559_MA0301.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	2559_MA0301.1_JASPAR_CORE_2009_	0.776	0.418	0.126	-0.106	0.890	1.5448	0.87445	11	9	7	13	0.5385	0.6364	0.7778	R	-2	taGATCA....	..TRGATCT                     	56	69	85	77	64	34	53	62.5714	78
+dyads_m3	2255_CN0092.1_JASPAR_CORE_2009_	dyads_m3	2255_CN0092.1_JASPAR_CORE_2009_	0.761	0.465	4.160	0.101	0.875	2.7440	0.89352	11	18	11	18	0.6111	1.0000	0.6111	R	-5	         ymGATCAAAtw	.....CAAATCAAATT..                                	72	46	61	61	48	85	66	62.7143	79
+oligos_6nt_mkv2	2526_MA0151.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	2526_MA0151.1_JASPAR_CORE_2009_	0.758	0.414	8.186	0.386	0.834	1.9973	0.83345	11	6	6	11	0.5455	0.5455	1.0000	D	3	...ATCAAT..	ATyAAA                        	78	75	20	57	84	45	84	63.2857	80
+dyads_m3	2559_MA0301.1_JASPAR_CORE_2009_	dyads_m3	2559_MA0301.1_JASPAR_CORE_2009_	0.773	0.416	0.195	-0.115	0.885	1.6057	0.87200	11	9	7	13	0.5385	0.6364	0.7778	R	-2	         ymGATCA....	..TRGATCT                                         	59	73	81	78	67	36	55	64.1429	81
+dyads_m3	1838_MA0326.1_JASPAR_CORE_2009_	dyads_m3	1838_MA0326.1_JASPAR_CORE_2009_	0.764	0.555	2.550	-0.043	0.847	2.4465	0.86175	11	8	8	11	0.7273	0.7273	1.0000	R	1	         .mGATCAAA..	YGAGCAAA                                          	70	17	66	72	73	81	80	65.5714	82
+dyads_m3	2350_CN0187.1_JASPAR_CORE_2009_	dyads_m3	2350_CN0187.1_JASPAR_CORE_2009_	0.755	0.472	4.329	0.067	0.854	2.9292	0.87898	11	15	10	16	0.6250	0.9091	0.6667	R	-5	         ymGATCAAAt.	.....AAGAWCAAAG                                   	81	43	59	67	61	87	76	67.7143	83
+dyads_m3	1793_MA0235.1_JASPAR_CORE_2009_	dyads_m3	1793_MA0235.1_JASPAR_CORE_2009_	0.764	0.486	0.204	-0.181	0.850	2.1064	0.85339	11	7	7	11	0.6364	0.6364	1.0000	R	1	         .mGATCAA...	HAATCAA                                           	66	38	80	88	78	56	77	69.0000	84
+oligos_7nt_mkv2	1771_MA0212.1_JASPAR_CORE_2009_	oligos_7nt_mkv2	1771_MA0212.1_JASPAR_CORE_2009_	0.767	0.418	1.998	-0.055	0.831	2.0248	0.83230	11	6	6	11	0.5455	0.5455	1.0000	R	3	...GGAGTA..	GGATTA                              	63	68	70	74	86	48	86	70.7143	85
+oligos_6nt_mkv2	1793_MA0235.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	1793_MA0235.1_JASPAR_CORE_2009_	0.759	0.483	0.148	-0.170	0.848	2.1244	0.85277	11	7	7	11	0.6364	0.6364	1.0000	R	1	.aGATCAA...	HAATCAA              	76	41	82	85	79	60	78	71.5714	86
+oligos_7nt_mkv2	1792_MA0234.1_JASPAR_CORE_2009_	oligos_7nt_mkv2	1792_MA0234.1_JASPAR_CORE_2009_	0.764	0.417	2.075	-0.055	0.830	2.0388	0.83173	11	6	6	11	0.5455	0.5455	1.0000	R	3	...GGAGTA..	GGATTA                              	68	71	69	73	87	49	87	72.0000	87
+oligos_6nt_mkv2	2670_MF0011.1_JASPAR_CORE_2009_	oligos_6nt_mkv2	2670_MF0011.1_JASPAR_CORE_2009_	0.751	0.410	1.677	0.106	0.835	1.9840	0.83400	11	6	6	11	0.5455	0.5455	1.0000	R	3	...ATCAAT..	AACAAW                        	85	80	71	60	83	44	83	72.2857	88
+; Host name	biow
+; Job started	2014-09-06.011812
+; Job done	2014-09-06.012135
+; Seconds	170.99
+;	user	170.99
+;	system	3.48
+;	cuser	22.61
+;	csystem	5.03

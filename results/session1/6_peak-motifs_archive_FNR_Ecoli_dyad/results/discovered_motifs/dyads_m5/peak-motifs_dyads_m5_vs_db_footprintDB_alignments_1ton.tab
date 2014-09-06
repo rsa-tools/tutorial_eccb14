@@ -1,0 +1,23 @@
+; One-to-n matrix alignment; reference matrix: dyads_m5_shift0	; 3 matrices	; sort_field=rank_mean
+; dyads_m5; m=0 (reference); ncol1=12; shift=0; ncol=12; rkrCGCTGGAwr
+; Alignment reference
+a	18	10	25	4	0	1	1	0	0	49	18	13
+c	10	10	9	43	1	49	0	0	0	0	7	12
+g	14	18	14	3	46	1	0	51	51	1	12	18
+t	9	13	3	1	4	0	50	0	0	1	14	8
+//
+; dyads_m5 versus 2742_PF0055.1_JASPAR_CORE_2009_; m=1/2; ncol2=6; w=6; offset=6; strand=D; shift=6; score= 1.1429; ------TGGAAA
+; cor=0.840; Ncor=0.420; logoDP=7.225; NIcor=0.398; NsEucl=0.864; SSD=1.331; NSW=0.889; rcor=1; rNcor=2; rlogoDP=1; rNIcor=1; rNsEucl=1; rSSD=1; rNSW=1; rank_mean=1.143; match_rank=1
+a	0	0	0	0	0	0	0	0	0	6612	6612	6612
+c	0	0	0	0	0	0	0	0	0	0	0	0
+g	0	0	0	0	0	0	0	6612	6612	0	0	0
+t	0	0	0	0	0	0	6612	0	0	0	0	0
+//
+; dyads_m5 versus 2533_MA0267.1_JASPAR_CORE_2009__rc; m=2/2; ncol2=7; w=7; offset=3; strand=R; shift=3; score= 1.8571; ---tGCTGGk--
+; cor=0.777; Ncor=0.453; logoDP=3.736; NIcor=0.146; NsEucl=0.862; SSD=1.876; NSW=0.866; rcor=2; rNcor=1; rlogoDP=2; rNIcor=2; rNsEucl=2; rSSD=2; rNSW=2; rank_mean=1.857; match_rank=2
+a	0	0	0	14	0	0	0	0	1	5	0	0
+c	0	0	0	17	0	100	0	0	6	21	0	0
+g	0	0	0	20	100	0	10	100	92	28	0	0
+t	0	0	0	49	0	0	90	0	1	45	0	0
+//
+;

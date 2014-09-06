@@ -1,0 +1,8 @@
+track name="dyads_m3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m3/peak-motifs_dyads_m3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>

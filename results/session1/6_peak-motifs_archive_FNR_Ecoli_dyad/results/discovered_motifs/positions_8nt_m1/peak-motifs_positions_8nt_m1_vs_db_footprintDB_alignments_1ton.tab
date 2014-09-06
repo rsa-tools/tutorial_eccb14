@@ -1,0 +1,23 @@
+; One-to-n matrix alignment; reference matrix: positions_8nt_m1_shift0	; 3 matrices	; sort_field=rank_mean
+; positions_8nt_m1; m=0 (reference); ncol1=13; shift=0; ncol=13; wkCAGGCCGATvc
+; Alignment reference
+a	17	7	1	37	2	1	4	2	2	34	1	10	9
+c	7	9	38	0	0	0	27	31	2	1	0	12	17
+g	5	12	0	1	36	38	3	1	35	1	0	12	7
+t	10	11	0	1	1	0	5	5	0	3	38	5	6
+//
+; positions_8nt_m1 versus 2429_MA0035.1_JASPAR_CORE_2009_; m=1/2; ncol2=6; w=6; offset=7; strand=D; shift=7; score= 1.4286; -------sGATgs
+; cor=0.872; Ncor=0.402; logoDP=3.480; NIcor=0.405; NsEucl=0.911; SSD=0.572; NSW=0.952; rcor=1; rNcor=2; rlogoDP=2; rNIcor=2; rNsEucl=1; rSSD=1; rNSW=1; rank_mean=1.429; match_rank=1
+a	0	0	0	0	0	0	0	13	0	50	1	13	6
+c	0	0	0	0	0	0	0	14	0	2	0	6	16
+g	0	0	0	0	0	0	0	15	53	0	1	25	22
+t	0	0	0	0	0	0	0	11	0	1	51	9	9
+//
+; positions_8nt_m1 versus 5095_SigD_2_DBTBS_1.0_; m=2/2; ncol2=8; w=8; offset=5; strand=D; shift=5; score= 1.5714; -----GCCGATAT
+; cor=0.860; Ncor=0.529; logoDP=6.075; NIcor=0.528; NsEucl=0.897; SSD=1.359; NSW=0.915; rcor=2; rNcor=1; rlogoDP=1; rNIcor=1; rNsEucl=2; rSSD=2; rNSW=2; rank_mean=1.571; match_rank=2
+a	0	0	0	0	0	0	0	0	0.05	0.98	0.02	0.94	0.23
+c	0	0	0	0	0	0	1	0.96	0.04	0	0	0.06	0
+g	0	0	0	0	0	0.99	0	0.04	0.91	0	0	0	0.05
+t	0	0	0	0	0	0.01	0	0	0	0.02	0.98	0	0.72
+//
+;

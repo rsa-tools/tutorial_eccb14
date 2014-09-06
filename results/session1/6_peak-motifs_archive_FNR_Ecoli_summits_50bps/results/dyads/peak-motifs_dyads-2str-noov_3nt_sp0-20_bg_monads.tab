@@ -1,0 +1,97 @@
+; dyad-analysis  -v 1 -i $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/data/sequences/peak-motifs_test_maxlen1000_purged_ml30_mis0.fasta -quick -format fasta -sort -lth ratio 1 -lth occ_sig 0 -uth rank 100 -return occ,proba,ratio,zscore,rank -2str -noov -seqtype dna -l 3 -sp 0-20 -bg monads -pseudo 0.01
+; Citation: van Helden et al. (2000). Nucleic Acids Res. 28(8):1808-18.
+; Program version              	1.78
+; Input file                   	$RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/data/sequences/peak-motifs_test_maxlen1000_purged_ml30_mis0.fasta
+; Sequence type                	DNA
+; Nb of sequences              	0
+; Sum of sequence lengths      	0
+; default return values        	freq,occ
+; return values                	ratio,proba,occ,exp_freq,exp_occ,rank,zscore
+; Discard overlapping matches
+; Counted on both strands
+; 	grouped by pairs of reverse complements
+; Monad parameters             
+; 	monad size                  	3
+; 	monad positions              10791
+; 	    valid                    	10791
+; 	    discarded                	0 (contain other letters than ACGT)
+; 	distinct monads              64
+; Dyad parameters              
+; 	dyad type                    any dyad
+; 	minimal spacing              0
+; 	maximal spacing              20
+; 	distinct dyads               	43680
+; 	dyads tested for significance	20248
+;	Dyad counts per spacing
+;		spacing	max_pos	occ	ovlps	ovl+occ	ACGT	nonACGT
+;		sp 0		10377	90	10467	10377	NA
+;		sp 1		10243	113	10356	10243	NA
+;		sp 2		10117	131	10248	10117	NA
+;		sp 3		9987	156	10143	9987	NA
+;		sp 4		9865	171	10036	9865	NA
+;		sp 5		9743	186	9929	9743	NA
+;		sp 6		9648	171	9819	9648	NA
+;		sp 7		9508	198	9706	9508	NA
+;		sp 8		9382	214	9596	9382	NA
+;		sp 9		9287	199	9486	9287	NA
+;		sp 10		9176	202	9378	9176	NA
+;		sp 11		9053	218	9271	9053	NA
+;		sp 12		8955	208	9163	8955	NA
+;		sp 13		8851	203	9054	8851	NA
+;		sp 14		8750	197	8947	8750	NA
+;		sp 15		8646	193	8839	8646	NA
+;		sp 16		8540	190	8730	8540	NA
+;		sp 17		8436	182	8618	8436	NA
+;		sp 18		8321	191	8512	8321	NA
+;		sp 19		8192	211	8403	8192	NA
+;		sp 20		8089	202	8291	8089	NA
+; Estimation of expected dyad frequencies
+;	Background model	monads
+;	Monad calibration from input sequences
+; Sequences:
+;	Analyzed by count-words
+; column headers
+;	1	sequence       	
+;	2	identifier             	
+;	3	expected_freq  	
+;	4	occ            	observed occurrences
+;	5	exp_occ        	expected occurrences
+;	6	occ_P          	occurrence probability (binomial)
+;	7	occ_E          	E-value for occurrences (binomial)
+;	8	occ_sig        	occurrence significance (binomial)
+;	9	rank           	rank
+;	10	ovl_occ        	number of overlapping occurrences
+;	11	all_occ        	number of non-overlapping + overlapping occurrences
+;	12	zscore         	z-score (normal)
+;	13	occ_var        	
+;	14	ratio          	observed/expected ratio
+;	15	ov_coef        	overlap coefficient
+;	16	remark         	remark (dir_rep=direct repeat; rc_pal=reverse complementary palindrom)
+#sequence  	identifier             	expected_freq	occ	exp_occ	occ_P	occ_E	occ_sig	rank	ovl_occ	all_occ	zscore	occ_var	ratio	ov_coef	remark
+tgan{6}tca	tgan{6}tca|tgan{6}tca	0.0004836246352	     38	   4.67	5.1e-22	1.0e-17	  16.99	      1	0	38	  15.48	   4.64	   8.14	 1.0000	rc_pal
+tgan{7}caa	tgan{7}caa|ttgn{7}tca	0.0009431006720	     48	   8.97	6.2e-20	1.3e-15	  14.90	      2	18	66	  13.12	   8.86	   5.35	 1.0000	
+gatn{5}tca	gatn{5}tca|tgan{5}atc	0.0009351055279	     43	   9.11	  4e-16	8.0e-12	  11.10	      3	13	56	  11.30	   9.00	   4.72	 1.0000	
+ttgn{8}caa	ttgn{8}caa|ttgn{8}caa	0.0004580333040	     30	   4.30	5.7e-16	1.2e-11	  10.94	      4	0	30	  12.44	   4.27	   6.98	 1.0000	rc_pal
+gatn{6}caa	gatn{6}caa|ttgn{6}atc	0.0009111029202	     42	   8.79	5.7e-16	1.2e-11	  10.94	      5	6	48	  11.27	   8.69	   4.78	 1.0000	
+gatcaa	gatcaa|ttgatc	0.0009111029202	     31	   9.45	2.3e-08	4.7e-04	   3.33	      6	2	33	   7.05	   9.34	   3.28	 1.0000	
+gatn{4}atc	gatn{4}atc|gatn{4}atc	0.0004519532159	     20	   4.46	5.7e-08	1.2e-03	   2.94	      7	0	20	   7.38	   4.43	   4.49	 1.0000	rc_pal
+atcaat	atcaat|attgat	0.0012234116266	     36	  12.70	6.5e-08	1.3e-03	   2.88	      8	0	36	   6.57	  12.59	   2.84	 1.0039	
+caaaaa	caaaaa|tttttg	0.0016348738602	     41	  16.97	5.3e-07	1.1e-02	   1.97	      9	0	41	   5.90	  16.60	   2.42	 1.0000	
+gacn{5}tca	gacn{5}tca|tgan{5}gtc	0.0004348379396	     17	   4.24	2.4e-06	4.9e-02	   1.31	     10	2	19	   6.22	   4.21	   4.01	 1.0000	
+taan{9}ata	taan{9}ata|tatn{9}tta	0.0009891650683	     26	   9.19	4.1e-06	8.4e-02	   1.08	     11	0	26	   5.56	   9.14	   2.83	 1.0039	
+atcaaa	atcaaa|tttgat	0.0016236669181	     38	  16.85	6.4e-06	1.3e-01	   0.89	     12	0	38	   5.20	  16.53	   2.26	 1.0010	
+gtgn{7}tca	gtgn{7}tca|tgan{7}cac	0.0005330639957	     17	   5.07	2.3e-05	4.7e-01	   0.33	     13	1	18	   5.32	   5.03	   3.35	 1.0000	
+caan{1}aaa	caan{1}aaa|tttn{1}ttg	0.0016348738602	     36	  16.75	2.9e-05	5.9e-01	   0.23	     14	0	36	   4.76	  16.39	   2.15	 1.0000	
+atcn{4}tca	atcn{4}tca|tgan{4}gat	0.0009372266886	     24	   9.25	3.7e-05	7.4e-01	   0.13	     15	1	25	   4.88	   9.15	   2.60	 1.0010	
+cccn{5}ggg	cccn{5}ggg|cccn{5}ggg	0.0000919742141	      7	   0.90	4.2e-05	8.5e-01	   0.07	     16	0	7	   6.45	   0.90	   7.81	 1.0000	rc_pal
+ggtgaa	ggtgaa|ttcacc	0.0004647832323	     16	   4.82	4.5e-05	9.2e-01	   0.04	     17	0	16	   5.10	   4.79	   3.32	 1.0000	
+gtgn{8}caa	gtgn{8}caa|ttgn{8}cac	0.0005143170574	     16	   4.83	4.6e-05	9.2e-01	   0.03	     18	0	16	   5.10	   4.79	   3.32	 1.0000	
+attn{8}tca	attn{8}tca|tgan{8}aat	0.0012673119237	     28	  11.89	4.7e-05	9.6e-01	   0.02	     19	3	31	   4.71	  11.72	   2.35	 1.0010	
+; Host name	biow
+; Job started	2014-09-06.011318
+; Job done	2014-09-06.011326
+; Seconds	8.59
+;	user	8.59
+;	system	0.07
+;	cuser	0.19
+;	csystem	0.01

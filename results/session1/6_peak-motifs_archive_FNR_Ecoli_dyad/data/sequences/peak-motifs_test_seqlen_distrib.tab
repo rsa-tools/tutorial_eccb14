@@ -1,0 +1,38 @@
+; classfreq  -v 1 -col 2 -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/data/sequences/peak-motifs_test_seqlen.tab -ci 20 -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/data/sequences/peak-motifs_test_seqlen_distrib.tab
+;	min                 	minimum of class interval (inclusive)
+;	max                 	maximum of class interval (exclusive)
+;	center              	center of class interval
+;	n                   	occurrences
+;	n_cum               	cumulative occurrences (inclusive)
+;	n_dcum              	decreasing cumulative occurrences (inclusive)
+;	f                   	frequencies
+;	f_cum               	cumulative frequencies (inclusive)
+;	f_dcum              	decreasing cumulative frequencies (inclusive)
+#[min	max[	center	n	n_cum	n_dcum	f	f_cum	f_dcum
+920	940	930	1	1	109	0.00917	0.00917	1.00000
+940	960	950	0	1	108	0.00000	0.00917	0.99083
+960	980	970	0	1	108	0.00000	0.00917	0.99083
+980	1000	990	0	1	108	0.00000	0.00917	0.99083
+1000	1020	1010	108	109	108	0.99083	1.00000	0.99083
+; Statistics:
+; -----------
+; input file	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/data/sequences/peak-motifs_test_seqlen.tab
+; class interval     	20
+; classes            	5
+; count              	109
+; sum                	108923
+; mean               	999.294
+; median class       	[980..1000[
+; var                	53.9
+; std                	7.34135
+; min                	923
+; max                	1000
+; range              	77
+; Host name	biow
+; Job started	2014-09-05.202659
+; Job done	2014-09-05.202659
+; Seconds	0.22
+;	user	0.22
+;	system	0.01
+;	cuser	0
+;	csystem	0

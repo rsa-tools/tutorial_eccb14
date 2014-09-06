@@ -1,0 +1,30 @@
+; One-to-n matrix alignment; reference matrix: dyads_m1_shift0	; 4 matrices	; sort_field=rank_mean
+; dyads_m1; m=0 (reference); ncol1=15; shift=0; ncol=15; wyATCGCCAGCGygg
+; Alignment reference
+a	10	6	28	2	0	1	1	0	32	0	1	2	7	6	5
+c	8	12	2	3	29	0	31	34	1	0	32	0	9	8	8
+g	5	4	3	5	2	33	1	0	0	33	1	29	2	14	16
+t	11	12	1	24	3	0	1	0	1	1	0	3	16	6	5
+//
+; dyads_m1 versus 4955_brk_DrosophilaTF_1.1__rc; m=1/3; ncol2=7; w=7; offset=2; strand=R; shift=2; score= 1.7143; --RrCGCCA------
+; cor=0.889; Ncor=0.415; logoDP=0.836; NIcor=-0.106; NsEucl=0.904; SSD=0.910; NSW=0.935; rcor=1; rNcor=2; rlogoDP=3; rNIcor=3; rNsEucl=1; rSSD=1; rNSW=1; rank_mean=1.714; match_rank=1
+a	0	0	0.75	0.4167	0	0	0	0	0.9167	0	0	0	0	0	0
+c	0	0	0	0	1	0	1	1	0.0833	0	0	0	0	0	0
+g	0	0	0.25	0.5833	0	1	0	0	0	0	0	0	0	0	0
+t	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+//
+; dyads_m1 versus 1772_MA0213.1_JASPAR_CORE_2009__rc; m=2/3; ncol2=8; w=8; offset=2; strand=R; shift=2; score= 1.8571; --rGCGCCrs-----
+; cor=0.784; Ncor=0.418; logoDP=3.376; NIcor=0.093; NsEucl=0.880; SSD=1.837; NSW=0.885; rcor=2; rNcor=1; rlogoDP=2; rNIcor=2; rNsEucl=2; rSSD=2; rNSW=2; rank_mean=1.857; match_rank=2
+a	0	0	4	1	0	0	0	0	6	0	0	0	0	0	0
+c	0	0	1	0	9	0	10	10	0	4	0	0	0	0	0
+g	0	0	5	8	0	10	0	0	4	5	0	0	0	0	0
+t	0	0	0	1	1	0	0	0	0	1	0	0	0	0	0
+//
+; dyads_m1 versus 6287_1qqa_A_3D-footprint_20130124__rc; m=3/3; ncol2=8; w=8; offset=4; strand=R; shift=4; score= 2.4286; ----cGcntGCG---
+; cor=0.759; Ncor=0.405; logoDP=4.470; NIcor=0.370; NsEucl=0.872; SSD=2.109; NSW=0.868; rcor=3; rNcor=3; rlogoDP=1; rNIcor=1; rNsEucl=3; rSSD=3; rNSW=3; rank_mean=2.429; match_rank=3
+a	0	0	0	0	12	4	21	24	19	7	0	0	0	0	0
+c	0	0	0	0	60	2	31	24	20	4	96	0	0	0	0
+g	0	0	0	0	12	88	23	24	19	81	0	96	0	0	0
+t	0	0	0	0	12	2	21	24	38	4	0	0	0	0	0
+//
+;

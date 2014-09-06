@@ -1,0 +1,103 @@
+; matrix-scan  -quick -v 1 -seq_format fasta -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/data/sequences/peak-motifs_test_maxlen1000.fasta -matrix_format transfac -m $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m1/peak-motifs_dyads_m1.tf -bg_format inclusive -bgfile $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/composition/peak-motifs_test_inclusive-1str-ovlp_2nt.txt -pseudo 1 -2str -decimals 1 -bg_pseudo 0.01 -n score -lth score 7.5 -origin center -return sites -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m1/peak-motifs_dyads_m1_sites.tab
+; Quick counting mode          
+; Input files
+;	input	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/data/sequences/peak-motifs_test_maxlen1000.fasta
+;	bg	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/composition/peak-motifs_test_inclusive-1str-ovlp_2nt.txt
+; Matrix files
+;	matrix 1	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m1/peak-motifs_dyads_m1.tf
+; Sequence format      	fasta
+; Output files
+;	output	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m1/peak-motifs_dyads_m1_sites.tab
+; Pseudo counts        	1
+; Background model
+;	Method        	file
+;	Markov order  	1
+;	Strand        	undef
+;	Background pseudo-frequency	0.01
+;	Residue probabilities
+;		a	0.26267
+;		c	0.23953
+;		g	0.23490
+;		t	0.26291
+; Thresholds	lower	upper
+;	score 	7.5  	NA
+; Output columns
+;	1	seq_id
+;	2	ft_type
+;	3	ft_name
+;	4	strand
+;	5	start
+;	6	end
+;	7	sequence
+;	8	weight
+#seq_id	ft_type	ft_name	strand	start	end	sequence	weight
+?_gi|49175990|ref|NC_000913.2|_20369_21701_+	site	dyads_m1	D	-87	-73	TTGTCGCCAGCTTCG	9.5
+?_gi|49175990|ref|NC_000913.2|_29051_30211_+	site	dyads_m1	R	415	429	TTATCGCCCGCGATA	8.6
+?_gi|49175990|ref|NC_000913.2|_29051_30211_+	site	dyads_m1	R	438	452	CTAACGCCAGCGCCG	10.9
+?_gi|49175990|ref|NC_000913.2|_33442_34798_+	site	dyads_m1	R	-155	-141	TCAGCGCCATCGCGG	9.1
+?_gi|49175990|ref|NC_000913.2|_83062_84394_+	site	dyads_m1	D	62	76	GTCCCGCCAGCGTGA	8.6
+?_gi|49175990|ref|NC_000913.2|_121130_122616_+	site	dyads_m1	D	412	426	TCGTCGCCAGGGTGG	10.0
+?_gi|49175990|ref|NC_000913.2|_876847_878023_+	site	dyads_m1	R	-354	-340	TTATTGACAGCGCGG	8.3
+?_gi|49175990|ref|NC_000913.2|_939453_940572_+	site	dyads_m1	R	297	311	CTATCGACAGCGTGC	10.9
+?_gi|49175990|ref|NC_000913.2|_1003362_1004557_+	site	dyads_m1	D	-438	-424	GCATTGCCAGCGTGC	10.3
+?_gi|49175990|ref|NC_000913.2|_1018042_1019723_+	site	dyads_m1	D	-49	-35	ACACCGCCAGCGAAG	11.0
+?_gi|49175990|ref|NC_000913.2|_1278431_1279507_+	site	dyads_m1	D	-453	-439	ATATCGCCTGCGTAG	11.0
+?_gi|49175990|ref|NC_000913.2|_1278431_1279507_+	site	dyads_m1	D	222	236	ATATCGCCAGCGTTG	13.6
+?_gi|49175990|ref|NC_000913.2|_1296282_1299602_+	site	dyads_m1	D	-7	7	ACAGCGGCAGCGCGA	7.8
+?_gi|49175990|ref|NC_000913.2|_1396937_1398217_+	site	dyads_m1	D	-375	-361	CCAGCGCCTGCGCGA	7.6
+?_gi|49175990|ref|NC_000913.2|_1396937_1398217_+	site	dyads_m1	R	-348	-334	CCATCGGCAGCGGCC	7.9
+?_gi|49175990|ref|NC_000913.2|_1544745_1545910_+	site	dyads_m1	R	129	143	ATACCGCCCGCGCAG	8.0
+?_gi|49175990|ref|NC_000913.2|_1626452_1627821_+	site	dyads_m1	D	462	476	TAATCGCCAGCAATG	9.3
+?_gi|49175990|ref|NC_000913.2|_1655510_1656555_+	site	dyads_m1	R	124	138	CCAGCGCCAGAGAAC	7.6
+?_gi|49175990|ref|NC_000913.2|_1655510_1656555_+	site	dyads_m1	D	304	318	ATACCGGCAGCGATG	7.9
+?_gi|49175990|ref|NC_000913.2|_1664694_1665907_+	site	dyads_m1	R	474	488	CCATCGCCAGCGTGG	14.5
+?_gi|49175990|ref|NC_000913.2|_1734954_1736249_+	site	dyads_m1	D	-324	-310	CAATCGCCAGCGCCA	10.9
+?_gi|49175990|ref|NC_000913.2|_1734954_1736249_+	site	dyads_m1	D	-318	-304	CCAGCGCCAGCAACG	8.6
+?_gi|49175990|ref|NC_000913.2|_1867913_1869080_+	site	dyads_m1	R	432	446	AGAGCGCCAGCGAGG	11.7
+?_gi|49175990|ref|NC_000913.2|_1934876_1936141_+	site	dyads_m1	R	-178	-164	TAATTGCCAGCGTTG	10.3
+?_gi|49175990|ref|NC_000913.2|_1934876_1936141_+	site	dyads_m1	D	86	100	TTATCGCCATCGCGG	10.6
+?_gi|49175990|ref|NC_000913.2|_1986922_1988136_+	site	dyads_m1	D	34	48	TTTGCGCCAGCGCAG	7.7
+?_gi|49175990|ref|NC_000913.2|_2065518_2067096_+	site	dyads_m1	R	-100	-86	TAATGGCCAGAGTGA	7.5
+?_gi|49175990|ref|NC_000913.2|_2341114_2343212_+	site	dyads_m1	R	-201	-187	ATAACGCCAGCGGTG	9.4
+?_gi|49175990|ref|NC_000913.2|_2530808_2532723_+	site	dyads_m1	D	138	152	AAAGCGCCAGCGCGA	9.8
+?_gi|49175990|ref|NC_000913.2|_2713720_2715797_+	site	dyads_m1	D	93	107	CCGTCGCCAGCGAGC	10.9
+?_gi|49175990|ref|NC_000913.2|_2716052_2717129_+	site	dyads_m1	R	-354	-340	GCGTCGTCAGCGTGC	7.9
+?_gi|49175990|ref|NC_000913.2|_2907250_2908427_+	site	dyads_m1	D	-49	-35	TCTTCGCCAGCGCAC	9.3
+?_gi|49175990|ref|NC_000913.2|_2944763_2946198_+	site	dyads_m1	D	306	320	TTCTCGCCAGCGTCG	11.7
+?_gi|49175990|ref|NC_000913.2|_3084066_3085778_+	site	dyads_m1	D	-25	-11	TCACCACCAGCGCCT	7.5
+?_gi|49175990|ref|NC_000913.2|_3143814_3145078_+	site	dyads_m1	R	156	170	AGATCGCCAGCTTAG	11.0
+?_gi|49175990|ref|NC_000913.2|_3150987_3152126_+	site	dyads_m1	R	77	91	GATCCGCCAGCGCGG	7.5
+?_gi|49175990|ref|NC_000913.2|_3150987_3152126_+	site	dyads_m1	D	354	368	ATATCACCAGCGCGC	9.9
+?_gi|49175990|ref|NC_000913.2|_3152620_3153790_+	site	dyads_m1	R	93	107	TGATCGCCAGCGCCC	11.7
+?_gi|49175990|ref|NC_000913.2|_3279335_3280398_+	site	dyads_m1	D	-299	-285	AACGCGCCAGCGTCG	8.9
+?_gi|49175990|ref|NC_000913.2|_3298768_3300021_+	site	dyads_m1	R	-385	-371	CCGACGCCAGCGATC	7.7
+?_gi|49175990|ref|NC_000913.2|_3305466_3307222_+	site	dyads_m1	D	329	343	GGATTGCCAGCGCTT	7.6
+?_gi|49175990|ref|NC_000913.2|_3330504_3332124_+	site	dyads_m1	D	-321	-307	TTAGCGCCAGCGTGG	13.2
+?_gi|49175990|ref|NC_000913.2|_3375092_3377195_+	site	dyads_m1	R	417	431	TCGTCGCCTGCGCGG	8.6
+?_gi|49175990|ref|NC_000913.2|_3610991_3612250_+	site	dyads_m1	D	-184	-170	AAATCGTCAGCGTAG	10.1
+?_gi|49175990|ref|NC_000913.2|_3661401_3664309_+	site	dyads_m1	R	477	491	GAATCGCCAGCGAGC	11.6
+?_gi|49175990|ref|NC_000913.2|_3881223_3882950_+	site	dyads_m1	D	-455	-441	ACAGGGCCAGCGTGT	9.9
+?_gi|49175990|ref|NC_000913.2|_3917503_3921947_+	site	dyads_m1	D	31	45	TCAGGGCCAGCGGAG	8.5
+?_gi|49175990|ref|NC_000913.2|_3979879_3981358_+	site	dyads_m1	R	-400	-386	TCACCGCCAGCATAA	8.1
+?_gi|49175990|ref|NC_000913.2|_4010401_4012453_+	site	dyads_m1	R	94	108	CCAGCGCCAGCGCCT	10.6
+?_gi|49175990|ref|NC_000913.2|_4346418_4347761_+	site	dyads_m1	R	-119	-105	CCATCGCCAGAGAGT	10.0
+?_gi|49175990|ref|NC_000913.2|_4566227_4567339_+	site	dyads_m1	D	-425	-411	ATACCGCCAGCAAGA	8.2
+;
+; Matrices
+;	matrix	name    	ncol	nrow	pseudo	Wmin	Wmax	Wrange
+;	1	dyads_m1	15	4	0	-33.600	14.900	48.500	a:0.263 c:0.240 g:0.235 t:0.263 
+; Number of sequences scanned	109
+; Sum of sequence lengths	108923
+; N residues           	0
+; Matches per matrix
+;	matrix	name    	matches	scored
+;	1	dyads_m1       	51	0
+;		TOTAL          	51	0
+; Host name	biow
+; Job started	2014-09-05.205358
+; Job done	2014-09-05.205358
+; Seconds	0.29
+;	user	0.29
+;	system	0.04
+;	cuser	0.23
+;	csystem	0.02

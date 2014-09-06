@@ -1,0 +1,61 @@
+; convert-matrix  -v 1 -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt/peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices.tf -from tf -to tab -return counts -return logo -logo_format png,pdf -logo_file $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt/peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt/peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_links.txt
+; Input files
+;	input	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt/peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices.tf
+; Input format        	tf
+; Output files
+;	output	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt/peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_links.txt
+; Output format       	tab
+; pseudo-weight       	1
+a	2	1	6	0	0	0	0	0	0	1	1
+c	2	3	0	0	0	0	0	6	6	1	1
+g	2	2	0	6	6	6	6	0	0	4	4
+t	0	0	0	0	0	0	0	0	0	0	0
+//
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m1.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m1.pdf
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m1_rc.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m1_rc.pdf
+a	2	3	7	0	7	0	7	7	0	0	1
+c	1	1	0	0	0	0	0	0	0	1	2
+g	1	1	0	0	0	0	0	0	7	3	2
+t	3	2	0	7	0	7	0	0	0	3	2
+//
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m2.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m2.pdf
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m2_rc.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m2_rc.pdf
+a	1	2	0	0	0	10	0	0	0	2	3
+c	4	2	10	0	10	0	0	0	10	2	2
+g	4	6	0	0	0	0	10	10	0	5	5
+t	1	0	0	10	0	0	0	0	0	1	0
+//
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m3.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m3.pdf
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m3_rc.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m3_rc.pdf
+a	3	1	5	1	0	1	0	11	1	0	0	11	1	2
+c	1	4	3	9	10	8	5	0	0	11	11	0	4	6
+g	4	1	1	0	0	1	1	0	10	0	0	0	1	0
+t	3	5	2	1	1	1	5	0	0	0	0	0	5	3
+//
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m4.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m4.pdf
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m4_rc.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m4_rc.pdf
+a	2	1	0	6	0	0	0	0	6	0	1
+c	0	0	6	0	6	0	6	6	0	2	1
+g	0	2	0	0	0	0	0	0	0	4	3
+t	4	3	0	0	0	6	0	0	0	0	1
+//
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m5.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m5.pdf
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m5_rc.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/positions_7nt//peak-motifs_positions-2str-noov_7nt_ci50_pssm_count_matrices_logo_m5_rc.pdf
+; Host name	biow
+; Job started	2014-09-05.202846
+; Job done	2014-09-05.202850
+; Seconds	0.28
+;	user	0.28
+;	system	0.05
+;	cuser	3.27
+;	csystem	0.57

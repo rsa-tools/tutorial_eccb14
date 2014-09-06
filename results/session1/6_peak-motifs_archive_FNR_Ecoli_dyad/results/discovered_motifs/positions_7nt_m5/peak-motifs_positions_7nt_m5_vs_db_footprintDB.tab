@@ -1,0 +1,75 @@
+; compare-matrices  -v 1 -mode matches -format1 transfac -file1 $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5.tf -format2 tf -file2 $RSAT/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf -mode matches -DR -uth offset_rank 1 -lth w 5 -lth Wr 0.3 -lth cor 0.75 -lth Ncor 0.4 -return matrix_name,matrix_id,cor,Ncor,logoDP,NIcor,NsEucl,SSD,NSW,match_rank,width,strand,offset,consensus,alignments_1ton -sort Ncor -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_vs_db_footprintDB
+; Program version       	1.118
+; Input files
+;	file2 	/vh/rsat/rsat/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf
+;	file1 	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5.tf
+; Output files
+;	alignments_1ton	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_vs_db_footprintDB_alignments_1ton.tab
+;	match_table_txt	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_vs_db_footprintDB.tab
+;	html_index   	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_vs_db_footprintDB_index.html
+;	alignments_1ton_html	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_vs_db_footprintDB_alignments_1ton.html
+;	match_table_html	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_vs_db_footprintDB.html
+;	prefix       	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_vs_db_footprintDB
+; Matrices
+;	file1	1 matrices	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5.tf
+;		file1	1	11	6	wkCACTCCAsg
+;	file2	4196 matrices	/vh/rsat/rsat/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf
+;		file2		1		17		100		yyaymCATCAAwmwwmm
+;		file2		2		10		7		ACCGGAAGws
+;		file2		3		16		100		wwtksgTAATTACsdy
+;		file2		4		17		100		twrttaATTAwtaawwr
+;		file2		5		18		100		TCCGynnnnnnnnnCGGA
+;		file2		6		20		100		gwrastTTCCGGAAyrywrr
+;		file2		7		20		100		yrawygGyGCCGyrysackh
+;		file2		8		21		100		wmrmraAtmGAAGaaawawww
+;		file2		9		20		100		rkmkkakCACGTGmyyrvwy
+;		file2		10		6		1		CTATCA
+;		file2		11		18		66		hTTwCCwWAwwdGGhAat
+;		...	4186 more matrices
+; Column content
+;	1	id1          	Identifier of the first matrix
+;	2	id2          	Identifier of the second matrix
+;	3	name1        	Name of the first matrix
+;	4	name2        	Name of the second matrix
+;	5	cor          	Pearson coefficient of correlation between frequency matrices
+;	6	Ncor         	Normalized correlation. Ncor = cor * Wr
+;	7	logoDP       	Dot product between the logo matrices.
+;	8	NIcor        	Normalized Pearson correlation between the information content matrices. NIcor = Icor * Wr
+;	9	NSW          	Normalized Sandelin-Wasserman similarity. NSW = SW/w
+;	10	SSD          	sum of squared distance.
+;	11	NsEucl       	relative Euclidian similarity. NsEucl = (max(dEucl) - dEucl)/max(dEucl)
+;	12	w1           	Width of the first matrix
+;	13	w2           	Width of the second matrix
+;	14	w            	Alignment length (number of overlapping columns between matrix 1 and matrix 2, as a function of the offset)
+;	15	W            	Total alignment length (overlapping + non-overlapping columns). W = w1 + w2 - w
+;	16	Wr           	Relative alignment length (overlap divided by the total alignemnt length). Wr = w/W
+;	17	wr1          	Alignment length relative to the width of the first matrix. wr1 = w/w1
+;	18	wr2          	Alignment length relative to the width of the second matrix. wr2 = w/w2
+;	19	strand       	"strand", i.e. orientation of matrix 2 relative to matrix 1 (D=direct;  R=reverse)
+;	20	offset       	shift of the second matrix relative to the first matrix (negative:left; positive: right)
+;	21	consensus1   	IUPAC consensus of matrix 1 (dots represent non-aligned columns)
+;	22	consensus2   	IUPAC consensus of matrix 2 (dots represent non-aligned columns)
+;	23	rcor         	Matching rank for cor
+;	24	rNcor        	Matching rank for Ncor
+;	25	rlogoDP      	Matching rank for logoDP
+;	26	rNIcor       	Matching rank for NIcor
+;	27	rNsEucl      	Matching rank for NsEucl
+;	28	rSSD         	Matching rank for SSD
+;	29	rNSW         	Matching rank for NSW
+;	30	rank_mean    	Mean of the matching ranks on all selected metrics
+;	31	match_rank   	Rank of the match (sorting by rank_mean)
+#id1	id2	name1	name2	cor	Ncor	logoDP	NIcor	NSW	SSD	NsEucl	w1	w2	w	W	Wr	wr1	wr2	strand	offset	consensus1	consensus2	rcor	rNcor	rlogoDP	rNIcor	rNsEucl	rSSD	rNSW	rank_mean	match_rank
+positions_7nt_m5	2858_PF0171.1_JASPAR_CORE_2009_	positions_7nt_m5	2858_PF0171.1_JASPAR_CORE_2009_	0.926	0.432	8.320	0.414	0.956	0.6120	0.92098	11	11	7	15	0.4667	0.6364	0.6364	D	4	....CTCCAsg	CTCCAsG....                   	1	3	2	3	1	2	2	2.0000	1
+positions_7nt_m5	5958_1a0a_B_3D-footprint_20130124_	positions_7nt_m5	5958_1a0a_B_3D-footprint_20130124_	0.924	0.420	5.834	0.422	0.961	0.3926	0.91139	11	5	5	11	0.4545	0.4545	1.0000	D	6	......CCAsg	CCAcg                               	2	4	4	2	2	1	1	2.2857	2
+positions_7nt_m5	5978_1am9_AB_3D-footprint_20130124_	positions_7nt_m5	5978_1am9_AB_3D-footprint_20130124_	0.772	0.702	12.376	0.660	0.858	2.8403	0.88083	11	10	10	11	0.9091	0.9091	1.0000	D	0	wkCACTCCAs.	aTCACCCCAC                          	6	1	1	1	3	6	6	3.4286	3
+positions_7nt_m5	2512_MA0130.1_JASPAR_CORE_2009_	positions_7nt_m5	2512_MA0130.1_JASPAR_CORE_2009_	0.800	0.437	6.779	0.396	0.875	1.4957	0.85587	11	6	6	11	0.5455	0.5455	1.0000	D	4	....CTCCAs.	mTCCAC                        	5	2	3	4	6	3	5	4.0000	4
+positions_7nt_m5	7286_ZAT18_ArabidopsisPBM_20140210_	positions_7nt_m5	7286_ZAT18_ArabidopsisPBM_20140210_	0.803	0.401	3.249	0.357	0.893	1.5048	0.87608	11	10	7	14	0.5000	0.6364	0.7000	R	-3	wkCACTC....	...TGCACTH                          	4	6	5	5	4	4	3	4.4286	5
+positions_7nt_m5	6200_1lo1_A_3D-footprint_20130124_	positions_7nt_m5	6200_1lo1_A_3D-footprint_20130124_	0.806	0.403	1.973	0.015	0.888	1.5614	0.87377	11	10	7	14	0.5000	0.6364	0.7000	R	4	....CTCCAsg	CTCNAGG...                          	3	5	6	6	5	5	4	4.8571	6
+; Host name	biow
+; Job started	2014-09-05.203449
+; Job done	2014-09-05.203521
+; Seconds	29.94
+;	user	29.94
+;	system	0.3
+;	cuser	1.1
+;	csystem	0.28
