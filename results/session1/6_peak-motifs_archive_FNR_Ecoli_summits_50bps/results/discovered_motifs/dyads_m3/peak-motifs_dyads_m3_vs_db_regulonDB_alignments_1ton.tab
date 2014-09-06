@@ -1,0 +1,16 @@
+; One-to-n matrix alignment; reference matrix: dyads_m3_shift6	; 2 matrices	; sort_field=rank_mean
+; dyads_m3; m=0 (reference); ncol1=11; shift=6; ncol=17; ------ymGATCAAAtw
+; Alignment reference
+a	0	0	0	0	0	0	2	6	0	11	0	0	11	11	11	2	4
+c	0	0	0	0	0	0	3	3	0	0	0	11	0	0	0	2	1
+g	0	0	0	0	0	0	2	0	11	0	0	0	0	0	0	0	0
+t	0	0	0	0	0	0	4	2	0	0	11	0	0	0	0	7	6
+//
+; dyads_m3 versus ECK120011229 (FNR); m=1/1; ncol2=14; w=8; offset=-6; strand=D; shift=0; score=      1; tTGaTywayATCAA---
+; cor=0.863; Ncor=0.406; logoDP=6.313; NIcor=0.409; NsEucl=0.903; SSD=1.216; NSW=0.924; rcor=1; rNcor=1; rlogoDP=1; rNIcor=1; rNsEucl=1; rSSD=1; rNSW=1; rank_mean=1.000; match_rank=1
+a	17	5	13	47	10	17	28	48	20	66	4	0	80	73	0	0	0
+c	8	8	10	14	3	28	10	12	23	0	0	72	1	8	0	0	0
+g	10	6	58	8	13	3	16	11	11	11	0	5	0	0	0	0	0
+t	48	64	2	14	57	35	29	12	29	6	79	6	2	2	0	0	0
+//
+;

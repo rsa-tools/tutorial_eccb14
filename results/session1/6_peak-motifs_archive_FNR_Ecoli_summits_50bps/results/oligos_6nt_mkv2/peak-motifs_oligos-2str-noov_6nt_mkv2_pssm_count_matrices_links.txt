@@ -1,0 +1,25 @@
+; convert-matrix  -v 1 -i $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2/peak-motifs_oligos-2str-noov_6nt_mkv2_pssm_count_matrices.tf -from tf -to tab -return counts -return logo -logo_format png,pdf -logo_file $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2/peak-motifs_oligos-2str-noov_6nt_mkv2_pssm_count_matrices_logo -o $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2/peak-motifs_oligos-2str-noov_6nt_mkv2_pssm_count_matrices_links.txt
+; Input files
+;	input	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2/peak-motifs_oligos-2str-noov_6nt_mkv2_pssm_count_matrices.tf
+; Input format        	tf
+; Output files
+;	output	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2/peak-motifs_oligos-2str-noov_6nt_mkv2_pssm_count_matrices_links.txt
+; Output format       	tab
+; pseudo-weight       	1
+a	1	2	0	5	0	0	5	5	0	3	2
+c	1	1	0	0	0	5	0	0	0	0	0
+g	1	1	5	0	0	0	0	0	0	2	1
+t	2	1	0	0	5	0	0	0	5	0	2
+//
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2//peak-motifs_oligos-2str-noov_6nt_mkv2_pssm_count_matrices_logo_m1.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2//peak-motifs_oligos-2str-noov_6nt_mkv2_pssm_count_matrices_logo_m1.pdf
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2//peak-motifs_oligos-2str-noov_6nt_mkv2_pssm_count_matrices_logo_m1_rc.png
+; logo file:/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2//peak-motifs_oligos-2str-noov_6nt_mkv2_pssm_count_matrices_logo_m1_rc.pdf
+; Host name	biow
+; Job started	2014-09-06.011305
+; Job done	2014-09-06.011306
+; Seconds	0.26
+;	user	0.26
+;	system	0.02
+;	cuser	0.64
+;	csystem	0.11

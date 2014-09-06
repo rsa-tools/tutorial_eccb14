@@ -1,0 +1,155 @@
+; compare-matrices  -v 1 -mode matches -format1 transfac -file1 $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3.tf -format2 tf -file2 $RSAT/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf -mode matches -DR -uth offset_rank 1 -lth w 5 -lth Wr 0.3 -lth cor 0.75 -lth Ncor 0.4 -return matrix_name,matrix_id,cor,Ncor,logoDP,NIcor,NsEucl,SSD,NSW,match_rank,width,strand,offset,consensus,alignments_1ton -sort Ncor -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB
+; Program version       	1.118
+; Input files
+;	file2 	/vh/rsat/rsat/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf
+;	file1 	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3.tf
+; Output files
+;	alignments_1ton	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB_alignments_1ton.tab
+;	match_table_txt	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB.tab
+;	html_index   	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB_index.html
+;	alignments_1ton_html	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB_alignments_1ton.html
+;	match_table_html	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB.html
+;	prefix       	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB
+; Matrices
+;	file1	1 matrices	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3.tf
+;		file1	1	12	34	dsTGGTAATTcw
+;	file2	4196 matrices	/vh/rsat/rsat/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf
+;		file2		1		17		100		yyaymCATCAAwmwwmm
+;		file2		2		10		7		ACCGGAAGws
+;		file2		3		16		100		wwtksgTAATTACsdy
+;		file2		4		17		100		twrttaATTAwtaawwr
+;		file2		5		18		100		TCCGynnnnnnnnnCGGA
+;		file2		6		20		100		gwrastTTCCGGAAyrywrr
+;		file2		7		20		100		yrawygGyGCCGyrysackh
+;		file2		8		21		100		wmrmraAtmGAAGaaawawww
+;		file2		9		20		100		rkmkkakCACGTGmyyrvwy
+;		file2		10		6		1		CTATCA
+;		file2		11		18		66		hTTwCCwWAwwdGGhAat
+;		...	4186 more matrices
+; Column content
+;	1	id1          	Identifier of the first matrix
+;	2	id2          	Identifier of the second matrix
+;	3	name1        	Name of the first matrix
+;	4	name2        	Name of the second matrix
+;	5	cor          	Pearson coefficient of correlation between frequency matrices
+;	6	Ncor         	Normalized correlation. Ncor = cor * Wr
+;	7	logoDP       	Dot product between the logo matrices.
+;	8	NIcor        	Normalized Pearson correlation between the information content matrices. NIcor = Icor * Wr
+;	9	NSW          	Normalized Sandelin-Wasserman similarity. NSW = SW/w
+;	10	SSD          	sum of squared distance.
+;	11	NsEucl       	relative Euclidian similarity. NsEucl = (max(dEucl) - dEucl)/max(dEucl)
+;	12	w1           	Width of the first matrix
+;	13	w2           	Width of the second matrix
+;	14	w            	Alignment length (number of overlapping columns between matrix 1 and matrix 2, as a function of the offset)
+;	15	W            	Total alignment length (overlapping + non-overlapping columns). W = w1 + w2 - w
+;	16	Wr           	Relative alignment length (overlap divided by the total alignemnt length). Wr = w/W
+;	17	wr1          	Alignment length relative to the width of the first matrix. wr1 = w/w1
+;	18	wr2          	Alignment length relative to the width of the second matrix. wr2 = w/w2
+;	19	strand       	"strand", i.e. orientation of matrix 2 relative to matrix 1 (D=direct;  R=reverse)
+;	20	offset       	shift of the second matrix relative to the first matrix (negative:left; positive: right)
+;	21	consensus1   	IUPAC consensus of matrix 1 (dots represent non-aligned columns)
+;	22	consensus2   	IUPAC consensus of matrix 2 (dots represent non-aligned columns)
+;	23	rcor         	Matching rank for cor
+;	24	rNcor        	Matching rank for Ncor
+;	25	rlogoDP      	Matching rank for logoDP
+;	26	rNIcor       	Matching rank for NIcor
+;	27	rNsEucl      	Matching rank for NsEucl
+;	28	rSSD         	Matching rank for SSD
+;	29	rNSW         	Matching rank for NSW
+;	30	rank_mean    	Mean of the matching ranks on all selected metrics
+;	31	match_rank   	Rank of the match (sorting by rank_mean)
+#id1	id2	name1	name2	cor	Ncor	logoDP	NIcor	NSW	SSD	NsEucl	w1	w2	w	W	Wr	wr1	wr2	strand	offset	consensus1	consensus2	rcor	rNcor	rlogoDP	rNIcor	rNsEucl	rSSD	rNSW	rank_mean	match_rank
+positions_8nt_m3	7458_HXD4_f1_HOCOMOCO_v9_	positions_8nt_m3	7458_HXD4_f1_HOCOMOCO_v9_	0.931	0.543	3.927	0.539	0.968	0.4543	0.93192	12	7	7	12	0.5833	0.5833	1.0000	D	5	.....TAATTcw	TAATTkw                               	3	2	23	4	2	3	2	5.5714	1
+positions_8nt_m3	6107_1hdd_C_3D-footprint_20130124_	positions_8nt_m3	6107_1hdd_C_3D-footprint_20130124_	0.895	0.522	5.452	0.517	0.952	0.6666	0.91753	12	7	7	12	0.5833	0.5833	1.0000	D	4	....GTAATTc.	GTAAtna                              	8	15	3	5	5	7	5	6.8571	2
+positions_8nt_m3	7341_DLX2_f1_HOCOMOCO_v9_	positions_8nt_m3	7341_DLX2_f1_HOCOMOCO_v9_	0.903	0.527	4.447	0.540	0.948	0.7236	0.91407	12	7	7	12	0.5833	0.5833	1.0000	D	5	.....TAATTcw	TAATTrt                               	6	10	14	3	8	9	9	8.4286	3
+positions_8nt_m3	1746_MA0187.1_JASPAR_CORE_2009_	positions_8nt_m3	1746_MA0187.1_JASPAR_CORE_2009_	0.896	0.523	3.946	0.541	0.951	0.6796	0.91672	12	7	7	12	0.5833	0.5833	1.0000	D	5	.....TAATTcw	TAATTry              	7	13	22	2	6	8	6	9.1429	4
+positions_8nt_m3	7597_PRRX2_f1_HOCOMOCO_v9_	positions_8nt_m3	7597_PRRX2_f1_HOCOMOCO_v9_	0.935	0.467	4.476	0.477	0.956	0.5260	0.91453	12	6	6	12	0.5000	0.5000	1.0000	D	5	.....TAATTc.	TAATTr                                	2	50	13	10	7	4	4	12.8571	5
+positions_8nt_m3	7537_NOBOX_si_HOCOMOCO_v9_	positions_8nt_m3	7537_NOBOX_si_HOCOMOCO_v9_	0.883	0.476	4.193	0.502	0.943	0.8023	0.90952	12	8	7	13	0.5385	0.5833	0.8750	D	5	.....TAATTcw	TAATTrs.                              	10	47	16	7	10	12	12	16.2857	6
+positions_8nt_m3	4964_en_DrosophilaTF_1.1_	positions_8nt_m3	4964_en_DrosophilaTF_1.1_	0.921	0.460	4.019	0.464	0.951	0.5924	0.90929	12	6	6	12	0.5000	0.5000	1.0000	D	5	.....TAATTc.	TAATTa                               	4	60	20	14	11	5	7	17.2857	7
+positions_8nt_m3	2510_MA0125.1_JASPAR_CORE_2009_	positions_8nt_m3	2510_MA0125.1_JASPAR_CORE_2009_	0.877	0.472	3.962	0.501	0.942	0.8072	0.90924	12	8	7	13	0.5385	0.5833	0.8750	D	5	.....TAATTcw	TAATTrs.                      	12	48	21	8	12	13	13	18.1429	8
+positions_8nt_m3	7502_MSX2_f1_HOCOMOCO_v9_	positions_8nt_m3	7502_MSX2_f1_HOCOMOCO_v9_	0.920	0.460	2.111	0.469	0.967	0.4020	0.92528	12	6	6	12	0.5000	0.5000	1.0000	D	6	......AATTcw	AATTkk                                	5	61	45	12	3	2	3	18.7143	9
+positions_8nt_m3	6108_1hdd_CD_3D-footprint_20130124_	positions_8nt_m3	6108_1hdd_CD_3D-footprint_20130124_	0.882	0.441	5.752	0.441	0.947	0.8407	0.91896	12	12	8	16	0.5000	0.6667	0.6667	D	4	....GTAATTcw	GTAATnan....                         	11	78	2	21	4	14	10	20.0000	10
+positions_8nt_m3	4947_ap_DrosophilaTF_1.1_	positions_8nt_m3	4947_ap_DrosophilaTF_1.1_	0.895	0.447	4.181	0.437	0.950	0.5986	0.90882	12	6	6	12	0.5000	0.5000	1.0000	D	5	.....TAATTc.	TAATnn                               	9	71	17	22	13	6	8	20.8571	11
+positions_8nt_m3	5218_Dlx1_DBD_HumanTF_1.0_	positions_8nt_m3	5218_Dlx1_DBD_HumanTF_1.0_	0.813	0.542	2.111	0.383	0.927	1.1607	0.90477	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	KTAATTRS                             	29	3	44	36	17	25	19	24.7143	12
+positions_8nt_m3	5210_DLX5_FL_HumanTF_1.0_	positions_8nt_m3	5210_DLX5_FL_HumanTF_1.0_	0.808	0.539	1.911	0.403	0.928	1.1540	0.90505	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	DTAATTRB                             	31	5	58	27	15	21	17	24.8571	13
+positions_8nt_m3	1790_MA0232.1_JASPAR_CORE_2009_	positions_8nt_m3	1790_MA0232.1_JASPAR_CORE_2009_	0.875	0.437	4.038	0.445	0.938	0.7411	0.89854	12	6	6	12	0.5000	0.5000	1.0000	D	5	.....TAATTc.	TAATkR               	13	79	19	19	24	10	14	25.4286	14
+positions_8nt_m3	5211_DLX6_DBD_HumanTF_1.0_	positions_8nt_m3	5211_DLX6_DBD_HumanTF_1.0_	0.810	0.540	2.245	0.380	0.925	1.1999	0.90318	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	KTAATTRS                             	30	4	41	40	19	27	22	26.1429	15
+positions_8nt_m3	5209_DLX4_DBD_HumanTF_1.0_	positions_8nt_m3	5209_DLX4_DBD_HumanTF_1.0_	0.806	0.537	1.982	0.383	0.926	1.1790	0.90403	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	KTAATTRS                             	32	6	50	35	18	26	20	26.7143	16
+positions_8nt_m3	6515_2vy1_A_3D-footprint_20130124_	positions_8nt_m3	6515_2vy1_A_3D-footprint_20130124_	0.788	0.591	6.021	0.583	0.906	1.6951	0.89771	12	9	9	12	0.7500	0.7500	1.0000	D	2	..TGGTAATTc.	TGGTnnnTA                            	46	1	1	1	26	74	39	26.8571	17
+positions_8nt_m3	1767_MA0208.1_JASPAR_CORE_2009_	positions_8nt_m3	1767_MA0208.1_JASPAR_CORE_2009_	0.865	0.504	4.902	0.504	0.905	1.3321	0.88341	12	7	7	12	0.5833	0.5833	1.0000	D	5	.....TAATTcw	TAATTAA              	17	33	5	6	54	35	42	27.4286	18
+positions_8nt_m3	5219_Dlx2_DBD_HumanTF_1.0_	positions_8nt_m3	5219_Dlx2_DBD_HumanTF_1.0_	0.797	0.532	2.534	0.396	0.916	1.3406	0.89766	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	WTAATTRS                             	39	9	36	28	27	38	29	29.4286	19
+positions_8nt_m3	5504_LMX1B_full_HumanTF_1.0_	positions_8nt_m3	5504_LMX1B_full_HumanTF_1.0_	0.788	0.525	2.120	0.395	0.920	1.2823	0.89991	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	KTAATTRR                             	45	12	43	29	22	31	25	29.5714	20
+positions_8nt_m3	5208_DLX3_DBD_HumanTF_1.0_	positions_8nt_m3	5208_DLX3_DBD_HumanTF_1.0_	0.805	0.537	1.780	0.378	0.928	1.1564	0.90495	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	KTAATTRS                             	33	7	69	43	16	22	18	29.7143	21
+positions_8nt_m3	1782_MA0223.1_JASPAR_CORE_2009__MA0224.1_JASPAR_CORE_2009_	positions_8nt_m3	1782_MA0223.1_JASPAR_CORE_2009__MA0224.1_JASPAR_CORE_2009_	0.828	0.483	4.811	0.459	0.905	1.3241	0.88376	12	7	7	12	0.5833	0.5833	1.0000	D	4	....GTAATTc.	bTAATTA              	25	44	8	15	53	34	41	31.4286	22
+positions_8nt_m3	5207_DLX2_DBD_HumanTF_1.0_	positions_8nt_m3	5207_DLX2_DBD_HumanTF_1.0_	0.800	0.533	1.349	0.355	0.929	1.1347	0.90585	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	KTAATTRS                             	36	8	81	50	14	20	16	32.1429	23
+positions_8nt_m3	5922_Vsx1_DBD_HumanTF_1.0_	positions_8nt_m3	5922_Vsx1_DBD_HumanTF_1.0_	0.789	0.526	1.800	0.369	0.921	1.2595	0.90081	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRR                             	44	11	67	44	21	29	24	34.2857	24
+positions_8nt_m3	2465_MA0075.1_JASPAR_CORE_2009_	positions_8nt_m3	2465_MA0075.1_JASPAR_CORE_2009_	0.983	0.410	1.577	0.069	0.979	0.2107	0.93509	12	5	5	12	0.4167	0.4167	1.0000	R	5	.....TAATT..	TAATT                         	1	85	77	81	1	1	1	35.2857	25
+positions_8nt_m3	1731_MA0172.1_JASPAR_CORE_2009_	positions_8nt_m3	1731_MA0172.1_JASPAR_CORE_2009_	0.866	0.505	2.681	0.219	0.909	1.2807	0.88568	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TAATTAA              	16	31	31	59	47	30	35	35.5714	26
+positions_8nt_m3	5909_UNCX_DBD_2_HumanTF_1.0_	positions_8nt_m3	5909_UNCX_DBD_2_HumanTF_1.0_	0.775	0.517	1.855	0.387	0.916	1.3365	0.89782	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRR                             	54	17	63	32	25	36	28	36.4286	27
+positions_8nt_m3	5683_PRRX2_full_HumanTF_1.0_	positions_8nt_m3	5683_PRRX2_full_HumanTF_1.0_	0.779	0.519	1.708	0.366	0.919	1.2937	0.89947	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRR                             	52	16	71	46	23	32	27	38.1429	28
+positions_8nt_m3	5680_PRRX1_DBD_HumanTF_1.0_	positions_8nt_m3	5680_PRRX1_DBD_HumanTF_1.0_	0.773	0.515	2.229	0.382	0.910	1.4375	0.89402	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRR                             	55	18	42	37	33	48	34	38.1429	29
+positions_8nt_m3	6061_1fjl_B_3D-footprint_20130124_	positions_8nt_m3	6061_1fjl_B_3D-footprint_20130124_	0.850	0.496	1.285	0.076	0.933	0.9331	0.90242	12	7	7	12	0.5833	0.5833	1.0000	R	4	....GTAATTc.	GTAATNA                              	19	39	82	79	20	15	15	38.4286	30
+positions_8nt_m3	2645_MA0426.1_JASPAR_CORE_2009_	positions_8nt_m3	2645_MA0426.1_JASPAR_CORE_2009_	0.875	0.437	4.855	0.428	0.904	1.1574	0.87321	12	6	6	12	0.5000	0.5000	1.0000	D	5	.....TAATTc.	TAATTG                        	14	80	6	24	75	23	47	38.4286	31
+positions_8nt_m3	2710_PF0023.1_JASPAR_CORE_2009_	positions_8nt_m3	2710_PF0023.1_JASPAR_CORE_2009_	0.875	0.437	4.855	0.428	0.904	1.1574	0.87321	12	6	6	12	0.5000	0.5000	1.0000	D	5	.....TAATTc.	TAATTA                        	14	80	6	24	75	23	47	38.4286	32
+positions_8nt_m3	1742_MA0183.1_JASPAR_CORE_2009_	positions_8nt_m3	1742_MA0183.1_JASPAR_CORE_2009_	0.859	0.463	0.422	-0.064	0.946	0.7494	0.91255	12	8	7	13	0.5385	0.5833	0.8750	R	5	.....TAATTcw	TWATTMR.             	18	58	85	83	9	11	11	39.2857	33
+positions_8nt_m3	5681_PRRX1_full_1_HumanTF_1.0_	positions_8nt_m3	5681_PRRX1_full_1_HumanTF_1.0_	0.767	0.511	2.072	0.383	0.911	1.4205	0.89466	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRG                             	64	23	46	34	32	46	33	39.7143	34
+positions_8nt_m3	6262_1puf_A_3D-footprint_20130124_	positions_8nt_m3	6262_1puf_A_3D-footprint_20130124_	0.847	0.494	1.663	0.070	0.923	1.0826	0.89490	12	7	7	12	0.5833	0.5833	1.0000	R	1	.sTGGTAA....	GTNGTAA                              	20	40	73	80	30	19	23	40.7143	35
+positions_8nt_m3	5258_EN1_full_1_HumanTF_1.0_	positions_8nt_m3	5258_EN1_full_1_HumanTF_1.0_	0.769	0.512	2.738	0.394	0.904	1.5389	0.89035	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	CTAATTRS                             	63	22	29	31	37	59	45	40.8571	36
+positions_8nt_m3	5561_Meox2_DBD_HumanTF_1.0_	positions_8nt_m3	5561_Meox2_DBD_HumanTF_1.0_	0.753	0.502	2.668	0.474	0.906	1.5010	0.89171	12	8	8	12	0.6667	0.6667	1.0000	D	4	....GTAATTcw	kTAATkAc                             	83	35	32	11	35	52	38	40.8571	37
+positions_8nt_m3	5751_SHOX_DBD_HumanTF_1.0_	positions_8nt_m3	5751_SHOX_DBD_HumanTF_1.0_	0.772	0.514	2.505	0.380	0.906	1.5099	0.89139	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRR                             	59	19	37	41	36	55	40	41.0000	38
+positions_8nt_m3	1737_MA0178.1_JASPAR_CORE_2009_	positions_8nt_m3	1737_MA0178.1_JASPAR_CORE_2009_	0.830	0.484	1.880	0.183	0.914	1.2059	0.88907	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TAATTAA              	24	43	61	64	39	28	30	41.2857	39
+positions_8nt_m3	5541_MSX1_full_HumanTF_1.0_	positions_8nt_m3	5541_MSX1_full_HumanTF_1.0_	0.772	0.514	2.343	0.346	0.908	1.4751	0.89265	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	BTAATTRS                             	60	20	39	51	34	50	36	41.4286	40
+positions_8nt_m3	1754_MA0195.1_JASPAR_CORE_2009_	positions_8nt_m3	1754_MA0195.1_JASPAR_CORE_2009_	0.819	0.478	1.390	0.147	0.925	1.0442	0.89678	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TAATTAR              	27	46	80	72	29	17	21	41.7143	41
+positions_8nt_m3	5701_RAXL1_DBD_HumanTF_1.0_	positions_8nt_m3	5701_RAXL1_DBD_HumanTF_1.0_	0.762	0.508	1.863	0.381	0.911	1.4182	0.89474	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRR                             	70	26	62	38	31	45	32	43.4286	42
+positions_8nt_m3	5687_Prrx2_DBD_HumanTF_1.0_	positions_8nt_m3	5687_Prrx2_DBD_HumanTF_1.0_	0.758	0.505	2.634	0.408	0.900	1.5936	0.88842	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRR                             	77	30	34	26	40	64	52	46.1429	43
+positions_8nt_m3	1747_MA0188.1_JASPAR_CORE_2009_	positions_8nt_m3	1747_MA0188.1_JASPAR_CORE_2009_	0.843	0.492	1.736	0.104	0.907	1.2992	0.88486	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TAATTGS              	22	41	70	78	49	33	37	47.1429	44
+positions_8nt_m3	5564_Msx3_DBD_2_HumanTF_1.0_	positions_8nt_m3	5564_Msx3_DBD_2_HumanTF_1.0_	0.769	0.513	2.776	0.356	0.899	1.6173	0.88759	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRS                             	62	21	28	49	44	69	58	47.2857	45
+positions_8nt_m3	5817_Shox2_DBD_HumanTF_1.0_	positions_8nt_m3	5817_Shox2_DBD_HumanTF_1.0_	0.761	0.507	2.625	0.380	0.900	1.6026	0.88810	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRR                             	71	27	35	39	41	66	53	47.4286	46
+positions_8nt_m3	1798_MA0240.1_JASPAR_CORE_2009_	positions_8nt_m3	1798_MA0240.1_JASPAR_CORE_2009_	0.824	0.480	1.994	0.185	0.901	1.3834	0.88119	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	YAATTAA              	26	45	49	63	59	41	51	47.7143	47
+positions_8nt_m3	1759_MA0200.1_JASPAR_CORE_2009_	positions_8nt_m3	1759_MA0200.1_JASPAR_CORE_2009_	0.787	0.459	4.735	0.449	0.891	1.5272	0.87517	12	7	7	12	0.5833	0.5833	1.0000	D	4	....GTAATTc.	mTAATTr              	48	63	10	17	71	57	71	48.1429	48
+positions_8nt_m3	1794_MA0236.1_JASPAR_CORE_2009_	positions_8nt_m3	1794_MA0236.1_JASPAR_CORE_2009_	0.802	0.468	1.889	0.193	0.904	1.3389	0.88311	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TAATTAR              	34	49	60	61	55	37	43	48.4286	49
+positions_8nt_m3	5540_MSX1_DBD_2_HumanTF_1.0_	positions_8nt_m3	5540_MSX1_DBD_2_HumanTF_1.0_	0.764	0.509	2.789	0.362	0.897	1.6417	0.88675	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRS                             	68	25	26	47	46	71	61	49.1429	50
+positions_8nt_m3	5479_ISX_DBD_2_HumanTF_1.0_	positions_8nt_m3	5479_ISX_DBD_2_HumanTF_1.0_	0.764	0.509	2.724	0.360	0.898	1.6297	0.88716	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRG                             	67	24	30	48	45	70	60	49.1429	51
+positions_8nt_m3	6487_2p5l_D_3D-footprint_20130124_	positions_8nt_m3	6487_2p5l_D_3D-footprint_20130124_	0.814	0.407	1.458	0.368	0.912	1.0555	0.87892	12	6	6	12	0.5000	0.5000	1.0000	D	6	......AATTcw	AATTCA                               	28	86	79	45	63	18	31	50.0000	52
+positions_8nt_m3	1757_MA0198.1_JASPAR_CORE_2009__MA0455.1_JASPAR_CORE_2009_	positions_8nt_m3	1757_MA0198.1_JASPAR_CORE_2009__MA0455.1_JASPAR_CORE_2009_	0.785	0.458	4.925	0.450	0.886	1.6018	0.87215	12	7	7	12	0.5833	0.5833	1.0000	D	4	....GTAATTc.	yTAATTr              	49	64	4	16	78	65	77	50.4286	53
+positions_8nt_m3	5419_HOXA2_DBD_HumanTF_1.0_	positions_8nt_m3	5419_HOXA2_DBD_HumanTF_1.0_	0.755	0.522	1.955	0.344	0.904	1.7250	0.89681	12	10	9	13	0.6923	0.7500	0.9000	R	3	...GGTAATTcw	GSTAATKRS.                           	82	14	53	52	28	80	44	50.4286	54
+positions_8nt_m3	5750_SHOX2_DBD_HumanTF_1.0_	positions_8nt_m3	5750_SHOX2_DBD_HumanTF_1.0_	0.756	0.504	2.496	0.380	0.900	1.6068	0.88796	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRR                             	81	34	38	42	42	67	54	51.1429	55
+positions_8nt_m3	5480_ISX_full_HumanTF_1.0_	positions_8nt_m3	5480_ISX_full_HumanTF_1.0_	0.760	0.507	3.179	0.385	0.892	1.7249	0.88392	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTRR                             	73	28	24	33	52	79	69	51.1429	56
+positions_8nt_m3	5640_PDX1_DBD_2_HumanTF_1.0_	positions_8nt_m3	5640_PDX1_DBD_2_HumanTF_1.0_	0.751	0.501	2.778	0.394	0.895	1.6816	0.88538	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATKRS                             	84	36	27	30	48	72	64	51.5714	57
+positions_8nt_m3	1753_MA0194.1_JASPAR_CORE_2009_	positions_8nt_m3	1753_MA0194.1_JASPAR_CORE_2009_	0.836	0.488	2.968	0.227	0.887	1.5830	0.87291	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TAATTAA              	23	42	25	56	77	63	76	51.7143	58
+positions_8nt_m3	6133_1io4_C_3D-footprint_20130124_	positions_8nt_m3	6133_1io4_C_3D-footprint_20130124_	0.845	0.422	0.126	-0.094	0.919	0.9673	0.88409	12	6	6	12	0.5000	0.5000	1.0000	R	0	dsTGGT......	TGTGGT                               	21	82	86	85	51	16	26	52.4286	59
+positions_8nt_m3	7572_PDX1_do_HOCOMOCO_v9_	positions_8nt_m3	7572_PDX1_do_HOCOMOCO_v9_	0.757	0.504	4.070	0.483	0.880	1.9197	0.87753	12	8	8	12	0.6667	0.6667	1.0000	D	4	....GTAATTcw	STmATTAG                              	80	32	18	9	66	86	78	52.7143	60
+positions_8nt_m3	7342_DLX3_do_HOCOMOCO_v9_	positions_8nt_m3	7342_DLX3_do_HOCOMOCO_v9_	0.757	0.466	4.436	0.469	0.891	1.7491	0.88310	12	9	8	13	0.6154	0.6667	0.8889	D	4	....GTAATTcw	mTAATTrs.                             	79	52	15	13	56	83	72	52.8571	61
+positions_8nt_m3	5171_BSX_DBD_HumanTF_1.0_	positions_8nt_m3	5171_BSX_DBD_HumanTF_1.0_	0.751	0.501	1.938	0.282	0.903	1.5520	0.88989	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	BTAATKRS                             	85	37	55	54	38	60	50	54.1429	62
+positions_8nt_m3	5543_MSX2_DBD_2_HumanTF_1.0_	positions_8nt_m3	5543_MSX2_DBD_2_HumanTF_1.0_	0.758	0.505	2.642	0.326	0.893	1.7068	0.88452	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATTGG                             	75	29	33	53	50	75	65	54.2857	63
+positions_8nt_m3	1815_MA0257.1_JASPAR_CORE_2009_	positions_8nt_m3	1815_MA0257.1_JASPAR_CORE_2009_	0.795	0.464	1.657	0.160	0.904	1.3488	0.88268	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TMATTAR              	42	57	74	68	57	39	46	54.7143	64
+positions_8nt_m3	1750_MA0191.1_JASPAR_CORE_2009_	positions_8nt_m3	1750_MA0191.1_JASPAR_CORE_2009_	0.791	0.462	1.822	0.194	0.899	1.4086	0.88011	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	YMATTAA              	43	59	65	60	60	42	56	55.0000	65
+positions_8nt_m3	1809_MA0251.1_JASPAR_CORE_2009_	positions_8nt_m3	1809_MA0251.1_JASPAR_CORE_2009_	0.798	0.466	1.828	0.156	0.899	1.4119	0.87997	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	YAATTAR              	38	54	64	69	61	43	57	55.1429	66
+positions_8nt_m3	1788_MA0230.1_JASPAR_CORE_2009_	positions_8nt_m3	1788_MA0230.1_JASPAR_CORE_2009_	0.801	0.467	2.268	0.219	0.890	1.5379	0.87473	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TMATTAA              	35	51	40	58	72	58	73	55.2857	67
+positions_8nt_m3	1726_MA0167.1_JASPAR_CORE_2009_	positions_8nt_m3	1726_MA0167.1_JASPAR_CORE_2009_	0.797	0.465	1.604	0.145	0.903	1.3562	0.88236	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TAATTAR              	40	55	76	73	58	40	49	55.8571	68
+positions_8nt_m3	5162_BARX1_DBD_2_HumanTF_1.0_	positions_8nt_m3	5162_BARX1_DBD_2_HumanTF_1.0_	0.750	0.500	2.060	0.282	0.900	1.6070	0.88795	12	8	8	12	0.6667	0.6667	1.0000	R	4	....GTAATTcw	YTAATKGB                             	86	38	47	55	43	68	55	56.0000	69
+positions_8nt_m3	1736_MA0177.1_JASPAR_CORE_2009_	positions_8nt_m3	1736_MA0177.1_JASPAR_CORE_2009_	0.799	0.466	1.804	0.155	0.897	1.4372	0.87890	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TMATTAR              	37	53	66	70	64	47	62	57.0000	70
+positions_8nt_m3	1738_MA0179.1_JASPAR_CORE_2009_	positions_8nt_m3	1738_MA0179.1_JASPAR_CORE_2009_	0.761	0.444	4.700	0.444	0.877	1.7229	0.86741	12	7	7	12	0.5833	0.5833	1.0000	D	4	....GTAATTc.	yTAATTr              	72	74	11	20	82	78	82	59.8571	71
+positions_8nt_m3	1765_MA0206.1_JASPAR_CORE_2009_	positions_8nt_m3	1765_MA0206.1_JASPAR_CORE_2009_	0.779	0.454	2.050	0.224	0.892	1.5136	0.87572	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TMATTAA              	53	67	48	57	70	56	70	60.1429	72
+positions_8nt_m3	1779_MA0220.1_JASPAR_CORE_2009_	positions_8nt_m3	1779_MA0220.1_JASPAR_CORE_2009_	0.760	0.443	4.696	0.445	0.876	1.7305	0.86712	12	7	7	12	0.5833	0.5833	1.0000	D	4	....GTAATTc.	yTAATTr              	74	75	12	18	84	82	84	61.2857	73
+positions_8nt_m3	1799_MA0241.1_JASPAR_CORE_2009_	positions_8nt_m3	1799_MA0241.1_JASPAR_CORE_2009_	0.797	0.465	1.786	0.127	0.892	1.5080	0.87595	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TAATTAR              	41	56	68	76	69	54	68	61.7143	74
+positions_8nt_m3	1768_MA0209.1_JASPAR_CORE_2009_	positions_8nt_m3	1768_MA0209.1_JASPAR_CORE_2009_	0.782	0.456	1.929	0.145	0.893	1.5049	0.87608	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TMATTAR              	51	66	56	74	68	53	67	62.1429	75
+positions_8nt_m3	1808_MA0250.1_JASPAR_CORE_2009_	positions_8nt_m3	1808_MA0250.1_JASPAR_CORE_2009_	0.757	0.442	4.781	0.432	0.871	1.8100	0.86410	12	7	7	12	0.5833	0.5833	1.0000	D	4	....GTAATTc.	tTAATTr              	78	77	9	23	85	84	85	63.0000	76
+positions_8nt_m3	1796_MA0238.1_JASPAR_CORE_2009_	positions_8nt_m3	1796_MA0238.1_JASPAR_CORE_2009_	0.787	0.459	1.927	0.164	0.888	1.5746	0.87324	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TMATTAR              	47	62	57	66	74	62	75	63.2857	77
+positions_8nt_m3	1748_MA0189.1_JASPAR_CORE_2009_	positions_8nt_m3	1748_MA0189.1_JASPAR_CORE_2009_	0.766	0.447	1.647	0.163	0.899	1.4180	0.87971	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TMATTAR              	66	73	75	67	62	44	59	63.7143	78
+positions_8nt_m3	1740_MA0181.1_JASPAR_CORE_2009_	positions_8nt_m3	1740_MA0181.1_JASPAR_CORE_2009_	0.772	0.450	1.953	0.185	0.889	1.5583	0.87390	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	YAATTAR              	58	69	54	62	73	61	74	64.4286	79
+positions_8nt_m3	1743_MA0184.1_JASPAR_CORE_2009_	positions_8nt_m3	1743_MA0184.1_JASPAR_CORE_2009_	0.784	0.457	1.466	0.108	0.893	1.4942	0.87652	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	YAATTAR              	50	65	78	77	67	51	66	64.8571	80
+positions_8nt_m3	1784_MA0226.1_JASPAR_CORE_2009_	positions_8nt_m3	1784_MA0226.1_JASPAR_CORE_2009_	0.772	0.450	1.959	0.183	0.880	1.6817	0.86900	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	YAATTAA              	57	68	52	65	79	73	79	67.5714	81
+positions_8nt_m3	1756_MA0197.1_JASPAR_CORE_2009_	positions_8nt_m3	1756_MA0197.1_JASPAR_CORE_2009_	0.762	0.410	0.461	-0.100	0.896	1.4606	0.87792	12	8	7	13	0.5385	0.5833	0.8750	R	5	.....TAATTcw	TMATTAW.             	69	84	84	86	65	49	63	71.4286	82
+positions_8nt_m3	1761_MA0202.1_JASPAR_CORE_2009_	positions_8nt_m3	1761_MA0202.1_JASPAR_CORE_2009_	0.769	0.449	1.895	0.131	0.878	1.7115	0.86785	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	YAATTAR              	61	70	59	75	80	76	80	71.5714	83
+positions_8nt_m3	1786_MA0228.1_JASPAR_CORE_2009_	positions_8nt_m3	1786_MA0228.1_JASPAR_CORE_2009_	0.758	0.442	1.980	0.153	0.877	1.7160	0.86767	12	7	7	12	0.5833	0.5833	1.0000	R	5	.....TAATTcw	TMATTAR              	76	76	51	71	81	77	81	73.2857	84
+positions_8nt_m3	6026_1co0_A_3D-footprint_20130124_	positions_8nt_m3	6026_1co0_A_3D-footprint_20130124_	0.767	0.447	1.667	0.040	0.869	1.8347	0.86318	12	7	7	12	0.5833	0.5833	1.0000	R	1	.sTGGTAA....	CTGGTAC                              	65	72	72	82	86	85	86	78.2857	85
+positions_8nt_m3	1787_MA0229.1_JASPAR_CORE_2009_	positions_8nt_m3	1787_MA0229.1_JASPAR_CORE_2009_	0.772	0.416	0.671	-0.092	0.876	1.7300	0.86714	12	8	7	13	0.5385	0.5833	0.8750	R	5	.....TAATTcw	YAATTAR.             	56	83	83	84	83	81	83	79.0000	86
+; Host name	biow
+; Job started	2014-09-05.203631
+; Job done	2014-09-05.203739
+; Seconds	35.04
+;	user	35.04
+;	system	2.03
+;	cuser	27.93
+;	csystem	3.58

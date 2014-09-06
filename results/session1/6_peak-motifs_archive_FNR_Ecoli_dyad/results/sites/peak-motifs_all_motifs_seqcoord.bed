@@ -1,0 +1,1310 @@
+track name="test_peaks" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad test: peaks" visibility=2 use_score=1 color=13,115,67
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/peak-motifspeak_seq
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_0_923_+ 556.48</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_20369_21701_+ 93.75</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_29051_30211_+ 56.28</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_33442_34798_+ 463.14</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_83062_84394_+ 108.78</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_121130_122616_+ 685.09</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_280823_281963_+ 261.51</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_399733_400893_+ 79.75</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_695647_696755_+ 56.82</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_769395_771104_+ 1597.04</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_815456_816705_+ 442.84</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_854565_855677_+ 121.39</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_876847_878023_+ 237.07</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_939453_940572_+ 82.37</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_952544_954500_+ 1251.34</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1003362_1004557_+ 432.53</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1018042_1019723_+ 60.38</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1030214_1031803_+ 86.90</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1163561_1165788_+ 2118.39</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1276562_1277615_+ 57.93</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1278431_1279507_+ 79.87</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1296282_1299602_+ 1672.03</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1311299_1312519_+ 652.21</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1396937_1398217_+ 348.29</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1406481_1407793_+ 1512.02</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1514602_1515991_+ 1301.30</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1544745_1545910_+ 333.64</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1626452_1627821_+ 1203.14</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1655510_1656555_+ 68.36</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1664694_1665907_+ 787.05</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1717191_1719703_+ 1577.06</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1734954_1736249_+ 800.67</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1752104_1753248_+ 99.12</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1762628_1763683_+ 53.71</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1796886_1799014_+ 75.72</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1830825_1831894_+ 64.97</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1860082_1861503_+ 624.09</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1867913_1869080_+ 190.21</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1934876_1936141_+ 1288.28</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1986922_1988136_+ 629.46</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1989336_1990607_+ 160.34</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2065518_2067096_+ 156.40</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2341114_2343212_+ 310.80</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2376810_2377899_+ 70.83</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2402812_2404043_+ 598.84</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2410790_2412114_+ 822.03</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2414477_2415653_+ 299.06</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2458489_2459669_+ 255.36</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2530808_2532723_+ 300.87</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2557827_2558957_+ 373.60</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2560997_2563106_+ 804.35</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2618397_2619558_+ 454.32</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2631517_2632814_+ 607.88</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2713720_2715797_+ 1838.80</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2716052_2717129_+ 68.29</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2816030_2817497_+ 90.34</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2890048_2891219_+ 249.62</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2904443_2906681_+ 69.29</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2907250_2908427_+ 282.40</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2921806_2923429_+ 53.48</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2944763_2946198_+ 368.59</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3053268_3056865_+ 109.16</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3084066_3085778_+ 57.57</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3143814_3145078_+ 618.09</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3150987_3152126_+ 204.01</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3152620_3153790_+ 293.24</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3181064_3182667_+ 97.04</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3216709_3217778_+ 72.11</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3242219_3243492_+ 723.76</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3272608_3273734_+ 52.34</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3279335_3280398_+ 52.13</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3298768_3300021_+ 392.50</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3305466_3307222_+ 171.11</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3315525_3316942_+ 158.07</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3319524_3321163_+ 168.00</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3330504_3332124_+ 87.58</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3351516_3353255_+ 945.38</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3375092_3377195_+ 61.85</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3450219_3451899_+ 58.82</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3470272_3473148_+ 71.20</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3491374_3492566_+ 283.56</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3572443_3573675_+ 130.00</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3610991_3612250_+ 534.12</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3637380_3638572_+ 82.42</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3651216_3657402_+ 710.80</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3661401_3664309_+ 61.04</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3717365_3719269_+ 95.98</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3782659_3783794_+ 66.45</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3881223_3882950_+ 97.76</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3917503_3921947_+ 59.36</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3928628_3929783_+ 70.06</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3947812_3950452_+ 270.56</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3963098_3964995_+ 60.49</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3979879_3981358_+ 276.54</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4010401_4012453_+ 102.09</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4047381_4049667_+ 79.35</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4131123_4132281_+ 128.06</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4172889_4174240_+ 226.05</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4174949_4179737_+ 324.90</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4284936_4286242_+ 87.86</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4346418_4347761_+ 50.56</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4367959_4369215_+ 390.21</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4379856_4380991_+ 73.15</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4389886_4391246_+ 83.67</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4402117_4403527_+ 206.66</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4460310_4461486_+ 128.44</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4566227_4567339_+ 59.18</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4603264_4604888_+ 88.05</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4637448_4639202_+ 220.87</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+track name="test_peaks" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad test: peaks" visibility=2 use_score=1 color=13,115,67
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/peak-motifspeak_seq
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_0_923_+ 556.48</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_20369_21701_+ 93.75</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_29051_30211_+ 56.28</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_33442_34798_+ 463.14</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_83062_84394_+ 108.78</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_121130_122616_+ 685.09</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_280823_281963_+ 261.51</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_399733_400893_+ 79.75</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_695647_696755_+ 56.82</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_769395_771104_+ 1597.04</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_815456_816705_+ 442.84</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_854565_855677_+ 121.39</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_876847_878023_+ 237.07</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_939453_940572_+ 82.37</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_952544_954500_+ 1251.34</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1003362_1004557_+ 432.53</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1018042_1019723_+ 60.38</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1030214_1031803_+ 86.90</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1163561_1165788_+ 2118.39</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1276562_1277615_+ 57.93</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1278431_1279507_+ 79.87</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1296282_1299602_+ 1672.03</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1311299_1312519_+ 652.21</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1396937_1398217_+ 348.29</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1406481_1407793_+ 1512.02</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1514602_1515991_+ 1301.30</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1544745_1545910_+ 333.64</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1626452_1627821_+ 1203.14</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1655510_1656555_+ 68.36</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1664694_1665907_+ 787.05</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1717191_1719703_+ 1577.06</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1734954_1736249_+ 800.67</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1752104_1753248_+ 99.12</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1762628_1763683_+ 53.71</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1796886_1799014_+ 75.72</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1830825_1831894_+ 64.97</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1860082_1861503_+ 624.09</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1867913_1869080_+ 190.21</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1934876_1936141_+ 1288.28</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1986922_1988136_+ 629.46</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_1989336_1990607_+ 160.34</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2065518_2067096_+ 156.40</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2341114_2343212_+ 310.80</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2376810_2377899_+ 70.83</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2402812_2404043_+ 598.84</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2410790_2412114_+ 822.03</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2414477_2415653_+ 299.06</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2458489_2459669_+ 255.36</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2530808_2532723_+ 300.87</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2557827_2558957_+ 373.60</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2560997_2563106_+ 804.35</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2618397_2619558_+ 454.32</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2631517_2632814_+ 607.88</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2713720_2715797_+ 1838.80</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2716052_2717129_+ 68.29</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2816030_2817497_+ 90.34</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2890048_2891219_+ 249.62</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2904443_2906681_+ 69.29</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2907250_2908427_+ 282.40</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2921806_2923429_+ 53.48</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_2944763_2946198_+ 368.59</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3053268_3056865_+ 109.16</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3084066_3085778_+ 57.57</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3143814_3145078_+ 618.09</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3150987_3152126_+ 204.01</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3152620_3153790_+ 293.24</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3181064_3182667_+ 97.04</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3216709_3217778_+ 72.11</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3242219_3243492_+ 723.76</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3272608_3273734_+ 52.34</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3279335_3280398_+ 52.13</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3298768_3300021_+ 392.50</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3305466_3307222_+ 171.11</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3315525_3316942_+ 158.07</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3319524_3321163_+ 168.00</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3330504_3332124_+ 87.58</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3351516_3353255_+ 945.38</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3375092_3377195_+ 61.85</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3450219_3451899_+ 58.82</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3470272_3473148_+ 71.20</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3491374_3492566_+ 283.56</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3572443_3573675_+ 130.00</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3610991_3612250_+ 534.12</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3637380_3638572_+ 82.42</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3651216_3657402_+ 710.80</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3661401_3664309_+ 61.04</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3717365_3719269_+ 95.98</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3782659_3783794_+ 66.45</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3881223_3882950_+ 97.76</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3917503_3921947_+ 59.36</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3928628_3929783_+ 70.06</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3947812_3950452_+ 270.56</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3963098_3964995_+ 60.49</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_3979879_3981358_+ 276.54</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4010401_4012453_+ 102.09</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4047381_4049667_+ 79.35</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4131123_4132281_+ 128.06</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4172889_4174240_+ 226.05</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4174949_4179737_+ 324.90</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4284936_4286242_+ 87.86</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4346418_4347761_+ 50.56</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4367959_4369215_+ 390.21</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4379856_4380991_+ 73.15</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4389886_4391246_+ 83.67</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4402117_4403527_+ 206.66</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4460310_4461486_+ 128.44</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4566227_4567339_+ 59.18</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4603264_4604888_+ 88.05</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Invalid galaxy fasta header for feature extraction	?_gi|49175990|ref|NC_000913.2|_4637448_4639202_+ 220.87</font>
+</blockquote><br><hr size=3>
+	-1	0	feature	0	.	-1		255,0,0			
+track name="oligos_6nt_mkv3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: oligos_6nt_mkv3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/oligos_6nt_mkv3/peak-motifs_oligos_6nt_mkv3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_6nt_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_6nt_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_6nt_m1/peak-motifs_positions_6nt_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_6nt_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_6nt_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_6nt_m2/peak-motifs_positions_6nt_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m1/peak-motifs_positions_7nt_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m2/peak-motifs_positions_7nt_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m4" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m4" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m4/peak-motifs_positions_7nt_m4_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m5" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m5" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m1/peak-motifs_positions_8nt_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m2/peak-motifs_positions_8nt_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m4" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m4" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m4/peak-motifs_positions_8nt_m4_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m5" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m5" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m5/peak-motifs_positions_8nt_m5_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m1/peak-motifs_dyads_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m2/peak-motifs_dyads_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m3/peak-motifs_dyads_m3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m4" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m4" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m4/peak-motifs_dyads_m4_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m5" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m5" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m5/peak-motifs_dyads_m5_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="oligos_6nt_mkv3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: oligos_6nt_mkv3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/oligos_6nt_mkv3/peak-motifs_oligos_6nt_mkv3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_6nt_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_6nt_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_6nt_m1/peak-motifs_positions_6nt_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_6nt_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_6nt_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_6nt_m2/peak-motifs_positions_6nt_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m1/peak-motifs_positions_7nt_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m2/peak-motifs_positions_7nt_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m4" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m4" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m4/peak-motifs_positions_7nt_m4_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m5" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m5" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m1/peak-motifs_positions_8nt_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m2/peak-motifs_positions_8nt_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m4" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m4" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m4/peak-motifs_positions_8nt_m4_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m5" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m5" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m5/peak-motifs_positions_8nt_m5_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m1/peak-motifs_dyads_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m2/peak-motifs_dyads_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m3/peak-motifs_dyads_m3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m4" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m4" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m4/peak-motifs_dyads_m4_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m5" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m5" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m5/peak-motifs_dyads_m5_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="oligos_6nt_mkv3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: oligos_6nt_mkv3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/oligos_6nt_mkv3/peak-motifs_oligos_6nt_mkv3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_6nt_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_6nt_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_6nt_m1/peak-motifs_positions_6nt_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_6nt_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_6nt_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_6nt_m2/peak-motifs_positions_6nt_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m1/peak-motifs_positions_7nt_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m2/peak-motifs_positions_7nt_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m4" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m4" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m4/peak-motifs_positions_7nt_m4_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_7nt_m5" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_7nt_m5" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m1/peak-motifs_positions_8nt_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m2/peak-motifs_positions_8nt_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m4" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m4" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m4/peak-motifs_positions_8nt_m4_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="positions_8nt_m5" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: positions_8nt_m5" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m5/peak-motifs_positions_8nt_m5_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m1" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m1" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m1/peak-motifs_dyads_m1_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m2" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m2" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m2/peak-motifs_dyads_m2_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m3" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m3" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m3/peak-motifs_dyads_m3_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m4" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m4" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m4/peak-motifs_dyads_m4_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>
+track name="dyads_m5" description="RSAT peak-motifs ChIP-seq_FNR_E._coli_tunned_parameters_dyad: dyads_m5" visibility=2 itemRgb="On" use_score=1 color=247,73,2
+browser dense /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/dyads_m5/peak-motifs_dyads_m5_sites.tab
+## seq_name	start	end	feature_name	score	strand	thickStart	thickEnd	itemRgb	blockCount	blockSizes	blckStarts
+<blockquote class='error'>
+<font color='#DD0000'><b>Error: </b>Coord file (BED format) is not tab delimited. Convert the space into tabulations first.<br>
+Error occurred on host biow</font>
+</blockquote><br><hr size=3>
+</body></html>

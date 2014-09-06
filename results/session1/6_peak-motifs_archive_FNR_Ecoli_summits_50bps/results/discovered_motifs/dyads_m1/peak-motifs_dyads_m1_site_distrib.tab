@@ -1,0 +1,36 @@
+; classfreq  -v 1 -ci 20 -o $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_motifs/dyads_m1/peak-motifs_dyads_m1_site_distrib.tab
+;	min                 	minimum of class interval (inclusive)
+;	max                 	maximum of class interval (exclusive)
+;	center              	center of class interval
+;	n                   	occurrences
+;	n_cum               	cumulative occurrences (inclusive)
+;	n_dcum              	decreasing cumulative occurrences (inclusive)
+;	f                   	frequencies
+;	f_cum               	cumulative frequencies (inclusive)
+;	f_dcum              	decreasing cumulative frequencies (inclusive)
+#[min	max[	center	n	n_cum	n_dcum	f	f_cum	f_dcum
+-40	-20	-30	4	4	42	0.09524	0.09524	1.00000
+-20	0	-10	22	26	38	0.52381	0.61905	0.90476
+0	20	10	11	37	16	0.26190	0.88095	0.38095
+20	40	30	5	42	5	0.11905	1.00000	0.11905
+; Statistics:
+; -----------
+; class interval     	20
+; classes            	4
+; count              	42
+; sum                	-137
+; mean               	-3.2619
+; median class       	[-20..0[
+; var                	286
+; std                	16.8972
+; min                	-35.5
+; max                	28.5
+; range              	64
+; Host name	biow
+; Job started	2014-09-06.012151
+; Job done	2014-09-06.012151
+; Seconds	0.22
+;	user	0.22
+;	system	0.01
+;	cuser	0
+;	csystem	0

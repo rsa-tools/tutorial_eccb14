@@ -1,0 +1,3885 @@
+<html>
+<header>
+<title>/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB.tab</title>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+ <!-- 
+var stIsIE = /*@cc_on!@*/false;
+
+sorttable = {
+  init: function() {
+    // quit if this function has already been called
+    if (arguments.callee.done) return;
+    // flag this function so we don't do the same thing twice
+    arguments.callee.done = true;
+    // kill the timer
+    if (_timer) clearInterval(_timer);
+    
+    if (!document.createElement || !document.getElementsByTagName) return;
+    
+    sorttable.DATE_RE = /^(\d\d?)[\/\.-](\d\d?)[\/\.-]((\d\d)?\d\d)$/;
+    
+    forEach(document.getElementsByTagName('table'), function(table) {
+      if (table.className.search(/\bsortable\b/) != -1) {
+        sorttable.makeSortable(table);
+      }
+    });
+    
+  },
+  
+  makeSortable: function(table) {
+    if (table.getElementsByTagName('thead').length == 0) {
+      // table doesn't have a tHead. Since it should have, create one and
+      // put the first table row in it.
+      the = document.createElement('thead');
+      the.appendChild(table.rows[0]);
+      table.insertBefore(the,table.firstChild);
+    }
+    // Safari doesn't support table.tHead, sigh
+    if (table.tHead == null) table.tHead = table.getElementsByTagName('thead')[0];
+    
+    if (table.tHead.rows.length != 1) return; // can't cope with two header rows
+    
+    // Sorttable v1 put rows with a class of "sortbottom" at the bottom (as
+    // "total" rows, for example). This is B&R, since what you're supposed
+    // to do is put them in a tfoot. So, if there are sortbottom rows,
+    // for backwards compatibility, move them to tfoot (creating it if needed).
+    sortbottomrows = [];
+    for (var i=0; i<table.rows.length; i++) {
+      if (table.rows[i].className.search(/\bsortbottom\b/) != -1) {
+        sortbottomrows[sortbottomrows.length] = table.rows[i];
+      }
+    }
+    if (sortbottomrows) {
+      if (table.tFoot == null) {
+        // table doesn't have a tfoot. Create one.
+        tfo = document.createElement('tfoot');
+        table.appendChild(tfo);
+      }
+      for (var i=0; i<sortbottomrows.length; i++) {
+        tfo.appendChild(sortbottomrows[i]);
+      }
+      delete sortbottomrows;
+    }
+    
+    // work through each column and calculate its type
+    headrow = table.tHead.rows[0].cells;
+    for (var i=0; i<headrow.length; i++) {
+      // manually override the type with a sorttable_type attribute
+      if (!headrow[i].className.match(/\bsorttable_nosort\b/)) { // skip this col
+        mtch = headrow[i].className.match(/\bsorttable_([a-z0-9]+)\b/);
+        if (mtch) { override = mtch[1]; }
+	      if (mtch && typeof sorttable["sort_"+override] == 'function') {
+	        headrow[i].sorttable_sortfunction = sorttable["sort_"+override];
+	      } else {
+	        headrow[i].sorttable_sortfunction = sorttable.guessType(table,i);
+	      }
+	      // make it clickable to sort
+	      headrow[i].sorttable_columnindex = i;
+	      headrow[i].sorttable_tbody = table.tBodies[0];
+	      dean_addEvent(headrow[i],"click", function(e) {
+
+          if (this.className.search(/\bsorttable_sorted\b/) != -1) {
+            // if we're already sorted by this column, just 
+            // reverse the table, which is quicker
+            sorttable.reverse(this.sorttable_tbody);
+            this.className = this.className.replace('sorttable_sorted',
+                                                    'sorttable_sorted_reverse');
+            this.removeChild(document.getElementById('sorttable_sortfwdind'));
+            sortrevind = document.createElement('span');
+            sortrevind.id = "sorttable_sortrevind";
+            sortrevind.innerHTML = stIsIE ? '&nbsp<font face="webdings">5</font>' : '&nbsp;&#x25B4;';
+            this.appendChild(sortrevind);
+            return;
+          }
+          if (this.className.search(/\bsorttable_sorted_reverse\b/) != -1) {
+            // if we're already sorted by this column in reverse, just 
+            // re-reverse the table, which is quicker
+            sorttable.reverse(this.sorttable_tbody);
+            this.className = this.className.replace('sorttable_sorted_reverse',
+                                                    'sorttable_sorted');
+            this.removeChild(document.getElementById('sorttable_sortrevind'));
+            sortfwdind = document.createElement('span');
+            sortfwdind.id = "sorttable_sortfwdind";
+            sortfwdind.innerHTML = stIsIE ? '&nbsp<font face="webdings">6</font>' : '&nbsp;&#x25BE;';
+            this.appendChild(sortfwdind);
+            return;
+          }
+          
+          // remove sorttable_sorted classes
+          theadrow = this.parentNode;
+          forEach(theadrow.childNodes, function(cell) {
+            if (cell.nodeType == 1) { // an element
+              cell.className = cell.className.replace('sorttable_sorted_reverse','');
+              cell.className = cell.className.replace('sorttable_sorted','');
+            }
+          });
+          sortfwdind = document.getElementById('sorttable_sortfwdind');
+          if (sortfwdind) { sortfwdind.parentNode.removeChild(sortfwdind); }
+          sortrevind = document.getElementById('sorttable_sortrevind');
+          if (sortrevind) { sortrevind.parentNode.removeChild(sortrevind); }
+          
+          this.className += ' sorttable_sorted';
+          sortfwdind = document.createElement('span');
+          sortfwdind.id = "sorttable_sortfwdind";
+          sortfwdind.innerHTML = stIsIE ? '&nbsp<font face="webdings">6</font>' : '&nbsp;&#x25BE;';
+          this.appendChild(sortfwdind);
+
+	        // build an array to sort. This is a Schwartzian transform thing,
+	        // i.e., we "decorate" each row with the actual sort key,
+	        // sort based on the sort keys, and then put the rows back in order
+	        // which is a lot faster because you only do getInnerText once per row
+	        row_array = [];
+	        col = this.sorttable_columnindex;
+	        rows = this.sorttable_tbody.rows;
+	        for (var j=0; j<rows.length; j++) {
+	          row_array[row_array.length] = [sorttable.getInnerText(rows[j].cells[col]), rows[j]];
+	        }
+	        /* If you want a stable sort, uncomment the following line */
+	        //sorttable.shaker_sort(row_array, this.sorttable_sortfunction);
+	        /* and comment out this one */
+	        row_array.sort(this.sorttable_sortfunction);
+	        
+	        tb = this.sorttable_tbody;
+	        for (var j=0; j<row_array.length; j++) {
+	          tb.appendChild(row_array[j][1]);
+	        }
+	        
+	        delete row_array;
+	      });
+	    }
+    }
+  },
+  
+  guessType: function(table, column) {
+    // guess the type of a column based on its first non-blank row
+    sortfn = sorttable.sort_alpha;
+    for (var i=0; i<table.tBodies[0].rows.length; i++) {
+      text = sorttable.getInnerText(table.tBodies[0].rows[i].cells[column]);
+      if (text != '') {
+        if (text.match(/^-?[£$¤]?[\d,.]+%?$/)||text.match(/^\d+((\.|,)\d+)?(E|e)(\+|\-)\d+/)) {
+          return sorttable.sort_numeric;
+        }
+        // check for a date: dd/mm/yyyy or dd/mm/yy 
+        // can have / or . or - as separator
+        // can be mm/dd as well
+        possdate = text.match(sorttable.DATE_RE)
+        if (possdate) {
+          // looks like a date
+          first = parseInt(possdate[1]);
+          second = parseInt(possdate[2]);
+          if (first > 12) {
+            // definitely dd/mm
+            return sorttable.sort_ddmm;
+          } else if (second > 12) {
+            return sorttable.sort_mmdd;
+          } else {
+            // looks like a date, but we can't tell which, so assume
+            // that it's dd/mm (English imperialism!) and keep looking
+            sortfn = sorttable.sort_ddmm;
+          }
+        }
+      }
+    }
+    return sortfn;
+  },
+  
+  getInnerText: function(node) {
+    // gets the text we want to use for sorting for a cell.
+    // strips leading and trailing whitespace.
+    // this is *not* a generic getInnerText function; it's special to sorttable.
+    // for example, you can override the cell text with a customkey attribute.
+    // it also gets .value for <input> fields.
+    
+    hasInputs = (typeof node.getElementsByTagName == 'function') &&
+                 node.getElementsByTagName('input').length;
+    
+    if (node.getAttribute("sorttable_customkey") != null) {
+      return node.getAttribute("sorttable_customkey");
+    }
+    else if (typeof node.textContent != 'undefined' && !hasInputs) {
+      return node.textContent.replace(/^\s+|\s+$/g, '');
+    }
+    else if (typeof node.innerText != 'undefined' && !hasInputs) {
+      return node.innerText.replace(/^\s+|\s+$/g, '');
+    }
+    else if (typeof node.text != 'undefined' && !hasInputs) {
+      return node.text.replace(/^\s+|\s+$/g, '');
+    }
+    else {
+      switch (node.nodeType) {
+        case 3:
+          if (node.nodeName.toLowerCase() == 'input') {
+            return node.value.replace(/^\s+|\s+$/g, '');
+          }
+        case 4:
+          return node.nodeValue.replace(/^\s+|\s+$/g, '');
+          break;
+        case 1:
+        case 11:
+          var innerText = '';
+          for (var i = 0; i < node.childNodes.length; i++) {
+            innerText += sorttable.getInnerText(node.childNodes[i]);
+          }
+          return innerText.replace(/^\s+|\s+$/g, '');
+          break;
+        default:
+          return '';
+      }
+    }
+  },
+  
+  reverse: function(tbody) {
+    // reverse the rows in a tbody
+    newrows = [];
+    for (var i=0; i<tbody.rows.length; i++) {
+      newrows[newrows.length] = tbody.rows[i];
+    }
+    for (var i=newrows.length-1; i>=0; i--) {
+       tbody.appendChild(newrows[i]);
+    }
+    delete newrows;
+  },
+  
+  /* sort functions
+     each sort function takes two parameters, a and b
+     you are comparing a[0] and b[0] */
+  /* Numeric order */
+  sort_numeric: function(a,b) {
+	aa = parseFloat(a[0].replace(/[^0-9.\-eE]/g,''));
+	if (isNaN(aa)) aa = 0;
+	bb = parseFloat(b[0].replace(/[^0-9.\-eE]/g,''));
+	if (isNaN(bb)) bb = 0;
+	return aa-bb;
+    },
+//   sort_numeric: function(a,b) {
+//     aa = parseFloat(a[0].replace(/[^0-9.-eE]/g,''));
+//     if (isNaN(aa)) aa = 0;
+//     bb = parseFloat(b[0].replace(/[^0-9.-eE]/g,'')); 
+//     if (isNaN(bb)) bb = 0;    
+//     return aa-bb;
+//   },
+
+  /* alphabetical order */
+  sort_alpha: function(a,b) {
+    if (a[0]==b[0]) return 0;
+    if (a[0]<b[0]) return -1;
+    return 1;
+  },
+
+  /* sort dates formatted as ddmm (day first, month after) */
+  sort_ddmm: function(a,b) {
+    mtch = a[0].match(sorttable.DATE_RE);
+    y = mtch[3]; m = mtch[2]; d = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt1 = y+m+d;
+    mtch = b[0].match(sorttable.DATE_RE);
+    y = mtch[3]; m = mtch[2]; d = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt2 = y+m+d;
+    if (dt1==dt2) return 0;
+    if (dt1<dt2) return -1;
+    return 1;
+  },
+
+  /* sort dates formatted as mmdd (month first, day after) */
+  sort_mmdd: function(a,b) {
+    mtch = a[0].match(sorttable.DATE_RE);
+    y = mtch[3]; d = mtch[2]; m = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt1 = y+m+d;
+    mtch = b[0].match(sorttable.DATE_RE);
+    y = mtch[3]; d = mtch[2]; m = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt2 = y+m+d;
+    if (dt1==dt2) return 0;
+    if (dt1<dt2) return -1;
+    return 1;
+  },
+  
+  shaker_sort: function(list, comp_func) {
+    // A stable sort function to allow multi-level sorting of data
+    // see: http://en.wikipedia.org/wiki/Cocktail_sort
+    // thanks to Joseph Nahmias
+    var b = 0;
+    var t = list.length - 1;
+    var swap = true;
+
+    while(swap) {
+        swap = false;
+        for(var i = b; i < t; ++i) {
+            if ( comp_func(list[i], list[i+1]) > 0 ) {
+                var q = list[i]; list[i] = list[i+1]; list[i+1] = q;
+                swap = true;
+            }
+        } // for
+        t--;
+
+        if (!swap) break;
+
+        for(var i = t; i > b; --i) {
+            if ( comp_func(list[i], list[i-1]) < 0 ) {
+                var q = list[i]; list[i] = list[i-1]; list[i-1] = q;
+                swap = true;
+            }
+        } // for
+        b++;
+
+    } // while(swap)
+  }  
+}
+
+/* ******************************************************************
+   Supporting functions: bundled here to avoid depending on a library
+   ****************************************************************** */
+
+// Dean Edwards/Matthias Miller/John Resig
+
+/* for Mozilla/Opera9 */
+if (document.addEventListener) {
+    document.addEventListener("DOMContentLoaded", sorttable.init, false);
+}
+
+/* for Internet Explorer */
+/*@cc_on @*/
+/*@if (@_win32)
+    document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+    var script = document.getElementById("__ie_onload");
+    script.onreadystatechange = function() {
+        if (this.readyState == "complete") {
+            sorttable.init(); // call the onload handler
+        }
+    };
+/*@end @*/
+
+/* for Safari */
+if (/WebKit/i.test(navigator.userAgent)) { // sniff
+    var _timer = setInterval(function() {
+        if (/loaded|complete/.test(document.readyState)) {
+            sorttable.init(); // call the onload handler
+        }
+    }, 10);
+}
+
+/* for other browsers */
+window.onload = sorttable.init;
+
+// written by Dean Edwards, 2005
+// with input from Tino Zijdel, Matthias Miller, Diego Perini
+
+// http://dean.edwards.name/weblog/2005/10/add-event/
+
+function dean_addEvent(element, type, handler) {
+	if (element.addEventListener) {
+		element.addEventListener(type, handler, false);
+	} else {
+		// assign each event handler a unique ID
+		if (!handler.$$guid) handler.$$guid = dean_addEvent.guid++;
+		// create a hash table of event types for the element
+		if (!element.events) element.events = {};
+		// create a hash table of event handlers for each element/event pair
+		var handlers = element.events[type];
+		if (!handlers) {
+			handlers = element.events[type] = {};
+			// store the existing event handler (if there is one)
+			if (element["on" + type]) {
+				handlers[0] = element["on" + type];
+			}
+		}
+		// store the event handler in the hash table
+		handlers[handler.$$guid] = handler;
+		// assign a global event handler to do all the work
+		element["on" + type] = handleEvent;
+	}
+};
+// a counter used to create unique IDs
+dean_addEvent.guid = 1;
+
+function removeEvent(element, type, handler) {
+	if (element.removeEventListener) {
+		element.removeEventListener(type, handler, false);
+	} else {
+		// delete the event handler from the hash table
+		if (element.events && element.events[type]) {
+			delete element.events[type][handler.$$guid];
+		}
+	}
+};
+
+function handleEvent(event) {
+	var returnValue = true;
+	// grab the event object (IE uses a global event object)
+	event = event || fixEvent(((this.ownerDocument || this.document || this).parentWindow || window).event);
+	// get a reference to the hash table of event handlers
+	var handlers = this.events[event.type];
+	// execute each event handler
+	for (var i in handlers) {
+		this.$$handleEvent = handlers[i];
+		if (this.$$handleEvent(event) === false) {
+			returnValue = false;
+		}
+	}
+	return returnValue;
+};
+
+function fixEvent(event) {
+	// add W3C standard event methods
+	event.preventDefault = fixEvent.preventDefault;
+	event.stopPropagation = fixEvent.stopPropagation;
+	return event;
+};
+fixEvent.preventDefault = function() {
+	this.returnValue = false;
+};
+fixEvent.stopPropagation = function() {
+  this.cancelBubble = true;
+}
+
+// Dean's forEach: http://dean.edwards.name/base/forEach.js
+/*
+	forEach, version 1.0
+	Copyright 2006, Dean Edwards
+	License: http://www.opensource.org/licenses/mit-license.php
+*/
+
+// array-like enumeration
+if (!Array.forEach) { // mozilla already supports this
+	Array.forEach = function(array, block, context) {
+		for (var i = 0; i < array.length; i++) {
+			block.call(context, array[i], i, array);
+		}
+	};
+}
+
+// generic enumeration
+Function.prototype.forEach = function(object, block, context) {
+	for (var key in object) {
+		if (typeof this.prototype[key] == "undefined") {
+			block.call(context, object[key], key, object);
+		}
+	}
+};
+
+// character enumeration
+String.forEach = function(string, block, context) {
+	Array.forEach(string.split(""), function(chr, index) {
+		block.call(context, chr, index, string);
+	});
+};
+
+// globally resolve forEach enumeration
+var forEach = function(object, block, context) {
+	if (object) {
+		var resolve = Object; // default
+		if (object instanceof Function) {
+			// functions have a "length" property
+			resolve = Function;
+		} else if (object.forEach instanceof Function) {
+			// the object implements a custom forEach method so use that
+			object.forEach(block, context);
+			return;
+		} else if (typeof object == "string") {
+			// the object is a string
+			resolve = String;
+		} else if (typeof object.length == "number") {
+			// the object is array-like
+			resolve = Array;
+		}
+		resolve.forEach(object, block, context);
+	}
+}
+
+// --> 
+</script>
+<style type='text/css'>
+/* Style sheet for the HTML formatting of RSAT results */
+
+/* BODY  */
+body {
+       font-family: Verdana, Helvetica, Arial, sans-serif;
+       font-size: 70%;
+       margin-top: 2px;
+       margin-left: 20px;
+       text-align: justify;
+       background: #ffffff;
+       margin-right: 20px;
+/*       background: #0D73A7 url(images/bullet2-normal.gif) no-repeat 7px 7px;*/
+}
+
+
+/* div for menu */
+
+#Menu_space {
+	margin-top:120px;
+	margin-bottom:300px;
+}
+#Menu_wait {
+	position:absolute;
+	top:120px;
+	left:50%;
+	width:400px;
+	margin-left: -200px;
+	padding:10px;
+	text-align:center;
+	}
+
+#Menu {
+	position:absolute;
+	top:120px;
+	left:50%;
+	width:800px;
+	margin-left: -400px;
+	padding:10px;
+	background-color:#eee;
+	border:1px dashed #999;
+	line-height:17px;
+	font-size: 110%;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	text-align:left;
+	}
+
+#Menu h3 {
+	margin:0;
+	text-align:center;
+	padding-bottom:5px;
+}
+
+#Menu ul {
+	list-style-type:none;
+}
+
+/* TABLE */
+#Menu table {
+	margin: 10px 10px 10px;
+}
+
+#Menu  td, th {
+	font-size: 70%;
+	padding: 2px 10px;
+	vertical-align:top;
+}
+
+.menulink a:link,a:visited {
+	color:#cc6600;
+	background: transparent;
+	text-decoration: none;
+	}
+
+.menulink a:visited {
+	color:#cc6600;
+	background: transparent;
+	text-decoration: none;
+	}
+
+.menulink A:active {
+	color: #cc6600;
+	background: transparent;
+	text-decoration: none
+}
+
+.menulink A:hover {
+	text-decoration: underline;
+	color: #cc6600;
+}
+
+
+/* Links  */
+
+A:link,A:visited {
+	color: #0D73A7;
+	background: transparent;
+	text-decoration: none;
+}
+
+A:active {
+	color: #ff0000;
+	background: transparent;
+	text-decoration: none
+}
+
+A:hover {
+	text-decoration: underline;
+	color: #cc6600;
+}
+
+/* Headers  */
+
+h1 {
+	margin-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	border: 1px solid #2D282E;
+	background-color: #0D73A7;
+	font-size: 16px;
+	color: #D6EEFA;
+}
+h1 a:link, h1 a:visited {
+	color: #D6EEFA;
+}
+
+h1 a:hover {
+	color: #ffffff;
+}
+
+h2 {
+	margin-top: 10px;
+	padding-top: 15px;
+	margin-bottom: 0px;
+	color: #002266;
+	font-size: 15px;
+}
+
+h3 {
+	margin-top: 6px;
+	padding-top: 6px;
+	margin-bottom: 0px;
+	color: #002266;
+	font-size: 11px;
+}
+
+h4 {
+	margin-top: 4px;
+	padding-top: 4px;
+	margin-bottom: 0px;
+	color : #2D282E;
+	font-size: 11px;
+}
+
+h2.motif {
+	margin-top: 3px;
+	padding-top: 0px;
+	margin-bottom: 4px;
+	color : #2D282E;
+	font-size: 12px;
+}
+
+/* Other tag formatting  */
+hr {
+	border: 1px dotted #2D282E;
+	height: 1px;
+}
+
+hr.solid {
+	border: 1px solid #2D282E;
+	height: 1px;
+}
+
+pre,tt {
+         font-size: 12px;
+}
+
+pre { 
+      background:#EEEEEE;
+ }
+
+
+center {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+blockquote {
+	color : #cc6600;
+	font-size: 12px;
+}
+
+body blockquote.information {
+	color : #009900;
+	font-size: 12px;
+}
+
+body blockquote.warning {
+	color : #aa0000;
+	font-size: 12px;
+}
+
+blockquote.demo {
+	color : #000000;
+	font-size: 12px;
+	font-style:italic;
+}
+
+
+
+/* TABLE */
+table.simple {
+	margin: 10px 20px 20px;
+	color: #000000;
+}
+
+table.simple td,table.list th {
+	font-size: 70%;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+}
+
+table.simple th {
+	font-size: 70%;
+	background-color: #F6E6CA;
+}
+
+/* TABLE */
+
+/* table with white bg and small fonts */
+table.whitebg {
+	margin: 10px 20px 20px;
+	color: #000000;
+	border-left: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	border-spacing: 0px;
+}
+
+table.whitebg td,table.whitebg th {
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+}
+
+
+/* table with blue bg and small font */
+table.whitebg th {
+	font-size: 70%;
+	background-color: #F6E6CA;
+}
+
+table.bluebg {
+	color: #333333;
+	border-left: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	}
+
+table.bluebg td,table.bluebg th {
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	background-color: #D6EEFA;
+}
+
+table.bluebg th {
+	background-color: #0D73A7;
+	color: #D6EEFA;
+}
+	
+/* Table on result pages - compatible with the sorttable type defined by javascript */
+
+table.sortable {
+	margin: 10px 20px 20px;
+	color: #000000;
+	border-left: 1px solid #cbcbb4;
+	border-right: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	border-spacing: 0px;
+}
+
+table.sortable td,table.sortable th {
+	padding: 2px 10px;
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+}
+
+table.sortable th {
+	font-size: 70%;
+	background-color: #0D73A7;
+	color: #D6EEFA;
+}
+
+
+/* LINK TABLE ON RESULTS PAGES */
+table.resultlink {
+	margin-left:5px;
+	width : 90%;
+	color: #2D282E;
+	background-color: #D6EEFA;
+}
+
+
+table.resultlink td, table.resultlink th {
+	font-size: 70%;
+	padding-left:5px;
+	padding-right:3px;
+	text-align :left;
+}
+
+/* COLLAPSIBLE MENUS */
+
+.menu_heading_open {
+	background: url(images_html/arrow_box_down.gif) no-repeat 5px 7px;
+	text-decoration: none;
+	padding: 0px 6px 4px 21px;
+	margin: 0;
+	cursor: pointer;
+	font-weight: bold;
+	display: block;
+}
+
+.menu_heading_closed {
+	background: url(images_html/arrow_box.gif) no-repeat 5px 7px;
+	text-decoration: underline; 
+	display: block;
+	padding:0px 6px 4px 21px;
+	margin: 0;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.menu_collapsible {
+	display: none;
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+
+.menu_collapsible_display {
+   display: block;
+   margin-bottom: 10px;
+   margin-left: 30px;
+}
+</style>
+<header>
+<body bgcolor='#ffffff'>
+<PRE> compare-matrices  -v 1 -mode matches -format1 transfac -file1 $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3.tf -format2 tf -file2 $RSAT/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf -mode matches -DR -uth offset_rank 1 -lth w 5 -lth Wr 0.3 -lth cor 0.75 -lth Ncor 0.4 -return matrix_name,matrix_id,cor,Ncor,logoDP,NIcor,NsEucl,SSD,NSW,match_rank,width,strand,offset,consensus,alignments_1ton -sort Ncor -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB
+ Program version       	1.118
+ Input files
+	file2 	$RSAT/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf
+	file1 	$RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3.tf
+ Output files
+	alignments_1ton	$RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB_alignments_1ton.tab
+	match_table_txt	$RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB.tab
+	html_index   	$RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB_index.html
+	alignments_1ton_html	$RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB_alignments_1ton.html
+	match_table_html	$RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB.html
+	prefix       	$RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_vs_db_footprintDB
+ Matrices
+	file1	1 matrices	$RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3.tf
+		file1	1	12	34	dsTGGTAATTcw
+	file2	4196 matrices	$RSAT/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf
+		file2		1		17		100		yyaymCATCAAwmwwmm
+		file2		2		10		7		ACCGGAAGws
+		file2		3		16		100		wwtksgTAATTACsdy
+		file2		4		17		100		twrttaATTAwtaawwr
+		file2		5		18		100		TCCGynnnnnnnnnCGGA
+		file2		6		20		100		gwrastTTCCGGAAyrywrr
+		file2		7		20		100		yrawygGyGCCGyrysackh
+		file2		8		21		100		wmrmraAtmGAAGaaawawww
+		file2		9		20		100		rkmkkakCACGTGmyyrvwy
+		file2		10		6		1		CTATCA
+		file2		11		18		66		hTTwCCwWAwwdGGhAat
+		...	4186 more matrices
+ Column content
+	1	id1          	Identifier of the first matrix
+	2	id2          	Identifier of the second matrix
+	3	name1        	Name of the first matrix
+	4	name2        	Name of the second matrix
+	5	cor          	Pearson coefficient of correlation between frequency matrices
+	6	Ncor         	Normalized correlation. Ncor = cor * Wr
+	7	logoDP       	Dot product between the logo matrices.
+	8	NIcor        	Normalized Pearson correlation between the information content matrices. NIcor = Icor * Wr
+	9	NSW          	Normalized Sandelin-Wasserman similarity. NSW = SW/w
+	10	SSD          	sum of squared distance.
+	11	NsEucl       	relative Euclidian similarity. NsEucl = (max(dEucl) - dEucl)/max(dEucl)
+	12	w1           	Width of the first matrix
+	13	w2           	Width of the second matrix
+	14	w            	Alignment length (number of overlapping columns between matrix 1 and matrix 2, as a function of the offset)
+	15	W            	Total alignment length (overlapping + non-overlapping columns). W = w1 + w2 - w
+	16	Wr           	Relative alignment length (overlap divided by the total alignemnt length). Wr = w/W
+	17	wr1          	Alignment length relative to the width of the first matrix. wr1 = w/w1
+	18	wr2          	Alignment length relative to the width of the second matrix. wr2 = w/w2
+	19	strand       	"strand", i.e. orientation of matrix 2 relative to matrix 1 (D=direct;  R=reverse)
+	20	offset       	shift of the second matrix relative to the first matrix (negative:left; positive: right)
+	21	consensus1   	IUPAC consensus of matrix 1 (dots represent non-aligned columns)
+	22	consensus2   	IUPAC consensus of matrix 2 (dots represent non-aligned columns)
+	23	rcor         	Matching rank for cor
+	24	rNcor        	Matching rank for Ncor
+	25	rlogoDP      	Matching rank for logoDP
+	26	rNIcor       	Matching rank for NIcor
+	27	rNsEucl      	Matching rank for NsEucl
+	28	rSSD         	Matching rank for SSD
+	29	rNSW         	Matching rank for NSW
+	30	rank_mean    	Mean of the matching ranks on all selected metrics
+	31	match_rank   	Rank of the match (sorting by rank_mean)
+</pre>
+
+<table  class="sortable"  cellspacing=1 cellpadding=3 border=1>
+<tr valign='top'>
+<th align='left' >id1</th>
+<th align='left'>id2</th>
+<th align='left'>name1</th>
+<th align='left'>name2</th>
+<th align='left'>cor</th>
+<th align='left'>Ncor</th>
+<th align='left'>logoDP</th>
+<th align='left'>NIcor</th>
+<th align='left'>NSW</th>
+<th align='left'>SSD</th>
+<th align='left'>NsEucl</th>
+<th align='left'>w1</th>
+<th align='left'>w2</th>
+<th align='left'>w</th>
+<th align='left'>W</th>
+<th align='left'>Wr</th>
+<th align='left'>wr1</th>
+<th align='left'>wr2</th>
+<th align='left'>strand</th>
+<th align='left'>offset</th>
+<th align='left'>consensus1</th>
+<th align='left'>consensus2</th>
+<th align='left'>rcor</th>
+<th align='left'>rNcor</th>
+<th align='left'>rlogoDP</th>
+<th align='left'>rNIcor</th>
+<th align='left'>rNsEucl</th>
+<th align='left'>rSSD</th>
+<th align='left'>rNSW</th>
+<th align='left'>rank_mean</th>
+<th align='left'>match_rank</th>
+</tr>
+
+<tr valign='top'>
+<td>positions_8nt_m3</td>
+<td>7458_HXD4_f1_HOCOMOCO_v9_</td>
+<td>positions_8nt_m3</td>
+<td>7458_HXD4_f1_HOCOMOCO_v9_</td>
+<td>0.931</td>
+<td>0.543</td>
+<td>3.927</td>
+<td>0.539</td>
+<td>0.968</td>
+<td>0.4543</td>
+<td>0.93192</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTkw                               </td>
+<td>3</td>
+<td>2</td>
+<td>23</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+<td>2</td>
+<td>5.5714</td>
+<td>1</td>
+</tr>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>6107_1hdd_C_3D-footprint_20130124_</td>
+<td>positions_8nt_m3</td>
+<td>6107_1hdd_C_3D-footprint_20130124_</td>
+<td>0.895</td>
+<td>0.522</td>
+<td>5.452</td>
+<td>0.517</td>
+<td>0.952</td>
+<td>0.6666</td>
+<td>0.91753</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>D</td>
+<td>4</td>
+<td>....GTAATTc.</td>
+<td>GTAAtna                              </td>
+<td>8</td>
+<td>15</td>
+<td>3</td>
+<td>5</td>
+<td>5</td>
+<td>7</td>
+<td>5</td>
+<td>6.8571</td>
+<td>2</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>7341_DLX2_f1_HOCOMOCO_v9_</td>
+<td>positions_8nt_m3</td>
+<td>7341_DLX2_f1_HOCOMOCO_v9_</td>
+<td>0.903</td>
+<td>0.527</td>
+<td>4.447</td>
+<td>0.540</td>
+<td>0.948</td>
+<td>0.7236</td>
+<td>0.91407</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTrt                               </td>
+<td>6</td>
+<td>10</td>
+<td>14</td>
+<td>3</td>
+<td>8</td>
+<td>9</td>
+<td>9</td>
+<td>8.4286</td>
+<td>3</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1746_MA0187.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1746_MA0187.1_JASPAR_CORE_2009_</td>
+<td>0.896</td>
+<td>0.523</td>
+<td>3.946</td>
+<td>0.541</td>
+<td>0.951</td>
+<td>0.6796</td>
+<td>0.91672</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTry              </td>
+<td>7</td>
+<td>13</td>
+<td>22</td>
+<td>2</td>
+<td>6</td>
+<td>8</td>
+<td>6</td>
+<td>9.1429</td>
+<td>4</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>7597_PRRX2_f1_HOCOMOCO_v9_</td>
+<td>positions_8nt_m3</td>
+<td>7597_PRRX2_f1_HOCOMOCO_v9_</td>
+<td>0.935</td>
+<td>0.467</td>
+<td>4.476</td>
+<td>0.477</td>
+<td>0.956</td>
+<td>0.5260</td>
+<td>0.91453</td>
+<td>12</td>
+<td>6</td>
+<td>6</td>
+<td>12</td>
+<td>0.5000</td>
+<td>0.5000</td>
+<td>1.0000</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTc.</td>
+<td>TAATTr                                </td>
+<td>2</td>
+<td>50</td>
+<td>13</td>
+<td>10</td>
+<td>7</td>
+<td>4</td>
+<td>4</td>
+<td>12.8571</td>
+<td>5</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>7537_NOBOX_si_HOCOMOCO_v9_</td>
+<td>positions_8nt_m3</td>
+<td>7537_NOBOX_si_HOCOMOCO_v9_</td>
+<td>0.883</td>
+<td>0.476</td>
+<td>4.193</td>
+<td>0.502</td>
+<td>0.943</td>
+<td>0.8023</td>
+<td>0.90952</td>
+<td>12</td>
+<td>8</td>
+<td>7</td>
+<td>13</td>
+<td>0.5385</td>
+<td>0.5833</td>
+<td>0.8750</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTrs.                              </td>
+<td>10</td>
+<td>47</td>
+<td>16</td>
+<td>7</td>
+<td>10</td>
+<td>12</td>
+<td>12</td>
+<td>16.2857</td>
+<td>6</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>4964_en_DrosophilaTF_1.1_</td>
+<td>positions_8nt_m3</td>
+<td>4964_en_DrosophilaTF_1.1_</td>
+<td>0.921</td>
+<td>0.460</td>
+<td>4.019</td>
+<td>0.464</td>
+<td>0.951</td>
+<td>0.5924</td>
+<td>0.90929</td>
+<td>12</td>
+<td>6</td>
+<td>6</td>
+<td>12</td>
+<td>0.5000</td>
+<td>0.5000</td>
+<td>1.0000</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTc.</td>
+<td>TAATTa                               </td>
+<td>4</td>
+<td>60</td>
+<td>20</td>
+<td>14</td>
+<td>11</td>
+<td>5</td>
+<td>7</td>
+<td>17.2857</td>
+<td>7</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>2510_MA0125.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>2510_MA0125.1_JASPAR_CORE_2009_</td>
+<td>0.877</td>
+<td>0.472</td>
+<td>3.962</td>
+<td>0.501</td>
+<td>0.942</td>
+<td>0.8072</td>
+<td>0.90924</td>
+<td>12</td>
+<td>8</td>
+<td>7</td>
+<td>13</td>
+<td>0.5385</td>
+<td>0.5833</td>
+<td>0.8750</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTrs.                      </td>
+<td>12</td>
+<td>48</td>
+<td>21</td>
+<td>8</td>
+<td>12</td>
+<td>13</td>
+<td>13</td>
+<td>18.1429</td>
+<td>8</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>7502_MSX2_f1_HOCOMOCO_v9_</td>
+<td>positions_8nt_m3</td>
+<td>7502_MSX2_f1_HOCOMOCO_v9_</td>
+<td>0.920</td>
+<td>0.460</td>
+<td>2.111</td>
+<td>0.469</td>
+<td>0.967</td>
+<td>0.4020</td>
+<td>0.92528</td>
+<td>12</td>
+<td>6</td>
+<td>6</td>
+<td>12</td>
+<td>0.5000</td>
+<td>0.5000</td>
+<td>1.0000</td>
+<td>D</td>
+<td>6</td>
+<td>......AATTcw</td>
+<td>AATTkk                                </td>
+<td>5</td>
+<td>61</td>
+<td>45</td>
+<td>12</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>18.7143</td>
+<td>9</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>6108_1hdd_CD_3D-footprint_20130124_</td>
+<td>positions_8nt_m3</td>
+<td>6108_1hdd_CD_3D-footprint_20130124_</td>
+<td>0.882</td>
+<td>0.441</td>
+<td>5.752</td>
+<td>0.441</td>
+<td>0.947</td>
+<td>0.8407</td>
+<td>0.91896</td>
+<td>12</td>
+<td>12</td>
+<td>8</td>
+<td>16</td>
+<td>0.5000</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>D</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>GTAATnan....                         </td>
+<td>11</td>
+<td>78</td>
+<td>2</td>
+<td>21</td>
+<td>4</td>
+<td>14</td>
+<td>10</td>
+<td>20.0000</td>
+<td>10</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>4947_ap_DrosophilaTF_1.1_</td>
+<td>positions_8nt_m3</td>
+<td>4947_ap_DrosophilaTF_1.1_</td>
+<td>0.895</td>
+<td>0.447</td>
+<td>4.181</td>
+<td>0.437</td>
+<td>0.950</td>
+<td>0.5986</td>
+<td>0.90882</td>
+<td>12</td>
+<td>6</td>
+<td>6</td>
+<td>12</td>
+<td>0.5000</td>
+<td>0.5000</td>
+<td>1.0000</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTc.</td>
+<td>TAATnn                               </td>
+<td>9</td>
+<td>71</td>
+<td>17</td>
+<td>22</td>
+<td>13</td>
+<td>6</td>
+<td>8</td>
+<td>20.8571</td>
+<td>11</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5218_Dlx1_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5218_Dlx1_DBD_HumanTF_1.0_</td>
+<td>0.813</td>
+<td>0.542</td>
+<td>2.111</td>
+<td>0.383</td>
+<td>0.927</td>
+<td>1.1607</td>
+<td>0.90477</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>KTAATTRS                             </td>
+<td>29</td>
+<td>3</td>
+<td>44</td>
+<td>36</td>
+<td>17</td>
+<td>25</td>
+<td>19</td>
+<td>24.7143</td>
+<td>12</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5210_DLX5_FL_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5210_DLX5_FL_HumanTF_1.0_</td>
+<td>0.808</td>
+<td>0.539</td>
+<td>1.911</td>
+<td>0.403</td>
+<td>0.928</td>
+<td>1.1540</td>
+<td>0.90505</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>DTAATTRB                             </td>
+<td>31</td>
+<td>5</td>
+<td>58</td>
+<td>27</td>
+<td>15</td>
+<td>21</td>
+<td>17</td>
+<td>24.8571</td>
+<td>13</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1790_MA0232.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1790_MA0232.1_JASPAR_CORE_2009_</td>
+<td>0.875</td>
+<td>0.437</td>
+<td>4.038</td>
+<td>0.445</td>
+<td>0.938</td>
+<td>0.7411</td>
+<td>0.89854</td>
+<td>12</td>
+<td>6</td>
+<td>6</td>
+<td>12</td>
+<td>0.5000</td>
+<td>0.5000</td>
+<td>1.0000</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTc.</td>
+<td>TAATkR               </td>
+<td>13</td>
+<td>79</td>
+<td>19</td>
+<td>19</td>
+<td>24</td>
+<td>10</td>
+<td>14</td>
+<td>25.4286</td>
+<td>14</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5211_DLX6_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5211_DLX6_DBD_HumanTF_1.0_</td>
+<td>0.810</td>
+<td>0.540</td>
+<td>2.245</td>
+<td>0.380</td>
+<td>0.925</td>
+<td>1.1999</td>
+<td>0.90318</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>KTAATTRS                             </td>
+<td>30</td>
+<td>4</td>
+<td>41</td>
+<td>40</td>
+<td>19</td>
+<td>27</td>
+<td>22</td>
+<td>26.1429</td>
+<td>15</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5209_DLX4_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5209_DLX4_DBD_HumanTF_1.0_</td>
+<td>0.806</td>
+<td>0.537</td>
+<td>1.982</td>
+<td>0.383</td>
+<td>0.926</td>
+<td>1.1790</td>
+<td>0.90403</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>KTAATTRS                             </td>
+<td>32</td>
+<td>6</td>
+<td>50</td>
+<td>35</td>
+<td>18</td>
+<td>26</td>
+<td>20</td>
+<td>26.7143</td>
+<td>16</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>6515_2vy1_A_3D-footprint_20130124_</td>
+<td>positions_8nt_m3</td>
+<td>6515_2vy1_A_3D-footprint_20130124_</td>
+<td>0.788</td>
+<td>0.591</td>
+<td>6.021</td>
+<td>0.583</td>
+<td>0.906</td>
+<td>1.6951</td>
+<td>0.89771</td>
+<td>12</td>
+<td>9</td>
+<td>9</td>
+<td>12</td>
+<td>0.7500</td>
+<td>0.7500</td>
+<td>1.0000</td>
+<td>D</td>
+<td>2</td>
+<td>..TGGTAATTc.</td>
+<td>TGGTnnnTA                            </td>
+<td>46</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>26</td>
+<td>74</td>
+<td>39</td>
+<td>26.8571</td>
+<td>17</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1767_MA0208.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1767_MA0208.1_JASPAR_CORE_2009_</td>
+<td>0.865</td>
+<td>0.504</td>
+<td>4.902</td>
+<td>0.504</td>
+<td>0.905</td>
+<td>1.3321</td>
+<td>0.88341</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTAA              </td>
+<td>17</td>
+<td>33</td>
+<td>5</td>
+<td>6</td>
+<td>54</td>
+<td>35</td>
+<td>42</td>
+<td>27.4286</td>
+<td>18</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5219_Dlx2_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5219_Dlx2_DBD_HumanTF_1.0_</td>
+<td>0.797</td>
+<td>0.532</td>
+<td>2.534</td>
+<td>0.396</td>
+<td>0.916</td>
+<td>1.3406</td>
+<td>0.89766</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>WTAATTRS                             </td>
+<td>39</td>
+<td>9</td>
+<td>36</td>
+<td>28</td>
+<td>27</td>
+<td>38</td>
+<td>29</td>
+<td>29.4286</td>
+<td>19</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5504_LMX1B_full_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5504_LMX1B_full_HumanTF_1.0_</td>
+<td>0.788</td>
+<td>0.525</td>
+<td>2.120</td>
+<td>0.395</td>
+<td>0.920</td>
+<td>1.2823</td>
+<td>0.89991</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>KTAATTRR                             </td>
+<td>45</td>
+<td>12</td>
+<td>43</td>
+<td>29</td>
+<td>22</td>
+<td>31</td>
+<td>25</td>
+<td>29.5714</td>
+<td>20</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5208_DLX3_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5208_DLX3_DBD_HumanTF_1.0_</td>
+<td>0.805</td>
+<td>0.537</td>
+<td>1.780</td>
+<td>0.378</td>
+<td>0.928</td>
+<td>1.1564</td>
+<td>0.90495</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>KTAATTRS                             </td>
+<td>33</td>
+<td>7</td>
+<td>69</td>
+<td>43</td>
+<td>16</td>
+<td>22</td>
+<td>18</td>
+<td>29.7143</td>
+<td>21</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1782_MA0223.1_JASPAR_CORE_2009__MA0224.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1782_MA0223.1_JASPAR_CORE_2009__MA0224.1_JASPAR_CORE_2009_</td>
+<td>0.828</td>
+<td>0.483</td>
+<td>4.811</td>
+<td>0.459</td>
+<td>0.905</td>
+<td>1.3241</td>
+<td>0.88376</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>D</td>
+<td>4</td>
+<td>....GTAATTc.</td>
+<td>bTAATTA              </td>
+<td>25</td>
+<td>44</td>
+<td>8</td>
+<td>15</td>
+<td>53</td>
+<td>34</td>
+<td>41</td>
+<td>31.4286</td>
+<td>22</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5207_DLX2_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5207_DLX2_DBD_HumanTF_1.0_</td>
+<td>0.800</td>
+<td>0.533</td>
+<td>1.349</td>
+<td>0.355</td>
+<td>0.929</td>
+<td>1.1347</td>
+<td>0.90585</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>KTAATTRS                             </td>
+<td>36</td>
+<td>8</td>
+<td>81</td>
+<td>50</td>
+<td>14</td>
+<td>20</td>
+<td>16</td>
+<td>32.1429</td>
+<td>23</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5922_Vsx1_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5922_Vsx1_DBD_HumanTF_1.0_</td>
+<td>0.789</td>
+<td>0.526</td>
+<td>1.800</td>
+<td>0.369</td>
+<td>0.921</td>
+<td>1.2595</td>
+<td>0.90081</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRR                             </td>
+<td>44</td>
+<td>11</td>
+<td>67</td>
+<td>44</td>
+<td>21</td>
+<td>29</td>
+<td>24</td>
+<td>34.2857</td>
+<td>24</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>2465_MA0075.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>2465_MA0075.1_JASPAR_CORE_2009_</td>
+<td>0.983</td>
+<td>0.410</td>
+<td>1.577</td>
+<td>0.069</td>
+<td>0.979</td>
+<td>0.2107</td>
+<td>0.93509</td>
+<td>12</td>
+<td>5</td>
+<td>5</td>
+<td>12</td>
+<td>0.4167</td>
+<td>0.4167</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATT..</td>
+<td>TAATT                         </td>
+<td>1</td>
+<td>85</td>
+<td>77</td>
+<td>81</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>35.2857</td>
+<td>25</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1731_MA0172.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1731_MA0172.1_JASPAR_CORE_2009_</td>
+<td>0.866</td>
+<td>0.505</td>
+<td>2.681</td>
+<td>0.219</td>
+<td>0.909</td>
+<td>1.2807</td>
+<td>0.88568</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTAA              </td>
+<td>16</td>
+<td>31</td>
+<td>31</td>
+<td>59</td>
+<td>47</td>
+<td>30</td>
+<td>35</td>
+<td>35.5714</td>
+<td>26</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5909_UNCX_DBD_2_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5909_UNCX_DBD_2_HumanTF_1.0_</td>
+<td>0.775</td>
+<td>0.517</td>
+<td>1.855</td>
+<td>0.387</td>
+<td>0.916</td>
+<td>1.3365</td>
+<td>0.89782</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRR                             </td>
+<td>54</td>
+<td>17</td>
+<td>63</td>
+<td>32</td>
+<td>25</td>
+<td>36</td>
+<td>28</td>
+<td>36.4286</td>
+<td>27</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5683_PRRX2_full_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5683_PRRX2_full_HumanTF_1.0_</td>
+<td>0.779</td>
+<td>0.519</td>
+<td>1.708</td>
+<td>0.366</td>
+<td>0.919</td>
+<td>1.2937</td>
+<td>0.89947</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRR                             </td>
+<td>52</td>
+<td>16</td>
+<td>71</td>
+<td>46</td>
+<td>23</td>
+<td>32</td>
+<td>27</td>
+<td>38.1429</td>
+<td>28</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5680_PRRX1_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5680_PRRX1_DBD_HumanTF_1.0_</td>
+<td>0.773</td>
+<td>0.515</td>
+<td>2.229</td>
+<td>0.382</td>
+<td>0.910</td>
+<td>1.4375</td>
+<td>0.89402</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRR                             </td>
+<td>55</td>
+<td>18</td>
+<td>42</td>
+<td>37</td>
+<td>33</td>
+<td>48</td>
+<td>34</td>
+<td>38.1429</td>
+<td>29</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>6061_1fjl_B_3D-footprint_20130124_</td>
+<td>positions_8nt_m3</td>
+<td>6061_1fjl_B_3D-footprint_20130124_</td>
+<td>0.850</td>
+<td>0.496</td>
+<td>1.285</td>
+<td>0.076</td>
+<td>0.933</td>
+<td>0.9331</td>
+<td>0.90242</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTc.</td>
+<td>GTAATNA                              </td>
+<td>19</td>
+<td>39</td>
+<td>82</td>
+<td>79</td>
+<td>20</td>
+<td>15</td>
+<td>15</td>
+<td>38.4286</td>
+<td>30</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>2645_MA0426.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>2645_MA0426.1_JASPAR_CORE_2009_</td>
+<td>0.875</td>
+<td>0.437</td>
+<td>4.855</td>
+<td>0.428</td>
+<td>0.904</td>
+<td>1.1574</td>
+<td>0.87321</td>
+<td>12</td>
+<td>6</td>
+<td>6</td>
+<td>12</td>
+<td>0.5000</td>
+<td>0.5000</td>
+<td>1.0000</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTc.</td>
+<td>TAATTG                        </td>
+<td>14</td>
+<td>80</td>
+<td>6</td>
+<td>24</td>
+<td>75</td>
+<td>23</td>
+<td>47</td>
+<td>38.4286</td>
+<td>31</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>2710_PF0023.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>2710_PF0023.1_JASPAR_CORE_2009_</td>
+<td>0.875</td>
+<td>0.437</td>
+<td>4.855</td>
+<td>0.428</td>
+<td>0.904</td>
+<td>1.1574</td>
+<td>0.87321</td>
+<td>12</td>
+<td>6</td>
+<td>6</td>
+<td>12</td>
+<td>0.5000</td>
+<td>0.5000</td>
+<td>1.0000</td>
+<td>D</td>
+<td>5</td>
+<td>.....TAATTc.</td>
+<td>TAATTA                        </td>
+<td>14</td>
+<td>80</td>
+<td>6</td>
+<td>24</td>
+<td>75</td>
+<td>23</td>
+<td>47</td>
+<td>38.4286</td>
+<td>32</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1742_MA0183.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1742_MA0183.1_JASPAR_CORE_2009_</td>
+<td>0.859</td>
+<td>0.463</td>
+<td>0.422</td>
+<td>-0.064</td>
+<td>0.946</td>
+<td>0.7494</td>
+<td>0.91255</td>
+<td>12</td>
+<td>8</td>
+<td>7</td>
+<td>13</td>
+<td>0.5385</td>
+<td>0.5833</td>
+<td>0.8750</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TWATTMR.             </td>
+<td>18</td>
+<td>58</td>
+<td>85</td>
+<td>83</td>
+<td>9</td>
+<td>11</td>
+<td>11</td>
+<td>39.2857</td>
+<td>33</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5681_PRRX1_full_1_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5681_PRRX1_full_1_HumanTF_1.0_</td>
+<td>0.767</td>
+<td>0.511</td>
+<td>2.072</td>
+<td>0.383</td>
+<td>0.911</td>
+<td>1.4205</td>
+<td>0.89466</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRG                             </td>
+<td>64</td>
+<td>23</td>
+<td>46</td>
+<td>34</td>
+<td>32</td>
+<td>46</td>
+<td>33</td>
+<td>39.7143</td>
+<td>34</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>6262_1puf_A_3D-footprint_20130124_</td>
+<td>positions_8nt_m3</td>
+<td>6262_1puf_A_3D-footprint_20130124_</td>
+<td>0.847</td>
+<td>0.494</td>
+<td>1.663</td>
+<td>0.070</td>
+<td>0.923</td>
+<td>1.0826</td>
+<td>0.89490</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>1</td>
+<td>.sTGGTAA....</td>
+<td>GTNGTAA                              </td>
+<td>20</td>
+<td>40</td>
+<td>73</td>
+<td>80</td>
+<td>30</td>
+<td>19</td>
+<td>23</td>
+<td>40.7143</td>
+<td>35</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5258_EN1_full_1_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5258_EN1_full_1_HumanTF_1.0_</td>
+<td>0.769</td>
+<td>0.512</td>
+<td>2.738</td>
+<td>0.394</td>
+<td>0.904</td>
+<td>1.5389</td>
+<td>0.89035</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>CTAATTRS                             </td>
+<td>63</td>
+<td>22</td>
+<td>29</td>
+<td>31</td>
+<td>37</td>
+<td>59</td>
+<td>45</td>
+<td>40.8571</td>
+<td>36</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5561_Meox2_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5561_Meox2_DBD_HumanTF_1.0_</td>
+<td>0.753</td>
+<td>0.502</td>
+<td>2.668</td>
+<td>0.474</td>
+<td>0.906</td>
+<td>1.5010</td>
+<td>0.89171</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>D</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>kTAATkAc                             </td>
+<td>83</td>
+<td>35</td>
+<td>32</td>
+<td>11</td>
+<td>35</td>
+<td>52</td>
+<td>38</td>
+<td>40.8571</td>
+<td>37</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5751_SHOX_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5751_SHOX_DBD_HumanTF_1.0_</td>
+<td>0.772</td>
+<td>0.514</td>
+<td>2.505</td>
+<td>0.380</td>
+<td>0.906</td>
+<td>1.5099</td>
+<td>0.89139</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRR                             </td>
+<td>59</td>
+<td>19</td>
+<td>37</td>
+<td>41</td>
+<td>36</td>
+<td>55</td>
+<td>40</td>
+<td>41.0000</td>
+<td>38</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1737_MA0178.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1737_MA0178.1_JASPAR_CORE_2009_</td>
+<td>0.830</td>
+<td>0.484</td>
+<td>1.880</td>
+<td>0.183</td>
+<td>0.914</td>
+<td>1.2059</td>
+<td>0.88907</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTAA              </td>
+<td>24</td>
+<td>43</td>
+<td>61</td>
+<td>64</td>
+<td>39</td>
+<td>28</td>
+<td>30</td>
+<td>41.2857</td>
+<td>39</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5541_MSX1_full_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5541_MSX1_full_HumanTF_1.0_</td>
+<td>0.772</td>
+<td>0.514</td>
+<td>2.343</td>
+<td>0.346</td>
+<td>0.908</td>
+<td>1.4751</td>
+<td>0.89265</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>BTAATTRS                             </td>
+<td>60</td>
+<td>20</td>
+<td>39</td>
+<td>51</td>
+<td>34</td>
+<td>50</td>
+<td>36</td>
+<td>41.4286</td>
+<td>40</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1754_MA0195.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1754_MA0195.1_JASPAR_CORE_2009_</td>
+<td>0.819</td>
+<td>0.478</td>
+<td>1.390</td>
+<td>0.147</td>
+<td>0.925</td>
+<td>1.0442</td>
+<td>0.89678</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTAR              </td>
+<td>27</td>
+<td>46</td>
+<td>80</td>
+<td>72</td>
+<td>29</td>
+<td>17</td>
+<td>21</td>
+<td>41.7143</td>
+<td>41</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5701_RAXL1_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5701_RAXL1_DBD_HumanTF_1.0_</td>
+<td>0.762</td>
+<td>0.508</td>
+<td>1.863</td>
+<td>0.381</td>
+<td>0.911</td>
+<td>1.4182</td>
+<td>0.89474</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRR                             </td>
+<td>70</td>
+<td>26</td>
+<td>62</td>
+<td>38</td>
+<td>31</td>
+<td>45</td>
+<td>32</td>
+<td>43.4286</td>
+<td>42</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5687_Prrx2_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5687_Prrx2_DBD_HumanTF_1.0_</td>
+<td>0.758</td>
+<td>0.505</td>
+<td>2.634</td>
+<td>0.408</td>
+<td>0.900</td>
+<td>1.5936</td>
+<td>0.88842</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRR                             </td>
+<td>77</td>
+<td>30</td>
+<td>34</td>
+<td>26</td>
+<td>40</td>
+<td>64</td>
+<td>52</td>
+<td>46.1429</td>
+<td>43</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1747_MA0188.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1747_MA0188.1_JASPAR_CORE_2009_</td>
+<td>0.843</td>
+<td>0.492</td>
+<td>1.736</td>
+<td>0.104</td>
+<td>0.907</td>
+<td>1.2992</td>
+<td>0.88486</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTGS              </td>
+<td>22</td>
+<td>41</td>
+<td>70</td>
+<td>78</td>
+<td>49</td>
+<td>33</td>
+<td>37</td>
+<td>47.1429</td>
+<td>44</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5564_Msx3_DBD_2_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5564_Msx3_DBD_2_HumanTF_1.0_</td>
+<td>0.769</td>
+<td>0.513</td>
+<td>2.776</td>
+<td>0.356</td>
+<td>0.899</td>
+<td>1.6173</td>
+<td>0.88759</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRS                             </td>
+<td>62</td>
+<td>21</td>
+<td>28</td>
+<td>49</td>
+<td>44</td>
+<td>69</td>
+<td>58</td>
+<td>47.2857</td>
+<td>45</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5817_Shox2_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5817_Shox2_DBD_HumanTF_1.0_</td>
+<td>0.761</td>
+<td>0.507</td>
+<td>2.625</td>
+<td>0.380</td>
+<td>0.900</td>
+<td>1.6026</td>
+<td>0.88810</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRR                             </td>
+<td>71</td>
+<td>27</td>
+<td>35</td>
+<td>39</td>
+<td>41</td>
+<td>66</td>
+<td>53</td>
+<td>47.4286</td>
+<td>46</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1798_MA0240.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1798_MA0240.1_JASPAR_CORE_2009_</td>
+<td>0.824</td>
+<td>0.480</td>
+<td>1.994</td>
+<td>0.185</td>
+<td>0.901</td>
+<td>1.3834</td>
+<td>0.88119</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>YAATTAA              </td>
+<td>26</td>
+<td>45</td>
+<td>49</td>
+<td>63</td>
+<td>59</td>
+<td>41</td>
+<td>51</td>
+<td>47.7143</td>
+<td>47</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1759_MA0200.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1759_MA0200.1_JASPAR_CORE_2009_</td>
+<td>0.787</td>
+<td>0.459</td>
+<td>4.735</td>
+<td>0.449</td>
+<td>0.891</td>
+<td>1.5272</td>
+<td>0.87517</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>D</td>
+<td>4</td>
+<td>....GTAATTc.</td>
+<td>mTAATTr              </td>
+<td>48</td>
+<td>63</td>
+<td>10</td>
+<td>17</td>
+<td>71</td>
+<td>57</td>
+<td>71</td>
+<td>48.1429</td>
+<td>48</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1794_MA0236.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1794_MA0236.1_JASPAR_CORE_2009_</td>
+<td>0.802</td>
+<td>0.468</td>
+<td>1.889</td>
+<td>0.193</td>
+<td>0.904</td>
+<td>1.3389</td>
+<td>0.88311</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTAR              </td>
+<td>34</td>
+<td>49</td>
+<td>60</td>
+<td>61</td>
+<td>55</td>
+<td>37</td>
+<td>43</td>
+<td>48.4286</td>
+<td>49</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5540_MSX1_DBD_2_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5540_MSX1_DBD_2_HumanTF_1.0_</td>
+<td>0.764</td>
+<td>0.509</td>
+<td>2.789</td>
+<td>0.362</td>
+<td>0.897</td>
+<td>1.6417</td>
+<td>0.88675</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRS                             </td>
+<td>68</td>
+<td>25</td>
+<td>26</td>
+<td>47</td>
+<td>46</td>
+<td>71</td>
+<td>61</td>
+<td>49.1429</td>
+<td>50</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5479_ISX_DBD_2_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5479_ISX_DBD_2_HumanTF_1.0_</td>
+<td>0.764</td>
+<td>0.509</td>
+<td>2.724</td>
+<td>0.360</td>
+<td>0.898</td>
+<td>1.6297</td>
+<td>0.88716</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRG                             </td>
+<td>67</td>
+<td>24</td>
+<td>30</td>
+<td>48</td>
+<td>45</td>
+<td>70</td>
+<td>60</td>
+<td>49.1429</td>
+<td>51</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>6487_2p5l_D_3D-footprint_20130124_</td>
+<td>positions_8nt_m3</td>
+<td>6487_2p5l_D_3D-footprint_20130124_</td>
+<td>0.814</td>
+<td>0.407</td>
+<td>1.458</td>
+<td>0.368</td>
+<td>0.912</td>
+<td>1.0555</td>
+<td>0.87892</td>
+<td>12</td>
+<td>6</td>
+<td>6</td>
+<td>12</td>
+<td>0.5000</td>
+<td>0.5000</td>
+<td>1.0000</td>
+<td>D</td>
+<td>6</td>
+<td>......AATTcw</td>
+<td>AATTCA                               </td>
+<td>28</td>
+<td>86</td>
+<td>79</td>
+<td>45</td>
+<td>63</td>
+<td>18</td>
+<td>31</td>
+<td>50.0000</td>
+<td>52</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1757_MA0198.1_JASPAR_CORE_2009__MA0455.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1757_MA0198.1_JASPAR_CORE_2009__MA0455.1_JASPAR_CORE_2009_</td>
+<td>0.785</td>
+<td>0.458</td>
+<td>4.925</td>
+<td>0.450</td>
+<td>0.886</td>
+<td>1.6018</td>
+<td>0.87215</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>D</td>
+<td>4</td>
+<td>....GTAATTc.</td>
+<td>yTAATTr              </td>
+<td>49</td>
+<td>64</td>
+<td>4</td>
+<td>16</td>
+<td>78</td>
+<td>65</td>
+<td>77</td>
+<td>50.4286</td>
+<td>53</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5419_HOXA2_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5419_HOXA2_DBD_HumanTF_1.0_</td>
+<td>0.755</td>
+<td>0.522</td>
+<td>1.955</td>
+<td>0.344</td>
+<td>0.904</td>
+<td>1.7250</td>
+<td>0.89681</td>
+<td>12</td>
+<td>10</td>
+<td>9</td>
+<td>13</td>
+<td>0.6923</td>
+<td>0.7500</td>
+<td>0.9000</td>
+<td>R</td>
+<td>3</td>
+<td>...GGTAATTcw</td>
+<td>GSTAATKRS.                           </td>
+<td>82</td>
+<td>14</td>
+<td>53</td>
+<td>52</td>
+<td>28</td>
+<td>80</td>
+<td>44</td>
+<td>50.4286</td>
+<td>54</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5750_SHOX2_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5750_SHOX2_DBD_HumanTF_1.0_</td>
+<td>0.756</td>
+<td>0.504</td>
+<td>2.496</td>
+<td>0.380</td>
+<td>0.900</td>
+<td>1.6068</td>
+<td>0.88796</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRR                             </td>
+<td>81</td>
+<td>34</td>
+<td>38</td>
+<td>42</td>
+<td>42</td>
+<td>67</td>
+<td>54</td>
+<td>51.1429</td>
+<td>55</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5480_ISX_full_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5480_ISX_full_HumanTF_1.0_</td>
+<td>0.760</td>
+<td>0.507</td>
+<td>3.179</td>
+<td>0.385</td>
+<td>0.892</td>
+<td>1.7249</td>
+<td>0.88392</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTRR                             </td>
+<td>73</td>
+<td>28</td>
+<td>24</td>
+<td>33</td>
+<td>52</td>
+<td>79</td>
+<td>69</td>
+<td>51.1429</td>
+<td>56</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5640_PDX1_DBD_2_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5640_PDX1_DBD_2_HumanTF_1.0_</td>
+<td>0.751</td>
+<td>0.501</td>
+<td>2.778</td>
+<td>0.394</td>
+<td>0.895</td>
+<td>1.6816</td>
+<td>0.88538</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATKRS                             </td>
+<td>84</td>
+<td>36</td>
+<td>27</td>
+<td>30</td>
+<td>48</td>
+<td>72</td>
+<td>64</td>
+<td>51.5714</td>
+<td>57</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1753_MA0194.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1753_MA0194.1_JASPAR_CORE_2009_</td>
+<td>0.836</td>
+<td>0.488</td>
+<td>2.968</td>
+<td>0.227</td>
+<td>0.887</td>
+<td>1.5830</td>
+<td>0.87291</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTAA              </td>
+<td>23</td>
+<td>42</td>
+<td>25</td>
+<td>56</td>
+<td>77</td>
+<td>63</td>
+<td>76</td>
+<td>51.7143</td>
+<td>58</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>6133_1io4_C_3D-footprint_20130124_</td>
+<td>positions_8nt_m3</td>
+<td>6133_1io4_C_3D-footprint_20130124_</td>
+<td>0.845</td>
+<td>0.422</td>
+<td>0.126</td>
+<td>-0.094</td>
+<td>0.919</td>
+<td>0.9673</td>
+<td>0.88409</td>
+<td>12</td>
+<td>6</td>
+<td>6</td>
+<td>12</td>
+<td>0.5000</td>
+<td>0.5000</td>
+<td>1.0000</td>
+<td>R</td>
+<td>0</td>
+<td>dsTGGT......</td>
+<td>TGTGGT                               </td>
+<td>21</td>
+<td>82</td>
+<td>86</td>
+<td>85</td>
+<td>51</td>
+<td>16</td>
+<td>26</td>
+<td>52.4286</td>
+<td>59</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>7572_PDX1_do_HOCOMOCO_v9_</td>
+<td>positions_8nt_m3</td>
+<td>7572_PDX1_do_HOCOMOCO_v9_</td>
+<td>0.757</td>
+<td>0.504</td>
+<td>4.070</td>
+<td>0.483</td>
+<td>0.880</td>
+<td>1.9197</td>
+<td>0.87753</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>D</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>STmATTAG                              </td>
+<td>80</td>
+<td>32</td>
+<td>18</td>
+<td>9</td>
+<td>66</td>
+<td>86</td>
+<td>78</td>
+<td>52.7143</td>
+<td>60</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>7342_DLX3_do_HOCOMOCO_v9_</td>
+<td>positions_8nt_m3</td>
+<td>7342_DLX3_do_HOCOMOCO_v9_</td>
+<td>0.757</td>
+<td>0.466</td>
+<td>4.436</td>
+<td>0.469</td>
+<td>0.891</td>
+<td>1.7491</td>
+<td>0.88310</td>
+<td>12</td>
+<td>9</td>
+<td>8</td>
+<td>13</td>
+<td>0.6154</td>
+<td>0.6667</td>
+<td>0.8889</td>
+<td>D</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>mTAATTrs.                             </td>
+<td>79</td>
+<td>52</td>
+<td>15</td>
+<td>13</td>
+<td>56</td>
+<td>83</td>
+<td>72</td>
+<td>52.8571</td>
+<td>61</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5171_BSX_DBD_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5171_BSX_DBD_HumanTF_1.0_</td>
+<td>0.751</td>
+<td>0.501</td>
+<td>1.938</td>
+<td>0.282</td>
+<td>0.903</td>
+<td>1.5520</td>
+<td>0.88989</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>BTAATKRS                             </td>
+<td>85</td>
+<td>37</td>
+<td>55</td>
+<td>54</td>
+<td>38</td>
+<td>60</td>
+<td>50</td>
+<td>54.1429</td>
+<td>62</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5543_MSX2_DBD_2_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5543_MSX2_DBD_2_HumanTF_1.0_</td>
+<td>0.758</td>
+<td>0.505</td>
+<td>2.642</td>
+<td>0.326</td>
+<td>0.893</td>
+<td>1.7068</td>
+<td>0.88452</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATTGG                             </td>
+<td>75</td>
+<td>29</td>
+<td>33</td>
+<td>53</td>
+<td>50</td>
+<td>75</td>
+<td>65</td>
+<td>54.2857</td>
+<td>63</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1815_MA0257.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1815_MA0257.1_JASPAR_CORE_2009_</td>
+<td>0.795</td>
+<td>0.464</td>
+<td>1.657</td>
+<td>0.160</td>
+<td>0.904</td>
+<td>1.3488</td>
+<td>0.88268</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TMATTAR              </td>
+<td>42</td>
+<td>57</td>
+<td>74</td>
+<td>68</td>
+<td>57</td>
+<td>39</td>
+<td>46</td>
+<td>54.7143</td>
+<td>64</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1750_MA0191.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1750_MA0191.1_JASPAR_CORE_2009_</td>
+<td>0.791</td>
+<td>0.462</td>
+<td>1.822</td>
+<td>0.194</td>
+<td>0.899</td>
+<td>1.4086</td>
+<td>0.88011</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>YMATTAA              </td>
+<td>43</td>
+<td>59</td>
+<td>65</td>
+<td>60</td>
+<td>60</td>
+<td>42</td>
+<td>56</td>
+<td>55.0000</td>
+<td>65</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1809_MA0251.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1809_MA0251.1_JASPAR_CORE_2009_</td>
+<td>0.798</td>
+<td>0.466</td>
+<td>1.828</td>
+<td>0.156</td>
+<td>0.899</td>
+<td>1.4119</td>
+<td>0.87997</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>YAATTAR              </td>
+<td>38</td>
+<td>54</td>
+<td>64</td>
+<td>69</td>
+<td>61</td>
+<td>43</td>
+<td>57</td>
+<td>55.1429</td>
+<td>66</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1788_MA0230.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1788_MA0230.1_JASPAR_CORE_2009_</td>
+<td>0.801</td>
+<td>0.467</td>
+<td>2.268</td>
+<td>0.219</td>
+<td>0.890</td>
+<td>1.5379</td>
+<td>0.87473</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TMATTAA              </td>
+<td>35</td>
+<td>51</td>
+<td>40</td>
+<td>58</td>
+<td>72</td>
+<td>58</td>
+<td>73</td>
+<td>55.2857</td>
+<td>67</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1726_MA0167.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1726_MA0167.1_JASPAR_CORE_2009_</td>
+<td>0.797</td>
+<td>0.465</td>
+<td>1.604</td>
+<td>0.145</td>
+<td>0.903</td>
+<td>1.3562</td>
+<td>0.88236</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTAR              </td>
+<td>40</td>
+<td>55</td>
+<td>76</td>
+<td>73</td>
+<td>58</td>
+<td>40</td>
+<td>49</td>
+<td>55.8571</td>
+<td>68</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>5162_BARX1_DBD_2_HumanTF_1.0_</td>
+<td>positions_8nt_m3</td>
+<td>5162_BARX1_DBD_2_HumanTF_1.0_</td>
+<td>0.750</td>
+<td>0.500</td>
+<td>2.060</td>
+<td>0.282</td>
+<td>0.900</td>
+<td>1.6070</td>
+<td>0.88795</td>
+<td>12</td>
+<td>8</td>
+<td>8</td>
+<td>12</td>
+<td>0.6667</td>
+<td>0.6667</td>
+<td>1.0000</td>
+<td>R</td>
+<td>4</td>
+<td>....GTAATTcw</td>
+<td>YTAATKGB                             </td>
+<td>86</td>
+<td>38</td>
+<td>47</td>
+<td>55</td>
+<td>43</td>
+<td>68</td>
+<td>55</td>
+<td>56.0000</td>
+<td>69</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1736_MA0177.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1736_MA0177.1_JASPAR_CORE_2009_</td>
+<td>0.799</td>
+<td>0.466</td>
+<td>1.804</td>
+<td>0.155</td>
+<td>0.897</td>
+<td>1.4372</td>
+<td>0.87890</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TMATTAR              </td>
+<td>37</td>
+<td>53</td>
+<td>66</td>
+<td>70</td>
+<td>64</td>
+<td>47</td>
+<td>62</td>
+<td>57.0000</td>
+<td>70</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1738_MA0179.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1738_MA0179.1_JASPAR_CORE_2009_</td>
+<td>0.761</td>
+<td>0.444</td>
+<td>4.700</td>
+<td>0.444</td>
+<td>0.877</td>
+<td>1.7229</td>
+<td>0.86741</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>D</td>
+<td>4</td>
+<td>....GTAATTc.</td>
+<td>yTAATTr              </td>
+<td>72</td>
+<td>74</td>
+<td>11</td>
+<td>20</td>
+<td>82</td>
+<td>78</td>
+<td>82</td>
+<td>59.8571</td>
+<td>71</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1765_MA0206.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1765_MA0206.1_JASPAR_CORE_2009_</td>
+<td>0.779</td>
+<td>0.454</td>
+<td>2.050</td>
+<td>0.224</td>
+<td>0.892</td>
+<td>1.5136</td>
+<td>0.87572</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TMATTAA              </td>
+<td>53</td>
+<td>67</td>
+<td>48</td>
+<td>57</td>
+<td>70</td>
+<td>56</td>
+<td>70</td>
+<td>60.1429</td>
+<td>72</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1779_MA0220.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1779_MA0220.1_JASPAR_CORE_2009_</td>
+<td>0.760</td>
+<td>0.443</td>
+<td>4.696</td>
+<td>0.445</td>
+<td>0.876</td>
+<td>1.7305</td>
+<td>0.86712</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>D</td>
+<td>4</td>
+<td>....GTAATTc.</td>
+<td>yTAATTr              </td>
+<td>74</td>
+<td>75</td>
+<td>12</td>
+<td>18</td>
+<td>84</td>
+<td>82</td>
+<td>84</td>
+<td>61.2857</td>
+<td>73</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1799_MA0241.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1799_MA0241.1_JASPAR_CORE_2009_</td>
+<td>0.797</td>
+<td>0.465</td>
+<td>1.786</td>
+<td>0.127</td>
+<td>0.892</td>
+<td>1.5080</td>
+<td>0.87595</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TAATTAR              </td>
+<td>41</td>
+<td>56</td>
+<td>68</td>
+<td>76</td>
+<td>69</td>
+<td>54</td>
+<td>68</td>
+<td>61.7143</td>
+<td>74</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1768_MA0209.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1768_MA0209.1_JASPAR_CORE_2009_</td>
+<td>0.782</td>
+<td>0.456</td>
+<td>1.929</td>
+<td>0.145</td>
+<td>0.893</td>
+<td>1.5049</td>
+<td>0.87608</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TMATTAR              </td>
+<td>51</td>
+<td>66</td>
+<td>56</td>
+<td>74</td>
+<td>68</td>
+<td>53</td>
+<td>67</td>
+<td>62.1429</td>
+<td>75</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1808_MA0250.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1808_MA0250.1_JASPAR_CORE_2009_</td>
+<td>0.757</td>
+<td>0.442</td>
+<td>4.781</td>
+<td>0.432</td>
+<td>0.871</td>
+<td>1.8100</td>
+<td>0.86410</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>D</td>
+<td>4</td>
+<td>....GTAATTc.</td>
+<td>tTAATTr              </td>
+<td>78</td>
+<td>77</td>
+<td>9</td>
+<td>23</td>
+<td>85</td>
+<td>84</td>
+<td>85</td>
+<td>63.0000</td>
+<td>76</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1796_MA0238.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1796_MA0238.1_JASPAR_CORE_2009_</td>
+<td>0.787</td>
+<td>0.459</td>
+<td>1.927</td>
+<td>0.164</td>
+<td>0.888</td>
+<td>1.5746</td>
+<td>0.87324</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TMATTAR              </td>
+<td>47</td>
+<td>62</td>
+<td>57</td>
+<td>66</td>
+<td>74</td>
+<td>62</td>
+<td>75</td>
+<td>63.2857</td>
+<td>77</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1748_MA0189.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1748_MA0189.1_JASPAR_CORE_2009_</td>
+<td>0.766</td>
+<td>0.447</td>
+<td>1.647</td>
+<td>0.163</td>
+<td>0.899</td>
+<td>1.4180</td>
+<td>0.87971</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TMATTAR              </td>
+<td>66</td>
+<td>73</td>
+<td>75</td>
+<td>67</td>
+<td>62</td>
+<td>44</td>
+<td>59</td>
+<td>63.7143</td>
+<td>78</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1740_MA0181.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1740_MA0181.1_JASPAR_CORE_2009_</td>
+<td>0.772</td>
+<td>0.450</td>
+<td>1.953</td>
+<td>0.185</td>
+<td>0.889</td>
+<td>1.5583</td>
+<td>0.87390</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>YAATTAR              </td>
+<td>58</td>
+<td>69</td>
+<td>54</td>
+<td>62</td>
+<td>73</td>
+<td>61</td>
+<td>74</td>
+<td>64.4286</td>
+<td>79</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1743_MA0184.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1743_MA0184.1_JASPAR_CORE_2009_</td>
+<td>0.784</td>
+<td>0.457</td>
+<td>1.466</td>
+<td>0.108</td>
+<td>0.893</td>
+<td>1.4942</td>
+<td>0.87652</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>YAATTAR              </td>
+<td>50</td>
+<td>65</td>
+<td>78</td>
+<td>77</td>
+<td>67</td>
+<td>51</td>
+<td>66</td>
+<td>64.8571</td>
+<td>80</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1784_MA0226.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1784_MA0226.1_JASPAR_CORE_2009_</td>
+<td>0.772</td>
+<td>0.450</td>
+<td>1.959</td>
+<td>0.183</td>
+<td>0.880</td>
+<td>1.6817</td>
+<td>0.86900</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>YAATTAA              </td>
+<td>57</td>
+<td>68</td>
+<td>52</td>
+<td>65</td>
+<td>79</td>
+<td>73</td>
+<td>79</td>
+<td>67.5714</td>
+<td>81</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1756_MA0197.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1756_MA0197.1_JASPAR_CORE_2009_</td>
+<td>0.762</td>
+<td>0.410</td>
+<td>0.461</td>
+<td>-0.100</td>
+<td>0.896</td>
+<td>1.4606</td>
+<td>0.87792</td>
+<td>12</td>
+<td>8</td>
+<td>7</td>
+<td>13</td>
+<td>0.5385</td>
+<td>0.5833</td>
+<td>0.8750</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TMATTAW.             </td>
+<td>69</td>
+<td>84</td>
+<td>84</td>
+<td>86</td>
+<td>65</td>
+<td>49</td>
+<td>63</td>
+<td>71.4286</td>
+<td>82</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1761_MA0202.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1761_MA0202.1_JASPAR_CORE_2009_</td>
+<td>0.769</td>
+<td>0.449</td>
+<td>1.895</td>
+<td>0.131</td>
+<td>0.878</td>
+<td>1.7115</td>
+<td>0.86785</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>YAATTAR              </td>
+<td>61</td>
+<td>70</td>
+<td>59</td>
+<td>75</td>
+<td>80</td>
+<td>76</td>
+<td>80</td>
+<td>71.5714</td>
+<td>83</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1786_MA0228.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1786_MA0228.1_JASPAR_CORE_2009_</td>
+<td>0.758</td>
+<td>0.442</td>
+<td>1.980</td>
+<td>0.153</td>
+<td>0.877</td>
+<td>1.7160</td>
+<td>0.86767</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>TMATTAR              </td>
+<td>76</td>
+<td>76</td>
+<td>51</td>
+<td>71</td>
+<td>81</td>
+<td>77</td>
+<td>81</td>
+<td>73.2857</td>
+<td>84</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>6026_1co0_A_3D-footprint_20130124_</td>
+<td>positions_8nt_m3</td>
+<td>6026_1co0_A_3D-footprint_20130124_</td>
+<td>0.767</td>
+<td>0.447</td>
+<td>1.667</td>
+<td>0.040</td>
+<td>0.869</td>
+<td>1.8347</td>
+<td>0.86318</td>
+<td>12</td>
+<td>7</td>
+<td>7</td>
+<td>12</td>
+<td>0.5833</td>
+<td>0.5833</td>
+<td>1.0000</td>
+<td>R</td>
+<td>1</td>
+<td>.sTGGTAA....</td>
+<td>CTGGTAC                              </td>
+<td>65</td>
+<td>72</td>
+<td>72</td>
+<td>82</td>
+<td>86</td>
+<td>85</td>
+<td>86</td>
+<td>78.2857</td>
+<td>85</TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td>1787_MA0229.1_JASPAR_CORE_2009_</td>
+<td>positions_8nt_m3</td>
+<td>1787_MA0229.1_JASPAR_CORE_2009_</td>
+<td>0.772</td>
+<td>0.416</td>
+<td>0.671</td>
+<td>-0.092</td>
+<td>0.876</td>
+<td>1.7300</td>
+<td>0.86714</td>
+<td>12</td>
+<td>8</td>
+<td>7</td>
+<td>13</td>
+<td>0.5385</td>
+<td>0.5833</td>
+<td>0.8750</td>
+<td>R</td>
+<td>5</td>
+<td>.....TAATTcw</td>
+<td>YAATTAR.             </td>
+<td>56</td>
+<td>83</td>
+<td>83</td>
+<td>84</td>
+<td>83</td>
+<td>81</td>
+<td>83</td>
+<td>79.0000</td>
+<td>86</TD>
+</TR>
+
+</TABLE><PRE>
+ Host name	biow
+ Job started	2014-09-05.203631
+ Job done	2014-09-05.203739
+ Seconds	35.04
+	user	35.04
+	system	2.03
+	cuser	27.93
+;	csystem	3.58
+</PRE>
+</BODY></HTML>

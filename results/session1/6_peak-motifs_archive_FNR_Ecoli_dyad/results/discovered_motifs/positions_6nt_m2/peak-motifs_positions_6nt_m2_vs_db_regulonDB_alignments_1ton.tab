@@ -1,0 +1,16 @@
+; One-to-n matrix alignment; reference matrix: positions_6nt_m2_shift2	; 2 matrices	; sort_field=rank_mean
+; positions_6nt_m2; m=0 (reference); ncol1=11; shift=2; ncol=19; --TCCCCTAGCGC------
+; Alignment reference
+a	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0
+c	0	0	0	1	1	1	1	0	0	0	1	0	1	0	0	0	0	0	0
+g	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0
+t	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0
+//
+; positions_6nt_m2 versus ECK120026325 (HipB); m=1/1; ncol2=19; w=11; offset=-2; strand=D; shift=0; score=      1; TATCCbbKWdhGMGGATAA
+; cor=0.850; Ncor=0.492; logoDP=11.098; NIcor=0.472; NsEucl=0.901; SSD=2.375; NSW=0.892; rcor=1; rNcor=1; rlogoDP=1; rNIcor=1; rNsEucl=1; rSSD=1; rNSW=1; rank_mean=1.000; match_rank=1
+a	0	4	0	0	0	0	0	0	3	1	2	0	1	0	0	4	0	4	4
+c	0	0	0	4	4	2	2	0	0	0	1	0	3	0	0	0	0	0	0
+g	0	0	0	0	0	1	1	1	0	2	0	4	0	4	4	0	0	0	0
+t	4	0	4	0	0	1	1	3	1	1	1	0	0	0	0	0	4	0	0
+//
+;

@@ -1,0 +1,82 @@
+; compare-matrices  -v 1 -mode matches -format1 transfac -file1 $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3.tf -format2 tf -file2 $RSAT/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf -mode matches -DR -uth offset_rank 1 -lth w 5 -lth Wr 0.3 -lth cor 0.75 -lth Ncor 0.4 -return matrix_name,matrix_id,cor,Ncor,logoDP,NIcor,NsEucl,SSD,NSW,match_rank,width,strand,offset,consensus,alignments_1ton -sort Ncor -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_vs_db_footprintDB
+; Program version       	1.118
+; Input files
+;	file2 	/vh/rsat/rsat/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf
+;	file1 	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3.tf
+; Output files
+;	alignments_1ton	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_vs_db_footprintDB_alignments_1ton.tab
+;	match_table_txt	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_vs_db_footprintDB.tab
+;	html_index   	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_vs_db_footprintDB_index.html
+;	alignments_1ton_html	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_vs_db_footprintDB_alignments_1ton.html
+;	match_table_html	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_vs_db_footprintDB.html
+;	prefix       	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_vs_db_footprintDB
+; Matrices
+;	file1	1 matrices	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3.tf
+;		file1	1	11	10	sgCTCAGGCgr
+;	file2	4196 matrices	/vh/rsat/rsat/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf
+;		file2		1		17		100		yyaymCATCAAwmwwmm
+;		file2		2		10		7		ACCGGAAGws
+;		file2		3		16		100		wwtksgTAATTACsdy
+;		file2		4		17		100		twrttaATTAwtaawwr
+;		file2		5		18		100		TCCGynnnnnnnnnCGGA
+;		file2		6		20		100		gwrastTTCCGGAAyrywrr
+;		file2		7		20		100		yrawygGyGCCGyrysackh
+;		file2		8		21		100		wmrmraAtmGAAGaaawawww
+;		file2		9		20		100		rkmkkakCACGTGmyyrvwy
+;		file2		10		6		1		CTATCA
+;		file2		11		18		66		hTTwCCwWAwwdGGhAat
+;		...	4186 more matrices
+; Column content
+;	1	id1          	Identifier of the first matrix
+;	2	id2          	Identifier of the second matrix
+;	3	name1        	Name of the first matrix
+;	4	name2        	Name of the second matrix
+;	5	cor          	Pearson coefficient of correlation between frequency matrices
+;	6	Ncor         	Normalized correlation. Ncor = cor * Wr
+;	7	logoDP       	Dot product between the logo matrices.
+;	8	NIcor        	Normalized Pearson correlation between the information content matrices. NIcor = Icor * Wr
+;	9	NSW          	Normalized Sandelin-Wasserman similarity. NSW = SW/w
+;	10	SSD          	sum of squared distance.
+;	11	NsEucl       	relative Euclidian similarity. NsEucl = (max(dEucl) - dEucl)/max(dEucl)
+;	12	w1           	Width of the first matrix
+;	13	w2           	Width of the second matrix
+;	14	w            	Alignment length (number of overlapping columns between matrix 1 and matrix 2, as a function of the offset)
+;	15	W            	Total alignment length (overlapping + non-overlapping columns). W = w1 + w2 - w
+;	16	Wr           	Relative alignment length (overlap divided by the total alignemnt length). Wr = w/W
+;	17	wr1          	Alignment length relative to the width of the first matrix. wr1 = w/w1
+;	18	wr2          	Alignment length relative to the width of the second matrix. wr2 = w/w2
+;	19	strand       	"strand", i.e. orientation of matrix 2 relative to matrix 1 (D=direct;  R=reverse)
+;	20	offset       	shift of the second matrix relative to the first matrix (negative:left; positive: right)
+;	21	consensus1   	IUPAC consensus of matrix 1 (dots represent non-aligned columns)
+;	22	consensus2   	IUPAC consensus of matrix 2 (dots represent non-aligned columns)
+;	23	rcor         	Matching rank for cor
+;	24	rNcor        	Matching rank for Ncor
+;	25	rlogoDP      	Matching rank for logoDP
+;	26	rNIcor       	Matching rank for NIcor
+;	27	rNsEucl      	Matching rank for NsEucl
+;	28	rSSD         	Matching rank for SSD
+;	29	rNSW         	Matching rank for NSW
+;	30	rank_mean    	Mean of the matching ranks on all selected metrics
+;	31	match_rank   	Rank of the match (sorting by rank_mean)
+#id1	id2	name1	name2	cor	Ncor	logoDP	NIcor	NSW	SSD	NsEucl	w1	w2	w	W	Wr	wr1	wr2	strand	offset	consensus1	consensus2	rcor	rNcor	rlogoDP	rNIcor	rNsEucl	rSSD	rNSW	rank_mean	match_rank
+positions_7nt_m3	5875_TFAP2B_DBD_2_HumanTF_1.0_	positions_7nt_m3	5875_TFAP2B_DBD_2_HumanTF_1.0_	0.785	0.654	7.834	0.607	0.888	2.2404	0.89416	11	11	10	12	0.8333	0.9091	0.9091	D	-1	sgCTCAGGCg.	.GCCysAGGCd                         	6	1	1	1	6	9	9	4.7143	1
+positions_7nt_m3	5902_Tcfap2a_DBD_2_HumanTF_1.0_	positions_7nt_m3	5902_Tcfap2a_DBD_2_HumanTF_1.0_	0.785	0.654	7.151	0.606	0.890	2.2086	0.89492	11	11	10	12	0.8333	0.9091	0.9091	D	-1	sgCTCAGGCg.	.GCCysAGGCd                         	7	2	2	2	5	8	8	4.8571	2
+positions_7nt_m3	6491_2pe5_C_3D-footprint_20130124_	positions_7nt_m3	6491_2pe5_C_3D-footprint_20130124_	0.951	0.432	4.678	0.421	0.964	0.3622	0.91489	11	5	5	11	0.4545	0.4545	1.0000	D	1	.gCTCA.....	gcTCA                               	1	11	10	9	1	1	1	4.8571	3
+positions_7nt_m3	5872_TFAP2A_DBD_2_HumanTF_1.0_	positions_7nt_m3	5872_TFAP2A_DBD_2_HumanTF_1.0_	0.783	0.652	6.662	0.600	0.890	2.2014	0.89509	11	11	10	12	0.8333	0.9091	0.9091	D	-1	sgCTCAGGCg.	.GCCysAGGCw                         	8	3	5	3	4	7	7	5.2857	4
+positions_7nt_m3	7566_PAX5_si_HOCOMOCO_v9_	positions_7nt_m3	7566_PAX5_si_HOCOMOCO_v9_	0.843	0.537	6.019	0.430	0.903	1.3554	0.88240	11	7	7	11	0.6364	0.6364	1.0000	R	1	.gCTCAGG...	CCTCAGC                             	3	10	7	8	11	3	3	6.4286	5
+positions_7nt_m3	3725_UP00028_UniPROBE_20120919_	positions_7nt_m3	3725_UP00028_UniPROBE_20120919_	0.765	0.561	6.752	0.492	0.890	2.4155	0.90009	11	15	11	15	0.7333	1.0000	0.7333	R	-3	sgCTCAGGCgr	...SCCYSRGGSDW.               	10	8	3	7	2	11	5	6.5714	6
+positions_7nt_m3	6022_1cjg_A_3D-footprint_20130124_	positions_7nt_m3	6022_1cjg_A_3D-footprint_20130124_	0.900	0.409	3.648	0.375	0.939	0.6115	0.88941	11	5	5	11	0.4545	0.4545	1.0000	D	1	.gCTCA.....	GCTcA                               	2	13	11	11	9	2	2	7.1429	7
+positions_7nt_m3	1944_PB0088.1_JASPAR_CORE_2009_	positions_7nt_m3	1944_PB0088.1_JASPAR_CORE_2009_	0.764	0.561	6.657	0.495	0.890	2.4195	0.90001	11	15	11	15	0.7333	1.0000	0.7333	R	-3	sgCTCAGGCgr	...SCCYSRGGSDW.        	11	9	6	6	3	12	6	7.5714	8
+positions_7nt_m3	7295_AP2A_f2_HOCOMOCO_v9_	positions_7nt_m3	7295_AP2A_f2_HOCOMOCO_v9_	0.802	0.584	2.399	-0.007	0.893	1.7176	0.88416	11	8	8	11	0.7273	0.7273	1.0000	R	0	sgCTCAGG...	SCCYCAGG                            	4	6	13	13	10	5	4	7.8571	9
+positions_7nt_m3	5878_TFAP2C_DBD_2_HumanTF_1.0_	positions_7nt_m3	5878_TFAP2C_DBD_2_HumanTF_1.0_	0.762	0.635	6.738	0.583	0.879	2.4212	0.88997	11	11	10	12	0.8333	0.9091	0.9091	D	-1	sgCTCAGGCg.	.GCCtsAGGCw                         	12	4	4	4	8	13	12	8.1429	10
+positions_7nt_m3	5882_TFAP2C_full_3_HumanTF_1.0_	positions_7nt_m3	5882_TFAP2C_full_3_HumanTF_1.0_	0.757	0.631	5.039	0.573	0.880	2.4054	0.89033	11	11	10	12	0.8333	0.9091	0.9091	D	-1	sgCTCAGGCg.	.GCCysAGGCw                         	13	5	9	5	7	10	11	8.5714	11
+positions_7nt_m3	7297_AP2C_f1_HOCOMOCO_v9_	positions_7nt_m3	7297_AP2C_f1_HOCOMOCO_v9_	0.785	0.571	2.819	-0.001	0.883	1.8768	0.87891	11	8	8	11	0.7273	0.7273	1.0000	R	0	sgCTCAGG...	SCCYCAGG                            	5	7	12	12	12	6	10	9.1429	12
+positions_7nt_m3	6517_2wbs_A_3D-footprint_20130124_	positions_7nt_m3	6517_2wbs_A_3D-footprint_20130124_	0.766	0.418	5.958	0.398	0.870	1.5602	0.85279	11	6	6	11	0.5455	0.5455	1.0000	D	5	.....AGGCgr	aGGCGC                              	9	12	8	10	13	4	13	9.8571	13
+; Host name	biow
+; Job started	2014-09-05.203338
+; Job done	2014-09-05.203412
+; Seconds	30.29
+;	user	30.29
+;	system	0.39
+;	cuser	3.37
+;	csystem	0.53

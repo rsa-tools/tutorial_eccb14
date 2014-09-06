@@ -1,0 +1,76 @@
+; position-analysis -v 1 -i $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/data/sequences/peak-motifs_test_maxlen1000_purged_ml30_mis0.fasta -format fasta -sort -return html,chi,sig,distrib,graphs,rank,index -max_graphs 20 -1str -ovlp -seqtype dna -l 2 -ci 20 -img_format png -title ChIP-seq_FNR_E._coli_tunned_parameters_dyad_summits_50bps -origin center -o $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/composition/peak-motifs_test_profiles-1str-ovlp_2nt_ci20.tab
+; Citation: van Helden, et al. (2000).  Nucleic Acids Res 28, 1000-1010.
+; Sequence file                	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/data/sequences/peak-motifs_test_maxlen1000_purged_ml30_mis0.fasta
+; Sequence format              	fasta
+; Sequence type                	dna
+; Output file                  	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/composition/peak-motifs_test_profiles-1str-ovlp_2nt_ci20.tab
+; Oligo length                 	2
+; Occurrences counted  on a single  strands
+; Background model estimation: homogeneous repartition
+; Sequence statistics:
+;	Nb of sequences              	109
+;	Sum of sequence lengths      	11009
+;	Min sequence length          	0
+;	Max sequence length          	101
+;	Average sequence length      	101
+;	Possible positions           	10900
+; Oligonucleotide statistics:
+;	Total occurrences    	10900
+; Position interval parameters:
+;	Position interval    	20
+;	Number of windows    	6
+;	Total positions      	10900
+;	Degrees of freedom   	5
+; K-mer clustering parameters:
+;	Number of clusters   	0
+;	Clustering method    	complete
+; Position intervals:
+;	window	[min,max]	mid	seq	occ
+;	1	-3	[-59,-40]	-49.5	109	1199
+;	2	-2	[-39,-20]	-29.5	109	2180
+;	3	-1	[-19,0]	-9.5	109	2180
+;	4	0	[1,20]	10.5	109	2180
+;	5	1	[21,40]	30.5	109	2180
+;	6	2	[41,60]	50.5	109	981
+;
+; Column headers
+;	1	seq            	pattern sequence
+;	2	id             	pattern identifier
+;	3	occ            	pattern occurrences
+;	4	chi2           	observed chi-square
+;	5	df             	degrees of freedom
+;	6	Pval           	P-value (probability for one word to be a false positive)
+;	7	Eval           	E-value; expected number of false positives (Eval = Pval * nb_tests)
+;	8	sig            	Significance (sig = -log10(Eval))
+;	9	rank           	rank of the pattern according to sorting criterion
+;	10	-49.5          	occurrences in window	1	[-59,-40]
+;	11	-29.5          	occurrences in window	2	[-39,-20]
+;	12	-9.5           	occurrences in window	3	[-19,0]
+;	13	10.5           	occurrences in window	4	[1,20]
+;	14	30.5           	occurrences in window	5	[21,40]
+;	15	50.5           	occurrences in window	6	[41,60]
+#seq	id	occ	chi2	df	Pval	Eval	sig	rank	-49.5	-29.5	-9.5	10.5	30.5	50.5
+gt	gt	544	10.3	5	6.6e-02	1.1	-0.03	1	43	106	96	123	120	56
+aa	aa	1092	8.3	5	1.4e-01	2.3	-0.35	2	133	193	246	210	214	96
+tc	tc	649	7.4	5	2.0e-01	3.1	-0.49	3	56	128	149	133	120	63
+ac	ac	560	7.1	5	2.1e-01	3.4	-0.54	4	74	112	91	120	114	49
+at	at	949	5.3	5	3.9e-01	6.2	-0.79	5	98	192	215	174	184	86
+cc	cc	493	5.0	5	4.2e-01	6.7	-0.82	6	55	111	90	88	109	40
+ga	ga	645	4.8	5	4.5e-01	7.1	-0.85	7	78	121	144	114	128	60
+gc	gc	595	4.2	5	5.2e-01	8.3	-0.92	8	79	120	111	121	117	47
+ag	ag	577	3.7	5	6.0e-01	9.6	-0.98	9	51	117	119	118	113	59
+ta	ta	736	3.5	5	6.2e-01	9.9	-0.99	10	80	151	133	164	144	64
+cg	cg	519	2.8	5	7.3e-01	12	-1.07	11	64	95	98	113	104	45
+tg	tg	701	2.8	5	7.3e-01	12	-1.07	12	87	145	131	131	141	66
+ct	ct	582	2.3	5	8.1e-01	13	-1.11	13	63	119	114	127	105	54
+tt	tt	1104	2.0	5	8.4e-01	14	-1.13	14	109	226	217	224	231	97
+gg	gg	456	1.8	5	8.8e-01	14	-1.15	15	57	95	88	84	92	40
+ca	ca	698	1.4	5	9.2e-01	15	-1.17	16	72	149	138	136	144	59
+; Host name	biow
+; Job started	2014-09-06.011256
+; Job done	2014-09-06.011256
+; Seconds	0.43
+;	user	0.43
+;	system	0.01
+;	cuser	0
+;	csystem	0

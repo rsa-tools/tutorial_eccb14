@@ -1,0 +1,16 @@
+; convert-matrix  -v 1 -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_8nt_mkv5/peak-motifs_oligos-2str-noov_8nt_mkv5_pssm_count_matrices.tf -from transfac -to tab -return counts -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_8nt_mkv5/peak-motifs_oligos-2str-noov_8nt_mkv5_pssm_count_matrices.txt
+; Input files
+;	input	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_8nt_mkv5/peak-motifs_oligos-2str-noov_8nt_mkv5_pssm_count_matrices.tf
+; Input format        	transfac
+; Output files
+;	output	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_8nt_mkv5/peak-motifs_oligos-2str-noov_8nt_mkv5_pssm_count_matrices.txt
+; Output format       	tab
+; pseudo-weight       	1
+; Host name	biow
+; Job started	2014-09-05.202734
+; Job done	2014-09-05.202734
+; Seconds	0.25
+;	user	0.25
+;	system	0.02
+;	cuser	0
+;	csystem	0

@@ -1,0 +1,90 @@
+; matrix-scan  -quick -v 1 -seq_format fasta -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/data/sequences/peak-motifs_test_maxlen1000.fasta -matrix_format transfac -m $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m5/peak-motifs_positions_8nt_m5.tf -bg_format inclusive -bgfile $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/composition/peak-motifs_test_inclusive-1str-ovlp_2nt.txt -pseudo 1 -2str -decimals 1 -bg_pseudo 0.01 -n score -lth score 7.5 -origin center -return sites -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m5/peak-motifs_positions_8nt_m5_sites.tab
+; Quick counting mode          
+; Input files
+;	input	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/data/sequences/peak-motifs_test_maxlen1000.fasta
+;	bg	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/composition/peak-motifs_test_inclusive-1str-ovlp_2nt.txt
+; Matrix files
+;	matrix 1	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m5/peak-motifs_positions_8nt_m5.tf
+; Sequence format      	fasta
+; Output files
+;	output	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m5/peak-motifs_positions_8nt_m5_sites.tab
+; Pseudo counts        	1
+; Background model
+;	Method        	file
+;	Markov order  	1
+;	Strand        	undef
+;	Background pseudo-frequency	0.01
+;	Residue probabilities
+;		a	0.26267
+;		c	0.23953
+;		g	0.23490
+;		t	0.26291
+; Thresholds	lower	upper
+;	score 	7.5  	NA
+; Output columns
+;	1	seq_id
+;	2	ft_type
+;	3	ft_name
+;	4	strand
+;	5	start
+;	6	end
+;	7	sequence
+;	8	weight
+#seq_id	ft_type	ft_name	strand	start	end	sequence	weight
+?_gi|49175990|ref|NC_000913.2|_29051_30211_+	site	positions_8nt_m5	D	426	437	ATAACCCGGATG	11.9
+?_gi|49175990|ref|NC_000913.2|_121130_122616_+	site	positions_8nt_m5	D	-422	-411	ATAACCCGGTCC	8.4
+?_gi|49175990|ref|NC_000913.2|_695647_696755_+	site	positions_8nt_m5	D	441	452	CAAACCCGGAAC	8.1
+?_gi|49175990|ref|NC_000913.2|_815456_816705_+	site	positions_8nt_m5	R	341	352	GTAACCCGGCGA	7.9
+?_gi|49175990|ref|NC_000913.2|_1018042_1019723_+	site	positions_8nt_m5	R	-354	-343	GCAACCTGGATC	7.5
+?_gi|49175990|ref|NC_000913.2|_1018042_1019723_+	site	positions_8nt_m5	R	186	197	TTAACCCGTATG	10.0
+?_gi|49175990|ref|NC_000913.2|_1163561_1165788_+	site	positions_8nt_m5	R	-276	-265	GTTACCCGGACT	9.0
+?_gi|49175990|ref|NC_000913.2|_1163561_1165788_+	site	positions_8nt_m5	D	-236	-225	TTGACCCGGATG	9.3
+?_gi|49175990|ref|NC_000913.2|_1278431_1279507_+	site	positions_8nt_m5	R	-382	-371	GTAACCCGAAGT	9.4
+?_gi|49175990|ref|NC_000913.2|_1296282_1299602_+	site	positions_8nt_m5	D	-57	-46	TCAACCCGGTAG	8.1
+?_gi|49175990|ref|NC_000913.2|_1396937_1398217_+	site	positions_8nt_m5	D	256	267	ATAACCCGATGG	7.5
+?_gi|49175990|ref|NC_000913.2|_1406481_1407793_+	site	positions_8nt_m5	R	-216	-205	ATAACCCGGTCA	8.2
+?_gi|49175990|ref|NC_000913.2|_1514602_1515991_+	site	positions_8nt_m5	R	-44	-33	TTAACCCGTACT	8.8
+?_gi|49175990|ref|NC_000913.2|_1544745_1545910_+	site	positions_8nt_m5	D	335	346	GTGACCCGGATC	9.1
+?_gi|49175990|ref|NC_000913.2|_1544745_1545910_+	site	positions_8nt_m5	D	422	433	GCTACCCGGAAT	7.6
+?_gi|49175990|ref|NC_000913.2|_1626452_1627821_+	site	positions_8nt_m5	R	-57	-46	TCACCCCGGATG	8.0
+?_gi|49175990|ref|NC_000913.2|_1664694_1665907_+	site	positions_8nt_m5	R	-179	-168	TAAACCCGTAGC	7.6
+?_gi|49175990|ref|NC_000913.2|_1752104_1753248_+	site	positions_8nt_m5	R	-187	-176	TGAACCCGGTTG	8.1
+?_gi|49175990|ref|NC_000913.2|_1762628_1763683_+	site	positions_8nt_m5	D	344	355	GCAACCCGAAAG	8.0
+?_gi|49175990|ref|NC_000913.2|_1796886_1799014_+	site	positions_8nt_m5	D	432	443	TTAACCTGGATA	9.0
+?_gi|49175990|ref|NC_000913.2|_1989336_1990607_+	site	positions_8nt_m5	D	-132	-121	GGTACCCGGAGC	8.4
+?_gi|49175990|ref|NC_000913.2|_2376810_2377899_+	site	positions_8nt_m5	D	-359	-348	TTAACCCGGCTT	7.8
+?_gi|49175990|ref|NC_000913.2|_2458489_2459669_+	site	positions_8nt_m5	D	478	489	TTGACCCGGATG	9.3
+?_gi|49175990|ref|NC_000913.2|_2816030_2817497_+	site	positions_8nt_m5	D	-169	-158	GAACCCCGGATG	7.7
+?_gi|49175990|ref|NC_000913.2|_2904443_2906681_+	site	positions_8nt_m5	R	340	351	GTAACCCGACTG	8.0
+?_gi|49175990|ref|NC_000913.2|_2944763_2946198_+	site	positions_8nt_m5	D	-37	-26	ATAACCCGAAGG	10.0
+?_gi|49175990|ref|NC_000913.2|_2944763_2946198_+	site	positions_8nt_m5	D	73	84	ATAACCCGAAGG	10.0
+?_gi|49175990|ref|NC_000913.2|_2944763_2946198_+	site	positions_8nt_m5	D	183	194	ATAACCCGAAGG	10.0
+?_gi|49175990|ref|NC_000913.2|_3053268_3056865_+	site	positions_8nt_m5	D	157	168	GGTACCCGGAAT	8.0
+?_gi|49175990|ref|NC_000913.2|_3216709_3217778_+	site	positions_8nt_m5	R	-326	-315	GTCACCCGGATA	8.9
+?_gi|49175990|ref|NC_000913.2|_3315525_3316942_+	site	positions_8nt_m5	R	-431	-420	ATAACCTGGAAG	9.2
+?_gi|49175990|ref|NC_000913.2|_3315525_3316942_+	site	positions_8nt_m5	R	31	42	ATAACCCGAAGA	9.2
+?_gi|49175990|ref|NC_000913.2|_3319524_3321163_+	site	positions_8nt_m5	D	-231	-220	TGAACCCGTAAG	8.5
+?_gi|49175990|ref|NC_000913.2|_3450219_3451899_+	site	positions_8nt_m5	R	463	474	ATAACCCGAAGG	10.0
+?_gi|49175990|ref|NC_000913.2|_3637380_3638572_+	site	positions_8nt_m5	R	5	16	GCGACCCGGATG	8.3
+?_gi|49175990|ref|NC_000913.2|_3947812_3950452_+	site	positions_8nt_m5	R	-486	-475	GCCACCCGGATA	7.5
+?_gi|49175990|ref|NC_000913.2|_4174949_4179737_+	site	positions_8nt_m5	R	340	351	ACAACCCGAATA	8.3
+?_gi|49175990|ref|NC_000913.2|_4402117_4403527_+	site	positions_8nt_m5	D	-350	-339	TTTACCCGAAGG	7.9
+;
+; Matrices
+;	matrix	name            	ncol	nrow	pseudo	Wmin	Wmax	Wrange
+;	1	positions_8nt_m5	12	4	0	-26.000	11.700	37.700	a:0.263 c:0.240 g:0.235 t:0.263 
+; Number of sequences scanned	109
+; Sum of sequence lengths	108923
+; N residues           	0
+; Matches per matrix
+;	matrix	name            	matches	scored
+;	1	positions_8nt_m5	38	0
+;		TOTAL          	38	0
+; Host name	biow
+; Job started	2014-09-05.205354
+; Job done	2014-09-05.205354
+; Seconds	0.29
+;	user	0.29
+;	system	0.03
+;	cuser	0.24
+;	csystem	0.01

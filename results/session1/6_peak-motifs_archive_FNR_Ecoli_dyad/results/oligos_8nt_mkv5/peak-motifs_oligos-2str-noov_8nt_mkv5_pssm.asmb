@@ -1,0 +1,33 @@
+; pattern-assembly  -v 1 -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_8nt_mkv5/peak-motifs_oligos-2str-noov_8nt_mkv5.tab -2str -maxfl 1 -subst 1 -max_asmb_width 20 -toppat 100 -max_asmb_size 50 -max_asmb_width 20 -max_asmb_nb 5 -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_8nt_mkv5/peak-motifs_oligos-2str-noov_8nt_mkv5_pssm.asmb
+; Input file	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_8nt_mkv5/peak-motifs_oligos-2str-noov_8nt_mkv5.tab
+; Output file	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_8nt_mkv5/peak-motifs_oligos-2str-noov_8nt_mkv5_pssm.asmb
+; Input score column           	8
+; Output score column          	0
+; Strand-insensitive assembly
+; Max flanking bases           	1
+; Max substitutions            	1
+; Min matches                  	0
+; Min weight                   	0
+; Max assembly size            	50
+; Max assembly width           	20
+; Top number of patterns       	100
+; Number of input patterns     	2
+;
+
+; assembly # 1	seed: attcgaac	1 assembled patterns	length 8
+; alignt	 rev_cpl	score
+attcgaac	gttcgaat	0.44
+attcgaac	gttcgaat	0.44	best consensus
+
+; assembly # 2	seed: ggattcga	1 assembled patterns	length 8
+; alignt	 rev_cpl	score
+ggattcga	tcgaatcc	0.32
+ggattcga	tcgaatcc	0.32	best consensus
+; Host name	biow
+; Job started	2014-09-05.202732
+; Job done	2014-09-05.202732
+; Seconds	0.24
+;	user	0.24
+;	system	0.02
+;	cuser	0
+;	csystem	0

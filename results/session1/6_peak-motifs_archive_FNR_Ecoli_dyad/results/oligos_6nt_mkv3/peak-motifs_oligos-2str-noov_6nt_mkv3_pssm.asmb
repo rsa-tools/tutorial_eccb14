@@ -1,0 +1,51 @@
+; pattern-assembly  -v 1 -i $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_6nt_mkv3/peak-motifs_oligos-2str-noov_6nt_mkv3.tab -2str -maxfl 1 -subst 1 -max_asmb_width 20 -toppat 100 -max_asmb_size 50 -max_asmb_width 20 -max_asmb_nb 5 -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_6nt_mkv3/peak-motifs_oligos-2str-noov_6nt_mkv3_pssm.asmb
+; Input file	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_6nt_mkv3/peak-motifs_oligos-2str-noov_6nt_mkv3.tab
+; Output file	/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/oligos_6nt_mkv3/peak-motifs_oligos-2str-noov_6nt_mkv3_pssm.asmb
+; Input score column           	8
+; Output score column          	0
+; Strand-insensitive assembly
+; Max flanking bases           	1
+; Max substitutions            	1
+; Min matches                  	0
+; Min weight                   	0
+; Max assembly size            	50
+; Max assembly width           	20
+; Top number of patterns       	100
+; Number of input patterns     	9
+;
+
+; assembly # 1	seed: aagaga	3 assembled patterns	length 8
+; alignt	 rev_cpl	score
+gaagag..	..ctcttc	0.80
+.aagaga.	.tctctt.	1.01
+..agagat	atctct..	0.23
+gaagagat	atctcttc	1.01	best consensus
+
+; assembly # 2	seed: atcgac	1 assembled patterns	length 6
+;alignt	rev_cpl	score
+atcgac	gtcgat	0.79
+atcgac	gtcgat	0.79	best consensus
+
+; assembly # 3	seed: acaaaa	1 assembled patterns	length 6
+;alignt	rev_cpl	score
+acaaaa	ttttgt	0.71
+acaaaa	ttttgt	0.71	best consensus
+
+; assembly # 4	seed: gctaaa	1 assembled patterns	length 6
+;alignt	rev_cpl	score
+gctaaa	tttagc	0.62
+gctaaa	tttagc	0.62	best consensus
+
+; assembly # 5	seed: ggtaga	1 assembled patterns	length 6
+;alignt	rev_cpl	score
+ggtaga	tctacc	0.49
+ggtaga	tctacc	0.49	best consensus
+; Maximal number of assemblies is reached (5). Remaining patterns: 1.
+; Host name	biow
+; Job started	2014-09-05.202714
+; Job done	2014-09-05.202715
+; Seconds	0.57
+;	user	0.57
+;	system	0.01
+;	cuser	0
+;	csystem	0

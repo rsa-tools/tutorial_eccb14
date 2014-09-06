@@ -1,0 +1,480 @@
+<html>
+<header>
+<title>/vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/reports/peak-motifs_small_summary.txt</title>
+<style type='text/css'>
+/* Style sheet for the HTML formatting of RSAT results */
+
+/* BODY  */
+body {
+       font-family: Verdana, Helvetica, Arial, sans-serif;
+       font-size: 70%;
+       margin-top: 2px;
+       margin-left: 20px;
+       text-align: justify;
+       background: #ffffff;
+       margin-right: 20px;
+/*       background: #0D73A7 url(images/bullet2-normal.gif) no-repeat 7px 7px;*/
+}
+
+
+/* div for menu */
+
+#Menu_space {
+	margin-top:120px;
+	margin-bottom:300px;
+}
+#Menu_wait {
+	position:absolute;
+	top:120px;
+	left:50%;
+	width:400px;
+	margin-left: -200px;
+	padding:10px;
+	text-align:center;
+	}
+
+#Menu {
+	position:absolute;
+	top:120px;
+	left:50%;
+	width:800px;
+	margin-left: -400px;
+	padding:10px;
+	background-color:#eee;
+	border:1px dashed #999;
+	line-height:17px;
+	font-size: 110%;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	text-align:left;
+	}
+
+#Menu h3 {
+	margin:0;
+	text-align:center;
+	padding-bottom:5px;
+}
+
+#Menu ul {
+	list-style-type:none;
+}
+
+/* TABLE */
+#Menu table {
+	margin: 10px 10px 10px;
+}
+
+#Menu  td, th {
+	font-size: 70%;
+	padding: 2px 10px;
+	vertical-align:top;
+}
+
+.menulink a:link,a:visited {
+	color:#cc6600;
+	background: transparent;
+	text-decoration: none;
+	}
+
+.menulink a:visited {
+	color:#cc6600;
+	background: transparent;
+	text-decoration: none;
+	}
+
+.menulink A:active {
+	color: #cc6600;
+	background: transparent;
+	text-decoration: none
+}
+
+.menulink A:hover {
+	text-decoration: underline;
+	color: #cc6600;
+}
+
+
+/* Links  */
+
+A:link,A:visited {
+	color: #0D73A7;
+	background: transparent;
+	text-decoration: none;
+}
+
+A:active {
+	color: #ff0000;
+	background: transparent;
+	text-decoration: none
+}
+
+A:hover {
+	text-decoration: underline;
+	color: #cc6600;
+}
+
+/* Headers  */
+
+h1 {
+	margin-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	border: 1px solid #2D282E;
+	background-color: #0D73A7;
+	font-size: 16px;
+	color: #D6EEFA;
+}
+h1 a:link, h1 a:visited {
+	color: #D6EEFA;
+}
+
+h1 a:hover {
+	color: #ffffff;
+}
+
+h2 {
+	margin-top: 10px;
+	padding-top: 15px;
+	margin-bottom: 0px;
+	color: #002266;
+	font-size: 15px;
+}
+
+h3 {
+	margin-top: 6px;
+	padding-top: 6px;
+	margin-bottom: 0px;
+	color: #002266;
+	font-size: 11px;
+}
+
+h4 {
+	margin-top: 4px;
+	padding-top: 4px;
+	margin-bottom: 0px;
+	color : #2D282E;
+	font-size: 11px;
+}
+
+h2.motif {
+	margin-top: 3px;
+	padding-top: 0px;
+	margin-bottom: 4px;
+	color : #2D282E;
+	font-size: 12px;
+}
+
+/* Other tag formatting  */
+hr {
+	border: 1px dotted #2D282E;
+	height: 1px;
+}
+
+hr.solid {
+	border: 1px solid #2D282E;
+	height: 1px;
+}
+
+pre,tt {
+         font-size: 12px;
+}
+
+pre { 
+      background:#EEEEEE;
+ }
+
+
+center {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+blockquote {
+	color : #cc6600;
+	font-size: 12px;
+}
+
+body blockquote.information {
+	color : #009900;
+	font-size: 12px;
+}
+
+body blockquote.warning {
+	color : #aa0000;
+	font-size: 12px;
+}
+
+blockquote.demo {
+	color : #000000;
+	font-size: 12px;
+	font-style:italic;
+}
+
+
+
+/* TABLE */
+table.simple {
+	margin: 10px 20px 20px;
+	color: #000000;
+}
+
+table.simple td,table.list th {
+	font-size: 70%;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+}
+
+table.simple th {
+	font-size: 70%;
+	background-color: #F6E6CA;
+}
+
+/* TABLE */
+
+/* table with white bg and small fonts */
+table.whitebg {
+	margin: 10px 20px 20px;
+	color: #000000;
+	border-left: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	border-spacing: 0px;
+}
+
+table.whitebg td,table.whitebg th {
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+}
+
+
+/* table with blue bg and small font */
+table.whitebg th {
+	font-size: 70%;
+	background-color: #F6E6CA;
+}
+
+table.bluebg {
+	color: #333333;
+	border-left: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	}
+
+table.bluebg td,table.bluebg th {
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	background-color: #D6EEFA;
+}
+
+table.bluebg th {
+	background-color: #0D73A7;
+	color: #D6EEFA;
+}
+	
+/* Table on result pages - compatible with the sorttable type defined by javascript */
+
+table.sortable {
+	margin: 10px 20px 20px;
+	color: #000000;
+	border-left: 1px solid #cbcbb4;
+	border-right: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	border-spacing: 0px;
+}
+
+table.sortable td,table.sortable th {
+	padding: 2px 10px;
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+}
+
+table.sortable th {
+	font-size: 70%;
+	background-color: #0D73A7;
+	color: #D6EEFA;
+}
+
+
+/* LINK TABLE ON RESULTS PAGES */
+table.resultlink {
+	margin-left:5px;
+	width : 90%;
+	color: #2D282E;
+	background-color: #D6EEFA;
+}
+
+
+table.resultlink td, table.resultlink th {
+	font-size: 70%;
+	padding-left:5px;
+	padding-right:3px;
+	text-align :left;
+}
+
+/* COLLAPSIBLE MENUS */
+
+.menu_heading_open {
+	background: url(images_html/arrow_box_down.gif) no-repeat 5px 7px;
+	text-decoration: none;
+	padding: 0px 6px 4px 21px;
+	margin: 0;
+	cursor: pointer;
+	font-weight: bold;
+	display: block;
+}
+
+.menu_heading_closed {
+	background: url(images_html/arrow_box.gif) no-repeat 5px 7px;
+	text-decoration: underline; 
+	display: block;
+	padding:0px 6px 4px 21px;
+	margin: 0;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.menu_collapsible {
+	display: none;
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+
+.menu_collapsible_display {
+   display: block;
+   margin-bottom: 10px;
+   margin-left: 30px;
+}
+</style>
+<header>
+<body bgcolor='#ffffff'>
+<PRE></pre>
+
+<table  class="sortable"  cellspacing=1 cellpadding=3 border=1>
+<tr valign='top'>
+<th align='left' >Motif</th>
+<th align='left'>Logo</th>
+<th align='left'>3 Top hits in databases</th>
+</tr>
+
+<tr valign='top'>
+<td>oligos_6nt_mkv3</td>
+<td><img border='1' height='50' src='results/discovered_motifs/oligos_6nt_mkv3/peak-motifs_oligos_6nt_mkv3_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  2470_MA0080.1_JASPAR_CORE_2009_, 5987_1awc_A_3D-footprint_20130124_, 108_MA0062.1_JASPAR_CORE_2009_, </br></td>
+</tr>
+
+<tr valign=top>
+<TD>positions_6nt_m1</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_6nt_m1/peak-motifs_positions_6nt_m1_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  6733_4euw_A_3D-footprint_20130124_, 1939_PB0082.1_JASPAR_CORE_2009_, 3755_UP00058_UniPROBE_20120919_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_6nt_m2</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_6nt_m2/peak-motifs_positions_6nt_m2_logo.png'></td>
+<td><u>versus regulonDB:</u>  HipB, </br><u>versus footprintDB:</u>  2623_MA0396.1_JASPAR_CORE_2009_, 3076_HipB_RegulonDB_7.5_, 2588_MA0342.1_JASPAR_CORE_2009_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_7nt_m1</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_7nt_m1/peak-motifs_positions_7nt_m1_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  2588_MA0342.1_JASPAR_CORE_2009_, 2615_MA0381.1_JASPAR_CORE_2009_, 2604_MA0366.1_JASPAR_CORE_2009_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_7nt_m2</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_7nt_m2/peak-motifs_positions_7nt_m2_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  2613_MA0379.1_JASPAR_CORE_2009_, 6327_1tgh_A_3D-footprint_20130124_, 6272_1qn7_A_3D-footprint_20130124_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_7nt_m3</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  5875_TFAP2B_DBD_2_HumanTF_1.0_, 5902_Tcfap2a_DBD_2_HumanTF_1.0_, 6491_2pe5_C_3D-footprint_20130124_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_7nt_m4</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_7nt_m4/peak-motifs_positions_7nt_m4_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  2547_MA0285.1_JASPAR_CORE_2009_, 2733_PF0046.1_JASPAR_CORE_2009_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_7nt_m5</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  2858_PF0171.1_JASPAR_CORE_2009_, 5958_1a0a_B_3D-footprint_20130124_, 5978_1am9_AB_3D-footprint_20130124_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m1</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_8nt_m1/peak-motifs_positions_8nt_m1_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  2429_MA0035.1_JASPAR_CORE_2009_, 5095_SigD_2_DBTBS_1.0_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m2</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_8nt_m2/peak-motifs_positions_8nt_m2_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  7524_NFIA+NFIB+NFIC+NFIX_si_HOCOMOCO_v9_, 7282_WRKY45_ArabidopsisPBM_20140210_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m3</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  7458_HXD4_f1_HOCOMOCO_v9_, 6107_1hdd_C_3D-footprint_20130124_, 7341_DLX2_f1_HOCOMOCO_v9_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m4</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_8nt_m4/peak-motifs_positions_8nt_m4_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  2529_MA0163.1_JASPAR_CORE_2009_, 2448_MA0057.1_JASPAR_CORE_2009_, 7511_MZF1_f1_HOCOMOCO_v9_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>positions_8nt_m5</td>
+<td><img border='1' height='50' src='results/discovered_motifs/positions_8nt_m5/peak-motifs_positions_8nt_m5_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  5241_ELF1_full_HumanTF_1.0_, 5801_SPDEF_DBD_1_HumanTF_1.0_, 2542_MA0280.1_JASPAR_CORE_2009_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>dyads_m1</td>
+<td><img border='1' height='50' src='results/discovered_motifs/dyads_m1/peak-motifs_dyads_m1_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  4955_brk_DrosophilaTF_1.1_, 1772_MA0213.1_JASPAR_CORE_2009_, 6287_1qqa_A_3D-footprint_20130124_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>dyads_m2</td>
+<td><img border='1' height='50' src='results/discovered_motifs/dyads_m2/peak-motifs_dyads_m2_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  4955_brk_DrosophilaTF_1.1_, 2843_PF0156.1_JASPAR_CORE_2009_, 2606_MA0368.1_JASPAR_CORE_2009_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>dyads_m3</td>
+<td><img border='1' height='50' src='results/discovered_motifs/dyads_m3/peak-motifs_dyads_m3_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  1785_MA0227.1_JASPAR_CORE_2009_, 1810_MA0252.1_JASPAR_CORE_2009_, 7677_TGIF1_si_HOCOMOCO_v9_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>dyads_m4</td>
+<td><img border='1' height='50' src='results/discovered_motifs/dyads_m4/peak-motifs_dyads_m4_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  1921_PB0060.1_JASPAR_CORE_2009_, 3697_UP00000_UniPROBE_20120919_, 2481_MA0092.1_JASPAR_CORE_2009_, </br></TD>
+</TR>
+
+<tr valign=top>
+<TD>dyads_m5</td>
+<td><img border='1' height='50' src='results/discovered_motifs/dyads_m5/peak-motifs_dyads_m5_logo.png'></td>
+<td><u>versus regulonDB:</u>  no match</br><u>versus footprintDB:</u>  2742_PF0055.1_JASPAR_CORE_2009_, 2533_MA0267.1_JASPAR_CORE_2009_, </br></TD>
+</TR>
+
+</table>
+
+<pre>
+</PRE>
+</BODY></HTML>

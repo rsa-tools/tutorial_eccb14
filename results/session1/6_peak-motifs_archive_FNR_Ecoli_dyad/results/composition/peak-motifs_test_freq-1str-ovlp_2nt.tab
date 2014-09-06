@@ -1,0 +1,26 @@
+; /vh/rsat/rsat/bin/count-words -v 1 -i /vh/rsat/rsat/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/data/sequences/peak-motifs_test_maxlen1000_purged_ml30_mis0.fasta -l 2 -1str 
+; oligomer length              	2
+; column headers
+;    1    seq    oligomer sequence
+;    2    id     oligomer identifier
+;    3    freq   relative frequencies (occurrences per position)
+;    4    occ    occurrences
+#seq	identifier	observed_freq	occ
+aa	aa	0.0839470901434	9050
+ac	ac	0.0569077787878	6135
+ag	ag	0.0515184683598	5554
+at	at	0.0705619353283	7607
+ca	ca	0.0678997458397	7320
+cc	cc	0.0540322431034	5825
+cg	cg	0.0640595143127	6906
+ct	ct	0.0534200322802	5759
+ga	ga	0.0579003023950	6242
+gc	gc	0.0707567296811	7628
+gg	gg	0.0517039867911	5574
+gt	gt	0.0542455892993	5848
+ta	ta	0.0531788583196	5733
+tc	tc	0.0576034729050	6210
+tg	tg	0.0673060868597	7256
+tt	tt	0.0849581655938	9159
+; Job started 2014_09_05.202700
+; Job done    2014_09_05.202700

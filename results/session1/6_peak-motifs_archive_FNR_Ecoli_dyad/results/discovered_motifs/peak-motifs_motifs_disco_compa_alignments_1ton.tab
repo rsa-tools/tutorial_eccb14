@@ -1,0 +1,16 @@
+; One-to-n matrix alignment; reference matrix: dyads_m1_shift0	; 2 matrices	; sort_field=rank_mean
+; dyads_m1; m=0 (reference); ncol1=15; shift=0; ncol=15; wyATCGCCAGCGygg
+; Alignment reference
+a	10	6	28	2	0	1	1	0	32	0	1	2	7	6	5
+c	8	12	2	3	29	0	31	34	1	0	32	0	9	8	8
+g	5	4	3	5	2	33	1	0	0	33	1	29	2	14	16
+t	11	12	1	24	3	0	1	0	1	1	0	3	16	6	5
+//
+; dyads_m1 versus dyads_m2_rc; m=1/1; ncol2=13; w=13; offset=0; strand=R; shift=0; score=      1; kwATCGCCAGGmk--
+; cor=0.802; Ncor=0.695; logoDP=3.149; NIcor=0.070; NsEucl=0.920; SSD=2.185; NSW=0.916; rcor=1; rNcor=1; rlogoDP=1; rNIcor=1; rNsEucl=1; rSSD=1; rNSW=1; rank_mean=1.000; match_rank=1
+a	13	17	50	3	1	3	2	2	47	4	3	21	13	0	0
+c	12	10	0	1	52	0	50	52	3	3	7	16	10	0	0
+g	15	13	2	1	0	52	0	1	1	45	44	11	15	0	0
+t	15	15	3	50	2	0	3	0	4	3	1	7	17	0	0
+//
+;

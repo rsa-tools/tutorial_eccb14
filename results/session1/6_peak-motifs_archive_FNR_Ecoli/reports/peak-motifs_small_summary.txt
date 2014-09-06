@@ -1,0 +1,14 @@
+#Motif	Logo	3 Top hits in databases
+oligos_6nt_mkv3	<img border='1' height='50' src='results/discovered_motifs/oligos_6nt_mkv3/peak-motifs_oligos_6nt_mkv3_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  SPI1, GABPA, </br>
+positions_6nt_m1	<img border='1' height='50' src='results/discovered_motifs/positions_6nt_m1/peak-motifs_positions_6nt_m1_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  TCF7L2, ARID3A, GATA3, </br>
+positions_6nt_m2	<img border='1' height='50' src='results/discovered_motifs/positions_6nt_m2/peak-motifs_positions_6nt_m2_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  MZF1_1-4, MZF1_5-13, SPIB, </br>
+positions_7nt_m1	<img border='1' height='50' src='results/discovered_motifs/positions_7nt_m1/peak-motifs_positions_7nt_m1_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  INSM1, </br>
+positions_7nt_m2	<img border='1' height='50' src='results/discovered_motifs/positions_7nt_m2/peak-motifs_positions_7nt_m2_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  FOXL1, NKX3-1, </br>
+positions_7nt_m3	<img border='1' height='50' src='results/discovered_motifs/positions_7nt_m3/peak-motifs_positions_7nt_m3_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  no match</br>
+positions_7nt_m4	<img border='1' height='50' src='results/discovered_motifs/positions_7nt_m4/peak-motifs_positions_7nt_m4_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  no match</br>
+positions_7nt_m5	<img border='1' height='50' src='results/discovered_motifs/positions_7nt_m5/peak-motifs_positions_7nt_m5_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  ZNF354C, </br>
+positions_8nt_m1	<img border='1' height='50' src='results/discovered_motifs/positions_8nt_m1/peak-motifs_positions_8nt_m1_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  Gata1, </br>
+positions_8nt_m2	<img border='1' height='50' src='results/discovered_motifs/positions_8nt_m2/peak-motifs_positions_8nt_m2_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  no match</br>
+positions_8nt_m3	<img border='1' height='50' src='results/discovered_motifs/positions_8nt_m3/peak-motifs_positions_8nt_m3_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  Prrx2, Nobox, </br>
+positions_8nt_m4	<img border='1' height='50' src='results/discovered_motifs/positions_8nt_m4/peak-motifs_positions_8nt_m4_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  PLAG1, MZF1_5-13, </br>
+positions_8nt_m5	<img border='1' height='50' src='results/discovered_motifs/positions_8nt_m5/peak-motifs_positions_8nt_m5_logo.png'>	<u>versus jaspar_core_vertebrates:</u>  ETS1, </br>

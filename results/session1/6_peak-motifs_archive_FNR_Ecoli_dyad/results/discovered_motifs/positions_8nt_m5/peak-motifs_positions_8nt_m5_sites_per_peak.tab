@@ -1,0 +1,35 @@
+; classfreq  -v 1 -ci 1 -o $RSAT/public_html/tmp/apache/2014/09/05/peak-motifs.2014-09-05.202657_2014-09-05.202657_8OTbPR/results/discovered_motifs/positions_8nt_m5/peak-motifs_positions_8nt_m5_sites_per_peak.tab
+;	min                 	minimum of class interval (inclusive)
+;	max                 	maximum of class interval (exclusive)
+;	center              	center of class interval
+;	n                   	occurrences
+;	n_cum               	cumulative occurrences (inclusive)
+;	n_dcum              	decreasing cumulative occurrences (inclusive)
+;	f                   	frequencies
+;	f_cum               	cumulative frequencies (inclusive)
+;	f_dcum              	decreasing cumulative frequencies (inclusive)
+#[min	max[	center	n	n_cum	n_dcum	f	f_cum	f_dcum
+1	2	1.5	27	27	32	0.84375	0.84375	1.00000
+2	3	2.5	4	31	5	0.12500	0.96875	0.15625
+3	4	3.5	1	32	1	0.03125	1.00000	0.03125
+; Statistics:
+; -----------
+; class interval     	1
+; classes            	3
+; count              	32
+; sum                	38
+; mean               	1.1875
+; median class       	[2..3[
+; var                	0.215
+; std                	0.463512
+; min                	1
+; max                	3
+; range              	2
+; Host name	biow
+; Job started	2014-09-05.205355
+; Job done	2014-09-05.205355
+; Seconds	0.22
+;	user	0.22
+;	system	0.02
+;	cuser	0
+;	csystem	0

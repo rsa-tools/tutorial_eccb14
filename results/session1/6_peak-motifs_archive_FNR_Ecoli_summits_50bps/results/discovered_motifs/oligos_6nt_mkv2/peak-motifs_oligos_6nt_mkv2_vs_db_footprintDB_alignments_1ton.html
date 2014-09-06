@@ -1,0 +1,1847 @@
+<html>
+<head><title>One-to-n alignments</title><style type='text/css'>
+/* Style sheet for the HTML formatting of RSAT results */
+
+/* BODY  */
+body {
+       font-family: Verdana, Helvetica, Arial, sans-serif;
+       font-size: 70%;
+       margin-top: 2px;
+       margin-left: 20px;
+       text-align: justify;
+       background: #ffffff;
+       margin-right: 20px;
+/*       background: #0D73A7 url(images/bullet2-normal.gif) no-repeat 7px 7px;*/
+}
+
+
+/* div for menu */
+
+#Menu_space {
+	margin-top:120px;
+	margin-bottom:300px;
+}
+#Menu_wait {
+	position:absolute;
+	top:120px;
+	left:50%;
+	width:400px;
+	margin-left: -200px;
+	padding:10px;
+	text-align:center;
+	}
+
+#Menu {
+	position:absolute;
+	top:120px;
+	left:50%;
+	width:800px;
+	margin-left: -400px;
+	padding:10px;
+	background-color:#eee;
+	border:1px dashed #999;
+	line-height:17px;
+	font-size: 110%;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	text-align:left;
+	}
+
+#Menu h3 {
+	margin:0;
+	text-align:center;
+	padding-bottom:5px;
+}
+
+#Menu ul {
+	list-style-type:none;
+}
+
+/* TABLE */
+#Menu table {
+	margin: 10px 10px 10px;
+}
+
+#Menu  td, th {
+	font-size: 70%;
+	padding: 2px 10px;
+	vertical-align:top;
+}
+
+.menulink a:link,a:visited {
+	color:#cc6600;
+	background: transparent;
+	text-decoration: none;
+	}
+
+.menulink a:visited {
+	color:#cc6600;
+	background: transparent;
+	text-decoration: none;
+	}
+
+.menulink A:active {
+	color: #cc6600;
+	background: transparent;
+	text-decoration: none
+}
+
+.menulink A:hover {
+	text-decoration: underline;
+	color: #cc6600;
+}
+
+
+/* Links  */
+
+A:link,A:visited {
+	color: #0D73A7;
+	background: transparent;
+	text-decoration: none;
+}
+
+A:active {
+	color: #ff0000;
+	background: transparent;
+	text-decoration: none
+}
+
+A:hover {
+	text-decoration: underline;
+	color: #cc6600;
+}
+
+/* Headers  */
+
+h1 {
+	margin-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	border: 1px solid #2D282E;
+	background-color: #0D73A7;
+	font-size: 16px;
+	color: #D6EEFA;
+}
+h1 a:link, h1 a:visited {
+	color: #D6EEFA;
+}
+
+h1 a:hover {
+	color: #ffffff;
+}
+
+h2 {
+	margin-top: 10px;
+	padding-top: 15px;
+	margin-bottom: 0px;
+	color: #002266;
+	font-size: 15px;
+}
+
+h3 {
+	margin-top: 6px;
+	padding-top: 6px;
+	margin-bottom: 0px;
+	color: #002266;
+	font-size: 11px;
+}
+
+h4 {
+	margin-top: 4px;
+	padding-top: 4px;
+	margin-bottom: 0px;
+	color : #2D282E;
+	font-size: 11px;
+}
+
+h2.motif {
+	margin-top: 3px;
+	padding-top: 0px;
+	margin-bottom: 4px;
+	color : #2D282E;
+	font-size: 12px;
+}
+
+/* Other tag formatting  */
+hr {
+	border: 1px dotted #2D282E;
+	height: 1px;
+}
+
+hr.solid {
+	border: 1px solid #2D282E;
+	height: 1px;
+}
+
+pre,tt {
+         font-size: 12px;
+}
+
+pre { 
+      background:#EEEEEE;
+ }
+
+
+center {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+blockquote {
+	color : #cc6600;
+	font-size: 12px;
+}
+
+body blockquote.information {
+	color : #009900;
+	font-size: 12px;
+}
+
+body blockquote.warning {
+	color : #aa0000;
+	font-size: 12px;
+}
+
+blockquote.demo {
+	color : #000000;
+	font-size: 12px;
+	font-style:italic;
+}
+
+
+
+/* TABLE */
+table.simple {
+	margin: 10px 20px 20px;
+	color: #000000;
+}
+
+table.simple td,table.list th {
+	font-size: 70%;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+}
+
+table.simple th {
+	font-size: 70%;
+	background-color: #F6E6CA;
+}
+
+/* TABLE */
+
+/* table with white bg and small fonts */
+table.whitebg {
+	margin: 10px 20px 20px;
+	color: #000000;
+	border-left: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	border-spacing: 0px;
+}
+
+table.whitebg td,table.whitebg th {
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+}
+
+
+/* table with blue bg and small font */
+table.whitebg th {
+	font-size: 70%;
+	background-color: #F6E6CA;
+}
+
+table.bluebg {
+	color: #333333;
+	border-left: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	}
+
+table.bluebg td,table.bluebg th {
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	background-color: #D6EEFA;
+}
+
+table.bluebg th {
+	background-color: #0D73A7;
+	color: #D6EEFA;
+}
+	
+/* Table on result pages - compatible with the sorttable type defined by javascript */
+
+table.sortable {
+	margin: 10px 20px 20px;
+	color: #000000;
+	border-left: 1px solid #cbcbb4;
+	border-right: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	border-spacing: 0px;
+}
+
+table.sortable td,table.sortable th {
+	padding: 2px 10px;
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+}
+
+table.sortable th {
+	font-size: 70%;
+	background-color: #0D73A7;
+	color: #D6EEFA;
+}
+
+
+/* LINK TABLE ON RESULTS PAGES */
+table.resultlink {
+	margin-left:5px;
+	width : 90%;
+	color: #2D282E;
+	background-color: #D6EEFA;
+}
+
+
+table.resultlink td, table.resultlink th {
+	font-size: 70%;
+	padding-left:5px;
+	padding-right:3px;
+	text-align :left;
+}
+
+/* COLLAPSIBLE MENUS */
+
+.menu_heading_open {
+	background: url(images_html/arrow_box_down.gif) no-repeat 5px 7px;
+	text-decoration: none;
+	padding: 0px 6px 4px 21px;
+	margin: 0;
+	cursor: pointer;
+	font-weight: bold;
+	display: block;
+}
+
+.menu_heading_closed {
+	background: url(images_html/arrow_box.gif) no-repeat 5px 7px;
+	text-decoration: underline; 
+	display: block;
+	padding:0px 6px 4px 21px;
+	margin: 0;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.menu_collapsible {
+	display: none;
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+
+.menu_collapsible_display {
+   display: block;
+   margin-bottom: 10px;
+   margin-left: 30px;
+}
+</style>
+</head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+ <!-- 
+var stIsIE = /*@cc_on!@*/false;
+
+sorttable = {
+  init: function() {
+    // quit if this function has already been called
+    if (arguments.callee.done) return;
+    // flag this function so we don't do the same thing twice
+    arguments.callee.done = true;
+    // kill the timer
+    if (_timer) clearInterval(_timer);
+    
+    if (!document.createElement || !document.getElementsByTagName) return;
+    
+    sorttable.DATE_RE = /^(\d\d?)[\/\.-](\d\d?)[\/\.-]((\d\d)?\d\d)$/;
+    
+    forEach(document.getElementsByTagName('table'), function(table) {
+      if (table.className.search(/\bsortable\b/) != -1) {
+        sorttable.makeSortable(table);
+      }
+    });
+    
+  },
+  
+  makeSortable: function(table) {
+    if (table.getElementsByTagName('thead').length == 0) {
+      // table doesn't have a tHead. Since it should have, create one and
+      // put the first table row in it.
+      the = document.createElement('thead');
+      the.appendChild(table.rows[0]);
+      table.insertBefore(the,table.firstChild);
+    }
+    // Safari doesn't support table.tHead, sigh
+    if (table.tHead == null) table.tHead = table.getElementsByTagName('thead')[0];
+    
+    if (table.tHead.rows.length != 1) return; // can't cope with two header rows
+    
+    // Sorttable v1 put rows with a class of "sortbottom" at the bottom (as
+    // "total" rows, for example). This is B&R, since what you're supposed
+    // to do is put them in a tfoot. So, if there are sortbottom rows,
+    // for backwards compatibility, move them to tfoot (creating it if needed).
+    sortbottomrows = [];
+    for (var i=0; i<table.rows.length; i++) {
+      if (table.rows[i].className.search(/\bsortbottom\b/) != -1) {
+        sortbottomrows[sortbottomrows.length] = table.rows[i];
+      }
+    }
+    if (sortbottomrows) {
+      if (table.tFoot == null) {
+        // table doesn't have a tfoot. Create one.
+        tfo = document.createElement('tfoot');
+        table.appendChild(tfo);
+      }
+      for (var i=0; i<sortbottomrows.length; i++) {
+        tfo.appendChild(sortbottomrows[i]);
+      }
+      delete sortbottomrows;
+    }
+    
+    // work through each column and calculate its type
+    headrow = table.tHead.rows[0].cells;
+    for (var i=0; i<headrow.length; i++) {
+      // manually override the type with a sorttable_type attribute
+      if (!headrow[i].className.match(/\bsorttable_nosort\b/)) { // skip this col
+        mtch = headrow[i].className.match(/\bsorttable_([a-z0-9]+)\b/);
+        if (mtch) { override = mtch[1]; }
+	      if (mtch && typeof sorttable["sort_"+override] == 'function') {
+	        headrow[i].sorttable_sortfunction = sorttable["sort_"+override];
+	      } else {
+	        headrow[i].sorttable_sortfunction = sorttable.guessType(table,i);
+	      }
+	      // make it clickable to sort
+	      headrow[i].sorttable_columnindex = i;
+	      headrow[i].sorttable_tbody = table.tBodies[0];
+	      dean_addEvent(headrow[i],"click", function(e) {
+
+          if (this.className.search(/\bsorttable_sorted\b/) != -1) {
+            // if we're already sorted by this column, just 
+            // reverse the table, which is quicker
+            sorttable.reverse(this.sorttable_tbody);
+            this.className = this.className.replace('sorttable_sorted',
+                                                    'sorttable_sorted_reverse');
+            this.removeChild(document.getElementById('sorttable_sortfwdind'));
+            sortrevind = document.createElement('span');
+            sortrevind.id = "sorttable_sortrevind";
+            sortrevind.innerHTML = stIsIE ? '&nbsp<font face="webdings">5</font>' : '&nbsp;&#x25B4;';
+            this.appendChild(sortrevind);
+            return;
+          }
+          if (this.className.search(/\bsorttable_sorted_reverse\b/) != -1) {
+            // if we're already sorted by this column in reverse, just 
+            // re-reverse the table, which is quicker
+            sorttable.reverse(this.sorttable_tbody);
+            this.className = this.className.replace('sorttable_sorted_reverse',
+                                                    'sorttable_sorted');
+            this.removeChild(document.getElementById('sorttable_sortrevind'));
+            sortfwdind = document.createElement('span');
+            sortfwdind.id = "sorttable_sortfwdind";
+            sortfwdind.innerHTML = stIsIE ? '&nbsp<font face="webdings">6</font>' : '&nbsp;&#x25BE;';
+            this.appendChild(sortfwdind);
+            return;
+          }
+          
+          // remove sorttable_sorted classes
+          theadrow = this.parentNode;
+          forEach(theadrow.childNodes, function(cell) {
+            if (cell.nodeType == 1) { // an element
+              cell.className = cell.className.replace('sorttable_sorted_reverse','');
+              cell.className = cell.className.replace('sorttable_sorted','');
+            }
+          });
+          sortfwdind = document.getElementById('sorttable_sortfwdind');
+          if (sortfwdind) { sortfwdind.parentNode.removeChild(sortfwdind); }
+          sortrevind = document.getElementById('sorttable_sortrevind');
+          if (sortrevind) { sortrevind.parentNode.removeChild(sortrevind); }
+          
+          this.className += ' sorttable_sorted';
+          sortfwdind = document.createElement('span');
+          sortfwdind.id = "sorttable_sortfwdind";
+          sortfwdind.innerHTML = stIsIE ? '&nbsp<font face="webdings">6</font>' : '&nbsp;&#x25BE;';
+          this.appendChild(sortfwdind);
+
+	        // build an array to sort. This is a Schwartzian transform thing,
+	        // i.e., we "decorate" each row with the actual sort key,
+	        // sort based on the sort keys, and then put the rows back in order
+	        // which is a lot faster because you only do getInnerText once per row
+	        row_array = [];
+	        col = this.sorttable_columnindex;
+	        rows = this.sorttable_tbody.rows;
+	        for (var j=0; j<rows.length; j++) {
+	          row_array[row_array.length] = [sorttable.getInnerText(rows[j].cells[col]), rows[j]];
+	        }
+	        /* If you want a stable sort, uncomment the following line */
+	        //sorttable.shaker_sort(row_array, this.sorttable_sortfunction);
+	        /* and comment out this one */
+	        row_array.sort(this.sorttable_sortfunction);
+	        
+	        tb = this.sorttable_tbody;
+	        for (var j=0; j<row_array.length; j++) {
+	          tb.appendChild(row_array[j][1]);
+	        }
+	        
+	        delete row_array;
+	      });
+	    }
+    }
+  },
+  
+  guessType: function(table, column) {
+    // guess the type of a column based on its first non-blank row
+    sortfn = sorttable.sort_alpha;
+    for (var i=0; i<table.tBodies[0].rows.length; i++) {
+      text = sorttable.getInnerText(table.tBodies[0].rows[i].cells[column]);
+      if (text != '') {
+        if (text.match(/^-?[£$¤]?[\d,.]+%?$/)||text.match(/^\d+((\.|,)\d+)?(E|e)(\+|\-)\d+/)) {
+          return sorttable.sort_numeric;
+        }
+        // check for a date: dd/mm/yyyy or dd/mm/yy 
+        // can have / or . or - as separator
+        // can be mm/dd as well
+        possdate = text.match(sorttable.DATE_RE)
+        if (possdate) {
+          // looks like a date
+          first = parseInt(possdate[1]);
+          second = parseInt(possdate[2]);
+          if (first > 12) {
+            // definitely dd/mm
+            return sorttable.sort_ddmm;
+          } else if (second > 12) {
+            return sorttable.sort_mmdd;
+          } else {
+            // looks like a date, but we can't tell which, so assume
+            // that it's dd/mm (English imperialism!) and keep looking
+            sortfn = sorttable.sort_ddmm;
+          }
+        }
+      }
+    }
+    return sortfn;
+  },
+  
+  getInnerText: function(node) {
+    // gets the text we want to use for sorting for a cell.
+    // strips leading and trailing whitespace.
+    // this is *not* a generic getInnerText function; it's special to sorttable.
+    // for example, you can override the cell text with a customkey attribute.
+    // it also gets .value for <input> fields.
+    
+    hasInputs = (typeof node.getElementsByTagName == 'function') &&
+                 node.getElementsByTagName('input').length;
+    
+    if (node.getAttribute("sorttable_customkey") != null) {
+      return node.getAttribute("sorttable_customkey");
+    }
+    else if (typeof node.textContent != 'undefined' && !hasInputs) {
+      return node.textContent.replace(/^\s+|\s+$/g, '');
+    }
+    else if (typeof node.innerText != 'undefined' && !hasInputs) {
+      return node.innerText.replace(/^\s+|\s+$/g, '');
+    }
+    else if (typeof node.text != 'undefined' && !hasInputs) {
+      return node.text.replace(/^\s+|\s+$/g, '');
+    }
+    else {
+      switch (node.nodeType) {
+        case 3:
+          if (node.nodeName.toLowerCase() == 'input') {
+            return node.value.replace(/^\s+|\s+$/g, '');
+          }
+        case 4:
+          return node.nodeValue.replace(/^\s+|\s+$/g, '');
+          break;
+        case 1:
+        case 11:
+          var innerText = '';
+          for (var i = 0; i < node.childNodes.length; i++) {
+            innerText += sorttable.getInnerText(node.childNodes[i]);
+          }
+          return innerText.replace(/^\s+|\s+$/g, '');
+          break;
+        default:
+          return '';
+      }
+    }
+  },
+  
+  reverse: function(tbody) {
+    // reverse the rows in a tbody
+    newrows = [];
+    for (var i=0; i<tbody.rows.length; i++) {
+      newrows[newrows.length] = tbody.rows[i];
+    }
+    for (var i=newrows.length-1; i>=0; i--) {
+       tbody.appendChild(newrows[i]);
+    }
+    delete newrows;
+  },
+  
+  /* sort functions
+     each sort function takes two parameters, a and b
+     you are comparing a[0] and b[0] */
+  /* Numeric order */
+  sort_numeric: function(a,b) {
+	aa = parseFloat(a[0].replace(/[^0-9.\-eE]/g,''));
+	if (isNaN(aa)) aa = 0;
+	bb = parseFloat(b[0].replace(/[^0-9.\-eE]/g,''));
+	if (isNaN(bb)) bb = 0;
+	return aa-bb;
+    },
+//   sort_numeric: function(a,b) {
+//     aa = parseFloat(a[0].replace(/[^0-9.-eE]/g,''));
+//     if (isNaN(aa)) aa = 0;
+//     bb = parseFloat(b[0].replace(/[^0-9.-eE]/g,'')); 
+//     if (isNaN(bb)) bb = 0;    
+//     return aa-bb;
+//   },
+
+  /* alphabetical order */
+  sort_alpha: function(a,b) {
+    if (a[0]==b[0]) return 0;
+    if (a[0]<b[0]) return -1;
+    return 1;
+  },
+
+  /* sort dates formatted as ddmm (day first, month after) */
+  sort_ddmm: function(a,b) {
+    mtch = a[0].match(sorttable.DATE_RE);
+    y = mtch[3]; m = mtch[2]; d = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt1 = y+m+d;
+    mtch = b[0].match(sorttable.DATE_RE);
+    y = mtch[3]; m = mtch[2]; d = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt2 = y+m+d;
+    if (dt1==dt2) return 0;
+    if (dt1<dt2) return -1;
+    return 1;
+  },
+
+  /* sort dates formatted as mmdd (month first, day after) */
+  sort_mmdd: function(a,b) {
+    mtch = a[0].match(sorttable.DATE_RE);
+    y = mtch[3]; d = mtch[2]; m = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt1 = y+m+d;
+    mtch = b[0].match(sorttable.DATE_RE);
+    y = mtch[3]; d = mtch[2]; m = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt2 = y+m+d;
+    if (dt1==dt2) return 0;
+    if (dt1<dt2) return -1;
+    return 1;
+  },
+  
+  shaker_sort: function(list, comp_func) {
+    // A stable sort function to allow multi-level sorting of data
+    // see: http://en.wikipedia.org/wiki/Cocktail_sort
+    // thanks to Joseph Nahmias
+    var b = 0;
+    var t = list.length - 1;
+    var swap = true;
+
+    while(swap) {
+        swap = false;
+        for(var i = b; i < t; ++i) {
+            if ( comp_func(list[i], list[i+1]) > 0 ) {
+                var q = list[i]; list[i] = list[i+1]; list[i+1] = q;
+                swap = true;
+            }
+        } // for
+        t--;
+
+        if (!swap) break;
+
+        for(var i = t; i > b; --i) {
+            if ( comp_func(list[i], list[i-1]) < 0 ) {
+                var q = list[i]; list[i] = list[i-1]; list[i-1] = q;
+                swap = true;
+            }
+        } // for
+        b++;
+
+    } // while(swap)
+  }  
+}
+
+/* ******************************************************************
+   Supporting functions: bundled here to avoid depending on a library
+   ****************************************************************** */
+
+// Dean Edwards/Matthias Miller/John Resig
+
+/* for Mozilla/Opera9 */
+if (document.addEventListener) {
+    document.addEventListener("DOMContentLoaded", sorttable.init, false);
+}
+
+/* for Internet Explorer */
+/*@cc_on @*/
+/*@if (@_win32)
+    document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+    var script = document.getElementById("__ie_onload");
+    script.onreadystatechange = function() {
+        if (this.readyState == "complete") {
+            sorttable.init(); // call the onload handler
+        }
+    };
+/*@end @*/
+
+/* for Safari */
+if (/WebKit/i.test(navigator.userAgent)) { // sniff
+    var _timer = setInterval(function() {
+        if (/loaded|complete/.test(document.readyState)) {
+            sorttable.init(); // call the onload handler
+        }
+    }, 10);
+}
+
+/* for other browsers */
+window.onload = sorttable.init;
+
+// written by Dean Edwards, 2005
+// with input from Tino Zijdel, Matthias Miller, Diego Perini
+
+// http://dean.edwards.name/weblog/2005/10/add-event/
+
+function dean_addEvent(element, type, handler) {
+	if (element.addEventListener) {
+		element.addEventListener(type, handler, false);
+	} else {
+		// assign each event handler a unique ID
+		if (!handler.$$guid) handler.$$guid = dean_addEvent.guid++;
+		// create a hash table of event types for the element
+		if (!element.events) element.events = {};
+		// create a hash table of event handlers for each element/event pair
+		var handlers = element.events[type];
+		if (!handlers) {
+			handlers = element.events[type] = {};
+			// store the existing event handler (if there is one)
+			if (element["on" + type]) {
+				handlers[0] = element["on" + type];
+			}
+		}
+		// store the event handler in the hash table
+		handlers[handler.$$guid] = handler;
+		// assign a global event handler to do all the work
+		element["on" + type] = handleEvent;
+	}
+};
+// a counter used to create unique IDs
+dean_addEvent.guid = 1;
+
+function removeEvent(element, type, handler) {
+	if (element.removeEventListener) {
+		element.removeEventListener(type, handler, false);
+	} else {
+		// delete the event handler from the hash table
+		if (element.events && element.events[type]) {
+			delete element.events[type][handler.$$guid];
+		}
+	}
+};
+
+function handleEvent(event) {
+	var returnValue = true;
+	// grab the event object (IE uses a global event object)
+	event = event || fixEvent(((this.ownerDocument || this.document || this).parentWindow || window).event);
+	// get a reference to the hash table of event handlers
+	var handlers = this.events[event.type];
+	// execute each event handler
+	for (var i in handlers) {
+		this.$$handleEvent = handlers[i];
+		if (this.$$handleEvent(event) === false) {
+			returnValue = false;
+		}
+	}
+	return returnValue;
+};
+
+function fixEvent(event) {
+	// add W3C standard event methods
+	event.preventDefault = fixEvent.preventDefault;
+	event.stopPropagation = fixEvent.stopPropagation;
+	return event;
+};
+fixEvent.preventDefault = function() {
+	this.returnValue = false;
+};
+fixEvent.stopPropagation = function() {
+  this.cancelBubble = true;
+}
+
+// Dean's forEach: http://dean.edwards.name/base/forEach.js
+/*
+	forEach, version 1.0
+	Copyright 2006, Dean Edwards
+	License: http://www.opensource.org/licenses/mit-license.php
+*/
+
+// array-like enumeration
+if (!Array.forEach) { // mozilla already supports this
+	Array.forEach = function(array, block, context) {
+		for (var i = 0; i < array.length; i++) {
+			block.call(context, array[i], i, array);
+		}
+	};
+}
+
+// generic enumeration
+Function.prototype.forEach = function(object, block, context) {
+	for (var key in object) {
+		if (typeof this.prototype[key] == "undefined") {
+			block.call(context, object[key], key, object);
+		}
+	}
+};
+
+// character enumeration
+String.forEach = function(string, block, context) {
+	Array.forEach(string.split(""), function(chr, index) {
+		block.call(context, chr, index, string);
+	});
+};
+
+// globally resolve forEach enumeration
+var forEach = function(object, block, context) {
+	if (object) {
+		var resolve = Object; // default
+		if (object instanceof Function) {
+			// functions have a "length" property
+			resolve = Function;
+		} else if (object.forEach instanceof Function) {
+			// the object implements a custom forEach method so use that
+			object.forEach(block, context);
+			return;
+		} else if (typeof object == "string") {
+			// the object is a string
+			resolve = String;
+		} else if (typeof object.length == "number") {
+			// the object is array-like
+			resolve = Array;
+		}
+		resolve.forEach(object, block, context);
+	}
+}
+
+// --> 
+</script>
+<body>
+<h1>One-to-n alignments</h1>
+<p><pre><b>Command:</b> compare-matrices  -v 1 -mode matches -format1 transfac -file1 $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_motifs/oligos_6nt_mkv2/peak-motifs_oligos_6nt_mkv2.tf -format2 tf -file2 $RSAT/public_html/data/motif_databases/footprintDB/footprintDB.motif.tf -mode matches -DR -uth offset_rank 1 -lth w 5 -lth Wr 0.3 -lth cor 0.75 -lth Ncor 0.4 -return matrix_name,matrix_id,cor,Ncor,logoDP,NIcor,NsEucl,SSD,NSW,match_rank,width,strand,offset,consensus,alignments_1ton -sort Ncor -o $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/discovered_motifs/oligos_6nt_mkv2/peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB
+</pre></p>
+<h2>One-to-n matrix alignment; reference matrix: oligos_6nt_mkv2_shift8	; 36 matrices	; sort_field=rank_mean</h2>
+<p><table class='sortable'>
+<tr><th>Matrix name</th><th>Aligned logos</th><th>cor</th>
+<th>Ncor</th>
+<th>logoDP</th>
+<th>NIcor</th>
+<th>NsEucl</th>
+<th>SSD</th>
+<th>NSW</th>
+<th>rcor</th>
+<th>rNcor</th>
+<th>rlogoDP</th>
+<th>rNIcor</th>
+<th>rNsEucl</th>
+<th>rSSD</th>
+<th>rNSW</th>
+<th>rank_mean</th>
+<th>match_rank</th>
+<th>Aligned matrices</th>
+</tr><tr>
+<td style='background-color: #FFFFFF;'>oligos_6nt_mkv2_shift8 (oligos_6nt_mkv2)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/oligos_6nt_mkv2_shift8.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/oligos_6nt_mkv2_shift8.png'></a></td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;border-right:none'>&nbsp</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2; m=0 (reference); ncol1=11; shift=8; ncol=19; --------taGATCAATrw
+; Alignment reference
+a	0	0	0	0	0	0	0	0	1	2	0	5	0	0	5	5	0	3	2
+c	0	0	0	0	0	0	0	0	1	1	0	0	0	5	0	0	0	0	0
+g	0	0	0	0	0	0	0	0	1	1	5	0	0	0	0	0	0	2	1
+t	0	0	0	0	0	0	0	0	2	1	0	0	5	0	0	0	5	0	2
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>7424_HBP1_f1_HOCOMOCO_v9__shift13 (7424_HBP1_f1_HOCOMOCO_v9_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/7424_HBP1_f1_HOCOMOCO_v9__shift13.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/7424_HBP1_f1_HOCOMOCO_v9__shift13.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.939</td>
+<td style='background-color: #FFFFFF;'>0.433</td>
+<td style='background-color: #FFFFFF;'>6.895</td>
+<td style='background-color: #FFFFFF;'>0.434</td>
+<td style='background-color: #FFFFFF;'>0.925</td>
+<td style='background-color: #FFFFFF;'>0.400</td>
+<td style='background-color: #FFFFFF;'>0.967</td>
+<td style='background-color: #FFFFFF;'>1</td>
+<td style='background-color: #FFFFFF;'>20</td>
+<td style='background-color: #FFFFFF;'>19</td>
+<td style='background-color: #FFFFFF;'>13</td>
+<td style='background-color: #FFFFFF;'>2</td>
+<td style='background-color: #FFFFFF;'>1</td>
+<td style='background-color: #FFFFFF;'>1</td>
+<td style='background-color: #FFFFFF;'>8.143</td>
+<td style='background-color: #FFFFFF;'>1</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 7424_HBP1_f1_HOCOMOCO_v9_; m=1/35; ncol2=8; w=6; offset=5; strand=D; shift=13; score= 8.1429; -------------CAATgr
+; cor=0.939; Ncor=0.433; logoDP=6.895; NIcor=0.434; NsEucl=0.925; SSD=0.400; NSW=0.967; rcor=1; rNcor=20; rlogoDP=19; rNIcor=13; rNsEucl=2; rSSD=1; rNSW=1; rank_mean=8.143; match_rank=1
+a	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5	5	0	1	2
+c	0	0	0	0	0	0	0	0	0	0	0	0	0	4	0	0	0	1	0
+g	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	3	2
+t	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5	0	1
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>6530_3a01_E_3D-footprint_20130124__shift13 (6530_3a01_E_3D-footprint_20130124_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/6530_3a01_E_3D-footprint_20130124__shift13.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/6530_3a01_E_3D-footprint_20130124__shift13.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.896</td>
+<td style='background-color: #FFFFFF;'>0.489</td>
+<td style='background-color: #FFFFFF;'>7.801</td>
+<td style='background-color: #FFFFFF;'>0.504</td>
+<td style='background-color: #FFFFFF;'>0.901</td>
+<td style='background-color: #FFFFFF;'>0.712</td>
+<td style='background-color: #FFFFFF;'>0.941</td>
+<td style='background-color: #FFFFFF;'>6</td>
+<td style='background-color: #FFFFFF;'>13</td>
+<td style='background-color: #FFFFFF;'>11</td>
+<td style='background-color: #FFFFFF;'>10</td>
+<td style='background-color: #FFFFFF;'>15</td>
+<td style='background-color: #FFFFFF;'>3</td>
+<td style='background-color: #FFFFFF;'>6</td>
+<td style='background-color: #FFFFFF;'>9.143</td>
+<td style='background-color: #FFFFFF;'>2</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 6530_3a01_E_3D-footprint_20130124_; m=2/35; ncol2=6; w=6; offset=5; strand=D; shift=13; score= 9.1429; -------------CAATtA
+; cor=0.896; Ncor=0.489; logoDP=7.801; NIcor=0.504; NsEucl=0.901; SSD=0.712; NSW=0.941; rcor=6; rNcor=13; rlogoDP=11; rNIcor=10; rNsEucl=15; rSSD=3; rNSW=6; rank_mean=9.143; match_rank=2
+a	0	0	0	0	0	0	0	0	0	0	0	0	0	0	96	96	0	20	77
+c	0	0	0	0	0	0	0	0	0	0	0	0	0	96	0	0	0	19	0
+g	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	19	19
+t	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	96	38	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>5763_SOX15_full_2_HumanTF_1.0__shift11 (5763_SOX15_full_2_HumanTF_1.0_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5763_SOX15_full_2_HumanTF_1.0__shift11.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5763_SOX15_full_2_HumanTF_1.0__shift11.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.925</td>
+<td style='background-color: #FFFFFF;'>0.411</td>
+<td style='background-color: #FFFFFF;'>10.378</td>
+<td style='background-color: #FFFFFF;'>0.414</td>
+<td style='background-color: #FFFFFF;'>0.924</td>
+<td style='background-color: #FFFFFF;'>0.730</td>
+<td style='background-color: #FFFFFF;'>0.954</td>
+<td style='background-color: #FFFFFF;'>3</td>
+<td style='background-color: #FFFFFF;'>29</td>
+<td style='background-color: #FFFFFF;'>2</td>
+<td style='background-color: #FFFFFF;'>21</td>
+<td style='background-color: #FFFFFF;'>3</td>
+<td style='background-color: #FFFFFF;'>4</td>
+<td style='background-color: #FFFFFF;'>3</td>
+<td style='background-color: #FFFFFF;'>9.286</td>
+<td style='background-color: #FFFFFF;'>3</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 5763_SOX15_full_2_HumanTF_1.0_; m=3/35; ncol2=15; w=8; offset=3; strand=D; shift=11; score= 9.2857; -----------ATCAATAm
+; cor=0.925; Ncor=0.411; logoDP=10.378; NIcor=0.414; NsEucl=0.924; SSD=0.730; NSW=0.954; rcor=3; rNcor=29; rlogoDP=2; rNIcor=21; rNsEucl=3; rSSD=4; rNSW=3; rank_mean=9.286; match_rank=3
+a	0	0	0	0	0	0	0	0	0	0	0	88	0	0	88	88	0	88	88
+c	0	0	0	0	0	0	0	0	0	0	0	28	3	88	0	3	0	0	37
+g	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+t	0	0	0	0	0	0	0	0	0	0	0	3	88	0	0	0	88	5	6
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>2784_PF0097.1_JASPAR_CORE_2009__rc_shift10 (2784_PF0097.1_JASPAR_CORE_2009__rc)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2784_PF0097.1_JASPAR_CORE_2009__rc_shift10.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2784_PF0097.1_JASPAR_CORE_2009__rc_shift10.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.916</td>
+<td style='background-color: #FFFFFF;'>0.666</td>
+<td style='background-color: #FFFFFF;'>7.697</td>
+<td style='background-color: #FFFFFF;'>0.346</td>
+<td style='background-color: #FFFFFF;'>0.917</td>
+<td style='background-color: #FFFFFF;'>0.885</td>
+<td style='background-color: #FFFFFF;'>0.945</td>
+<td style='background-color: #FFFFFF;'>5</td>
+<td style='background-color: #FFFFFF;'>4</td>
+<td style='background-color: #FFFFFF;'>14</td>
+<td style='background-color: #FFFFFF;'>28</td>
+<td style='background-color: #FFFFFF;'>5</td>
+<td style='background-color: #FFFFFF;'>6</td>
+<td style='background-color: #FFFFFF;'>5</td>
+<td style='background-color: #FFFFFF;'>9.571</td>
+<td style='background-color: #FFFFFF;'>4</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 2784_PF0097.1_JASPAR_CORE_2009__rc; m=4/35; ncol2=8; w=8; offset=2; strand=R; shift=10; score= 9.5714; ----------GATrAATr-
+; cor=0.916; Ncor=0.666; logoDP=7.697; NIcor=0.346; NsEucl=0.917; SSD=0.885; NSW=0.945; rcor=5; rNcor=4; rlogoDP=14; rNIcor=28; rNsEucl=5; rSSD=6; rNSW=5; rank_mean=9.571; match_rank=4
+a	0	0	0	0	0	0	0	0	0	0	0	992	0	360	992	992	0	533	0
+c	0	0	0	0	0	0	0	0	0	0	0	0	0	195	0	0	0	0	0
+g	0	0	0	0	0	0	0	0	0	0	992	0	0	259	0	0	0	459	0
+t	0	0	0	0	0	0	0	0	0	0	0	0	992	178	0	0	992	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>5766_SOX18_full_2_HumanTF_1.0__shift11 (5766_SOX18_full_2_HumanTF_1.0_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5766_SOX18_full_2_HumanTF_1.0__shift11.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5766_SOX18_full_2_HumanTF_1.0__shift11.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.921</td>
+<td style='background-color: #FFFFFF;'>0.410</td>
+<td style='background-color: #FFFFFF;'>10.470</td>
+<td style='background-color: #FFFFFF;'>0.424</td>
+<td style='background-color: #FFFFFF;'>0.924</td>
+<td style='background-color: #FFFFFF;'>0.743</td>
+<td style='background-color: #FFFFFF;'>0.954</td>
+<td style='background-color: #FFFFFF;'>4</td>
+<td style='background-color: #FFFFFF;'>32</td>
+<td style='background-color: #FFFFFF;'>1</td>
+<td style='background-color: #FFFFFF;'>17</td>
+<td style='background-color: #FFFFFF;'>4</td>
+<td style='background-color: #FFFFFF;'>5</td>
+<td style='background-color: #FFFFFF;'>4</td>
+<td style='background-color: #FFFFFF;'>9.571</td>
+<td style='background-color: #FFFFFF;'>5</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 5766_SOX18_full_2_HumanTF_1.0_; m=5/35; ncol2=15; w=8; offset=3; strand=D; shift=11; score= 9.5714; -----------ATCAATwk
+; cor=0.921; Ncor=0.410; logoDP=10.470; NIcor=0.424; NsEucl=0.924; SSD=0.743; NSW=0.954; rcor=4; rNcor=32; rlogoDP=1; rNIcor=17; rNsEucl=4; rSSD=5; rNSW=4; rank_mean=9.571; match_rank=5
+a	0	0	0	0	0	0	0	0	0	0	0	298	8	0	298	298	0	96	51
+c	0	0	0	0	0	0	0	0	0	0	0	14	0	298	0	0	0	7	36
+g	0	0	0	0	0	0	0	0	0	0	0	31	0	0	0	0	0	15	132
+t	0	0	0	0	0	0	0	0	0	0	0	6	298	0	0	0	298	180	78
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>5774_SOX2_DBD_3_HumanTF_1.0__shift10 (5774_SOX2_DBD_3_HumanTF_1.0_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5774_SOX2_DBD_3_HumanTF_1.0__shift10.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5774_SOX2_DBD_3_HumanTF_1.0__shift10.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.886</td>
+<td style='background-color: #FFFFFF;'>0.420</td>
+<td style='background-color: #FFFFFF;'>10.258</td>
+<td style='background-color: #FFFFFF;'>0.408</td>
+<td style='background-color: #FFFFFF;'>0.913</td>
+<td style='background-color: #FFFFFF;'>1.212</td>
+<td style='background-color: #FFFFFF;'>0.933</td>
+<td style='background-color: #FFFFFF;'>7</td>
+<td style='background-color: #FFFFFF;'>23</td>
+<td style='background-color: #FFFFFF;'>3</td>
+<td style='background-color: #FFFFFF;'>22</td>
+<td style='background-color: #FFFFFF;'>6</td>
+<td style='background-color: #FFFFFF;'>9</td>
+<td style='background-color: #FFFFFF;'>7</td>
+<td style='background-color: #FFFFFF;'>11.000</td>
+<td style='background-color: #FFFFFF;'>6</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 5774_SOX2_DBD_3_HumanTF_1.0_; m=6/35; ncol2=17; w=9; offset=2; strand=D; shift=10; score=     11; ----------rATCAATGk
+; cor=0.886; Ncor=0.420; logoDP=10.258; NIcor=0.408; NsEucl=0.913; SSD=1.212; NSW=0.933; rcor=7; rNcor=23; rlogoDP=3; rNIcor=22; rNsEucl=6; rSSD=9; rNSW=7; rank_mean=11.000; match_rank=6
+a	0	0	0	0	0	0	0	0	0	0	105	352	7	0	352	352	0	19	49
+c	0	0	0	0	0	0	0	0	0	0	62	17	2	352	0	0	0	0	55
+g	0	0	0	0	0	0	0	0	0	0	131	56	7	0	0	0	0	296	115
+t	0	0	0	0	0	0	0	0	0	0	54	17	352	0	0	0	352	38	132
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>1999_PB0144.1_JASPAR_CORE_2009__shift7 (1999_PB0144.1_JASPAR_CORE_2009_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/1999_PB0144.1_JASPAR_CORE_2009__shift7.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/1999_PB0144.1_JASPAR_CORE_2009__shift7.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.818</td>
+<td style='background-color: #FFFFFF;'>0.562</td>
+<td style='background-color: #FFFFFF;'>7.711</td>
+<td style='background-color: #FFFFFF;'>0.585</td>
+<td style='background-color: #FFFFFF;'>0.911</td>
+<td style='background-color: #FFFFFF;'>1.897</td>
+<td style='background-color: #FFFFFF;'>0.914</td>
+<td style='background-color: #FFFFFF;'>15</td>
+<td style='background-color: #FFFFFF;'>6</td>
+<td style='background-color: #FFFFFF;'>13</td>
+<td style='background-color: #FFFFFF;'>4</td>
+<td style='background-color: #FFFFFF;'>8</td>
+<td style='background-color: #FFFFFF;'>20</td>
+<td style='background-color: #FFFFFF;'>12</td>
+<td style='background-color: #FFFFFF;'>11.143</td>
+<td style='background-color: #FFFFFF;'>7</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 1999_PB0144.1_JASPAR_CORE_2009_; m=7/35; ncol2=16; w=11; offset=-1; strand=D; shift=7; score=11.1429; -------swrsATCAATCr
+; cor=0.818; Ncor=0.562; logoDP=7.711; NIcor=0.585; NsEucl=0.911; SSD=1.897; NSW=0.914; rcor=15; rNcor=6; rlogoDP=13; rNIcor=4; rNsEucl=8; rSSD=20; rNSW=12; rank_mean=11.143; match_rank=7
+a	0	0	0	0	0	0	0	23	44	42	17	81	4	2	94	93	3	11	68
+c	0	0	0	0	0	0	0	27	8	14	34	2	1	90	1	1	2	71	2
+g	0	0	0	0	0	0	0	39	23	32	39	1	1	4	1	4	5	1	28
+t	0	0	0	0	0	0	0	11	25	12	10	16	94	4	4	2	91	17	3
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>5829_Sox3_DBD_2_HumanTF_1.0__shift10 (5829_Sox3_DBD_2_HumanTF_1.0_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5829_Sox3_DBD_2_HumanTF_1.0__shift10.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5829_Sox3_DBD_2_HumanTF_1.0__shift10.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.884</td>
+<td style='background-color: #FFFFFF;'>0.419</td>
+<td style='background-color: #FFFFFF;'>10.178</td>
+<td style='background-color: #FFFFFF;'>0.419</td>
+<td style='background-color: #FFFFFF;'>0.913</td>
+<td style='background-color: #FFFFFF;'>1.236</td>
+<td style='background-color: #FFFFFF;'>0.931</td>
+<td style='background-color: #FFFFFF;'>8</td>
+<td style='background-color: #FFFFFF;'>24</td>
+<td style='background-color: #FFFFFF;'>4</td>
+<td style='background-color: #FFFFFF;'>18</td>
+<td style='background-color: #FFFFFF;'>7</td>
+<td style='background-color: #FFFFFF;'>10</td>
+<td style='background-color: #FFFFFF;'>8</td>
+<td style='background-color: #FFFFFF;'>11.286</td>
+<td style='background-color: #FFFFFF;'>8</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 5829_Sox3_DBD_2_HumanTF_1.0_; m=8/35; ncol2=17; w=9; offset=2; strand=D; shift=10; score=11.2857; ----------sATCAATGt
+; cor=0.884; Ncor=0.419; logoDP=10.178; NIcor=0.419; NsEucl=0.913; SSD=1.236; NSW=0.931; rcor=8; rNcor=24; rlogoDP=4; rNIcor=18; rNsEucl=7; rSSD=10; rNSW=8; rank_mean=11.286; match_rank=8
+a	0	0	0	0	0	0	0	0	0	0	113	1477	54	0	1477	1477	0	0	103
+c	0	0	0	0	0	0	0	0	0	0	459	96	1	1477	0	0	1	0	226
+g	0	0	0	0	0	0	0	0	0	0	623	197	7	2	1	1	0	1116	352
+t	0	0	0	0	0	0	0	0	0	0	282	98	1477	10	0	0	1477	361	796
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>5048_ZmHOX2a_2__Athamap_20091028__rc_shift8 (5048_ZmHOX2a_2__Athamap_20091028__rc)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5048_ZmHOX2a_2__Athamap_20091028__rc_shift8.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5048_ZmHOX2a_2__Athamap_20091028__rc_shift8.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.926</td>
+<td style='background-color: #FFFFFF;'>0.589</td>
+<td style='background-color: #FFFFFF;'>0.139</td>
+<td style='background-color: #FFFFFF;'>-0.157</td>
+<td style='background-color: #FFFFFF;'>0.926</td>
+<td style='background-color: #FFFFFF;'>0.543</td>
+<td style='background-color: #FFFFFF;'>0.961</td>
+<td style='background-color: #FFFFFF;'>2</td>
+<td style='background-color: #FFFFFF;'>5</td>
+<td style='background-color: #FFFFFF;'>34</td>
+<td style='background-color: #FFFFFF;'>33</td>
+<td style='background-color: #FFFFFF;'>1</td>
+<td style='background-color: #FFFFFF;'>2</td>
+<td style='background-color: #FFFFFF;'>2</td>
+<td style='background-color: #FFFFFF;'>11.286</td>
+<td style='background-color: #FFFFFF;'>9</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 5048_ZmHOX2a_2__Athamap_20091028__rc; m=9/35; ncol2=7; w=7; offset=0; strand=R; shift=8; score=11.2857; --------cmGATCa----
+; cor=0.926; Ncor=0.589; logoDP=0.139; NIcor=-0.157; NsEucl=0.926; SSD=0.543; NSW=0.961; rcor=2; rNcor=5; rlogoDP=34; rNIcor=33; rNsEucl=1; rSSD=2; rNSW=2; rank_mean=11.286; match_rank=9
+a	0	0	0	0	0	0	0	0	6	16	0	27	0	0	15	0	0	0	0
+c	0	0	0	0	0	0	0	0	14	7	0	0	0	27	5	0	0	0	0
+g	0	0	0	0	0	0	0	0	4	4	27	0	0	0	2	0	0	0	0
+t	0	0	0	0	0	0	0	0	3	0	0	0	27	0	5	0	0	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>2042_PB0188.1_JASPAR_CORE_2009__shift7 (2042_PB0188.1_JASPAR_CORE_2009_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2042_PB0188.1_JASPAR_CORE_2009__shift7.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2042_PB0188.1_JASPAR_CORE_2009__shift7.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.814</td>
+<td style='background-color: #FFFFFF;'>0.559</td>
+<td style='background-color: #FFFFFF;'>7.045</td>
+<td style='background-color: #FFFFFF;'>0.586</td>
+<td style='background-color: #FFFFFF;'>0.911</td>
+<td style='background-color: #FFFFFF;'>1.923</td>
+<td style='background-color: #FFFFFF;'>0.913</td>
+<td style='background-color: #FFFFFF;'>16</td>
+<td style='background-color: #FFFFFF;'>7</td>
+<td style='background-color: #FFFFFF;'>18</td>
+<td style='background-color: #FFFFFF;'>3</td>
+<td style='background-color: #FFFFFF;'>9</td>
+<td style='background-color: #FFFFFF;'>21</td>
+<td style='background-color: #FFFFFF;'>13</td>
+<td style='background-color: #FFFFFF;'>12.429</td>
+<td style='background-color: #FFFFFF;'>10</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 2042_PB0188.1_JASPAR_CORE_2009_; m=10/35; ncol2=16; w=11; offset=-1; strand=D; shift=7; score=12.4286; -------sdrsWTCAATCr
+; cor=0.814; Ncor=0.559; logoDP=7.045; NIcor=0.586; NsEucl=0.911; SSD=1.923; NSW=0.913; rcor=16; rNcor=7; rlogoDP=18; rNIcor=3; rNsEucl=9; rSSD=21; rNSW=13; rank_mean=12.429; match_rank=10
+a	0	0	0	0	0	0	0	22	34	40	24	70	5	2	93	93	3	12	59
+c	0	0	0	0	0	0	0	30	5	16	26	3	2	85	1	1	2	69	2
+g	0	0	0	0	0	0	0	37	34	35	39	1	1	6	1	3	5	1	36
+t	0	0	0	0	0	0	0	12	27	10	10	26	92	7	5	2	90	18	4
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>5197_CUX1_DBD_3_HumanTF_1.0__shift9 (5197_CUX1_DBD_3_HumanTF_1.0_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5197_CUX1_DBD_3_HumanTF_1.0__shift9.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5197_CUX1_DBD_3_HumanTF_1.0__shift9.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.792</td>
+<td style='background-color: #FFFFFF;'>0.720</td>
+<td style='background-color: #FFFFFF;'>9.238</td>
+<td style='background-color: #FFFFFF;'>0.710</td>
+<td style='background-color: #FFFFFF;'>0.896</td>
+<td style='background-color: #FFFFFF;'>2.148</td>
+<td style='background-color: #FFFFFF;'>0.893</td>
+<td style='background-color: #FFFFFF;'>20</td>
+<td style='background-color: #FFFFFF;'>1</td>
+<td style='background-color: #FFFFFF;'>6</td>
+<td style='background-color: #FFFFFF;'>1</td>
+<td style='background-color: #FFFFFF;'>18</td>
+<td style='background-color: #FFFFFF;'>28</td>
+<td style='background-color: #FFFFFF;'>21</td>
+<td style='background-color: #FFFFFF;'>13.571</td>
+<td style='background-color: #FFFFFF;'>11</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 5197_CUX1_DBD_3_HumanTF_1.0_; m=11/35; ncol2=10; w=10; offset=1; strand=D; shift=9; score=13.5714; ---------TrATCrATam
+; cor=0.792; Ncor=0.720; logoDP=9.238; NIcor=0.710; NsEucl=0.896; SSD=2.148; NSW=0.893; rcor=20; rNcor=1; rlogoDP=6; rNIcor=1; rNsEucl=18; rSSD=28; rNSW=21; rank_mean=13.571; match_rank=11
+a	0	0	0	0	0	0	0	0	0	4099	25659	25659	71	51	9580	25659	150	25659	8168
+c	0	0	0	0	0	0	0	0	0	4649	3296	109	294	25659	264	45	95	9420	7633
+g	0	0	0	0	0	0	0	0	0	2401	15550	192	77	53	16079	85	29	7560	3958
+t	0	0	0	0	0	0	0	0	0	25659	7605	167	25659	595	130	231	25659	7079	5900
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>5776_SOX2_full_2_HumanTF_1.0__rc_shift10 (5776_SOX2_full_2_HumanTF_1.0__rc)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5776_SOX2_full_2_HumanTF_1.0__rc_shift10.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5776_SOX2_full_2_HumanTF_1.0__rc_shift10.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.870</td>
+<td style='background-color: #FFFFFF;'>0.412</td>
+<td style='background-color: #FFFFFF;'>9.016</td>
+<td style='background-color: #FFFFFF;'>0.406</td>
+<td style='background-color: #FFFFFF;'>0.907</td>
+<td style='background-color: #FFFFFF;'>1.399</td>
+<td style='background-color: #FFFFFF;'>0.922</td>
+<td style='background-color: #FFFFFF;'>9</td>
+<td style='background-color: #FFFFFF;'>28</td>
+<td style='background-color: #FFFFFF;'>7</td>
+<td style='background-color: #FFFFFF;'>23</td>
+<td style='background-color: #FFFFFF;'>10</td>
+<td style='background-color: #FFFFFF;'>13</td>
+<td style='background-color: #FFFFFF;'>9</td>
+<td style='background-color: #FFFFFF;'>14.143</td>
+<td style='background-color: #FFFFFF;'>12</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 5776_SOX2_full_2_HumanTF_1.0__rc; m=12/35; ncol2=17; w=9; offset=2; strand=R; shift=10; score=14.1429; ----------kATCAATGk
+; cor=0.870; Ncor=0.412; logoDP=9.016; NIcor=0.406; NsEucl=0.907; SSD=1.399; NSW=0.922; rcor=9; rNcor=28; rlogoDP=7; rNIcor=23; rNsEucl=10; rSSD=13; rNSW=9; rank_mean=14.143; match_rank=12
+a	0	0	0	0	0	0	0	0	0	0	17	85	1	0	85	85	0	4	11
+c	0	0	0	0	0	0	0	0	0	0	3	4	0	85	0	0	0	0	14
+g	0	0	0	0	0	0	0	0	0	0	29	6	0	0	0	0	0	85	25
+t	0	0	0	0	0	0	0	0	0	0	36	1	85	0	0	0	85	0	35
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>2653_MA0434.1_JASPAR_CORE_2009__shift6 (2653_MA0434.1_JASPAR_CORE_2009_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2653_MA0434.1_JASPAR_CORE_2009__shift6.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2653_MA0434.1_JASPAR_CORE_2009__shift6.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.845</td>
+<td style='background-color: #FFFFFF;'>0.455</td>
+<td style='background-color: #FFFFFF;'>6.405</td>
+<td style='background-color: #FFFFFF;'>0.438</td>
+<td style='background-color: #FFFFFF;'>0.894</td>
+<td style='background-color: #FFFFFF;'>1.100</td>
+<td style='background-color: #FFFFFF;'>0.921</td>
+<td style='background-color: #FFFFFF;'>13</td>
+<td style='background-color: #FFFFFF;'>16</td>
+<td style='background-color: #FFFFFF;'>22</td>
+<td style='background-color: #FFFFFF;'>12</td>
+<td style='background-color: #FFFFFF;'>19</td>
+<td style='background-color: #FFFFFF;'>8</td>
+<td style='background-color: #FFFFFF;'>10</td>
+<td style='background-color: #FFFFFF;'>14.286</td>
+<td style='background-color: #FFFFFF;'>13</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 2653_MA0434.1_JASPAR_CORE_2009_; m=13/35; ncol2=9; w=7; offset=-2; strand=D; shift=6; score=14.2857; ------yGymrATCm----
+; cor=0.845; Ncor=0.455; logoDP=6.405; NIcor=0.438; NsEucl=0.894; SSD=1.100; NSW=0.921; rcor=13; rNcor=16; rlogoDP=22; rNIcor=12; rNsEucl=19; rSSD=8; rNSW=10; rank_mean=14.286; match_rank=13
+a	0	0	0	0	0	0	11	0	9	63	40	100	0	0	36	0	0	0	0
+c	0	0	0	0	0	0	36	0	26	26	0	0	0	100	30	0	0	0	0
+g	0	0	0	0	0	0	11	100	0	0	60	0	0	0	17	0	0	0	0
+t	0	0	0	0	0	0	41	0	65	11	0	0	100	0	17	0	0	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>5199_CUX2_DBD_2_HumanTF_1.0__shift9 (5199_CUX2_DBD_2_HumanTF_1.0_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5199_CUX2_DBD_2_HumanTF_1.0__shift9.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5199_CUX2_DBD_2_HumanTF_1.0__shift9.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.768</td>
+<td style='background-color: #FFFFFF;'>0.698</td>
+<td style='background-color: #FFFFFF;'>8.936</td>
+<td style='background-color: #FFFFFF;'>0.681</td>
+<td style='background-color: #FFFFFF;'>0.890</td>
+<td style='background-color: #FFFFFF;'>2.407</td>
+<td style='background-color: #FFFFFF;'>0.880</td>
+<td style='background-color: #FFFFFF;'>26</td>
+<td style='background-color: #FFFFFF;'>2</td>
+<td style='background-color: #FFFFFF;'>8</td>
+<td style='background-color: #FFFFFF;'>2</td>
+<td style='background-color: #FFFFFF;'>21</td>
+<td style='background-color: #FFFFFF;'>33</td>
+<td style='background-color: #FFFFFF;'>27</td>
+<td style='background-color: #FFFFFF;'>17.000</td>
+<td style='background-color: #FFFFFF;'>14</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 5199_CUX2_DBD_2_HumanTF_1.0_; m=14/35; ncol2=10; w=10; offset=1; strand=D; shift=9; score=     17; ---------TrATCRATaa
+; cor=0.768; Ncor=0.698; logoDP=8.936; NIcor=0.681; NsEucl=0.890; SSD=2.407; NSW=0.880; rcor=26; rNcor=2; rlogoDP=8; rNIcor=2; rNsEucl=21; rSSD=33; rNSW=27; rank_mean=17.000; match_rank=14
+a	0	0	0	0	0	0	0	0	0	8111	45569	45569	479	74	13767	45569	396	45569	19809
+c	0	0	0	0	0	0	0	0	0	4573	5067	250	1841	45569	208	69	278	11730	9534
+g	0	0	0	0	0	0	0	0	0	4247	23534	540	485	94	31803	163	66	7587	5056
+t	0	0	0	0	0	0	0	0	0	45569	12191	345	45569	736	395	191	45569	12097	11171
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>1000_UP00185_UniPROBE_20120919__shift5 (1000_UP00185_UniPROBE_20120919_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/1000_UP00185_UniPROBE_20120919__shift5.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/1000_UP00185_UniPROBE_20120919__shift5.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.780</td>
+<td style='background-color: #FFFFFF;'>0.505</td>
+<td style='background-color: #FFFFFF;'>6.380</td>
+<td style='background-color: #FFFFFF;'>0.516</td>
+<td style='background-color: #FFFFFF;'>0.904</td>
+<td style='background-color: #FFFFFF;'>2.227</td>
+<td style='background-color: #FFFFFF;'>0.899</td>
+<td style='background-color: #FFFFFF;'>21</td>
+<td style='background-color: #FFFFFF;'>10</td>
+<td style='background-color: #FFFFFF;'>23</td>
+<td style='background-color: #FFFFFF;'>8</td>
+<td style='background-color: #FFFFFF;'>13</td>
+<td style='background-color: #FFFFFF;'>29</td>
+<td style='background-color: #FFFFFF;'>18</td>
+<td style='background-color: #FFFFFF;'>17.429</td>
+<td style='background-color: #FFFFFF;'>15</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 1000_UP00185_UniPROBE_20120919_; m=15/35; ncol2=17; w=11; offset=-3; strand=D; shift=5; score=17.4286; -----yyaymCATCAAwmw
+; cor=0.780; Ncor=0.505; logoDP=6.380; NIcor=0.516; NsEucl=0.904; SSD=2.227; NSW=0.899; rcor=21; rNcor=10; rlogoDP=23; rNIcor=8; rNsEucl=13; rSSD=29; rNSW=18; rank_mean=17.429; match_rank=15
+a	0	0	0	0	0	21	6	59	12	37	11	86	3	3	93	74	31	32	39
+c	0	0	0	0	0	28	50	4	40	39	73	2	1	95	3	6	5	32	14
+g	0	0	0	0	0	15	15	14	9	11	9	7	1	1	2	3	6	15	9
+t	0	0	0	0	0	36	29	23	39	13	7	5	95	1	2	17	58	21	38
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>2984_PH0134.1_JASPAR_CORE_2009__shift5 (2984_PH0134.1_JASPAR_CORE_2009_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2984_PH0134.1_JASPAR_CORE_2009__shift5.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2984_PH0134.1_JASPAR_CORE_2009__shift5.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.780</td>
+<td style='background-color: #FFFFFF;'>0.505</td>
+<td style='background-color: #FFFFFF;'>6.380</td>
+<td style='background-color: #FFFFFF;'>0.516</td>
+<td style='background-color: #FFFFFF;'>0.904</td>
+<td style='background-color: #FFFFFF;'>2.227</td>
+<td style='background-color: #FFFFFF;'>0.899</td>
+<td style='background-color: #FFFFFF;'>21</td>
+<td style='background-color: #FFFFFF;'>10</td>
+<td style='background-color: #FFFFFF;'>23</td>
+<td style='background-color: #FFFFFF;'>8</td>
+<td style='background-color: #FFFFFF;'>13</td>
+<td style='background-color: #FFFFFF;'>29</td>
+<td style='background-color: #FFFFFF;'>18</td>
+<td style='background-color: #FFFFFF;'>17.429</td>
+<td style='background-color: #FFFFFF;'>16</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 2984_PH0134.1_JASPAR_CORE_2009_; m=16/35; ncol2=17; w=11; offset=-3; strand=D; shift=5; score=17.4286; -----yyaymCATCAAwmw
+; cor=0.780; Ncor=0.505; logoDP=6.380; NIcor=0.516; NsEucl=0.904; SSD=2.227; NSW=0.899; rcor=21; rNcor=10; rlogoDP=23; rNIcor=8; rNsEucl=13; rSSD=29; rNSW=18; rank_mean=17.429; match_rank=16
+a	0	0	0	0	0	21	6	59	12	37	11	86	3	3	93	74	31	32	39
+c	0	0	0	0	0	28	49	3	40	39	73	2	1	95	3	6	5	32	14
+g	0	0	0	0	0	15	15	14	9	11	9	7	1	1	2	3	6	15	9
+t	0	0	0	0	0	36	29	23	39	13	7	5	95	1	2	17	58	21	38
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>5195_CUX1_DBD_1_HumanTF_1.0__shift0 (5195_CUX1_DBD_1_HumanTF_1.0_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5195_CUX1_DBD_1_HumanTF_1.0__shift0.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/5195_CUX1_DBD_1_HumanTF_1.0__shift0.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.854</td>
+<td style='background-color: #FFFFFF;'>0.405</td>
+<td style='background-color: #FFFFFF;'>7.521</td>
+<td style='background-color: #FFFFFF;'>0.397</td>
+<td style='background-color: #FFFFFF;'>0.905</td>
+<td style='background-color: #FFFFFF;'>1.447</td>
+<td style='background-color: #FFFFFF;'>0.920</td>
+<td style='background-color: #FFFFFF;'>11</td>
+<td style='background-color: #FFFFFF;'>34</td>
+<td style='background-color: #FFFFFF;'>16</td>
+<td style='background-color: #FFFFFF;'>25</td>
+<td style='background-color: #FFFFFF;'>12</td>
+<td style='background-color: #FFFFFF;'>15</td>
+<td style='background-color: #FFFFFF;'>11</td>
+<td style='background-color: #FFFFFF;'>17.714</td>
+<td style='background-color: #FFFFFF;'>17</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 5195_CUX1_DBD_1_HumanTF_1.0_; m=17/35; ncol2=17; w=9; offset=-8; strand=D; shift=0; score=17.7143; ATCrATmmstrATCrAT--
+; cor=0.854; Ncor=0.405; logoDP=7.521; NIcor=0.397; NsEucl=0.905; SSD=1.447; NSW=0.920; rcor=11; rNcor=34; rlogoDP=16; rNIcor=25; rNsEucl=12; rSSD=15; rNSW=11; rank_mean=17.714; match_rank=17
+a	18540	327	448	5977	18540	1598	7788	7150	4224	3402	6466	18540	245	353	7775	18540	1425	0	0
+c	217	549	18540	268	196	565	4732	5224	6088	3307	1417	217	338	18540	308	198	414	0	0
+g	645	252	307	12562	221	195	2182	3370	4885	3606	6842	639	184	235	10764	246	165	0	0
+t	948	18540	1083	219	332	18540	3837	2796	3344	8224	3814	793	18540	371	196	478	18540	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>2329_CN0166.1_JASPAR_CORE_2009__shift2 (2329_CN0166.1_JASPAR_CORE_2009_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2329_CN0166.1_JASPAR_CORE_2009__shift2.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2329_CN0166.1_JASPAR_CORE_2009__shift2.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.850</td>
+<td style='background-color: #FFFFFF;'>0.400</td>
+<td style='background-color: #FFFFFF;'>8.262</td>
+<td style='background-color: #FFFFFF;'>0.376</td>
+<td style='background-color: #FFFFFF;'>0.894</td>
+<td style='background-color: #FFFFFF;'>1.446</td>
+<td style='background-color: #FFFFFF;'>0.910</td>
+<td style='background-color: #FFFFFF;'>12</td>
+<td style='background-color: #FFFFFF;'>35</td>
+<td style='background-color: #FFFFFF;'>9</td>
+<td style='background-color: #FFFFFF;'>27</td>
+<td style='background-color: #FFFFFF;'>20</td>
+<td style='background-color: #FFFFFF;'>14</td>
+<td style='background-color: #FFFFFF;'>14</td>
+<td style='background-color: #FFFFFF;'>18.714</td>
+<td style='background-color: #FFFFFF;'>18</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 2329_CN0166.1_JASPAR_CORE_2009_; m=18/35; ncol2=14; w=8; offset=-6; strand=D; shift=2; score=18.7143; --CATGCTGAGATCAA---
+; cor=0.850; Ncor=0.400; logoDP=8.262; NIcor=0.376; NsEucl=0.894; SSD=1.446; NSW=0.910; rcor=12; rNcor=35; rlogoDP=9; rNIcor=27; rNsEucl=20; rSSD=14; rNSW=14; rank_mean=18.714; match_rank=18
+a	0	0	2	42	2	2	0	0	0	48	1	41	2	3	49	47	0	0	0
+c	0	0	46	5	0	1	49	0	0	0	0	5	2	40	0	0	0	0	0
+g	0	0	0	0	1	45	0	0	49	1	48	0	2	6	0	0	0	0	0
+t	0	0	1	2	46	1	0	49	0	0	0	3	43	0	0	2	0	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>6138_1j5n_A_3D-footprint_20130124__shift11 (6138_1j5n_A_3D-footprint_20130124_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/6138_1j5n_A_3D-footprint_20130124__shift11.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/6138_1j5n_A_3D-footprint_20130124__shift11.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.773</td>
+<td style='background-color: #FFFFFF;'>0.492</td>
+<td style='background-color: #FFFFFF;'>9.628</td>
+<td style='background-color: #FFFFFF;'>0.518</td>
+<td style='background-color: #FFFFFF;'>0.855</td>
+<td style='background-color: #FFFFFF;'>2.048</td>
+<td style='background-color: #FFFFFF;'>0.854</td>
+<td style='background-color: #FFFFFF;'>24</td>
+<td style='background-color: #FFFFFF;'>12</td>
+<td style='background-color: #FFFFFF;'>5</td>
+<td style='background-color: #FFFFFF;'>7</td>
+<td style='background-color: #FFFFFF;'>31</td>
+<td style='background-color: #FFFFFF;'>25</td>
+<td style='background-color: #FFFFFF;'>31</td>
+<td style='background-color: #FFFFFF;'>19.286</td>
+<td style='background-color: #FFFFFF;'>19</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 6138_1j5n_A_3D-footprint_20130124_; m=19/35; ncol2=7; w=7; offset=3; strand=D; shift=11; score=19.2857; -----------AACAATc-
+; cor=0.773; Ncor=0.492; logoDP=9.628; NIcor=0.518; NsEucl=0.855; SSD=2.048; NSW=0.854; rcor=24; rNcor=12; rlogoDP=5; rNIcor=7; rNsEucl=31; rSSD=25; rNSW=31; rank_mean=19.286; match_rank=19
+a	0	0	0	0	0	0	0	0	0	0	0	96	76	0	96	96	0	19	0
+c	0	0	0	0	0	0	0	0	0	0	0	0	0	96	0	0	0	38	0
+g	0	0	0	0	0	0	0	0	0	0	0	0	19	0	0	0	0	19	0
+t	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	96	20	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>3788_UP00091_UniPROBE_20120919__shift6 (3788_UP00091_UniPROBE_20120919_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/3788_UP00091_UniPROBE_20120919__shift6.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/3788_UP00091_UniPROBE_20120919__shift6.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.753</td>
+<td style='background-color: #FFFFFF;'>0.517</td>
+<td style='background-color: #FFFFFF;'>7.714</td>
+<td style='background-color: #FFFFFF;'>0.528</td>
+<td style='background-color: #FFFFFF;'>0.897</td>
+<td style='background-color: #FFFFFF;'>2.556</td>
+<td style='background-color: #FFFFFF;'>0.884</td>
+<td style='background-color: #FFFFFF;'>32</td>
+<td style='background-color: #FFFFFF;'>8</td>
+<td style='background-color: #FFFFFF;'>12</td>
+<td style='background-color: #FFFFFF;'>5</td>
+<td style='background-color: #FFFFFF;'>17</td>
+<td style='background-color: #FFFFFF;'>35</td>
+<td style='background-color: #FFFFFF;'>26</td>
+<td style='background-color: #FFFFFF;'>19.286</td>
+<td style='background-color: #FFFFFF;'>20</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 3788_UP00091_UniPROBE_20120919_; m=20/35; ncol2=16; w=11; offset=-2; strand=D; shift=6; score=19.2857; ------wwdrgAACAATwa
+; cor=0.753; Ncor=0.517; logoDP=7.714; NIcor=0.528; NsEucl=0.897; SSD=2.556; NSW=0.884; rcor=32; rNcor=8; rlogoDP=12; rNIcor=5; rNsEucl=17; rSSD=35; rNSW=26; rank_mean=19.286; match_rank=20
+a	0	0	0	0	0	0	31	26	26	45	15	83	0.98	1	0.97	0.97	0.03	49	45
+c	0	0	0	0	0	0	13	20	12	9	9	3	0	93	0	0	0.01	2	10
+g	0	0	0	0	0	0	17	14	26	29	63	13	0.01	1	0.01	0.01	0	8	24
+t	0	0	0	0	0	0	39	40	36	17	13	1	0.01	5	0.02	0.01	0.95	41	21
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>2682_PB0072.1_JASPAR_CORE_2009__shift6 (2682_PB0072.1_JASPAR_CORE_2009_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2682_PB0072.1_JASPAR_CORE_2009__shift6.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2682_PB0072.1_JASPAR_CORE_2009__shift6.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.753</td>
+<td style='background-color: #FFFFFF;'>0.517</td>
+<td style='background-color: #FFFFFF;'>7.665</td>
+<td style='background-color: #FFFFFF;'>0.527</td>
+<td style='background-color: #FFFFFF;'>0.897</td>
+<td style='background-color: #FFFFFF;'>2.555</td>
+<td style='background-color: #FFFFFF;'>0.884</td>
+<td style='background-color: #FFFFFF;'>33</td>
+<td style='background-color: #FFFFFF;'>9</td>
+<td style='background-color: #FFFFFF;'>15</td>
+<td style='background-color: #FFFFFF;'>6</td>
+<td style='background-color: #FFFFFF;'>16</td>
+<td style='background-color: #FFFFFF;'>34</td>
+<td style='background-color: #FFFFFF;'>25</td>
+<td style='background-color: #FFFFFF;'>19.714</td>
+<td style='background-color: #FFFFFF;'>21</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 2682_PB0072.1_JASPAR_CORE_2009_; m=21/35; ncol2=16; w=11; offset=-2; strand=D; shift=6; score=19.7143; ------wwdrgAACAATwa
+; cor=0.753; Ncor=0.517; logoDP=7.665; NIcor=0.527; NsEucl=0.897; SSD=2.555; NSW=0.884; rcor=33; rNcor=9; rlogoDP=15; rNIcor=6; rNsEucl=16; rSSD=34; rNSW=25; rank_mean=19.714; match_rank=21
+a	0	0	0	0	0	0	31	26	26	45	15	83	98	1	97	97	3	49	45
+c	0	0	0	0	0	0	13	20	12	9	9	3	0	94	0	0	1	2	10
+g	0	0	0	0	0	0	17	15	26	29	63	13	1	1	1	1	0	9	24
+t	0	0	0	0	0	0	39	40	36	17	13	2	1	5	2	1	95	41	20
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>7440_HNF6_f1_HOCOMOCO_v9__rc_shift6 (7440_HNF6_f1_HOCOMOCO_v9__rc)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/7440_HNF6_f1_HOCOMOCO_v9__rc_shift6.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/7440_HNF6_f1_HOCOMOCO_v9__rc_shift6.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.805</td>
+<td style='background-color: #FFFFFF;'>0.681</td>
+<td style='background-color: #FFFFFF;'>0.872</td>
+<td style='background-color: #FFFFFF;'>-0.173</td>
+<td style='background-color: #FFFFFF;'>0.907</td>
+<td style='background-color: #FFFFFF;'>2.093</td>
+<td style='background-color: #FFFFFF;'>0.905</td>
+<td style='background-color: #FFFFFF;'>17</td>
+<td style='background-color: #FFFFFF;'>3</td>
+<td style='background-color: #FFFFFF;'>30</td>
+<td style='background-color: #FFFFFF;'>35</td>
+<td style='background-color: #FFFFFF;'>11</td>
+<td style='background-color: #FFFFFF;'>26</td>
+<td style='background-color: #FFFFFF;'>16</td>
+<td style='background-color: #FFFFFF;'>19.714</td>
+<td style='background-color: #FFFFFF;'>22</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 7440_HNF6_f1_HOCOMOCO_v9__rc; m=22/35; ncol2=13; w=11; offset=-2; strand=R; shift=6; score=19.7143; ------whwaARTCAATAw
+; cor=0.805; Ncor=0.681; logoDP=0.872; NIcor=-0.173; NsEucl=0.907; SSD=2.093; NSW=0.905; rcor=17; rNcor=3; rlogoDP=30; rNIcor=35; rNsEucl=11; rSSD=26; rNSW=16; rank_mean=19.714; match_rank=22
+a	0	0	0	0	0	0	9	9	11	16	19	17	0	0	20	24	0	17	13
+c	0	0	0	0	0	0	3	7	2	0	2	0	1	24	3	0	0	1	0
+g	0	0	0	0	0	0	5	2	3	3	1	7	0	0	1	0	0	4	4
+t	0	0	0	0	0	0	7	6	8	5	2	0	23	0	0	0	24	2	7
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>7627_SOX10_si_HOCOMOCO_v9__shift13 (7627_SOX10_si_HOCOMOCO_v9_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/7627_SOX10_si_HOCOMOCO_v9__shift13.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/7627_SOX10_si_HOCOMOCO_v9__shift13.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.801</td>
+<td style='background-color: #FFFFFF;'>0.437</td>
+<td style='background-color: #FFFFFF;'>5.845</td>
+<td style='background-color: #FFFFFF;'>0.418</td>
+<td style='background-color: #FFFFFF;'>0.867</td>
+<td style='background-color: #FFFFFF;'>1.269</td>
+<td style='background-color: #FFFFFF;'>0.894</td>
+<td style='background-color: #FFFFFF;'>19</td>
+<td style='background-color: #FFFFFF;'>19</td>
+<td style='background-color: #FFFFFF;'>27</td>
+<td style='background-color: #FFFFFF;'>19</td>
+<td style='background-color: #FFFFFF;'>28</td>
+<td style='background-color: #FFFFFF;'>11</td>
+<td style='background-color: #FFFFFF;'>20</td>
+<td style='background-color: #FFFFFF;'>20.429</td>
+<td style='background-color: #FFFFFF;'>23</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 7627_SOX10_si_HOCOMOCO_v9_; m=23/35; ncol2=6; w=6; offset=5; strand=D; shift=13; score=20.4286; -------------CAAwGr
+; cor=0.801; Ncor=0.437; logoDP=5.845; NIcor=0.418; NsEucl=0.867; SSD=1.269; NSW=0.894; rcor=19; rNcor=19; rlogoDP=27; rNIcor=19; rNsEucl=28; rSSD=11; rNSW=20; rank_mean=20.429; match_rank=23
+a	0	0	0	0	0	0	0	0	0	0	0	0	0	0	32	31	15	2	13
+c	0	0	0	0	0	0	0	0	0	0	0	0	0	31	0	0	0	0	7
+g	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	29	10
+t	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	1	14	1	2
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>6753_6gat_A_3D-footprint_20130124__shift9 (6753_6gat_A_3D-footprint_20130124_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/6753_6gat_A_3D-footprint_20130124__shift9.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/6753_6gat_A_3D-footprint_20130124__shift9.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.803</td>
+<td style='background-color: #FFFFFF;'>0.438</td>
+<td style='background-color: #FFFFFF;'>4.707</td>
+<td style='background-color: #FFFFFF;'>0.416</td>
+<td style='background-color: #FFFFFF;'>0.863</td>
+<td style='background-color: #FFFFFF;'>1.346</td>
+<td style='background-color: #FFFFFF;'>0.888</td>
+<td style='background-color: #FFFFFF;'>18</td>
+<td style='background-color: #FFFFFF;'>18</td>
+<td style='background-color: #FFFFFF;'>28</td>
+<td style='background-color: #FFFFFF;'>20</td>
+<td style='background-color: #FFFFFF;'>29</td>
+<td style='background-color: #FFFFFF;'>12</td>
+<td style='background-color: #FFFFFF;'>23</td>
+<td style='background-color: #FFFFFF;'>21.143</td>
+<td style='background-color: #FFFFFF;'>24</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 6753_6gat_A_3D-footprint_20130124_; m=24/35; ncol2=6; w=6; offset=1; strand=D; shift=9; score=21.1429; ---------CnATCA----
+; cor=0.803; Ncor=0.438; logoDP=4.707; NIcor=0.416; NsEucl=0.863; SSD=1.346; NSW=0.888; rcor=18; rNcor=18; rlogoDP=28; rNIcor=20; rNsEucl=29; rSSD=12; rNSW=23; rank_mean=21.143; match_rank=24
+a	0	0	0	0	0	0	0	0	0	11	24	67	9	0	96	0	0	0	0
+c	0	0	0	0	0	0	0	0	0	67	24	9	11	96	0	0	0	0	0
+g	0	0	0	0	0	0	0	0	0	9	24	11	9	0	0	0	0	0	0
+t	0	0	0	0	0	0	0	0	0	9	24	9	67	0	0	0	0	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>3061_FNR_RegulonDB_7.5__rc_shift2 (3061_FNR_RegulonDB_7.5__rc)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/3061_FNR_RegulonDB_7.5__rc_shift2.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/3061_FNR_RegulonDB_7.5__rc_shift2.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.863</td>
+<td style='background-color: #FFFFFF;'>0.406</td>
+<td style='background-color: #FFFFFF;'>6.281</td>
+<td style='background-color: #FFFFFF;'>0.405</td>
+<td style='background-color: #FFFFFF;'>0.889</td>
+<td style='background-color: #FFFFFF;'>1.568</td>
+<td style='background-color: #FFFFFF;'>0.902</td>
+<td style='background-color: #FFFFFF;'>10</td>
+<td style='background-color: #FFFFFF;'>33</td>
+<td style='background-color: #FFFFFF;'>26</td>
+<td style='background-color: #FFFFFF;'>24</td>
+<td style='background-color: #FFFFFF;'>22</td>
+<td style='background-color: #FFFFFF;'>17</td>
+<td style='background-color: #FFFFFF;'>17</td>
+<td style='background-color: #FFFFFF;'>21.286</td>
+<td style='background-color: #FFFFFF;'>25</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 3061_FNR_RegulonDB_7.5__rc; m=25/35; ncol2=14; w=8; offset=-6; strand=R; shift=2; score=21.2857; --TTGATrtwrAtCAa---
+; cor=0.863; Ncor=0.406; logoDP=6.281; NIcor=0.405; NsEucl=0.889; SSD=1.568; NSW=0.902; rcor=10; rNcor=33; rlogoDP=26; rNIcor=24; rNsEucl=22; rSSD=17; rNSW=17; rank_mean=21.286; match_rank=25
+a	0	0	2	2	6	79	6	29	12	29	35	57	14	2	64	48	0	0	0
+c	0	0	0	0	5	0	11	11	11	16	3	13	8	58	6	10	0	0	0
+g	0	0	8	1	72	0	0	23	12	10	28	3	14	10	8	8	0	0	0
+t	0	0	73	80	0	4	66	20	48	28	17	10	47	13	5	17	0	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>1741_MA0182.1_JASPAR_CORE_2009__rc_shift13 (1741_MA0182.1_JASPAR_CORE_2009__rc)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/1741_MA0182.1_JASPAR_CORE_2009__rc_shift13.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/1741_MA0182.1_JASPAR_CORE_2009__rc_shift13.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.826</td>
+<td style='background-color: #FFFFFF;'>0.413</td>
+<td style='background-color: #FFFFFF;'>0.779</td>
+<td style='background-color: #FFFFFF;'>-0.103</td>
+<td style='background-color: #FFFFFF;'>0.877</td>
+<td style='background-color: #FFFFFF;'>1.096</td>
+<td style='background-color: #FFFFFF;'>0.909</td>
+<td style='background-color: #FFFFFF;'>14</td>
+<td style='background-color: #FFFFFF;'>27</td>
+<td style='background-color: #FFFFFF;'>32</td>
+<td style='background-color: #FFFFFF;'>31</td>
+<td style='background-color: #FFFFFF;'>25</td>
+<td style='background-color: #FFFFFF;'>7</td>
+<td style='background-color: #FFFFFF;'>15</td>
+<td style='background-color: #FFFFFF;'>21.571</td>
+<td style='background-color: #FFFFFF;'>26</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 1741_MA0182.1_JASPAR_CORE_2009__rc; m=26/35; ncol2=7; w=6; offset=5; strand=R; shift=13; score=21.5714; -------------yAATwA
+; cor=0.826; Ncor=0.413; logoDP=0.779; NIcor=-0.103; NsEucl=0.877; SSD=1.096; NSW=0.909; rcor=14; rNcor=27; rlogoDP=32; rNIcor=31; rNsEucl=25; rSSD=7; rNSW=15; rank_mean=21.571; match_rank=26
+a	0	0	0	0	0	0	0	0	0	0	0	0	0	0	24	30	0	17	22
+c	0	0	0	0	0	0	0	0	0	0	0	0	0	15	6	0	0	0	0
+g	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1
+t	0	0	0	0	0	0	0	0	0	0	0	0	0	15	0	0	30	13	7
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>7634_SOX5_f1_HOCOMOCO_v9__shift11 (7634_SOX5_f1_HOCOMOCO_v9_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/7634_SOX5_f1_HOCOMOCO_v9__shift11.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/7634_SOX5_f1_HOCOMOCO_v9__shift11.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.767</td>
+<td style='background-color: #FFFFFF;'>0.488</td>
+<td style='background-color: #FFFFFF;'>6.350</td>
+<td style='background-color: #FFFFFF;'>0.491</td>
+<td style='background-color: #FFFFFF;'>0.857</td>
+<td style='background-color: #FFFFFF;'>2.004</td>
+<td style='background-color: #FFFFFF;'>0.857</td>
+<td style='background-color: #FFFFFF;'>27</td>
+<td style='background-color: #FFFFFF;'>14</td>
+<td style='background-color: #FFFFFF;'>25</td>
+<td style='background-color: #FFFFFF;'>11</td>
+<td style='background-color: #FFFFFF;'>30</td>
+<td style='background-color: #FFFFFF;'>24</td>
+<td style='background-color: #FFFFFF;'>30</td>
+<td style='background-color: #FFFFFF;'>23.000</td>
+<td style='background-color: #FFFFFF;'>27</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 7634_SOX5_f1_HOCOMOCO_v9_; m=27/35; ncol2=7; w=7; offset=3; strand=D; shift=11; score=     23; -----------AACAATr-
+; cor=0.767; Ncor=0.488; logoDP=6.350; NIcor=0.491; NsEucl=0.857; SSD=2.004; NSW=0.857; rcor=27; rNcor=14; rlogoDP=25; rNIcor=11; rNsEucl=30; rSSD=24; rNSW=30; rank_mean=23.000; match_rank=27
+a	0	0	0	0	0	0	0	0	0	0	0	61	64	2	67	62	5	27	0
+c	0	0	0	0	0	0	0	0	0	0	0	1	0	62	0	5	4	11	0
+g	0	0	0	0	0	0	0	0	0	0	0	3	4	2	1	2	0	22	0
+t	0	0	0	0	0	0	0	0	0	0	0	4	1	3	1	0	60	9	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>3893_UP00198_UniPROBE_20120919__shift3 (3893_UP00198_UniPROBE_20120919_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/3893_UP00198_UniPROBE_20120919__shift3.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/3893_UP00198_UniPROBE_20120919__shift3.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.761</td>
+<td style='background-color: #FFFFFF;'>0.428</td>
+<td style='background-color: #FFFFFF;'>6.819</td>
+<td style='background-color: #FFFFFF;'>0.429</td>
+<td style='background-color: #FFFFFF;'>0.882</td>
+<td style='background-color: #FFFFFF;'>2.237</td>
+<td style='background-color: #FFFFFF;'>0.876</td>
+<td style='background-color: #FFFFFF;'>28</td>
+<td style='background-color: #FFFFFF;'>21</td>
+<td style='background-color: #FFFFFF;'>20</td>
+<td style='background-color: #FFFFFF;'>15</td>
+<td style='background-color: #FFFFFF;'>23</td>
+<td style='background-color: #FFFFFF;'>31</td>
+<td style='background-color: #FFFFFF;'>28</td>
+<td style='background-color: #FFFFFF;'>23.714</td>
+<td style='background-color: #FFFFFF;'>28</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 3893_UP00198_UniPROBE_20120919_; m=28/35; ncol2=14; w=9; offset=-5; strand=D; shift=3; score=23.7143; ---rTGATssmATCAaw--
+; cor=0.761; Ncor=0.428; logoDP=6.819; NIcor=0.429; NsEucl=0.882; SSD=2.237; NSW=0.876; rcor=28; rNcor=21; rlogoDP=20; rNIcor=15; rNsEucl=23; rSSD=31; rNSW=28; rank_mean=23.714; match_rank=28
+a	0	0	0	34	0.03	4	98	0.04	10	22	54	95	0.01	0	95	61	36	0	0
+c	0	0	0	18	0	2	1	0	37	28	34	3	0.01	0.97	1	14	21	0	0
+g	0	0	0	26	0	93	1	0.06	29	35	8	1	0	0	1	15	10	0	0
+t	0	0	0	22	0.96	1	0	0.90	24	15	4	1	0.99	0.02	3	10	33	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>2872_PH0014.1_JASPAR_CORE_2009__shift3 (2872_PH0014.1_JASPAR_CORE_2009_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2872_PH0014.1_JASPAR_CORE_2009__shift3.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2872_PH0014.1_JASPAR_CORE_2009__shift3.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.761</td>
+<td style='background-color: #FFFFFF;'>0.428</td>
+<td style='background-color: #FFFFFF;'>6.819</td>
+<td style='background-color: #FFFFFF;'>0.429</td>
+<td style='background-color: #FFFFFF;'>0.882</td>
+<td style='background-color: #FFFFFF;'>2.237</td>
+<td style='background-color: #FFFFFF;'>0.876</td>
+<td style='background-color: #FFFFFF;'>28</td>
+<td style='background-color: #FFFFFF;'>21</td>
+<td style='background-color: #FFFFFF;'>20</td>
+<td style='background-color: #FFFFFF;'>15</td>
+<td style='background-color: #FFFFFF;'>23</td>
+<td style='background-color: #FFFFFF;'>31</td>
+<td style='background-color: #FFFFFF;'>28</td>
+<td style='background-color: #FFFFFF;'>23.714</td>
+<td style='background-color: #FFFFFF;'>29</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 2872_PH0014.1_JASPAR_CORE_2009_; m=29/35; ncol2=14; w=9; offset=-5; strand=D; shift=3; score=23.7143; ---rTGATssmATCAaw--
+; cor=0.761; Ncor=0.428; logoDP=6.819; NIcor=0.429; NsEucl=0.882; SSD=2.237; NSW=0.876; rcor=28; rNcor=21; rlogoDP=20; rNIcor=15; rNsEucl=23; rSSD=31; rNSW=28; rank_mean=23.714; match_rank=29
+a	0	0	0	34	3	4	98	4	10	22	54	95	1	0	95	61	36	0	0
+c	0	0	0	18	0	2	1	0	37	28	34	3	1	97	1	14	21	0	0
+g	0	0	0	26	0	93	1	6	29	35	8	1	0	0	1	15	10	0	0
+t	0	0	0	22	96	1	1	90	24	15	4	1	99	2	3	10	33	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>2619_MA0389.1_JASPAR_CORE_2009__rc_shift7 (2619_MA0389.1_JASPAR_CORE_2009__rc)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2619_MA0389.1_JASPAR_CORE_2009__rc_shift7.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2619_MA0389.1_JASPAR_CORE_2009__rc_shift7.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.771</td>
+<td style='background-color: #FFFFFF;'>0.450</td>
+<td style='background-color: #FFFFFF;'>0.785</td>
+<td style='background-color: #FFFFFF;'>-0.004</td>
+<td style='background-color: #FFFFFF;'>0.872</td>
+<td style='background-color: #FFFFFF;'>1.616</td>
+<td style='background-color: #FFFFFF;'>0.885</td>
+<td style='background-color: #FFFFFF;'>25</td>
+<td style='background-color: #FFFFFF;'>17</td>
+<td style='background-color: #FFFFFF;'>31</td>
+<td style='background-color: #FFFFFF;'>30</td>
+<td style='background-color: #FFFFFF;'>27</td>
+<td style='background-color: #FFFFFF;'>18</td>
+<td style='background-color: #FFFFFF;'>24</td>
+<td style='background-color: #FFFFFF;'>24.571</td>
+<td style='background-color: #FFFFFF;'>30</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 2619_MA0389.1_JASPAR_CORE_2009__rc; m=30/35; ncol2=8; w=7; offset=-1; strand=R; shift=7; score=24.5714; -------gkAGATCt----
+; cor=0.771; Ncor=0.450; logoDP=0.785; NIcor=-0.004; NsEucl=0.872; SSD=1.616; NSW=0.885; rcor=25; rNcor=17; rlogoDP=31; rNIcor=30; rNsEucl=27; rSSD=18; rNSW=24; rank_mean=24.571; match_rank=30
+a	0	0	0	0	0	0	0	16	11	74	0	85	3	2	6	0	0	0	0
+c	0	0	0	0	0	0	0	18	13	3	0	2	0	90	19	0	0	0	0
+g	0	0	0	0	0	0	0	42	30	19	99	0	0	2	9	0	0	0	0
+t	0	0	0	0	0	0	0	24	46	4	0	13	97	6	66	0	0	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>2559_MA0301.1_JASPAR_CORE_2009__rc_shift6 (2559_MA0301.1_JASPAR_CORE_2009__rc)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2559_MA0301.1_JASPAR_CORE_2009__rc_shift6.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2559_MA0301.1_JASPAR_CORE_2009__rc_shift6.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.776</td>
+<td style='background-color: #FFFFFF;'>0.418</td>
+<td style='background-color: #FFFFFF;'>0.126</td>
+<td style='background-color: #FFFFFF;'>-0.106</td>
+<td style='background-color: #FFFFFF;'>0.874</td>
+<td style='background-color: #FFFFFF;'>1.545</td>
+<td style='background-color: #FFFFFF;'>0.890</td>
+<td style='background-color: #FFFFFF;'>23</td>
+<td style='background-color: #FFFFFF;'>25</td>
+<td style='background-color: #FFFFFF;'>35</td>
+<td style='background-color: #FFFFFF;'>32</td>
+<td style='background-color: #FFFFFF;'>26</td>
+<td style='background-color: #FFFFFF;'>16</td>
+<td style='background-color: #FFFFFF;'>22</td>
+<td style='background-color: #FFFFFF;'>25.571</td>
+<td style='background-color: #FFFFFF;'>31</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 2559_MA0301.1_JASPAR_CORE_2009__rc; m=31/35; ncol2=9; w=7; offset=-2; strand=R; shift=6; score=25.5714; ------kktrGATCt----
+; cor=0.776; Ncor=0.418; logoDP=0.126; NIcor=-0.106; NsEucl=0.874; SSD=1.545; NSW=0.890; rcor=23; rNcor=25; rlogoDP=35; rNIcor=32; rNsEucl=26; rSSD=16; rNSW=22; rank_mean=25.571; match_rank=31
+a	0	0	0	0	0	0	21	17	12	63	2	87	8	1	6	0	0	0	0
+c	0	0	0	0	0	0	21	21	18	4	1	1	0	88	20	0	0	0	0
+g	0	0	0	0	0	0	25	33	19	27	94	0	0	2	9	0	0	0	0
+t	0	0	0	0	0	0	32	28	51	6	3	12	92	8	65	0	0	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>7604_RARG_f1_HOCOMOCO_v9__shift9 (7604_RARG_f1_HOCOMOCO_v9_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/7604_RARG_f1_HOCOMOCO_v9__shift9.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/7604_RARG_f1_HOCOMOCO_v9__shift9.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.752</td>
+<td style='background-color: #FFFFFF;'>0.410</td>
+<td style='background-color: #FFFFFF;'>7.248</td>
+<td style='background-color: #FFFFFF;'>0.429</td>
+<td style='background-color: #FFFFFF;'>0.840</td>
+<td style='background-color: #FFFFFF;'>1.845</td>
+<td style='background-color: #FFFFFF;'>0.846</td>
+<td style='background-color: #FFFFFF;'>34</td>
+<td style='background-color: #FFFFFF;'>30</td>
+<td style='background-color: #FFFFFF;'>17</td>
+<td style='background-color: #FFFFFF;'>14</td>
+<td style='background-color: #FFFFFF;'>33</td>
+<td style='background-color: #FFFFFF;'>19</td>
+<td style='background-color: #FFFFFF;'>33</td>
+<td style='background-color: #FFFFFF;'>25.714</td>
+<td style='background-color: #FFFFFF;'>32</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 7604_RARG_f1_HOCOMOCO_v9_; m=32/35; ncol2=6; w=6; offset=1; strand=D; shift=9; score=25.7143; ---------AGKTCA----
+; cor=0.752; Ncor=0.410; logoDP=7.248; NIcor=0.429; NsEucl=0.840; SSD=1.845; NSW=0.846; rcor=34; rNcor=30; rlogoDP=17; rNIcor=14; rNsEucl=33; rSSD=19; rNSW=33; rank_mean=25.714; match_rank=32
+a	0	0	0	0	0	0	0	0	0	23	0	0	0	0	27	0	0	0	0
+c	0	0	0	0	0	0	0	0	0	0	0	0	0	29	2	0	0	0	0
+g	0	0	0	0	0	0	0	0	0	6	29	21	0	0	0	0	0	0	0
+t	0	0	0	0	0	0	0	0	0	0	0	8	29	0	0	0	0	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>2526_MA0151.1_JASPAR_CORE_2009__shift11 (2526_MA0151.1_JASPAR_CORE_2009_)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2526_MA0151.1_JASPAR_CORE_2009__shift11.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2526_MA0151.1_JASPAR_CORE_2009__shift11.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.758</td>
+<td style='background-color: #FFFFFF;'>0.414</td>
+<td style='background-color: #FFFFFF;'>8.186</td>
+<td style='background-color: #FFFFFF;'>0.386</td>
+<td style='background-color: #FFFFFF;'>0.833</td>
+<td style='background-color: #FFFFFF;'>1.997</td>
+<td style='background-color: #FFFFFF;'>0.834</td>
+<td style='background-color: #FFFFFF;'>31</td>
+<td style='background-color: #FFFFFF;'>26</td>
+<td style='background-color: #FFFFFF;'>10</td>
+<td style='background-color: #FFFFFF;'>26</td>
+<td style='background-color: #FFFFFF;'>35</td>
+<td style='background-color: #FFFFFF;'>23</td>
+<td style='background-color: #FFFFFF;'>35</td>
+<td style='background-color: #FFFFFF;'>26.571</td>
+<td style='background-color: #FFFFFF;'>33</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 2526_MA0151.1_JASPAR_CORE_2009_; m=33/35; ncol2=6; w=6; offset=3; strand=D; shift=11; score=26.5714; -----------ATyAAA--
+; cor=0.758; Ncor=0.414; logoDP=8.186; NIcor=0.386; NsEucl=0.833; SSD=1.997; NSW=0.834; rcor=31; rNcor=26; rlogoDP=10; rNIcor=26; rNsEucl=35; rSSD=23; rNSW=35; rank_mean=26.571; match_rank=33
+a	0	0	0	0	0	0	0	0	0	0	0	27	0	1	27	27	20	0	0
+c	0	0	0	0	0	0	0	0	0	0	0	0	0	9	0	0	0	0	0
+g	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0
+t	0	0	0	0	0	0	0	0	0	0	0	0	27	17	0	0	6	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>1793_MA0235.1_JASPAR_CORE_2009__rc_shift9 (1793_MA0235.1_JASPAR_CORE_2009__rc)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/1793_MA0235.1_JASPAR_CORE_2009__rc_shift9.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/1793_MA0235.1_JASPAR_CORE_2009__rc_shift9.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.759</td>
+<td style='background-color: #FFFFFF;'>0.483</td>
+<td style='background-color: #FFFFFF;'>0.148</td>
+<td style='background-color: #FFFFFF;'>-0.170</td>
+<td style='background-color: #FFFFFF;'>0.853</td>
+<td style='background-color: #FFFFFF;'>2.124</td>
+<td style='background-color: #FFFFFF;'>0.848</td>
+<td style='background-color: #FFFFFF;'>30</td>
+<td style='background-color: #FFFFFF;'>15</td>
+<td style='background-color: #FFFFFF;'>33</td>
+<td style='background-color: #FFFFFF;'>34</td>
+<td style='background-color: #FFFFFF;'>32</td>
+<td style='background-color: #FFFFFF;'>27</td>
+<td style='background-color: #FFFFFF;'>32</td>
+<td style='background-color: #FFFFFF;'>29.000</td>
+<td style='background-color: #FFFFFF;'>34</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 1793_MA0235.1_JASPAR_CORE_2009__rc; m=34/35; ncol2=7; w=7; offset=1; strand=R; shift=9; score=     29; ---------hAATCAA---
+; cor=0.759; Ncor=0.483; logoDP=0.148; NIcor=-0.170; NsEucl=0.853; SSD=2.124; NSW=0.848; rcor=30; rNcor=15; rlogoDP=33; rNIcor=34; rNsEucl=32; rSSD=27; rNSW=32; rank_mean=29.000; match_rank=34
+a	0	0	0	0	0	0	0	0	0	6	15	15	0	0	15	12	0	0	0
+c	0	0	0	0	0	0	0	0	0	4	0	0	0	15	0	0	0	0	0
+g	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0
+t	0	0	0	0	0	0	0	0	0	5	0	0	15	0	0	1	0	0	0
+</pre></td>
+</tr>
+<tr>
+<td style='background-color: #FFFFFF;'>2670_MF0011.1_JASPAR_CORE_2009__rc_shift11 (2670_MF0011.1_JASPAR_CORE_2009__rc)</td>
+<td style='background-color: #FFFFFF;'><a href='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2670_MF0011.1_JASPAR_CORE_2009__rc_shift11.png'><img border=0 src='peak-motifs_oligos_6nt_mkv2_vs_db_footprintDB_aligned_logos/2670_MF0011.1_JASPAR_CORE_2009__rc_shift11.png'></a></td>
+<td style='background-color: #FFFFFF;'>0.751</td>
+<td style='background-color: #FFFFFF;'>0.410</td>
+<td style='background-color: #FFFFFF;'>1.677</td>
+<td style='background-color: #FFFFFF;'>0.106</td>
+<td style='background-color: #FFFFFF;'>0.834</td>
+<td style='background-color: #FFFFFF;'>1.984</td>
+<td style='background-color: #FFFFFF;'>0.835</td>
+<td style='background-color: #FFFFFF;'>35</td>
+<td style='background-color: #FFFFFF;'>31</td>
+<td style='background-color: #FFFFFF;'>29</td>
+<td style='background-color: #FFFFFF;'>29</td>
+<td style='background-color: #FFFFFF;'>34</td>
+<td style='background-color: #FFFFFF;'>22</td>
+<td style='background-color: #FFFFFF;'>34</td>
+<td style='background-color: #FFFFFF;'>30.571</td>
+<td style='background-color: #FFFFFF;'>35</td>
+<td style='background-color: #FFFFFF;'><pre>; oligos_6nt_mkv2 versus 2670_MF0011.1_JASPAR_CORE_2009__rc; m=35/35; ncol2=6; w=6; offset=3; strand=R; shift=11; score=30.5714; -----------aACAAw--
+; cor=0.751; Ncor=0.410; logoDP=1.677; NIcor=0.106; NsEucl=0.834; SSD=1.984; NSW=0.835; rcor=35; rNcor=31; rlogoDP=29; rNIcor=29; rNsEucl=34; rSSD=22; rNSW=34; rank_mean=30.571; match_rank=35
+a	0	0	0	0	0	0	0	0	0	0	0	61.71	76.2	7.53	92.51	77.94	30.58	0	0
+c	0	0	0	0	0	0	0	0	0	0	0	10.7	3.14	74.53	0.92	14.03	0	0	0
+g	0	0	0	0	0	0	0	0	0	0	0	17.54	8.38	6.65	4.96	6.34	9	0	0
+t	0	0	0	0	0	0	0	0	0	0	0	10.05	12.28	11.29	1.61	1.68	60.43	0	0
+</pre></td>
+</tr>
+</table></p>
+</body></html>

@@ -1,0 +1,46 @@
+; compare-scores -v 1 -i $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2/peak-motifs_oligos-2str-noov_6nt_mkv2.tab -sc1 8 -suppress $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2/ -i $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/positions_6nt/peak-motifs_positions-2str-noov_6nt_ci50.tab -sc2 9 -suppress $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/positions_6nt/ -i $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_7nt_mkv2/peak-motifs_oligos-2str-noov_7nt_mkv2.tab -sc3 8 -suppress $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_7nt_mkv2/ -i $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/positions_7nt/peak-motifs_positions-2str-noov_7nt_ci50.tab -sc4 9 -suppress $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/positions_7nt/ -i $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_8nt_mkv2/peak-motifs_oligos-2str-noov_8nt_mkv2.tab -sc5 8 -suppress $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_8nt_mkv2/ -i $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/positions_8nt/peak-motifs_positions-2str-noov_8nt_ci50.tab -sc6 9 -suppress $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/positions_8nt/ -i $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/dyads/peak-motifs_dyads-2str-noov_3nt_sp0-20_bg_monads.tab -sc7 8 -suppress $RSAT/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/dyads/ -ic 1 -lc -null . -suppress peak-motifs_ -suppress .tab
+;Input files :
+;	nb	id_col	sc_col	file_name
+;	1	1	8	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_6nt_mkv2/peak-motifs_oligos-2str-noov_6nt_mkv2.tab
+;	2	1	9	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/positions_6nt/peak-motifs_positions-2str-noov_6nt_ci50.tab
+;	3	1	8	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_7nt_mkv2/peak-motifs_oligos-2str-noov_7nt_mkv2.tab
+;	4	1	9	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/positions_7nt/peak-motifs_positions-2str-noov_7nt_ci50.tab
+;	5	1	8	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/oligos_8nt_mkv2/peak-motifs_oligos-2str-noov_8nt_mkv2.tab
+;	6	1	9	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/positions_8nt/peak-motifs_positions-2str-noov_8nt_ci50.tab
+;	7	1	8	/vh/rsat/rsat/public_html/tmp/apache/2014/09/06/peak-motifs.2014-09-06.011249_2014-09-06.011249_H1RYPN/results/dyads/peak-motifs_dyads-2str-noov_3nt_sp0-20_bg_monads.tab
+; Host name	biow
+; Job started	2014-09-06.011343
+; Job done	2014-09-06.011343
+; Seconds	0.22
+;	user	0.22
+;	system	0.02
+;	cuser	0
+;	csystem	0
+##key	min	max	sum	avg	oligos-2str-noov_6nt_mkv2	oligos-2str-noov_7nt_mkv2	oligos-2str-noov_8nt_mkv2	dyads-2str-noov_3nt_sp0-20_bg_monads
+tgan{6}tca	16.99	16.99	16.99	16.99	.	.	.	  16.99
+tgan{7}caa	14.9	14.9	14.9	14.9	.	.	.	  14.90
+gatn{5}tca	11.1	11.1	11.1	11.1	.	.	.	  11.10
+ttgn{8}caa	10.94	10.94	10.94	10.94	.	.	.	  10.94
+gatn{6}caa	10.94	10.94	10.94	10.94	.	.	.	  10.94
+atcaat	1.9	2.88	4.78	2.39	1.90	.	.	   2.88
+gatcaa	1.33	3.33	4.66	2.33	1.33	.	.	   3.33
+gatn{4}atc	2.94	2.94	2.94	2.94	.	.	.	   2.94
+caaaaa	1.97	1.97	1.97	1.97	.	.	.	   1.97
+gacn{5}tca	1.31	1.31	1.31	1.31	.	.	.	   1.31
+aggagta	1.2	1.2	1.2	1.2	.	1.20	.	.
+taan{9}ata	1.08	1.08	1.08	1.08	.	.	.	   1.08
+atcaaa	0.14	0.89	1.03	0.515	0.14	.	.	   0.89
+agagggag	0.86	0.86	0.86	0.86	.	.	0.86	.
+attgatc	0.7	0.7	0.7	0.7	.	0.70	.	.
+aatttgat	0.64	0.64	0.64	0.64	.	.	0.64	.
+gtgn{7}tca	0.33	0.33	0.33	0.33	.	.	.	   0.33
+acgcagaa	0.32	0.32	0.32	0.32	.	.	0.32	.
+caan{1}aaa	0.23	0.23	0.23	0.23	.	.	.	   0.23
+aacttgat	0.16	0.16	0.16	0.16	.	.	0.16	.
+atcn{4}tca	0.13	0.13	0.13	0.13	.	.	.	   0.13
+attcacc	0.09	0.09	0.09	0.09	.	0.09	.	.
+cccn{5}ggg	0.07	0.07	0.07	0.07	.	.	.	   0.07
+ggtgaa	0.04	0.04	0.04	0.04	.	.	.	   0.04
+gtgn{8}caa	0.03	0.03	0.03	0.03	.	.	.	   0.03
+attn{8}tca	0.02	0.02	0.02	0.02	.	.	.	   0.02
+agatcaa	0.02	0.02	0.02	0.02	.	0.02	.	.
