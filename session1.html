@@ -335,6 +335,25 @@ $(function() {
 	</div>
 	
       </div>
+      <h3 class="expand">3 - Using a sequence set as control </h3>
+      <div class="collapse">
+	<i>peak-motifs</i> can take as input a second set of sequences to be used as a control. For example, if there is a set of peaks produced by a ChIP-seq experiment on a mutant that does not contain the transcription factor, this peak set can be used as a control for motif discovery.</br>
+	Ballester, et al, in their most resent work (eLife, in press) classified the CEBPa peaks in: Peaks belonging to a Cluster of Regulatory Modules (CRM, several TFs binding together) and Singletons (only CEBPa). Using Singleton peaks as control for the CRM peaks it is possible to discover the CEBPA co-factors.
+	<ol>
+	  <li><b>CRMs:</b><a href="./data/dataset_cebpa_dog/cfam2_cebpa_inModules_EPO.chr_crm.bed">bed file</a>, <a href="./data/dataset_cebpa_dog/cfam2_cebpa_inModules_EPO.chr_crm.fasta">fasta file</a> </li> 
+	  <li><b>Singletons:</b><a href="./data/dataset_cebpa_dog/cfam2_cebpa_inModules_EPO.chr_singleton.bed">bed file</a> , <a href="./data/dataset_cebpa_dog/cfam2_cebpa_inModules_EPO.chr_crm.fasta">fasta file</a></li>
+	</ol>
+	<div class="post">
+          <div class="success"><b>Results </b>
+	    <ol>
+              <li>Now there are two sequence composition results, one for the query sample and one for the control. The query is composed by peaks in the CRM category, the control are Singletons, as expected intuitively the size of the sequences are different.</li>
+              <li>The CEBPa motif is no longer found since it was over-represented in the control data set, now is possible to observe enrichment for other transcription factors like HNF4a which is a known important liver transcription factor likely to bind together with CEBPa</li>
+	    </ol>
+	    <b>Anticipated Results</b>:<a href="results/session1/3_peak-motifs_archive_cebpa_liver_dog_controlset_CRM_Single/peak-motifs_synthesis.html">peak-motifs control, CRMs vs Singletons.</a>	    
+          </div>	  
+	</div>
+	
+      </div>
       
     </div>
     
