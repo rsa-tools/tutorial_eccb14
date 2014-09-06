@@ -319,7 +319,7 @@ $(function() {
 	  <img class="bordered" src="figures/Screen_peak_motifs_cutseq.png" alt="PMSC4" width="550"/>
 	  <li><b>Motif-discovery parameters:</b> The choice of motif discovery algorithms markedly affects the result. It is recommended to combine the analysis of overrepresentation (oligo-analysis) and positional bias (position-analysis). Other available analysis are based on: spaced pairs (dyad-analysis) and locally overrepresented words (local-word).</li>
 	  <img class="bordered" src="figures/Screen_peak_motifs_motif_dis.png" alt="PMSC5" width="550"/>
-	  <li><b>Motif Comparison:</b> There are several databases that contain binding motifs available. Users can also add their own collections, in this case we will ad as well the motif reported by Schmidt,Wilson and Ballester based on a CEBPa ChIP-seq done in mouse [<a href="./data/dataset_cebpa_dog/do560+do843_mmus_cebpa_liver_top_meme.tf" target='_blank'>motif</a>]</li>
+	  <li><b>Motif Comparison:</b> There are several databases that contain binding motifs available. Users can also add their own collections, in this case we will add as well the motif reported by Schmidt,Wilson and Ballester based on a CEBPa ChIP-seq done in mouse [<a href="./data/dataset_cebpa_dog/do560+do843_mmus_cebpa_liver_top_meme.tf" target='_blank'>motif</a>]</li>
 	  <img class="bordered" src="figures/Screen_peak_motifs_motif_comp.png" alt="PMSC6" width="550"/>
 	  <li><b>Locate motifs:</b> Locating discovered motifs in peaks can be useful to detect potitional bias, once an intersting motif is found it becomes important to locate the site in the genomic context, there are options available in <i>peak-motifs</i> that facilitate this task.</li>
 	  <img class="bordered" src="figures/Screen_peak_motifs_motif_locate.png" alt="PMSC7" width="550"/>
@@ -471,6 +471,7 @@ $(function() {
             <li>Which parameters did you use?</li>
             <li>Did you select any specific set of motifs to compare with? Why?</li>
 	    <li>Which algorithm gave you the expected motif?</li>
+	    <li>Try comparing the discovered motifs with motifs from binding interfaces of proteins in <a href="http://floresta.eead.csic.es/footprintdb/index.php">footprintDB</a>, these motifs are inferred from a collection of protein-DNA complexes.
 	  </ol>
 	  <b>Anticipated Results:</b> <a href="./results/session1/6_peak-motifs_archive_FNR_Ecoli/peak-motifs_synthesis.html"> [Default parameters]</a> <a href="results/session1/6_peak-motifs_archive_FNR_Ecoli_dyad/peak-motifs_synthesis.html"> [Tunned parameters]</a>	    
         </div>	  
