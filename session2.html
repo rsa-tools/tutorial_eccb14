@@ -368,12 +368,16 @@ There are several ways to create random sequences to generate a negative control
 <div class=error>Do not forget to check the help of this tool to understand the parameters !</div>
 	</li>
 	<li> Run peak-motifs on the output file<br />
-<code>peak-motifs -i [previous output file] -title random-seq -markov auto -disco oligos,positions,local_words -nmotifs 5 -minol 6 -maxol 6 -2str -origin center 
--task purge,seqlen,composition,disco,merge_words,collect_motifs,synthesis -prefix peakmot_randomseq -noov -outdir random-seq-mmo-2
-</code>	
+<code>peak-motifs -i [previous output file] -title random-seq -markov auto -disco oligos,positions -nmotifs 5 -minol 6 -maxol 6 -2str -origin center 
+-task purge,seqlen,composition,disco,merge_words,collect_motifs,synthesis -prefix peakmot_randomseq -noov -outdir random-seq-mmo-2 -v 2</code>
+<div class=notice>
+Note that we chose a high verbosity (-v 2) which allows to follow the different steps the program is going through. You can however choose a lower verbosity (-v 0 or -v 1)
+</div>
 		</li> 
+<div class=error> In order to visualize the results in html format, we need to fetch resulting folder (random-seq-mmo-2) locally, so that you can open the html files in a local browser. You can do this either using filezilla or scp, by indicating the login (root on the IFB cloud or vmusers of the local virtual machines)) and IP address of your virtual machine.</div>		
+		
 		<li>Navigate to the output folder just created and open the html file</li>
-		<div class="success"><b>Question : </b> Do you find any over-represented motifs ? Check the different algorithm used (olig-analysis, position-analysis, local-words).</div>      
+		<div class="success"><b>Question : </b> Do you find any over-represented motifs ? Check the different algorithm used (olig-analysis, position-analysis, ...).</div>      
 	            </ol>
 </div>
 				
@@ -389,9 +393,9 @@ Check the exact name of the Canis familiaris organims in the output.
 </li>	
 <li>Extract random genomic fragments from the dog genome using <br />
 
-<code>random-genomic-fragments -i [template bed file] -template_format bed -org Canis_familiaris_EnsEMBL -return seq -o [output file]</code></li>
+<code>random-genome-fragments -i [template bed file] -template_format bed -org Canis_familiaris_EnsEMBL -return seq -o [output file]</code></li>
 <li>Run the previous peak-motifs command on this new file (Modify the name of the output dir !)</li>
-<div class="success"><b>Question : </b> Do you find any over-represented motifs ? Check the different algorithm used (olig-analysis, position-analysis, local-words). How different are the results compared to the negative control based on artificial sequences ?</div>      
+<div class="success"><b>Question : </b> Do you find any over-represented motifs ? Check the different algorithm used (olig-analysis, position-analysis). Why do you see a different behavior depending on the algorithms ?</div>      
 
 	</ol>            
 	            
